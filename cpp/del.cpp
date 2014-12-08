@@ -14,6 +14,8 @@ typedef struct edge edge;
 typedef struct triangle tringle;
 typedef struct point point;
 
+typedef edge* p_edge;
+
 struct edge{ 			//half-edge structure
   int index;
   
@@ -38,7 +40,15 @@ struct point{			//point structure
 
 double ori(point p1, point p2, point p3){
   //returns cross product between p1p2 and p1p3
-  return (p1.x - p3.x)*(p2.y - p3.y) - (p1.y - p3.y)*(p2.x - p3.x);
+  return
+    (p1.x - p3.x)*(p2.y - p3.y) -
+    (p1.y - p3.y)*(p2.x - p3.x);
+}
+
+bool intersect(point p1, point q1, point p2,point q2){
+  //checks if line segment p1q1 intersects p2q2 using cross products
+  return (ori(p1,q1,p2)>0 != ori(p1,q1,q2)>0 &&
+	  ori(p2,q2,p1)>0 != ori(p2,q2,q1)>0 );
 }
 
 bool inTriangle(point p, edge e){
@@ -75,36 +85,76 @@ edge *createEdge(point *p1,point *p2){
   return e;   
 }
 
-int makeEdge(edge *e,edge *f){
+int pairEdges(edge *e,edge *f){
   //matches two half edges. points must be the opposite
-  e->opp=f;
-  f->opp=e;
+  E[e->index].opp=f;
+  E[f->index].opp=e;
   return 0;
 }
 
 int makeTriangle(edge *e,edge *f,edge *g){
-  //matches three half edges into a ccw-oriented triangle  
-  e->next=f;
-  f->next=g;
-  g->next=e;
-
-  e->prev=g;
-  g->prev=f;
-  f->prev=e;
+  //matches three half edges into a ccw-oriented triangle
+  E[e->index].next=f;
+  E[f->index].next=g;
+  E[g->index].next=e;
+  
+  E[e->index].prev=g;
+  E[f->index].prev=e;
+  E[g->index].prev=f;
   return 0;
 }
 
 //TRIANGULATION FUNCTIONS
 
-int findTriangle(point p,int i_start){
-  edge e;
-  double cx,cy;
 
-  e=E[i_start];
-
-  cout << e.next <<endl;
+bool deleteTriangle(edge *e){
+  point *p1,*p2;
+  p1=e->s;
+  p2=e->f;
+  p1->edges.erase(p1->edges.find(e->index));
+  p2->edges.erase(p2->edges.find(e->opp->index));
   
+  return true;
 }
+
+edge *findTriangle(point p,edge *e){
+  point m;
+  edge *f;
+  f=e;
+  do{
+    m.x=(f->s->x+f->f->x+f->next->f->x)/3;
+    m.y=(f->s->y+f->f->y+f->next->f->y)/3;
+    if (intersect(p,m,*f->s,*f->f)){
+      f=f->opp;
+      cout << "intersected with first edge" << endl;
+      continue;
+    }
+    if (intersect(p,m,*f->next->s,*f->next->f)){
+      f=f->next->opp;
+      cout << "intersected with next edge" << endl;
+      continue;
+    }
+    if (intersect(p,m,*f->prev->s,*f->prev->f)){
+      f=f->prev->opp;
+      cout << "intersected with prev edge" << endl;
+      continue;
+    }
+    cout << "found triangle!" << endl;
+    break;  
+  }while(f!=NULL);
+  if (f==NULL){
+    cout << "could not find triangle" << endl;
+  }
+  
+  return f;
+}
+
+int insertPoint(point p,edge *e){
+  edge *f;
+  f = findTriangle(p,e);
+  deleteTriangle(f);
+}
+
 
 //MAIN FOR TESTING PURPOSES
 
@@ -129,7 +179,7 @@ point *st;		//super triangle, for accessing the triangulation
 
 int initMesh(){
   st = new point[3];
-  edge *e,*f,*g;
+  edge *e,*f,*g,*e_,*f_,*g_;
   
   st[0].x=-SUPER;
   st[0].y=-SUPER;
@@ -146,20 +196,21 @@ int initMesh(){
   e=createEdge(&st[0],&st[1]);
   f=createEdge(&st[1],&st[2]);
   g=createEdge(&st[2],&st[0]);
-
   makeTriangle(e,f,g);
+
+  pairEdges(e,createEdge(&st[1],&st[0]));
+  pairEdges(f,createEdge(&st[2],&st[1]));
+  pairEdges(g,createEdge(&st[0],&st[2]));
   
   return 0;  
 }
 
 int main(){
-  
+  point p;
   readVector();
   initMesh();
-
-  cout << E[*st[0].edges.begin()].next <<endl;
   
-  findTriangle(v[0],*st[0].edges.begin());
+  insertPoint(v[0],&E[*st[0].edges.begin()]);
   
   return 0;
 }
