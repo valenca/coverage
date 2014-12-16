@@ -14,10 +14,9 @@ typedef struct edge edge;
 typedef struct triangle tringle;
 typedef struct point point;
 
-typedef edge* p_edge;
-
 struct edge{ 			//half-edge structure
   int index;
+  bool real;			//0 if edges are part of the super triangle
   
   point *s;   			//start point
   point *f;   			//end point
@@ -35,7 +34,7 @@ struct point{			//point structure
   double y;   			//y chromossome
   double w;			//x^2+y^2. precalculated to speed circumference test
   
-  set<int> edges;	//stack of edges STARTING AT the point
+  set<int> edges;		//stack of edges STARTING AT the point
 };
 
 double ori(point p1, point p2, point p3){
@@ -56,12 +55,13 @@ bool inTriangle(point p, edge e){
   return (ori(*e.s, *e.f, p) >= 0 && ori(*e.f, *e.next->f, p) >= 0 && ori(*e.prev->s, *e.s, p) >= 0);
 }
 
-bool inCircle(point p,edge e){
+bool inCircle(point p,edge *e){
   point p1,p2,p3;
-  p1=*e.s;
-  p2=*e.f;
-  p3=*e.next->f;
-    
+  
+  p1=*e->s;
+  p2=*e->f;
+  p3=*e->next->f;
+  
   return
     (p1.x - p.x) * (p2.y - p.y) * (p3.w - p.w) +
     (p1.y - p.y) * (p2.w - p.w) * (p3.x - p.x) +
@@ -80,6 +80,7 @@ edge *createEdge(point *p1,point *p2){
   e->index=++n_edges;
   e->s=p1;
   e->f=p2;
+  e->real=true;
   E.insert(pair<int,edge>(n_edges,*e));
   p1->edges.insert(n_edges);
   return e;   
@@ -87,6 +88,8 @@ edge *createEdge(point *p1,point *p2){
 
 int pairEdges(edge *e,edge *f){
   //matches two half edges. points must be the opposite
+  e->opp=f;
+  f->opp=e;
   E[e->index].opp=f;
   E[f->index].opp=e;
   return 0;
@@ -107,14 +110,23 @@ int makeTriangle(edge *e,edge *f,edge *g){
 //TRIANGULATION FUNCTIONS
 
 
-bool deleteTriangle(edge *e){
+bool deleteEdge(edge *e){
   point *p1,*p2;
   p1=e->s;
-  p2=e->f;
   p1->edges.erase(p1->edges.find(e->index));
-  p2->edges.erase(p2->edges.find(e->opp->index));
-  
-  return true;
+  E.erase(E.find(e->index));
+  return false;
+}
+
+bool deleteTriangle(edge *e){
+  if(e->next->real)
+    deleteEdge(e->next);
+  if(e->prev->real)
+    deleteEdge(e->prev);
+  if(e->real)
+    deleteEdge(e);
+
+  return false;
 }
 
 edge *findTriangle(point p,edge *e){
@@ -149,10 +161,37 @@ edge *findTriangle(point p,edge *e){
   return f;
 }
 
+int digCavity(point p,edge *e){
+  edge *f,*g,*h;
+  if (!e->real)
+    return -1;
+  if(e->next!=NULL && e->prev != NULL){
+    if(inCircle(p,e)){
+      f=e->next;
+      g=e->prev;
+      deleteTriangle(e);
+      digCavity(p,f);
+      digCavity(p,g);
+    }
+    else{
+      f=createEdge(&p,e->f);
+      g=createEdge(e->f,e->s);
+      h=createEdge(e->s,&p);
+      makeTriangle(f,g,h);
+    }
+  }
+}
+
 int insertPoint(point p,edge *e){
-  edge *f;
+  edge *f,*a,*b,*c;
+  
   f = findTriangle(p,e);
+
   deleteTriangle(f);
+  
+  digCavity(p,a);
+  digCavity(p,b);
+  digCavity(p,c);
 }
 
 
@@ -198,9 +237,9 @@ int initMesh(){
   g=createEdge(&st[2],&st[0]);
   makeTriangle(e,f,g);
 
-  pairEdges(e,createEdge(&st[1],&st[0]));
-  pairEdges(f,createEdge(&st[2],&st[1]));
-  pairEdges(g,createEdge(&st[0],&st[2]));
+  e->real=false;
+  f->real=false;
+  g->real=false;
   
   return 0;  
 }
@@ -211,6 +250,8 @@ int main(){
   initMesh();
   
   insertPoint(v[0],&E[*st[0].edges.begin()]);
+
+  cout << E.size() << endl;
   
   return 0;
 }
