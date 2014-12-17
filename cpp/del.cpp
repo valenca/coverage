@@ -117,7 +117,7 @@ triangle * makeTriangle(point &p1,point &p2, point &p3){
   s_edg_in.push(pair<pair<int,int>,triangle*>(e1,t));
   s_edg_in.push(pair<pair<int,int>,triangle*>(e2,t));
   s_edg_in.push(pair<pair<int,int>,triangle*>(e3,t));
-  c_edg_in.top()+=3;
+  c_edg_in.top()++;
   
   return t;
 }
@@ -146,13 +146,13 @@ bool deleteTriangle(triangle &t){
   s_edg_out.push(pair<pair<int,int>,triangle*>(e1,&t));
   s_edg_out.push(pair<pair<int,int>,triangle*>(e2,&t));
   s_edg_out.push(pair<pair<int,int>,triangle*>(e3,&t));
-  c_edg_out.top()+=3;
+  c_edg_out.top()++;
   return false;
 }
 
 bool loadState(){
   triangle *t;
-  for(int i=0;i<c_edg_in.top();i+=3){
+  for(int i=0;i<c_edg_in.top();i++){
     t=s_edg_in.top().second;
     t->v1->nbors.erase(t->v1->nbors.find(t->v2->index));
     t->v2->nbors.erase(t->v2->nbors.find(t->v3->index));
@@ -165,7 +165,7 @@ bool loadState(){
     s_edg_in.pop();
   }
   c_edg_in.pop();
-  for(int i=0;i<c_edg_out.top();i+=3){
+  for(int i=0;i<c_edg_out.top();i++){
     t=s_edg_out.top().second;
     t->v1->nbors.insert(t->v2->index);
     t->v2->nbors.insert(t->v3->index);
@@ -266,9 +266,9 @@ int readVector(){
 
 triangle * initMesh(point &s1,point &s2,point &s3){
   triangle *t,*f;
-  s1.x=-SUPER;
-  s1.y=-SUPER;  
-  s1.w=SUPER*SUPER*2;
+  s1.x=-1;
+  s1.y=-1;  
+  s1.w=1;
   s1.index=N+1;
   
   s2.x=SUPER;
@@ -305,7 +305,18 @@ int main(){
   
   readVector();
   t=initMesh(s1,s2,s3);
-  insertPoint(v[0],*E.begin()->second);  
+  
+  for(i=0;i<N;i++)
+    insertPoint(v[i],*E.begin()->second);
+  for(i=0;i<N;i++)
+    loadState();
+  cout << E.size() <<endl;
+  for(i=0;i<N;i++)
+    insertPoint(v[i],*E.begin()->second);
+  for(i=0;i<N;i++)
+    loadState();
+  cout << E.size() <<endl;
+  
   return 0;
 }
 
