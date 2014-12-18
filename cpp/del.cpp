@@ -1,54 +1,27 @@
-#include<stdio.h>
 #include<cstdlib>
 #include<iostream>
-#include<map>
+#include<cmath>
 #include<set>
 #include<stack>
-#include<ctime>
+#include"del.h"
 
-#define SUPER 10000
 
 using namespace std;
 
-typedef struct triangle tringle;
-typedef struct point point;
-typedef pair<int,int> edge;
-
-typedef set< int >::iterator 	 set_it;
-typedef map< pair<int,int>,triangle *>::iterator map_it;
-
-struct triangle{ 			//half-edge str
-  point *v1;
-  point *v2;
-  point *v3;
-
-  int index;
-  
-  bool fake;
-};
-
-struct point{				//point structure
-  bool real;				//1 if part of point set, 0 if part of auxiliary triangle/structures
-  int index;
-  
-  double x;   				//x coordinate
-  double y;   				//y chromossome
-  double w;				//x^2+y^2. precalculated to speed circumference test
-  
-  set<int> nbors;	
-};
-
-int N;	 				//total number of points
-int K; 					//number of centroids
-point *v;				//array of points
-point *st;				//super triangle, for accessing the triangulation
 int n_triangles;
-map< pair<int,int> , triangle * > E;	//hashtable of
+triangle * last_t;			//last triangle created
 
-stack< pair< pair<int,int>, triangle*> > s_edg_out;
-stack<int> c_edg_out;
-stack< pair< pair<int,int>, triangle*> > s_edg_in;
-stack<int> c_edg_in;
+map< pair<int,int> , triangle * > E;	//hashtable of half-edges
+
+stack< triangle* > s_l_tri;		//stack of last triangle created
+stack<int> c_edg_in;			//stack of number of h.edges created last
+stack<int> c_edg_out;			//stack of number of h.edges removed last
+stack<map_entry> s_edg_in;		//stack of half edges created from mesh
+stack<map_entry> s_edg_out;		//stack of half edges removed from mesh
+
+point s1,s2,s3,s4;
+
+//GEOMETRIC FUNCTIONS
 
 double ori(point &p1, point &p2, point &p3){
   //returns cross product between p1p2 and p1p3
@@ -89,6 +62,12 @@ point * adjacent(point &p, point&q){
   return t->v3;
 }
 
+double euclidean(point &p,point &q){
+  return sqrt(((p.x-q.x)*(p.x-q.x))+((p.y-q.y)*(p.y-q.y)));
+}
+
+
+//TRIANGLE MANIPULATION
 triangle * makeTriangle(point &p1,point &p2, point &p3){
   triangle *t;
   edge e1,e2,e3;
@@ -104,24 +83,25 @@ triangle * makeTriangle(point &p1,point &p2, point &p3){
   e2=edge(p2.index,p3.index);
   e3=edge(p3.index,p1.index);
 
-  E.insert(pair<pair<int,int>,triangle*>(e1,t));
-  E.insert(pair<pair<int,int>,triangle*>(e2,t));
-  E.insert(pair<pair<int,int>,triangle*>(e3,t));
+  E.insert(map_entry(e1,t));
+  E.insert(map_entry(e2,t));
+  E.insert(map_entry(e3,t));
 
+  //update individual points
   p1.nbors.insert(p2.index);
   p2.nbors.insert(p3.index);
   p3.nbors.insert(p1.index);
-
   
   //save state
-  s_edg_in.push(pair<pair<int,int>,triangle*>(e1,t));
-  s_edg_in.push(pair<pair<int,int>,triangle*>(e2,t));
-  s_edg_in.push(pair<pair<int,int>,triangle*>(e3,t));
+  s_edg_in.push(map_entry(e1,t));
+  s_edg_in.push(map_entry(e2,t));
+  s_edg_in.push(map_entry(e3,t));
   c_edg_in.top()++;
-  
+
+  last_t=t;
+  s_l_tri.top()=t;
   return t;
 }
-
 
 bool deleteTriangle(triangle &t){
   point *p1,*p2,*p3;
@@ -138,31 +118,39 @@ bool deleteTriangle(triangle &t){
   E.erase(E.find(e2));
   E.erase(E.find(e3));
 
+  //update individual points
   p1->nbors.erase(p1->nbors.find(p2->index));
   p2->nbors.erase(p2->nbors.find(p3->index));
   p3->nbors.erase(p3->nbors.find(p1->index));
     
   //save state
-  s_edg_out.push(pair<pair<int,int>,triangle*>(e1,&t));
-  s_edg_out.push(pair<pair<int,int>,triangle*>(e2,&t));
-  s_edg_out.push(pair<pair<int,int>,triangle*>(e3,&t));
+  s_edg_out.push(map_entry(e1,&t));
+  s_edg_out.push(map_entry(e2,&t));
+  s_edg_out.push(map_entry(e3,&t));
   c_edg_out.top()++;
   return false;
 }
 
+//MESH MANIPULATION
 bool loadState(){
   triangle *t;
+  bool a,b,c;
   for(int i=0;i<c_edg_in.top();i++){
     t=s_edg_in.top().second;
+    
     t->v1->nbors.erase(t->v1->nbors.find(t->v2->index));
     t->v2->nbors.erase(t->v2->nbors.find(t->v3->index));
+    
     t->v3->nbors.erase(t->v3->nbors.find(t->v1->index));
+    
     E.erase(E.find(s_edg_in.top().first));
     s_edg_in.pop();
     E.erase(E.find(s_edg_in.top().first));
     s_edg_in.pop();
     E.erase(E.find(s_edg_in.top().first));
     s_edg_in.pop();
+
+    delete t;
   }
   c_edg_in.pop();
   for(int i=0;i<c_edg_out.top();i++){
@@ -170,6 +158,7 @@ bool loadState(){
     t->v1->nbors.insert(t->v2->index);
     t->v2->nbors.insert(t->v3->index);
     t->v3->nbors.insert(t->v1->index);
+    
     E.insert(s_edg_out.top());
     s_edg_out.pop();
     E.insert(s_edg_out.top());
@@ -178,6 +167,10 @@ bool loadState(){
     s_edg_out.pop();
   }
   c_edg_out.pop();
+
+  s_l_tri.pop();
+  last_t=s_l_tri.top();
+  
   return false;
 }
 
@@ -212,7 +205,7 @@ triangle *findTriangle(point &p,triangle &t){
 
 int digCavity(point &p,point &q, point &r){
   point *s;
-  if(q.index >=N && r.index>=N){
+  if(q.index > N && r.index > N){
     makeTriangle(p,r,q);
     return 0;
   }
@@ -230,14 +223,15 @@ int digCavity(point &p,point &q, point &r){
   return 0;
 }
 
-int insertPoint(point &p,triangle &t){
+int insertPoint(point &p){
   triangle *f;
   point *p1,*p2,*p3;
 
   c_edg_in.push(0);
   c_edg_out.push(0);
-  
-  f = findTriangle(p,t);
+  s_l_tri.push(NULL);
+
+  f = findTriangle(p,*last_t);
   p1=f->v1;
   p2=f->v2;
   p3=f->v3;
@@ -248,80 +242,44 @@ int insertPoint(point &p,triangle &t){
   digCavity(p,*p1,*p3);
   return 0;
 }
-//MAIN FOR TESTING PURPOSES
 
-int readVector(){
-  int i;
-  cin >> N;
-  cin >> K;
-  v=new point[N];
-  for(i=0;i<N;i++){
-    cin >> v[i].x;
-    cin >> v[i].y;
-    v[i].w = v[i].x*v[i].x + v[i].y*v[i].y;
-    v[i].real=true;
-    v[i].index=i;
-  }
-}
-
-triangle * initMesh(point &s1,point &s2,point &s3){
+void initMesh(double min_x,double max_x,double min_y,double max_y){
+  //initiate mesh with super rectangle containing all points
   triangle *t,*f;
-  s1.x=-1;
-  s1.y=-1;  
-  s1.w=1;
+  s1.x=min_x-1;
+  s1.y=min_y-1;  
+  s1.w=(s1.x*s1.x)+(s1.y*s1.y);
   s1.index=N+1;
   
-  s2.x=SUPER;
-  s2.y=0;
-  s2.w=SUPER*SUPER;
+  s2.x=max_x+1;
+  s2.y=min_y-1;
+  s2.w=(s2.x*s2.x)+(s2.y*s2.y);
   s2.index=N+2;
   
-  s3.x=0;
-  s3.y=SUPER;
-  s3.w=SUPER*SUPER;
+  s3.x=min_x-1;
+  s3.y=max_x+1;
+  s3.w=(s3.x*s3.x)+(s3.y*s3.y);
   s3.index=N+3;
-
-  //outside edges with a fake triangle
   
+  s4.x=max_x+1;
+  s4.y=max_y+1;
+  s4.w=(s4.x*s4.x)+(s4.y*s4.y);
+  s4.index=N+4;
+  
+  //add fake triangles to outer edges of the rectangle
   f=new triangle;
   f->index=-1;
   f->fake=true;
   
-  E.insert(pair<pair<int,int>,triangle*>(edge(s2.index,s1.index),f));
-  E.insert(pair<pair<int,int>,triangle*>(edge(s3.index,s2.index),f));
-  E.insert(pair<pair<int,int>,triangle*>(edge(s1.index,s3.index),f));
+  E.insert(map_entry(edge(s2.index,s1.index),f));
+  E.insert(map_entry(edge(s1.index,s3.index),f));
+  E.insert(map_entry(edge(s4.index,s2.index),f));
+  E.insert(map_entry(edge(s3.index,s4.index),f));
 
   c_edg_in.push(0);
+  s_l_tri.push(NULL);
   
+  t=makeTriangle(s2,s4,s3);  
   t=makeTriangle(s1,s2,s3);
-
-  return t;  
+  return;  
 }
-
-int main(){
-  int i,c;
-  triangle *t;
-  point p,s1,s2,s3;
-  
-  readVector();
-  t=initMesh(s1,s2,s3);
-  
-  for(i=0;i<N;i++)
-    insertPoint(v[i],*E.begin()->second);
-  for(i=0;i<N;i++)
-    loadState();
-  cout << E.size() <<endl;
-  for(i=0;i<N;i++)
-    insertPoint(v[i],*E.begin()->second);
-  for(i=0;i<N;i++)
-    loadState();
-  cout << E.size() <<endl;
-  
-  return 0;
-}
-
-
-
-
-
-
