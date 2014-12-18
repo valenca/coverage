@@ -78,11 +78,11 @@ int route(int p,int q){
       }
     }
   }while(mz!=mz2);
-  cout << mz << " - " << mn <<endl;
   return mz;
 }
 
 void coverage(){
+  
   return;
 }
 
@@ -93,30 +93,8 @@ int main(){
   
   readVector();
   initMesh(min_x,max_x,min_y,max_y);
-  
-  for(i=0;i<N/2;i++){
-    insertPoint(v[i]);
-    centroid[i]=1;
-  }
 
-
-  for(int pt=N/2;pt<N;pt++){
-    int mz;
-    double mn=10000;
-  
-    for(i=0;i<N/2;i++){
-      if(centroid[i]){
-	if(mn>dist[pt][i]){
-	  mn=dist[pt][i];
-	  mz=i;
-	}
-      }
-    }
-  
-    route(pt,2);
-    cout << mz << " - " << mn <<endl;  
-    cout << "--------" <<endl;
-  }
+  best=INT_MAX;
   
   cout << E.size() <<endl;
   return 0;
