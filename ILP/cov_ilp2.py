@@ -23,7 +23,7 @@ for i,vi in enumerate(v):
 	for j,vj in enumerate(v):
 		d[i+1,j+1]=dist(vi,vj)
 
-with open("distances.dat","w") as f:
+with open("../ILP/distances.dat","w") as f:
 
 	f.write("data;\nparam N:= %d;" % N)
 	f.write("\nparam K:= %d;" % K)
@@ -42,6 +42,6 @@ with open("distances.dat","w") as f:
 		f.write("\n")
 	f.write(";\nend;\n")
 
-call("glpsol -m form2.mod -d distances.dat -y output")
-call("cat output")
-call("rm distances.dat")
+call("glpsol -m ../ILP/form2.mod -d ../ILP/distances.dat -y ../ILP/output")
+call("cat ../ILP/output")
+call("rm ../ILP/distances.dat")

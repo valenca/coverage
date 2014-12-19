@@ -28,6 +28,7 @@ double min_y;
 double ** dist;
 bool *centroid;
 int *cent_of;
+double best;
 
 int readVector(){
   int i,j;
@@ -54,7 +55,7 @@ int readVector(){
 
   centroid = new bool[N];
   cent_of = new int[N];
-  
+  best = INT_MAX;
   for(i=0;i<N-1;i++)
     for(j=i+1;j<N;j++)
       dist[i][j]=dist[j][i]=euclidean(v[i],v[j]);
@@ -81,9 +82,110 @@ int route(int p,int q){
   return mz;
 }
 
-void coverage(){
+int bound (int pos, double score, int idx){
+  int i;	
+  for (i = pos; i < N; i++)
+    // an improvement can be found
+    if (dist[idx][i] < score)
+      return 1; 
+  return 0;
+}
+
+int V[100];
+
+void coverage(int pos, int ncentral, double score, int idx,int last) {
+  int i, j,clos;
+  double nscore,val;
+  int tmp_central_of[N];		
   
-  return;
+  if (ncentral == K) {
+    for (i = pos; i < N; i++){
+      val = INT_MAX;
+      for (j = 0; j < pos; j++){
+	if (centroid[j] == 1 && dist[i][j] < val) 
+	  val = dist[i][j];
+      }
+      score = max(score,val);
+    }
+    // update the best
+    if (score < best) {
+      best = score;
+      cout <<best<<endl;
+      for(i=0;i<N;i++)
+	V[i]=centroid[i];
+    }
+    return;
+  }
+
+  if (pos == N){
+    //cout << 1 <<endl;
+    return;
+  }
+  if(pos + K - ncentral > N){
+    //cout << 2 <<endl;
+    return;
+  }
+  if(N - pos + ncentral < K){
+    cout << 3 <<endl;
+    return;
+  }
+
+  if (pos > ncentral && score >= best && bound(pos, score, idx) == 0)
+    return;
+
+  // make temporary copy of central_of
+  for (i = 0; i <= pos; i++)
+    tmp_central_of[i] = cent_of[i];
+	
+  // Decision 1: the point at pos is a centroid
+  // Then, assign non-centroids to the new centroid and change accordingly		
+  // Note: overall score can be equal or decrease.
+  
+  insertPoint(v[pos]);
+  centroid[pos] = 1;
+  nscore = 0;
+  for (i = 0; i < pos; i++){
+    if (centroid[i] == 0) {
+      if (dist[pos][i] < dist[cent_of[i]][i]) 
+	cent_of[i] = pos;
+      if (nscore < dist[cent_of[i]][i]) {
+	nscore = dist[cent_of[i]][i];
+	idx = i;  // keep the largest link for the bound
+      }
+    }
+  }
+	
+  //Recursion
+  coverage(pos+1, ncentral+1, nscore, idx,last);
+  loadState();
+  // recover the contents of the old central_of
+  for (i = 0; i <= pos; i++)
+    cent_of[i] = tmp_central_of[i];
+
+  // Decision 2: the point at pos is a non- centroid
+  // Then, find the closest centroid		
+  // Note: overall score can be equal or increase.
+  centroid[pos] = 0;
+  for (i = 0; i < pos; i++){
+    if (centroid[i] == 1){
+      clos=route(pos,i);
+      if (dist[pos][clos] < dist[cent_of[pos]][pos]) {
+	cent_of[pos] = clos;	
+      }
+      break;
+    }
+  }
+  if (score < dist[cent_of[pos]][pos]) {
+    score = dist[cent_of[pos]][pos];
+    idx = pos;	// keep the largest link for the bound 
+  }
+
+  // recursion
+  coverage(pos+1, ncentral, score, idx,last);
+
+  // undo
+  centroid[pos] = -1;
+  cent_of[pos] = pos;
 }
 
 int main(){
@@ -93,10 +195,12 @@ int main(){
   
   readVector();
   initMesh(min_x,max_x,min_y,max_y);
-
-  best=INT_MAX;
   
-  cout << E.size() <<endl;
+  coverage(0, 0, INT_MAX, 0,0);
+  for(i=0;i<N;i++)
+    cout << V[i] << " ";
+  cout <<endl << best <<endl;
+  
   return 0;
 }
 

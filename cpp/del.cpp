@@ -21,6 +21,8 @@ stack<map_entry> s_edg_out;		//stack of half edges removed from mesh
 
 point s1,s2,s3,s4;
 
+stack<triangle*> tri_pool;
+
 //GEOMETRIC FUNCTIONS
 
 double ori(point &p1, point &p2, point &p3){
@@ -71,7 +73,19 @@ double euclidean(point &p,point &q){
 triangle * makeTriangle(point &p1,point &p2, point &p3){
   triangle *t;
   edge e1,e2,e3;
-  t=new triangle;
+
+  if(tri_pool.empty()){
+    triangle * pool_space;
+    int i;
+    pool_space=new triangle[N];
+    cout << "more triangles" <<endl;
+    for(i=0;i<N;i++){
+      tri_pool.push(&pool_space[i]);
+    }
+  }  
+  
+  t=tri_pool.top();
+  tri_pool.pop();  
 
   t->fake=false;
   t->v1=&p1;
@@ -97,7 +111,7 @@ triangle * makeTriangle(point &p1,point &p2, point &p3){
   s_edg_in.push(map_entry(e2,t));
   s_edg_in.push(map_entry(e3,t));
   c_edg_in.top()++;
-
+  
   last_t=t;
   s_l_tri.top()=t;
   return t;
@@ -128,6 +142,7 @@ bool deleteTriangle(triangle &t){
   s_edg_out.push(map_entry(e2,&t));
   s_edg_out.push(map_entry(e3,&t));
   c_edg_out.top()++;
+  
   return false;
 }
 
@@ -139,8 +154,7 @@ bool loadState(){
     t=s_edg_in.top().second;
     
     t->v1->nbors.erase(t->v1->nbors.find(t->v2->index));
-    t->v2->nbors.erase(t->v2->nbors.find(t->v3->index));
-    
+    t->v2->nbors.erase(t->v2->nbors.find(t->v3->index));    
     t->v3->nbors.erase(t->v3->nbors.find(t->v1->index));
     
     E.erase(E.find(s_edg_in.top().first));
@@ -150,7 +164,7 @@ bool loadState(){
     E.erase(E.find(s_edg_in.top().first));
     s_edg_in.pop();
 
-    delete t;
+    tri_pool.push(t);
   }
   c_edg_in.pop();
   for(int i=0;i<c_edg_out.top();i++){
