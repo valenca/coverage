@@ -33,9 +33,21 @@ struct point{			//point structure
   double x; 			//x coordinate
   double y;			//y chromossome
   double w;			//x^2+y^2. precalculated to speed circumference test
+
+  int d;			//position in hilbert curve
   
-  set<int> nbors;	
+  set<int> nbors;
+  
+  bool operator< (const point& str)const{
+    return (d < str.d);
+  }
+  
 };
+
+//hilbert functions;
+int xy2d(int n,int x,int y);
+void d2xy(int n,int d,int *x,int *y);
+void rot(int n,int *x,int *y,int rx,int ry);
 
 //geometric functions
 double ori(point &p1, point &p2, point &p3);

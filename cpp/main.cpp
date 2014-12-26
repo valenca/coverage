@@ -6,10 +6,14 @@
 #include<stack>
 #include<ctime>
 #include<climits>
+#include<algorithm>
+
 #include"del.h"
 
 #define min(a,b) (((a)<(b))?(a):(b))
 #define max(a,b) (((a)>(b))?(a):(b))
+
+#define HIL 32
 
 using namespace std;
 
@@ -32,9 +36,14 @@ double best;
 
 int readVector(){
   int i,j;
+  double mx,mn;
   cin >> N;
   cin >> K;
   v=new point[N];
+
+  max_x=max_y=0;
+  min_x=min_y=INT_MAX;
+  
   for(i=0;i<N;i++){
     cin >> v[i].x;
     cin >> v[i].y;
@@ -47,6 +56,15 @@ int readVector(){
     min_x=min(v[i].x,min_x);
     min_y=min(v[i].y,min_y);
   }
+  
+  mx=max(max_x-min_x,max_y-min_y);
+  
+  for(i=0;i<N;i++){
+    v[i].d = xy2d(HIL,(int)((v[i].x-min_x)/(mx/HIL)),(int)((v[i].y-min_y)/(mx/HIL)));
+  }
+
+  sort(v,v+N);
+  
   dist = new double*[N];
   for(i=0;i<N;i++){
     dist[i]=new double[N];
@@ -59,7 +77,8 @@ int readVector(){
   for(i=0;i<N-1;i++)
     for(j=i+1;j<N;j++)
       dist[i][j]=dist[j][i]=euclidean(v[i],v[j]);
-  
+
+    
   return 0;
 }
 
@@ -83,11 +102,14 @@ int route(int p,int q){
 }
 
 int bound (int pos, double score, int idx){
-  int i;	
-  for (i = pos; i < N; i++)
+  return 0;
+  int i;
+  for (i = pos; i < N; i++){
     // an improvement can be found
-    if (dist[idx][i] < score)
-      return 1; 
+    if (dist[idx][i] < score){
+      return 1;
+    }
+  }
   return 0;
 }
 
@@ -140,8 +162,8 @@ void coverage(int pos, int ncentral, double score, int idx,int last) {
   // Decision 1: the point at pos is a centroid
   // Then, assign non-centroids to the new centroid and change accordingly		
   // Note: overall score can be equal or decrease.
-  
-  insertPoint(v[pos]);
+
+  insertPoint(v[pos]);  
   centroid[pos] = 1;
   nscore = 0;
   for (i = 0; i < pos; i++){
@@ -153,8 +175,7 @@ void coverage(int pos, int ncentral, double score, int idx,int last) {
 	idx = i;  // keep the largest link for the bound
       }
     }
-  }
-	
+  }	
   //Recursion
   coverage(pos+1, ncentral+1, nscore, idx,last);
   loadState();
@@ -188,6 +209,36 @@ void coverage(int pos, int ncentral, double score, int idx,int last) {
   cent_of[pos] = pos;
 }
 
+void cov(int pos, int ncent, double score,int far,int last){
+  int i;
+  double nscore;
+  if(ncent==K){
+    if(score<best){
+      best=score;
+    }
+  }
+  else{
+    
+    //point is a centroid
+    insertPoint(v[pos]);
+    nscore=0;
+    for (i = 0; i < pos; i++){
+      if (centroid[i] == 0) {
+	if (dist[pos][i] < dist[cent_of[i]][i]) 
+	  cent_of[i] = pos;
+	if (nscore < dist[cent_of[i]][i]) {
+	  nscore = dist[cent_of[i]][i];
+	  far = i;  // keep the largest link for the bound
+	}
+      }
+    }
+    cov(pos+1,ncent+1,nscore,far,last);
+    cout << ncent<<endl;
+    loadState();
+    //point is a non-centroid
+  }
+}
+
 int main(){
   int i,c;
   triangle *t;
@@ -197,6 +248,7 @@ int main(){
   initMesh(min_x,max_x,min_y,max_y);
   
   coverage(0, 0, INT_MAX, 0,0);
+  //cov(0,0,INT_MAX,0,0);
   for(i=0;i<N;i++)
     cout << V[i] << " ";
   cout <<endl << best <<endl;

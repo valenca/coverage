@@ -19,9 +19,11 @@ s.t. dist  {i in 1..N}           : sum{j in 1..N}(C[i,j]*x[i,j])<=D;
 
 solve;
 
-printf {j in 1..N:y[j]==1} "%i ", j-1;
+#printf {j in 1..N:y[j]==1} "%i ", j-1;
+#printf "\n";
+#for {i in 1..N}{for {j in 1..N} printf "%s ", if x[i,j] then "1" else "0"; printf("\n");}
+     
+printf {j in 1..N}"%i ", y[j];
 printf "\n";
-
-for {i in 1..N}{for {j in 1..N} printf "%s ", if x[i,j] then "1" else "0"; printf("\n");}
 printf "%f\n",D;
 end;
