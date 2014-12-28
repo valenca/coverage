@@ -270,7 +270,6 @@ void cov(int pos, int ncent, double score,int far,int last,int c){
       }
     }
 
-    
     last=route(pos,last);
     cent_of[pos]=last;
     
