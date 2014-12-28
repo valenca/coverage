@@ -33,6 +33,7 @@ double ** dist;
 bool *centroid;
 int *cent_of;
 double best;
+int *best_v;
 
 int readVector(){
   int i,j;
@@ -71,6 +72,8 @@ int readVector(){
     dist[i][i]=INT_MAX;
   }
 
+  best_v = new int[N];
+  
   centroid = new bool[N];
   cent_of = new int[N];
   best = INT_MAX;
@@ -78,7 +81,8 @@ int readVector(){
     for(j=i+1;j<N;j++)
       dist[i][j]=dist[j][i]=euclidean(v[i],v[j]);
 
-    
+  best=INT_MAX;
+  
   return 0;
 }
 
@@ -113,8 +117,6 @@ int bound (int pos, double score, int idx){
   return 0;
 }
 
-int V[100];
-
 void coverage(int pos, int ncentral, double score, int idx,int last) {
   int i, j,clos;
   double nscore,val;
@@ -134,7 +136,7 @@ void coverage(int pos, int ncentral, double score, int idx,int last) {
       best = score;
       cout <<best<<endl;
       for(i=0;i<N;i++)
-	V[i]=centroid[i];
+	best_v[i]=centroid[i];
     }
     return;
   }
@@ -209,18 +211,32 @@ void coverage(int pos, int ncentral, double score, int idx,int last) {
   cent_of[pos] = pos;
 }
 
-void cov(int pos, int ncent, double score,int far,int last){
+void cov(int pos, int ncent, double score,int far,int last,int c){
   int i;
   double nscore;
+  int tmp_central_of[pos];
+
+  
+  if(pos>=N)
+    return;
   if(ncent==K){
     if(score<best){
       best=score;
+      for(i=0;i<N;i++){
+	best_v[i]=centroid[i];
+      }
     }
+    return;
   }
   else{
     
     //point is a centroid
+    centroid[pos]=1;
     insertPoint(v[pos]);
+    
+    for (i = 0; i <= pos; i++)
+      tmp_central_of[i] = cent_of[i];
+    
     nscore=0;
     for (i = 0; i < pos; i++){
       if (centroid[i] == 0) {
@@ -232,10 +248,40 @@ void cov(int pos, int ncent, double score,int far,int last){
 	}
       }
     }
-    cov(pos+1,ncent+1,nscore,far,last);
-    cout << ncent<<endl;
+
+    cout << nscore << endl;
+    
+    cov(pos+1,ncent+1,nscore,far,last,1);
     loadState();
+
+    for (i = 0; i <= pos; i++){
+      cent_of[i] = tmp_central_of[i];
+    }
     //point is a non-centroid
+
+    centroid[pos]=0;
+
+    if(centroid[last]!=1){
+      for(i=0;i<pos;i++){
+	if(centroid[i]==1){
+	  last=i;
+	  break;
+	}
+      }
+    }
+
+    
+    last=route(pos,last);
+    cent_of[pos]=last;
+    
+    if (score < dist[cent_of[pos]][pos]) {
+      score = dist[cent_of[pos]][pos];
+      far = pos;	// keep the largest link for the bound 
+    }
+    cov(pos+1,ncent,score,far,last,0);
+    
+    centroid[pos]=-1;
+    cent_of[pos]=pos;
   }
 }
 
@@ -247,17 +293,12 @@ int main(){
   readVector();
   initMesh(min_x,max_x,min_y,max_y);
   
-  coverage(0, 0, INT_MAX, 0,0);
-  //cov(0,0,INT_MAX,0,0);
+  //coverage(0, 0, INT_MAX, 0,0);
+  cov(0,0,INT_MAX,0,0,-1);
   for(i=0;i<N;i++)
-    cout << V[i] << " ";
+    cout << best_v[i] << " ";
   cout <<endl << best <<endl;
   
   return 0;
 }
-
-
-
-
-
 

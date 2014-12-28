@@ -303,23 +303,23 @@ int insertPoint(point &p){
 void initMesh(double min_x,double max_x,double min_y,double max_y){
   //initiate mesh with super rectangle containing all points
   triangle *t,*f;
-  s1.x=min_x-1;
-  s1.y=min_y-1;  
+  s1.x=-2*max_x-1;
+  s1.y=-2*max_y-1;  
   s1.w=(s1.x*s1.x)+(s1.y*s1.y);
   s1.index=N+1;
   
-  s2.x=max_x+1;
-  s2.y=min_y-1;
+  s2.x=2*max_x+1;
+  s2.y=-2*max_y-1;
   s2.w=(s2.x*s2.x)+(s2.y*s2.y);
   s2.index=N+2;
   
-  s3.x=min_x-1;
-  s3.y=max_x+1;
+  s3.x=-2*max_x-1;
+  s3.y=2*max_x+1;
   s3.w=(s3.x*s3.x)+(s3.y*s3.y);
   s3.index=N+3;
   
-  s4.x=max_x+1;
-  s4.y=max_y+1;
+  s4.x=2*max_x+1;
+  s4.y=2*max_y+1;
   s4.w=(s4.x*s4.x)+(s4.y*s4.y);
   s4.index=N+4;
   
