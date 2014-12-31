@@ -5,7 +5,6 @@
 #include<stack>
 #include"del.h"
 
-
 using namespace std;
 
 int n_triangles;
@@ -18,8 +17,6 @@ stack<int> c_edg_in;			//stack of number of h.edges created last
 stack<int> c_edg_out;			//stack of number of h.edges removed last
 stack<map_entry> s_edg_in;		//stack of half edges created from mesh
 stack<map_entry> s_edg_out;		//stack of half edges removed from mesh
-
-point s1,s2,s3,s4;
 
 stack<triangle*> tri_pool;
 
@@ -121,7 +118,11 @@ triangle * makeTriangle(point &p1,point &p2, point &p3){
     triangle * pool_space;
     int i;
     pool_space=new triangle[N];
+    
+#ifdef DEBUG
     cout << "more triangles" <<endl;
+#endif
+    
     for(i=0;i<N;i++){
       tri_pool.push(&pool_space[i]);
     }
@@ -241,8 +242,8 @@ triangle *findTriangle(point &p,triangle &t){
   
   m.x=(v1->x+v2->x+v3->x)/3;
   m.y=(v1->y+v2->y+v3->y)/3;
-  
-  while(inCircle(p,*v1,*v2,*v3)<=0){    
+  while(inCircle(p,*v1,*v2,*v3)<=0){
+    //cout << ": " << v1->index << " " << v2->index << " " << v3->index << endl;
     if (first && intersect(p,m,*v1,*v2)){
       tmp=v1;
       v1=v2;
@@ -262,7 +263,7 @@ triangle *findTriangle(point &p,triangle &t){
 
 int digCavity(point &p,point &q, point &r){
   point *s;
-  if(q.index > N && r.index > N){
+  if(E[edge(q.index,r.index)]->index==-1){
     makeTriangle(p,r,q);
     return 0;
   }
@@ -297,36 +298,48 @@ int insertPoint(point &p){
   digCavity(p,*p2,*p1);
   digCavity(p,*p3,*p2);
   digCavity(p,*p1,*p3);
+  
   return 0;
 }
 
-void initMesh(double min_x,double max_x,double min_y,double max_y){
+void initMesh(double min_x,double max_x,double min_y,double max_y,point &s1,point &s2,point &s3,point &s4){
   //initiate mesh with super rectangle containing all points
+  double dx=max_x-min_x;
+  double dy=max_y-min_y;
+  
   triangle *t,*f;
-  s1.x=-2*max_x-1;
-  s1.y=-2*max_y-1;  
+  
+  s1.x=min_x-dx-1;
+  s1.y=min_y-dy-1;  
   s1.w=(s1.x*s1.x)+(s1.y*s1.y);
   s1.index=N+1;
   
-  s2.x=2*max_x+1;
-  s2.y=-2*max_y-1;
+  s2.x=max_x+dx+1;
+  s2.y=min_y-dy-1;
   s2.w=(s2.x*s2.x)+(s2.y*s2.y);
   s2.index=N+2;
   
-  s3.x=-2*max_x-1;
-  s3.y=2*max_x+1;
+  s3.x=min_x-dx-1;
+  s3.y=max_y+dy+1;
   s3.w=(s3.x*s3.x)+(s3.y*s3.y);
   s3.index=N+3;
   
-  s4.x=2*max_x+1;
-  s4.y=2*max_y+1;
+  s4.x=max_x+dx+1;
+  s4.y=max_y+dy+1;
   s4.w=(s4.x*s4.x)+(s4.y*s4.y);
   s4.index=N+4;
-  
+    
   //add fake triangles to outer edges of the rectangle
   f=new triangle;
   f->index=-1;
   f->fake=true;
+
+  s1.nbors.insert(N+3);
+  s2.nbors.insert(N+1);
+  s3.nbors.insert(N+2);
+  s2.nbors.insert(N+3);
+  s4.nbors.insert(N+2);
+  s3.nbors.insert(N+4);
   
   E.insert(map_entry(edge(s2.index,s1.index),f));
   E.insert(map_entry(edge(s1.index,s3.index),f));

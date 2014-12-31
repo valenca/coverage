@@ -298,7 +298,6 @@ void cov(int pos, int ncent, int nncent, double score,int far,int last,int c){
       if(centroid[i]==0 && cent_of[i]==*it){
 	if(dist[pos][i]<dist[i][*it]){
 	  cent_of[i]=pos;
-	  score=dist[i][*it];
 	  if(i==far)
 	    tog=0;
 	}

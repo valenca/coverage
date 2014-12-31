@@ -22,7 +22,8 @@ solve;
 #printf {j in 1..N:y[j]==1} "%i ", j-1;
 #printf "\n";
 #for {i in 1..N}{for {j in 1..N} printf "%s ", if x[i,j] then "1" else "0"; printf("\n");}
-     
+
+printf "%d points %d centroids:\n",N,K; 
 printf {j in 1..N}"%i ", y[j];
 printf "\n";
 printf "%f\n",D;

@@ -5,6 +5,9 @@
 #include<set>
 #include<stack>
 
+#define DEBUG
+#define HIL 32
+
 using namespace std;
 
 typedef struct triangle tringle;
@@ -66,4 +69,5 @@ bool loadState();
 triangle *findTriangle(point &p,triangle &t);
 int digCavity(point &p,point &q, point &r);
 int insertPoint(point &p);
-void initMesh(double min_x,double max_x,double min_y,double max_y);
+void initMesh(double min_x,double max_x,double min_y,double max_y,
+	      point &s1,point &s2,point &s3,point &s4);
