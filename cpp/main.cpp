@@ -13,6 +13,8 @@
 #define min(a,b) (((a)<(b))?(a):(b))
 #define max(a,b) (((a)>(b))?(a):(b))
 
+#define DEBUGY
+
 using namespace std;
 
 //triangulation variables - external
@@ -48,6 +50,8 @@ int readVector(){
     cin >> v[i].y;
     
     v[i].w = v[i].x*v[i].x + v[i].y*v[i].y;
+
+    v[i].t_index=i;
     
     max_x=max(v[i].x,max_x);
     max_y=max(v[i].y,max_y);
@@ -245,7 +249,8 @@ void coverage(int pos, int ncentral, double score, int idx,int last) {
 void cov(int pos, int ncent, int nncent, double score,int far,int last,int c){
   int i,j,tfar,tnc[pos+1],tog=0;
   double tscore;
-	
+
+#ifdef DEBUG
   tscore=0;
   if(nncent>0){
     for(i=0;i<pos;i++){
@@ -258,9 +263,11 @@ void cov(int pos, int ncent, int nncent, double score,int far,int last,int c){
 	}
       }
     }
-    cout << tfar << " "<< far << endl;
+    if(tscore != score)
+      cout << score << " "<< tscore << endl;
   }
-	
+#endif
+  
   if(ncent==K){
     for(i=pos;i<N;i++){
       if(last[centroid]!=1)
@@ -293,18 +300,18 @@ void cov(int pos, int ncent, int nncent, double score,int far,int last,int c){
   insertPoint(v[pos]);
   centroid[pos]=1;
   cent_of[pos]=pos;
-  for(set_it it = v[pos].nbors.begin();it!=v[pos].nbors.end();it++){
+  //for(set_it it = v[pos].nbors.begin();it!=v[pos].nbors.end();it++){
     for(i=0;i<pos;i++){
-      if(centroid[i]==0 && cent_of[i]==*it){
-	if(dist[pos][i]<dist[i][*it]){
+      if(centroid[i]==0 && v[pos].nbors.count(cent_of[i])>0){
+	if(dist[pos][i]<dist[i][cent_of[i]]){
 	  cent_of[i]=pos;
-	  score=dist[i][*it];
+	  //score=dist[i][*it];
 	  if(i==far)
 	    tog=0;
 	}
       }
     }
-  }
+    //}
 	
   if (tog==0){
     score=0;
@@ -355,7 +362,7 @@ void cov(int pos, int ncent, int nncent, double score,int far,int last,int c){
 }	
   
 int main(){
-  int i,c;
+  int i,j,c;
   triangle *t;
   point p;
 
@@ -375,8 +382,12 @@ int main(){
 #endif
   
   cov(0,0,0,0,-1,N+1,-1);
-  for(i=0;i<N;i++)
-    cout << best_v[i] << " ";
+  
+  for(j=0;j<N;j++)
+    for(i=0;i<N;i++)
+      if(v[i].t_index==j)
+	cout << best_v[i] << " ";
+  
   cout << endl << best <<endl;
   return 0;
 }

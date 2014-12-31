@@ -5,7 +5,6 @@
 #include<set>
 #include<stack>
 
-#define DEBUG
 #define HIL 32
 
 using namespace std;
@@ -32,6 +31,8 @@ struct triangle{		//half-edge str
 
 struct point{			//point structure
   int index;			//index of the point
+
+  int t_index;
   
   double x; 			//x coordinate
   double y;			//y chromossome
