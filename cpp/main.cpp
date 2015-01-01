@@ -1,5 +1,6 @@
 #include<cstdlib>
 #include<iostream>
+#include<iomanip>
 #include<cmath>
 #include<map>
 #include<set>
@@ -13,7 +14,7 @@
 #define min(a,b) (((a)<(b))?(a):(b))
 #define max(a,b) (((a)>(b))?(a):(b))
 
-#define DEBUGY
+#define DEBUGy
 
 using namespace std;
 
@@ -119,8 +120,7 @@ int route(int p,int q){
     }
   }while(mz!=mz2);
 
-#ifdef DEBUG
-  
+#ifdef DEBUG  
   double tmn=INT_MAX;
   int tmz=mz;
   for(int i=0;i<N;i++){
@@ -129,144 +129,28 @@ int route(int p,int q){
       tmz=i;
     }
   }
-
   if(tmn!=mn){
     cout << p <<" "<< q << " ROUTE ERROR: "<< mz << " should be "<< tmz << " " << centroid[q] <<endl;
   }
-  
 #endif
 
   return mz;
 }
 
 int bound (int pos, double score, int idx){
-  return 0;
   int i;
-  for (i = pos; i < N; i++){
+  for (i = N-1; i >= pos; i--){
     // an improvement can be found
-    if (dist[idx][i] < score){
+    if (dist[idx][i] < best){ // spof
       return 1;
     }
   }
   return 0;
 }
 
-void coverage(int pos, int ncentral, double score, int idx,int last) {
-  int i, j,clos;
-  double nscore,val;
-  int tmp_central_of[N];		
-  
-  if (ncentral == K) {
-    for (i = pos; i < N; i++){
-      val = INT_MAX;
-      for (j = 0; j < pos; j++){
-	if (centroid[j] == 1 && dist[i][j] < val) 
-	  val = dist[i][j];
-      }
-      score = max(score,val);
-    }
-    // update the best
-    if (score < best) {
-      best = score;
-      cout <<best<<endl;
-      for(i=0;i<N;i++)
-	best_v[i]=centroid[i];
-    }
-    return;
-  }
-
-  if (pos == N){
-    //cout << 1 <<endl;
-    return;
-  }
-  if(pos + K - ncentral > N){
-    //cout << 2 <<endl;
-    return;
-  }
-  if(N - pos + ncentral < K){
-    cout << 3 <<endl;
-    return;
-  }
-
-  
-  if (pos > ncentral && score >= best && bound(pos, score, idx) == 0)
-    return;
-
-  // make temporary copy of central_of
-  for (i = 0; i <= pos; i++)
-    tmp_central_of[i] = cent_of[i];
-	
-  // Decision 1: the point at pos is a centroid
-  // Then, assign non-centroids to the new centroid and change accordingly		
-  // Note: overall score can be equal or decrease.
-
-  insertPoint(v[pos]);  
-  centroid[pos] = 1;
-  nscore = 0;
-  for (i = 0; i < pos; i++){
-    if (centroid[i] == 0) {
-      if (dist[pos][i] < dist[cent_of[i]][i]) 
-	cent_of[i] = pos;
-      if (nscore < dist[cent_of[i]][i]) {
-	nscore = dist[cent_of[i]][i];
-	idx = i;  // keep the largest link for the bound
-      }
-    }
-  }	
-  //Recursion
-  coverage(pos+1, ncentral+1, nscore, idx,last);
-  loadState();
-  // recover the contents of the old central_of
-  for (i = 0; i <= pos; i++)
-    cent_of[i] = tmp_central_of[i];
-
-  // Decision 2: the point at pos is a non- centroid
-  // Then, find the closest centroid		
-  // Note: overall score can be equal or increase.
-  centroid[pos] = 0;
-  for (i = 0; i < pos; i++){
-    if (centroid[i] == 1){
-      clos=route(pos,i);
-      if (dist[pos][clos] < dist[cent_of[pos]][pos]) {
-	cent_of[pos] = clos;	
-      }
-      break;
-    }
-  }
-  if (score < dist[cent_of[pos]][pos]) {
-    score = dist[cent_of[pos]][pos];
-    idx = pos;	// keep the largest link for the bound 
-  }
-
-  // recursion
-  coverage(pos+1, ncentral, score, idx,last);
-
-  // undo
-  centroid[pos] = 0;
-  cent_of[pos] = pos;
-}
-
 void cov(int pos, int ncent, int nncent, double score,int far,int last,int c){
-  int i,j,tfar,tnc[pos+1],tog=0;
+  int i,tfar,tnc[pos+1],tog=0;
   double tscore;
-
-#ifdef DEBUG
-  tscore=0;
-  if(nncent>0){
-    for(i=0;i<pos;i++){
-      for(j=0;j<pos;j++){
-	if(centroid[i]==0 && centroid[j]==1){
-	  if(dist[i][j]>tscore){
-	    tscore=dist[i][j];
-	    tfar=i;
-	  }
-	}
-      }
-    }
-    if(tscore != score)
-      cout << score << " "<< tscore << endl;
-  }
-#endif
   
   if(ncent==K){
     for(i=pos;i<N;i++){
@@ -288,9 +172,8 @@ void cov(int pos, int ncent, int nncent, double score,int far,int last,int c){
 	
   if(pos==N || nncent+K>N)
     return;
-	
-	
-  //if (pos > ncent && score >= best && bound(pos, score, far) == 0) return;
+		
+  if (pos > ncent && score >= best && bound(pos, score, far) == 0) return;
 	
   //point is a centroid
   for(i=0;i<=pos;i++) tnc[i]=cent_of[i];
@@ -300,29 +183,29 @@ void cov(int pos, int ncent, int nncent, double score,int far,int last,int c){
   insertPoint(v[pos]);
   centroid[pos]=1;
   cent_of[pos]=pos;
-  //for(set_it it = v[pos].nbors.begin();it!=v[pos].nbors.end();it++){
-    for(i=0;i<pos;i++){
-      if(centroid[i]==0 && v[pos].nbors.count(cent_of[i])>0){
-	if(dist[pos][i]<dist[i][cent_of[i]]){
-	  cent_of[i]=pos;
-	  //score=dist[i][*it];
-	  if(i==far)
-	    tog=0;
+  
+  for(i=0;i<pos;i++){
+    if(v[pos].nbors.count(cent_of[i])>0 && centroid[i]==0){
+      if(dist[pos][i]<dist[i][cent_of[i]]){
+	cent_of[i]=pos;
+	if(i==far){
+	  tog=1;
 	}
-      }
-    }
-    //}
-	
-  if (tog==0){
-    score=0;
-    for(i=0;i<pos;i++){
-      if(centroid[i] == 0 && dist[i][cent_of[i]]>score){
-	score=dist[i][cent_of[i]];
-	far=pos;
       }
     }
   }
 	
+  if (tog==1){
+    score=0;
+    for(i=0;i<pos;i++){
+      if(centroid[i] == 0 && dist[i][cent_of[i]]>score){
+	score=dist[i][cent_of[i]];
+	far=i;
+      }
+    }
+  }
+
+  
   //recursion
   cov(pos+1,ncent+1,nncent,score,far,last,1);
   //backtracking
@@ -334,9 +217,8 @@ void cov(int pos, int ncent, int nncent, double score,int far,int last,int c){
     cent_of[i]=tnc[i];
 	
   //point is not a centroid
-	
   centroid[pos]=0;
-  if(ncent==0){
+  if(ncent==-1){
     cent_of[pos]=N+1;
     v[N+1].nbors.insert(pos);
     far=pos;
@@ -373,10 +255,6 @@ int main(){
   readVector();
   initMesh(min_x,max_x,min_y,max_y,v[N+1],v[N+2],v[N+3],v[N+4]);
 
-  /*
-    for (i=0;i<(N+5);i++)
-    cout << i << ": " << v[i].x<<" " << v[i].y << endl;
-  */
 #ifdef DEBUG
   cout << "processing..." << endl;
 #endif
