@@ -1,7 +1,7 @@
 #include<cstdlib>
 #include<iostream>
 #include<cmath>
-#include<map>
+#include<unordered_map>
 #include<set>
 #include<stack>
 
@@ -11,14 +11,14 @@ using namespace std;
 
 typedef struct triangle tringle;
 typedef struct point point;
-typedef pair<int,int> edge;
-typedef pair<edge,triangle*> map_entry;
+typedef pair<long int,triangle*> map_entry;
 
 typedef set<int>::iterator set_it;
-typedef map<edge,triangle*>::iterator map_it;
+typedef unordered_map<long int,triangle*>::iterator map_it;
 
-extern int N;			//number of points
-extern map<edge,triangle*> E;	//hashtable of half-edges
+extern int N;			//number of points on original set
+extern int N5;			//number of points on extended set (includes outer rectangle)
+extern unordered_map<long int,triangle*> E;	//hashtable of half-edges
 
 struct triangle{		//half-edge str
   bool fake;			//auxiliary triangle flag. true if triangle is outside of the convex hull
@@ -41,7 +41,7 @@ struct point{			//point structure
   int d;			//position in hilbert curve
   
   set<int> nbors;
-  
+
   bool operator< (const point& str)const{
     return (d < str.d);
   }

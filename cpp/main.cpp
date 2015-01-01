@@ -21,6 +21,7 @@ using namespace std;
 //triangulation variables - external
 
 int N;	 				//total number of points
+int N5;
 int K; 					//number of centroids
 point *v;				//array of points
 
@@ -41,8 +42,12 @@ int readVector(){
   double mx,mn;
   cin >> N;
   cin >> K;
-  v=new point[N+5]; //V[N+1]..V[N+4] are super triangles, V[N] is a debug point/buffer
+  
+  N5=N+5;
+  
+  v=new point[N5]; //V[N+1]..V[N+4] are super triangles, V[N] is a debug point/buffer
 
+  
   max_x=max_y=0;
   min_x=min_y=INT_MAX;
   
@@ -69,7 +74,7 @@ int readVector(){
   sort(v,v+N);
 
   best_v   = new int[N];
-  centroid = new int[N+5];
+  centroid = new int[N5];
   cent_of  = new int[N];
 
   centroid[N+1]=centroid[N+2]=centroid[N+3]=centroid[N+4]=1;
@@ -81,14 +86,14 @@ int readVector(){
     cent_of[i]=-1;
   }
   
-  dist = new double*[N+4];
-  for(i=0;i<N+4;i++){
-    dist[i]=new double[N+4];
+  dist = new double*[N5];
+  for(i=0;i<N5-1;i++){
+    dist[i]=new double[N5];
     dist[i][i]=0;
   }
     
-  for(i=0;i<N+3;i++){
-    for(j=i+1;j<N+4;j++){
+  for(i=0;i<N5-2;i++){
+    for(j=i+1;j<N5-1;j++){
       if(i<N && j<N){
 	dist[i][j]=dist[j][i]=euclidean(v[i],v[j]);
       }
@@ -265,7 +270,7 @@ int main(){
     for(i=0;i<N;i++)
       if(v[i].t_index==j)
 	cout << best_v[i] << " ";
-  
+
   cout << endl << best <<endl;
   return 0;
 }

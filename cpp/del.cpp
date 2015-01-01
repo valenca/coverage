@@ -1,7 +1,6 @@
 #include<cstdlib>
 #include<iostream>
 #include<cmath>
-#include<set>
 #include<stack>
 #include"del.h"
 
@@ -10,7 +9,7 @@ using namespace std;
 int n_triangles;
 triangle * last_t;			//last triangle created
 
-map< pair<int,int> , triangle * > E;	//hashtable of half-edges
+unordered_map< long int , triangle * > E;		//hashtable of half-edges
 
 stack< triangle* > s_l_tri;		//stack of last triangle created
 stack<int> c_edg_in;			//stack of number of h.edges created last
@@ -94,7 +93,7 @@ double inCircle(point &p,point &q,point &r,point &s){
 }
 
 point * adjacent(point &p, point&q){
-  triangle *t=E[make_pair(p.index,q.index)];
+  triangle *t=E[N5*p.index+q.index];
   if (t->v1->index != p.index && t->v1->index != q.index){
     return t->v1;
   }
@@ -112,7 +111,7 @@ double euclidean(point &p,point &q){
 //TRIANGLE MANIPULATION
 triangle * makeTriangle(point &p1,point &p2, point &p3){
   triangle *t;
-  edge e1,e2,e3;
+  long int e1,e2,e3;
 
   if(tri_pool.empty()){
     triangle * pool_space;
@@ -137,9 +136,9 @@ triangle * makeTriangle(point &p1,point &p2, point &p3){
   t->v3=&p3;
   t->index=n_triangles++;
   
-  e1=edge(p1.index,p2.index);
-  e2=edge(p2.index,p3.index);
-  e3=edge(p3.index,p1.index);
+  e1=(long int)(N5*p1.index+p2.index);
+  e2=(long int)(N5*p2.index+p3.index);
+  e3=(long int)(N5*p3.index+p1.index);
 
   E.insert(map_entry(e1,t));
   E.insert(map_entry(e2,t));
@@ -163,14 +162,14 @@ triangle * makeTriangle(point &p1,point &p2, point &p3){
 
 bool deleteTriangle(triangle &t){
   point *p1,*p2,*p3;
-  edge e1,e2,e3;
+  long int e1,e2,e3;
   p1=t.v1;
   p2=t.v2;
   p3=t.v3;
 
-  e1=edge(p1->index,p2->index);
-  e2=edge(p2->index,p3->index);
-  e3=edge(p3->index,p1->index);
+  e1=(long int)(N5*p1->index+p2->index);
+  e2=(long int)(N5*p2->index+p3->index);
+  e3=(long int)(N5*p3->index+p1->index);
   
   E.erase(E.find(e1));
   E.erase(E.find(e2));
@@ -258,19 +257,19 @@ triangle *findTriangle(point &p,triangle &t){
     v3=adjacent(*v1,*v2);
     first=false;
   }
-  return E[edge(v1->index,v2->index)];
+  return E[(long int)(N5*v1->index+v2->index)];
 }
 
 int digCavity(point &p,point &q, point &r){
   point *s;
-  if(E[edge(q.index,r.index)]->index==-1){
+  if(E[(long int)(N5*q.index+r.index)]->index==-1){
     makeTriangle(p,r,q);
     return 0;
   }
-  if(E.count(edge(q.index,r.index))>=0){
+  if(E.count((long int)(N5*q.index+r.index))>=0){
     s=adjacent(q,r);
     if( inCircle(p,q,r,*s)>0){
-      deleteTriangle(*E[edge(q.index,r.index)]);
+      deleteTriangle(*E[(long int)(N5*q.index+r.index)]);
       digCavity(p,q,*s);
       digCavity(p,*s,r);
     }
@@ -341,10 +340,10 @@ void initMesh(double min_x,double max_x,double min_y,double max_y,point &s1,poin
   s4.nbors.insert(N+2);
   s3.nbors.insert(N+4);
   
-  E.insert(map_entry(edge(s2.index,s1.index),f));
-  E.insert(map_entry(edge(s1.index,s3.index),f));
-  E.insert(map_entry(edge(s4.index,s2.index),f));
-  E.insert(map_entry(edge(s3.index,s4.index),f));
+  E.insert(map_entry((long int)(N5*s2.index+s1.index),f));
+  E.insert(map_entry((long int)(N5*s1.index+s3.index),f));
+  E.insert(map_entry((long int)(N5*s4.index+s2.index),f));
+  E.insert(map_entry((long int)(N5*s3.index+s4.index),f));
 
   c_edg_in.push(0);
   s_l_tri.push(NULL);

@@ -26,7 +26,9 @@ def maxdist(v,w):
 
 pm=[]
 m = 1000000
+print "going"
 for p in list(combinations(v,K)):
+	print p
 	d=maxdist(p,v)
 	if m > d:
 		m=d
