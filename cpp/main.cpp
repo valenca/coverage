@@ -11,10 +11,7 @@
 
 #include"del.h"
 
-#define min(a,b) (((a)<(b))?(a):(b))
-#define max(a,b) (((a)>(b))?(a):(b))
-
-#define DEBUGy
+#define DEBU
 
 using namespace std;
 
@@ -46,7 +43,6 @@ int readVector(){
   N5=N+5;
   
   v=new point[N5]; //V[N+1]..V[N+4] are super triangles, V[N] is a debug point/buffer
-
   
   max_x=max_y=0;
   min_x=min_y=INT_MAX;
@@ -146,7 +142,7 @@ int bound (int pos, double score, int idx){
   int i;
   for (i = N-1; i >= pos; i--){
     // an improvement can be found
-    if (dist[idx][i] < best){ // spof
+    if (dist[idx][i] < best){ 
       return 1;
     }
   }
@@ -214,12 +210,13 @@ void cov(int pos, int ncent, int nncent, double score,int far,int last,int c){
   //recursion
   cov(pos+1,ncent+1,nncent,score,far,last,1);
   //backtracking
-  score	= tscore;
-  far	= tfar;
   loadState();
-	
-  for(i=0;i<=pos;i++)
-    cent_of[i]=tnc[i];
+  if(score!=tscore){
+    score = tscore;
+    far	= tfar;
+    for(i=0;i<=pos;i++)
+      cent_of[i]=tnc[i];
+  }
 	
   //point is not a centroid
   centroid[pos]=0;
@@ -241,11 +238,13 @@ void cov(int pos, int ncent, int nncent, double score,int far,int last,int c){
     far=pos;
   }
   cov(pos+1,ncent,nncent+1,score,far,pos,0);
-	
-  score=tscore;
-  far=tfar;
-  for(i=0;i<=pos;i++)
-    cent_of[i]=tnc[i];
+
+  if(score!=tscore){
+    score=tscore;
+    far=tfar;
+    for(i=0;i<=pos;i++)
+      cent_of[i]=tnc[i];
+  }
 }	
   
 int main(){

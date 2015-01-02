@@ -41,7 +41,7 @@ struct point{			//point structure
   int d;			//position in hilbert curve
   
   set<int> nbors;
-
+  
   bool operator< (const point& str)const{
     return (d < str.d);
   }
