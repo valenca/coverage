@@ -1,0 +1,18 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Theory and Definitions}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Definition}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Defining as an Optimisation Problem}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.3}{Defining as Linear Programming Problem}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.4}{Algorithmic Concepts}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.4.1}{Branch and Bound}{section.2.4}% 7
+\BOOKMARK [1][-]{section.2.5}{Geometric Concepts and Structures}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.5.1}{Nearest Neighbour}{section.2.5}% 9
+\BOOKMARK [2][-]{subsection.2.5.2}{Point Location}{section.2.5}% 10
+\BOOKMARK [2][-]{subsection.2.5.3}{Voronoi Diagrams}{section.2.5}% 11
+\BOOKMARK [2][-]{subsection.2.5.4}{Delaunay Triangulation}{section.2.5}% 12
+\BOOKMARK [0][-]{chapter.3}{Deterministic Algorithms}{}% 13
+\BOOKMARK [1][-]{section.3.1}{Naive Approach}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.2}{Branch and Bound}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.3}{Delaunay Assisted Branch and Bound}{chapter.3}% 16
+\BOOKMARK [0][-]{chapter.4}{Heuristic Algorithms and Future Work}{}% 17
+\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 18

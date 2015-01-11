@@ -1,0 +1,81 @@
+\chapter{Optimal Minimum Coverage Algorithms}
+\label{chap:algos}
+\lhead{Chapter \ref{chap:algos}. \emph{Deterministic Algorithms}} % This is for the header
+\paragraph{}
+This chapter covers three possible algorithms that solve the coverage problem described in \ref{sect:problem}. All these algorithms calculate the subset $P$ of size $K$ from a set $N$, in a way that minimises the maximum coverage value for all points in $P$, over the remaining points in $N$.
+
+\section{Combinatorial Approach}
+\paragraph{}
+The simplest way to implement a solution to the coverage problem is to enumerate all combinations of $K$ elements from $N$. Each of these combinations is the list of candidate centroids, and every point in $N$ is assigned to its closest centroid. This assignement step takes $\mathcal{O(NK)}$ for each combination of $K$ elements.\\
+Finding the minimum coverage value in this approach is trivial, since it is just a matter selecting the combination of centroids that has the minimum distance between the farthest point from its centroid. \\
+This approach takes $\mathcal{O}(K!)$ time complexity, and takes no advantage from previously calculated candidate solutions.
+\section{Branch and Bound}
+\label{sect:bb}
+A more sophisticated approach to the problem is to use a branch and bound method.\\
+In this approach, we build the assignment between centroids and non-centroids incrementally.\\
+At each step of the recursive tree, we consider one of the points. We then take a decision of whether the point is a centroid or a non-centroid. According to which decision we take, the objective function and the centroid assignment is updated accordingly. We do this until all the centroids have been chosen.
+\subsection{Branching}
+\paragraph{}
+As stated above, branching the tree involves updating the assignment between new points and/or new centroids, as well as update the objective function. The following algorithms explain in detail how to do so.
+\paragraph{Inserting a Centroid}
+To insert a centroid $c$, we must check which points are closer to $c$ than their current centroid, and change their assignment to $c$.
+Since non-centroids only change assignment to centroids closer to them, inserting a centroid means that the objective function either decreases in value or stays the same.\\
+After inserting a centroid, if the farthest non-centroid is reassigned, all non-centroids must be checked to see which one is the new maximiser of the objective function.\\
+This step compares all non-centroids to the new centroid $c$, taking $\mathcal{O}(N)$ time at both the worst and best cases.
+
+\paragraph{Inserting a Non-Centroid}
+Inserting a non-centroid $n$ only requires finding which of the current centroids is the closest to $n$. Updating the objective function is a matter of testing whether the distance between $n$ and its centroid is larger than the current maximum.\\
+Inserting a non-centroid cannot produce a better objective function, since it will either decrease or maintain the current value. \\
+This step compares the distance between point $n$ and all centroids, taking $\mathcal{O}(K)$ time.
+
+\paragraph{Removing a Centroid}
+After a branch is fully calculated, it is necessary to backtrack to the parent state.
+This means removing a centroid $c$, and redistributing the values assigned to $c$ to their respective closest centroids in the remaining set. \\
+The value function either increases or maintains, since the distance for all points previously assigned to $c$ will increase, potentially above the current value for the objective function.\\
+Removing a centroid $c$ means comparing all non-centroids assigned to $c$ to all the other centroids. This step takes $\mathcal{O}(NK)$ time to execute. Alternatively, if the assignment state is saved before inserting the centroid, recovering it requires only retrieving the state, which means, in the worst and best cases copying an array of size $N$, which takes $\mathcal{O}(N)$ time at the expense of additional $\mathcal{O}(N)$ memory space.
+
+\paragraph{Removing a Non-Centroid}
+In order to remove a non-centroid $n$, we only need to update the objective function. If $n$ is the maximiser of the objective function, we must find the second farthest point from its centroid, which is the new maximiser.\\
+Removing a non-centroid can either decrease or maintain the value of the objective function.\\
+Removing a non-centroid $n$ means that the next farthest point from its centroid must be found. This can be done by checking all distances between the non-centroids and their respective centroids, taking $\mathcal{O}(N)$ time. Alternatively, one can save the previous value for the objective function, as well as the maximiser. Retrieving the previous value this way can be done in $\mathcal{O}(1)$ time at the expense of additional $\mathcal{O}(1)$ memory space.
+\subsection{Bounds}
+\paragraph{}
+At all points in the branching, we calculate a lower bound for the value of the objective function the current state's sub-branches. If the lower bound is higher than the best value calculated, then there is no purpose in further exploring the current branch.
+
+\paragraph{Lower Bound}
+After each insertion, centroid or non-centroid, one can assume that, the best case scenario, all the points not yet inserted will be centroids. This would hypothetically decrease the value the most. If this value is higher than the best value of the objective function, then there is no permutation of centroids/non-centroids that will improve the current solution, and the branch can be pruned.
+\paragraph{}
+\section{Delaunay Assisted Branch and Bound}
+\paragraph{}
+Most of the operations in the branch and bound approach described in \ref{sect:bb} have at least linear time complexity for both the best and expected cases. We can speed these up by implementing incrementally built Delaunay triangulations. To aid the calculations, the points are pre-processed and sorted by a Hilbert Curve approximation of a sufficiently high order.
+
+\paragraph{Inserting a Centroid}
+In order to take advantage of Delaunay triangulations, each time a centroid is chosen, it must be included in the Delaunay triangulation. This means that the triangulation must be updated. Inserting a point in a triangulation with $K$ vertices using the Bowyer-Watson algorithm described in \ref{sect:dtconst} takes an estimated $\mathcal{O}(\log{K})$ \cite{tricomplex}.\\
+After having a centroid $c$ included in a Delaunay triangulation, it is possible to know which other centroids are its Voronoi neighbours. This is due to the duality between Delaunay triangulations and Voronoi diagrams.
+Since Voronoi diagrams partition the space by distance to a set of points (in this case, the centroids), we only need to check the subset of non-centroids assigned to the direct neighbours of $c$ to find which points should change assignment to $c$. 
+This property lowers the expected number of comparisons to make. Since the average number of Voronoi neighbours per centroid in any given diagram cannot exceed 6 \cite{tricard}, the number of points to be compared in a uniformly distributed set of non-centroids should not include all non-centroids, but only a small fraction of them.\\
+Despite the lower number of comparisons, the worst-case time complexity is still $\mathcal{O}(N)$ time to complete, and in the worst case scenario it can still require a check through all non-centroids, which can all be assigned to the neighbours of $c$.\\
+If the objective function maximiser is assigned to $c$, all non-centroids can be candidates to become the new maximiser, so a linear check must be done.
+
+\paragraph{Inserting a Non-Centroid}
+Since there is a triangulation in place, finding the closest centroid $c$ to a new non-centroid $n$ is simply a matter of using the greedy routing algorithm to find this centroid.\\
+The greedy routing algorithm has a worst-case time complexity of $\mathcal{O}(K)$. This happens when the search is started in the furthest centroid from $n$, and all centroids are either in the direction of $n$, or are neighbours of the centroids that are. 
+Since the points are inserted ordered by a Hilbert curve approximation, each consecutive point should minimize the position variation from the last, and the last centroid returned by the greedy routing algorithm can be used to start the new query. 
+This means that, ideally, each inserted non-centroid $n$ is close to its respective optimally positioned centroid $c$, and it will only need to calculate the distances to the neighbours of $c$ in order to guarantee that $c$ is indeed the correct centroid.
+The aforementioned property of the average 6 neighbours for each centroid means that the expected time for a query starting at the right centroid is $\mathcal{O}(1)$, and this is heuristically approximated by the Hilbert curves.\\
+The time complexity of inserting one non-centroid is still $\mathcal{O}(K)$ for the worst case. However, the insertion of a large number of uniformly distributed and Hilbert-sorted points \textit{should} behave closer to constant time per point.
+
+\paragraph{Removing a Centroid}
+Removing a centroid $c$ means removing it from the Delaunay triangulation and redistributing all points assigned to $c$ across its neighbours.\\
+Since all points are inserted in the triangulation in a last-in first-out order, removing a point from a triangulation is a matter of retrieving the previous state. We can do this by storing all new edges and triangles in a stack upon construction, and retrieve them upon removal, without the need of recalculating anything. Since inserting a centroid $c$ takes expected $\mathcal{O}(\log{n})$ time \cite{tricomplex}, and removing it will take exactly the same higher level operations (in reverse order), it can also be done in expected $\mathcal{O}(\log{n})$ time, without the need to do extra calculations.\\
+Likewise, redistributing the points assigned to $c$ takes retrieving the previous state. Each change in assignment can be saved in a stack upon insertion, and retrieving it can be done by popping the stack.\\
+This step also takes $\mathcal{O}(N)$ time, since all points can change assignment. Using a stack limits the number of operations to only the ones changed upon insertion.
+
+\paragraph{Removing a Non-Centroid}
+Removing a non-centroid $n$ only requires recovering the second farthest point if $n$ is currently the farthest point, otherwise, no operations besides erasing $n$'s assignment, taking $\mathcal{O}(1)$ time and memory.
+
+\paragraph{}
+Despite having the same worst-case time complexity as the branch and bound algorithm described in \ref{sect:bb}, the expected time complexity for the Delaunay assisted approach is lower. This approach should have better performance when higher numbers of centroids are needed.\\
+This is especially true since maintaining a valid Delaunay triangulation through all the centroid permutations, as well as the Hilbert sorting, takes a computing cost. This extra overhead will have a negative impact in the performance in the smaller instances of the problem.\\
+
+\section{Results?}

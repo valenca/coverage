@@ -1,0 +1,27 @@
+\begin{algorithm}[H]
+    \caption{Bowyer-Watson Algorithm}
+    \begin{algorithmic}[1]
+        \Procedure {InsertVertex}{$v,a,b,c$}
+            \State $\text{DeleteTriangle}(a,b,c)$
+            \State $\text{DigCavity}(v,a,b)$
+            \State $\text{DigCavity}(v,b,c)$
+            \State $\text{DigCavity}(v,c,a)$
+        \EndProcedure
+    \end{algorithmic}
+    
+    \begin{algorithmic}[1]
+       	\Procedure {DigCavity}{$a,b,c$}
+        	\State $d \gets \text{Adjacent}(b,c)$
+        	\If {$d \neq \varnothing$}
+	        	\If {$\text{inCircle}(a,b,c,d)$}
+		        	\State $\text{DeleteTriangle}(w,v,x)$
+		        	\State $\text{DigCavity}(a,b,d)$
+		        	\State $\text{DigCavity}(a,d,c)$
+	        	\Else 
+		        	\State$\text{AddTriangle}(a,b,c)$
+	        	\EndIf
+        	\EndIf
+       	\EndProcedure
+    \end{algorithmic}
+    \label{alg:bowyer}
+\end{algorithm}

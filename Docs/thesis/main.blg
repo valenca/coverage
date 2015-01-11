@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2014/Arch Linux)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: unsrtnat.bst
+Database file #1: Bibliography.bib
+Warning--empty title in tricomplex
+Warning--empty journal in tricomplex
+Warning--empty year in tricomplex
+Warning--empty year in tricomplex
+Warning--empty title in tricard
+Warning--empty journal in tricard
+Warning--empty year in tricard
+Warning--empty year in tricard
+You've used 3 entries,
+            2481 wiz_defined-function locations,
+            561 strings with 4647 characters,
+and the built_in function-call counts, 1041 in all, are:
+= -- 82
+> -- 35
+< -- 3
++ -- 16
+- -- 10
+* -- 74
+:= -- 158
+add.period$ -- 5
+call.type$ -- 3
+change.case$ -- 4
+chr.to.int$ -- 3
+cite$ -- 11
+duplicate$ -- 64
+empty$ -- 100
+format.name$ -- 13
+if$ -- 216
+int.to.chr$ -- 1
+int.to.str$ -- 4
+missing$ -- 3
+newline$ -- 19
+num.names$ -- 9
+pop$ -- 39
+preamble$ -- 1
+purify$ -- 3
+quote$ -- 0
+skip$ -- 40
+stack$ -- 0
+substring$ -- 38
+swap$ -- 14
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 21
+warning$ -- 8
+while$ -- 9
+width$ -- 0
+write$ -- 34
+(There were 8 warnings)

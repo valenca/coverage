@@ -1,0 +1,17 @@
+\begin{algorithm}[H]
+    \caption{Insert Centroid}
+    \begin{algorithmic}[1]
+        \Procedure {insert\_centroid X}{}
+            \For {C \textbf{in} Centroids}
+                \For{i \textbf{in} $\text{CoveredBy}(C)$}
+                    \If {$\text{dist}(X,i) < \text{dist}(C,i)$}
+                        \State $\text{CoveredBy}(C) \gets \text{CoveredBy}(C) \setminus i$
+                        \State $\text{CoveredBy}(X) \gets \text{CoveredBy}(X) \cap i$
+                        \State Update Objective Function
+                    \EndIf
+                \EndFor
+            \EndFor
+        \EndProcedure
+    \end{algorithmic}
+    \label{alg:bb_ic}
+\end{algorithm}

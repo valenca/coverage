@@ -1,0 +1,42 @@
+
+\documentclass[
+				twoside,
+				11pt, a4paper,
+				footinclude=true,
+				headinclude=true,
+				cleardoublepage=empty
+]{scrbook}
+
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage[linedheaders,parts,pdfspacing]{classicthesis}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{acronym}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usetikzlibrary{positioning,arrows}
+\usetikzlibrary{decorations.pathreplacing} 
+
+\newtheorem{theorem}{Theorem}[section]
+
+
+\author{João Valença}
+\title{Visualisation and Analysis of Geographic Information: Algorithms and Data Structures}
+
+\begin{document}
+\maketitle	
+
+\setcounter{tocdepth}{2} % <-- 2 includes up to subsections in the ToC
+\setcounter{secnumdepth}{3} % <-- 3 numbers up to subsubsections
+\tableofcontents 
+
+\input{abstract}
+\input{introduction}
+\input{cstudy}
+\input{algorithms}
+\input{future}
+\input{conclusion}
+\end{document}

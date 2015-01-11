@@ -1,0 +1,21 @@
+\begin{figure}[H]
+	\begin{center}
+		\begin{tikzpicture}[scale=0.4]
+		%\draw [<->,thick] (0,10) node (yaxis) [left] {}
+		%|- (15,0) node (xaxis) [below] {};
+		
+		\draw [-{Straight Barb[left,scale=2]},thick] (4,8) -- 
+			node[anchor=south west]{$p_ip_j$}(6,2);
+			
+		\draw [-{Straight Barb[left,scale=2]},thick] (6,2) -- 
+			node[anchor=north east][xshift=2]{$p_jp_i$}(4,8);		
+		
+				\fill (1,1) circle (3pt);
+		\fill (4,8) circle (3pt) node[anchor=west]{$p_i$};
+		\fill (6,2) circle (3pt) node[anchor=west]{$p_j$};
+		\fill (9,5) circle (3pt);
+		\end{tikzpicture}
+	\end{center}
+	\caption{Example of a Representation of the Half-Edge Structure}
+	\label{fig:hedge}
+\end{figure}
