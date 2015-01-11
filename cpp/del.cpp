@@ -49,13 +49,13 @@ void d2xy(int n,int d,int *x,int *y){
  
 //rotate/flipaquadrantappropriately
 void rot(int n,int *x,int *y,int rx,int ry){
+  int t;
   if(ry==0){
     if(rx==1){
       *x=n-1-*x;
       *y=n-1-*y;
     }
-
-    int t=*x;
+    t=*x;
     *x=*y;
     *y=t;
   }

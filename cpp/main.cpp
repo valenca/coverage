@@ -11,11 +11,7 @@
 
 #include"del.h"
 
-#define DEBU
-
 using namespace std;
-
-//triangulation variables - external
 
 int N;	 				//total number of points
 int N5;
@@ -67,7 +63,7 @@ int readVector(){
     v[i].d = xy2d(HIL,(int)((v[i].x-min_x)/(mx/HIL)),(int)((v[i].y-min_y)/(mx/HIL)));
   }
 
-  sort(v,v+N);
+  sort(v,v+N); 
 
   best_v   = new int[N];
   centroid = new int[N5];
@@ -139,20 +135,25 @@ int route(int p,int q){
 }
 
 int bound (int pos, double score, int idx){
-  int i;
+  int i,tog;
   for (i = N-1; i >= pos; i--){
     // an improvement can be found
-    if (dist[idx][i] < best){ 
-      return 1;
-    }
+    if (dist[idx][i]<best)
+      return 0;
   }
-  return 0;
+  return 1;
 }
 
+stack<int> s_change;
+stack<int> c_change;
+stack<int> n_change;
+
 void cov(int pos, int ncent, int nncent, double score,int far,int last,int c){
-  int i,tfar,tnc[pos+1],tog=0;
+  int i,tfar,tog=0;
+  uset_it jt;
+  set_it it;
   double tscore;
-  
+    
   if(ncent==K){
     for(i=pos;i<N;i++){
       if(last[centroid]!=1)
@@ -166,7 +167,7 @@ void cov(int pos, int ncent, int nncent, double score,int far,int last,int c){
       best=score;
       for(i=0;i<N;i++)
 	best_v[i]=centroid[i];
-      cout << best << endl;
+      printf("%f\n",best);
     }
     return;
   }
@@ -174,22 +175,27 @@ void cov(int pos, int ncent, int nncent, double score,int far,int last,int c){
   if(pos==N || nncent+K>N)
     return;
 		
-  if (pos > ncent && score >= best && bound(pos, score, far) == 0) return;
+  if (pos > ncent && score >= best && bound(pos, score, far) == 1){
+    return;
+  }
 	
   //point is a centroid
-  for(i=0;i<=pos;i++) tnc[i]=cent_of[i];
   tscore=score;
   tfar=far;
 	
   insertPoint(v[pos]);
   centroid[pos]=1;
-  cent_of[pos]=pos;
-  
-  for(i=0;i<pos;i++){
-    if(v[pos].nbors.count(cent_of[i])>0 && centroid[i]==0){
-      if(dist[pos][i]<dist[i][cent_of[i]]){
-	cent_of[i]=pos;
-	if(i==far){
+  c_change.push(0);
+  for(it=v[pos].nbors.begin();it!=v[pos].nbors.end();it++){
+    for(jt=v[*it].covered.begin();jt!=v[*it].covered.end();jt++){
+      if(dist[pos][*jt]<dist[*jt][*it]){
+	c_change.top()++;
+	s_change.push(*jt);
+	n_change.push(*it);
+	cent_of[*jt]=pos;
+	v[pos].covered.insert(*jt);
+	v[*it].covered.erase(jt);
+	if(*jt==far){
 	  tog=1;
 	}
       }
@@ -205,72 +211,62 @@ void cov(int pos, int ncent, int nncent, double score,int far,int last,int c){
       }
     }
   }
-
   
   //recursion
   cov(pos+1,ncent+1,nncent,score,far,last,1);
   //backtracking
   loadState();
-  if(score!=tscore){
-    score = tscore;
-    far	= tfar;
-    for(i=0;i<=pos;i++)
-      cent_of[i]=tnc[i];
+  
+  score = tscore;
+  far	= tfar;
+  
+  cent_of[pos]=-1;
+  for(i=0;i<c_change.top();i++){
+    v[n_change.top()].covered.insert(s_change.top());
+    v[pos].covered.erase(s_change.top());
+    cent_of[s_change.top()]=n_change.top();
+    n_change.pop();
+    s_change.pop();
   }
-	
+  c_change.pop();
+  
   //point is not a centroid
   centroid[pos]=0;
-  if(ncent==-1){
-    cent_of[pos]=N+1;
-    v[N+1].nbors.insert(pos);
-    far=pos;
-    score=INT_MAX;
-  }
-  else{
-    if(centroid[last]!=1)
-      last=N+1;
-    last=route(pos,last);
-    cent_of[pos]=last;
-  }
+  
+  if(centroid[last]!=1)
+    last=N+1;
+  last=route(pos,last);
+  v[last].covered.insert(pos);
+  cent_of[pos]=last;
 	
-  if(dist[pos][cent_of[pos]]>score){
+  if(dist[pos][last]>score){
     score=dist[pos][cent_of[pos]];
     far=pos;
   }
+  
   cov(pos+1,ncent,nncent+1,score,far,pos,0);
 
-  if(score!=tscore){
-    score=tscore;
-    far=tfar;
-    for(i=0;i<=pos;i++)
-      cent_of[i]=tnc[i];
-  }
+  score=tscore;
+  far=tfar;
+  v[last].covered.erase(pos);
+  cent_of[pos]=-1;  
 }	
   
 int main(){
   int i,j,c;
   triangle *t;
   point p;
-
-#ifdef DEBUG
-  cout << "pre-processing..." << endl;
-#endif
-  
+  clock_t T=clock();
+    
   readVector();
   initMesh(min_x,max_x,min_y,max_y,v[N+1],v[N+2],v[N+3],v[N+4]);
-
-#ifdef DEBUG
-  cout << "processing..." << endl;
-#endif
-  
   cov(0,0,0,0,-1,N+1,-1);
+  T = clock() - T;
   
-  for(j=0;j<N;j++)
-    for(i=0;i<N;i++)
-      if(v[i].t_index==j)
-	cout << best_v[i] << " ";
-
-  cout << endl << best <<endl;
+  for(i=0;i<N;i++)
+    cout << best_v[i] << " ";
+  
+  printf("\nN = %d,\tK = %d,\tB = %f,\tT = %f\n",N,K,best,((float)T)/CLOCKS_PER_SEC);
   return 0;
 }
 

@@ -2,10 +2,11 @@
 #include<iostream>
 #include<cmath>
 #include<unordered_map>
+#include<unordered_set>
 #include<set>
 #include<stack>
 
-#define HIL 32
+#define HIL 64
 
 using namespace std;
 
@@ -14,6 +15,7 @@ typedef struct point point;
 typedef pair<long int,triangle*> map_entry;
 
 typedef set<int>::iterator set_it;
+typedef set<int>::iterator uset_it;
 typedef unordered_map<long int,triangle*>::iterator map_it;
 
 extern int N;			//number of points on original set
@@ -41,6 +43,7 @@ struct point{			//point structure
   int d;			//position in hilbert curve
   
   set<int> nbors;
+  set<int> covered;
   
   bool operator< (const point& str)const{
     return (d < str.d);

@@ -3,7 +3,7 @@ from sys import argv
 from itertools import izip
 from pprint import pprint
 from math import sqrt
-
+import time
 #with open(argv[1]) as f:
 #	v=map(int,f.read().split())
 
@@ -14,6 +14,8 @@ N=input()
 K=input()
 v=[]
 
+start = time.time()
+
 for i in xrange(N):
 	v.append(map(float,raw_input().split()))
 
@@ -23,7 +25,7 @@ for i,vi in enumerate(v):
 	for j,vj in enumerate(v):
 		d[i+1,j+1]=dist(vi,vj)
 
-with open("distances.dat","w") as f:
+with open("../ILP/distances.dat","w") as f:
 
 	f.write("data;\nparam N:= %d;" % N)
 	f.write("\nparam K:= %d;" % K)
@@ -42,6 +44,11 @@ with open("distances.dat","w") as f:
 		f.write("\n")
 	f.write(";\nend;\n")
 
-call("glpsol -m form.mod -d distances.dat -y output")
-call("cat output")
-call("rm distances.dat")
+if len(argv)==2:
+	call("glpsol -m ../ILP/form.mod -d ../ILP/distances.dat -y ../ILP/output > /dev/null")
+else:
+	call("glpsol -m ../ILP/form.mod -d ../ILP/distances.dat -y ../ILP/output")
+call("cat ../ILP/output | tail -1")
+end = time.time()
+print ("T = %f" % float(end-start))
+call("rm ../ILP/distances.dat")
