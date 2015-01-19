@@ -58,7 +58,7 @@ A common step of geometry-based algorithms to solve the problem is performing a 
 \paragraph{}
 A concept commonly associated with nearest neighbour search is point location. 
 One way to efficiently make a large number o point location queries is to partition the plane into regions. Point location algorithms direct the nearest neighbour search to smaller regions, discarding any points that are too distant from the query, thus reducing the number of calculations necessary to get the proper point location.
-Common structures used for point location are \textit{k-d trees} as described in [[Cambazard]]. A \textit{k-d tree} partitions the space using a divide and conquer approach to define orthogonally aligned half-planes in order to achieve point location queries in $\mathcal{O}(\log{n})$ time. A \textit{k-d tree}, however, needs to be periodically updated in order to keep its efficiency and cannot be constructed or deconstructed incrementally without considering this overhead.
+Common structures used for point location are \textit{k-d trees} as described in \citet{incrementalcov}. A \textit{k-d tree} partitions the space using a divide and conquer approach to define orthogonally aligned half-planes in order to achieve point location queries in $\mathcal{O}(\log{n})$ time. A \textit{k-d tree}, however, needs to be periodically updated in order to keep its efficiency and cannot be constructed or deconstructed incrementally without considering this overhead.
 \subsection{Voronoi Diagrams}
 \paragraph{}
 Voronoi diagrams partition the space into regions, which are defined by the set of points in the space that are closest to a subset of those points. Definitions of distance and space may vary, but on our case we will consider the $\mathbb{R}^2$ plane and the Euclidean distance.\\
@@ -102,7 +102,7 @@ Another point location algorithm to consider is the line walking algorithm. This
 Starting at any triangle $s$, with the geometrical centre $m$, if point $v$ is not contained in $s$, then the line segment $(v,m)$ intersects a finite set of triangles.  
 The line segment $(v,m)$ intersects two edges of each triangle in this set, with the exception of $s$ and $t$ where $(v,m)$ only intersects one edge each. 
 By iterating through each triangle choosing the neighbour that contains the next edge that intersects $(v,m)$, triangle $t$ can be found in $\mathcal{O}(n)$ time.\\
-This algorithm was described by Amenta, Choi, and Rote \cite{walking}, and is ilustrated in Figure \ref*{fig:wk1}.
+This algorithm was described by \citet{walking}, and is ilustrated in Figure \ref*{fig:wk1}.
 \input{Figures/wk1}
 \subsubsection{Construction}
 \label{sect:dtconst}

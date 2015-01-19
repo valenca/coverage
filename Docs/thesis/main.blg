@@ -3,58 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: unsrtnat.bst
 Database file #1: Bibliography.bib
-Warning--empty journal in linearprog
-Warning--empty title in incrementalcov
-Warning--empty journal in incrementalcov
-Warning--empty year in incrementalcov
-Warning--empty year in incrementalcov
-Warning--empty title in tricomplex
-Warning--empty journal in tricomplex
-Warning--empty year in tricomplex
-Warning--empty year in tricomplex
-Warning--empty title in tricard
-Warning--empty journal in tricard
-Warning--empty year in tricard
-Warning--empty year in tricard
-You've used 5 entries,
+Warning--I didn't find a database entry for "tricard"
+You've used 4 entries,
             2481 wiz_defined-function locations,
-            568 strings with 4800 characters,
-and the built_in function-call counts, 1720 in all, are:
-= -- 136
-> -- 63
-< -- 5
-+ -- 28
-- -- 18
-* -- 124
-:= -- 260
-add.period$ -- 9
-call.type$ -- 5
+            579 strings with 5255 characters,
+and the built_in function-call counts, 1768 in all, are:
+= -- 156
+> -- 76
+< -- 3
++ -- 30
+- -- 22
+* -- 123
+:= -- 269
+add.period$ -- 14
+call.type$ -- 4
 change.case$ -- 7
-chr.to.int$ -- 5
-cite$ -- 18
-duplicate$ -- 106
-empty$ -- 165
-format.name$ -- 23
-if$ -- 360
+chr.to.int$ -- 4
+cite$ -- 4
+duplicate$ -- 99
+empty$ -- 167
+format.name$ -- 26
+if$ -- 391
 int.to.chr$ -- 1
-int.to.str$ -- 6
+int.to.str$ -- 5
 missing$ -- 5
-newline$ -- 27
-num.names$ -- 15
-pop$ -- 65
+newline$ -- 28
+num.names$ -- 12
+pop$ -- 43
 preamble$ -- 1
-purify$ -- 5
+purify$ -- 4
 quote$ -- 0
-skip$ -- 64
+skip$ -- 60
 stack$ -- 0
-substring$ -- 58
-swap$ -- 22
+substring$ -- 86
+swap$ -- 25
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 35
-warning$ -- 13
+type$ -- 25
+warning$ -- 0
 while$ -- 16
 width$ -- 0
-write$ -- 53
-(There were 13 warnings)
+write$ -- 60
+(There was 1 warning)

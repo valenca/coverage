@@ -1,28 +1,34 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{4}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[Cambazard et~al.(2012)Cambazard, Mehta, O’Sullivan, and
+  Quesada]{incrementalcov}
+Hadrien Cambazard, Deepak Mehta, Barry O’Sullivan, and Luis Quesada.
+\newblock A computational geometry-based local search algorithm for planar
+  location problems.
+\newblock In \emph{Integration of AI and OR Techniques in Contraint Programming
+  for Combinatorial Optimzation Problems}, pages 97--112. Springer, 2012.
+
 \bibitem[Amenta et~al.(2003)Amenta, Choi, and Rote]{walking}
-Nina Amenta, Sunghee Choi, and Günter Rote.
+Nina Amenta, Sunghee Choi, and G{\"u}nter Rote.
 \newblock Incremental constructions con brio.
-\newblock \emph{Proceedings of the Nineteenth Annual Symposium on Computational
-  Geometry (San Diego, California)}, pages 211--219, June 2003.
+\newblock In \emph{Proceedings of the nineteenth annual symposium on
+  Computational geometry}, pages 211--219. ACM, 2003.
 
-\bibitem[Elloumi et~al.(2001)Elloumi, Labbé, and Pochet]{linearprog}
-Sourour Elloumi, Martine Labbé, and Yves Pochet.
-\newblock New formulation and resolution method for the p-center problem.
-\newblock pages 3--4, December 2001.
+\bibitem[Elloumi et~al.(2004)Elloumi, Labb{\'e}, and Pochet]{linearprog}
+Sourour Elloumi, Martine Labb{\'e}, and Yves Pochet.
+\newblock A new formulation and resolution method for the p-center problem.
+\newblock \emph{INFORMS Journal on Computing}, 16\penalty0 (1):\penalty0
+  84--94, 2004.
 
-\bibitem[Cambazard()]{incrementalcov}
-Cambazard.
-
-\bibitem[Shewchuk()]{tricomplex}
-Shewchuk.
-
-\bibitem[find()]{tricard}
-find.
+\bibitem[Shewchuk(1999)]{tricomplex}
+Jonathan~Richard Shewchuk.
+\newblock \emph{Lecture notes on Delaunay mesh generation}.
+\newblock Department of Electrical Engineering and Computer Science, University
+  of California at Berkeley, 1999.
 
 \end{thebibliography}

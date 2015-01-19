@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2014.12.24)  19 JAN 2015 17:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2014.12.24)  19 JAN 2015 23:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1183,14 +1183,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc [1
-
-
-])
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- (./main.lof)
+ [1
+
+
+] (./main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
@@ -1245,7 +1245,12 @@ Chapter 4.
 ------------------------------------------------------------------------------
 [14
 
-] [15] [16] [17]
+] [15]
+
+Package natbib Warning: Citation `tricard' on page 16 undefined on input line 5
+6.
+
+[16] [17]
 Underfull \hbox (badness 10000) in paragraph at lines 78--80
 
  []
@@ -1268,7 +1273,11 @@ Chapter 6.
 ------------------------------------------------------------------------------
  Bibliography
 ------------------------------------------------------------------------------
-(./main.bbl) [22
+(./main.bbl)
+
+Package natbib Warning: There were undefined citations.
+
+[22
 
 
 ]
@@ -1278,14 +1287,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 290.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 290.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 290.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BCE294E5CA9CF1DC95D3F7204324C76F;5137.
+(rerunfilecheck)             Checksum: A3F7F8FAF7FFCA519A7656F224EE8A28;4943.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 290.
  ) 
 Here is how much of TeX's memory you used:
- 27025 strings out of 493108
- 497594 string characters out of 6140724
- 667798 words of memory out of 5000000
- 29856 multiletter control sequences out of 15000+600000
+ 27020 strings out of 493108
+ 497518 string characters out of 6140724
+ 667834 words of memory out of 5000000
+ 29853 multiletter control sequences out of 15000+600000
  13515 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,67p,18260b,742s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1303,10 +1312,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols
 /msbm10.pfb>
-Output written on main.pdf (25 pages, 254021 bytes).
+Output written on main.pdf (25 pages, 255802 bytes).
 PDF statistics:
- 487 PDF objects out of 1000 (max. 8388607)
- 439 compressed objects within 5 object streams
- 126 named destinations out of 1000 (max. 500000)
- 245 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 481 PDF objects out of 1000 (max. 8388607)
+ 433 compressed objects within 5 object streams
+ 124 named destinations out of 1000 (max. 500000)
+ 237 words of extra memory for PDF output out of 10000 (max. 10000000)
 
