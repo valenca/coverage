@@ -1,8 +1,25 @@
-\chapter{Heuristic Algorithms and Future Work}
+\chapter{Future Work}
 \label{chap:future}
 \lhead{Chapter \ref{chap:future}. \emph{Heuristic Algorithms and Future Work}} % This is for the header
-\section{Approximating the Problem}
-\section{Panning and Zooming}
-\section{Scalable Algorithms}
-\section{Usable Structures}
+\section{Integration in a Visualisation Framework}
+\paragraph{}
+The final objective of this study is to integrate an algorithm in a web application that can display the most representative set as possible. There is, however, a time constraint to do this. The feedback time on the application needs to be as small as possible while still delivering an acceptable set of points, in order to not lose engagement from the user.
+\paragraph{}
+The application will display a rectangular window, showing a cut of geographical region containing a set of points. The algorithm chosen will need to be able to choose a representative set of points within the cut quickly, as well as be able to recalculate a new set points for a new cut, resulting from panning or zooming the display window over the region.
+\paragraph{}
+The algorithm serve as the middleware responsible for filtering the response of a GIS server to a Web Map Service, or \emph{WMS} request. \emph{WMS} lists the geographic coordinates of the points to be represented in an image by the coordinates mapped into orthogonally organised pixels on an image displaying the cut of the region requested by the application.
+\paragraph{}
+The candidate algorithms will be tested using data from the Open Street Map project. The project features a lot of open source data, as well as a versatile API's for fetching data in the \emph{WMS} standard.
+
+\section{Heuristic Approaches}
+Optimal solution algorithms, and their slow time performance, makes them a poor choice for real-time applications. As such, heuristic algorithms that provide good but not optimal solution in faster time may be the
+\paragraph{}
 \section{Uniformity}
+Another measure of quality for a solution is its \emph{uniformity}. Uniformity is defined mathematically in a set of points as the distance between the closest pair of points. The most representative subset $U$ of a larger set $N$ relative to its uniformity will be the subset of $N$ that has the highest value for the distance of its closest pair. Like coverage, the concept of uniformity is frequent in the field of optimisation. Maximising uniformity can be formally defined as:
+
+\begin{equation}
+\max_{U \in N}{\min_{\substack{u_i,u_j \in U \\ u_i \neq u_j}}{\lVert u_i-u_j \rVert}}
+\end{equation}
+
+\noindent
+Where $N$ is the initial set of points in $\mathbb{R}^2$, $U$ is the most uniform subset in $N$, and $\lVert \cdot \rVert$ is the Euclidean distance between two points.

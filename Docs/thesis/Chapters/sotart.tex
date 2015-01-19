@@ -1,6 +1,43 @@
 \chapter{State of the Art}
 \label{chap:sota}
 \lhead{Chapter \ref{chap:sota}. \emph{State of the Art}} % This is for the header
-\section{Geographic/Geometric Information Algorithms}
+\paragraph{}
+The \emph{p-center} problem is a well known problem in the optimisation field of study. As such, several approaches have been explored over the years. 
+
+\section{Defining the Problem in Integer Linear Programming}
+\paragraph{}
+A simple and straight-forward approach to the problem is to model it in  integer linear programming as follows:
+\begin{align}
+\text{minimise}   \quad& D							   &\\
+\text{subject to} \quad
+& \sum\limits_{j=1}^{N}{y_j} = k 
+& 							\label{ilp:1}\\
+& \sum\limits_{j=1}^{N}{x_{ij}}	= 1   
+& i=1,\ldots,N 				\label{ilp:2}\\
+& \sum\limits_{j=1}^{N}{d_{ij} x_{ij}} \leq D
+& i=1,\ldots,N				\label{ilp:3}\\
+& x_{ij} \leq y_{j}				   
+& i=1,\ldots,N;j=1,\ldots,N	\label{ilp:4}\\
+& x_{ij},y_{j} \in \{0,1\}
+& i=1,\ldots,N;j=1,\ldots,N \label{ilp:5}
+\end{align}
+In this formulation, $y_j = 1$ if point $j$ is a centroid and $y_j = 0$ if it is a non-centroid.
+$x_ij = 1$ if the point $i$ is assigned to the centroid $j$, and $x_{ij}=0$ if it is not.
+$d_{ij}$ is the Euclidean distance between points $i$ and $j$.
+Constraint \ref{ilp:1} ensures that $k$ centroids are chosen.
+Constraint \ref{ilp:2} limits the assignment of one point to more than one centroid.
+Constraint \ref{ilp:3} ensures that all active distances are lower than the limit we are minimising.
+Constraint \ref{ilp:4} limits points to being assigned only to centroids, where $y_j=1$.
+Constraint \ref{ilp:5} defines both $x_{ij}$ and $y_j$ as binary variables, in order to properly represent selection and assignment.
+\paragraph{}
+It is worth noting that this formulation minimises the objective function by selecting the best possible set of centroids, but it only minimises the maximum coverage. This way, only the farthest point from its centroid has the guarantee that it is connected to its closest centroid.\\
+Every other point, however, can be linked to any centroid so long as it is closer to it than the distance defined by the objective function, since $d_{ij}x_{ij}$ only has to be lower than $D$, but not include the lowest possible values.\\
+Likewise, it can also produce the result where one centroid is assigned to another centroid, and not itself, as long as they are close enough together.
+These cases have no effect on the outcome of the final coverage value or the centroid selection, but are rather counter-productive, since we want to minimize the coverage of all centroids, with minimal overlapping of the covered areas.\\
+In order to best display the results, a simple post-processing step can be applied, where each point will be strictly assigned to the closest centroid. This can be easily computed in $\mathcal{O}((N-k)k)$ time in case there is a need for a clearer display of the assignment.
+
+\paragraph{}
+Other, more elaborate formulations can be used. Elloumi et al.\ \cite{linearprog} explore a new formulation to obtain tighter bounds in the LP relaxation. They also limit the values that the solution can take, by enumerating all different values of distances between points, and sorting them in decreasing order.
+
 \section{Incremental Approach}
-\section{ILP}
+A different approach using procedural programming is described by Cambazard et al.\ \cite{incrementalcov}

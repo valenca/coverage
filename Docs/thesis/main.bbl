@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,6 +10,14 @@ Nina Amenta, Sunghee Choi, and Günter Rote.
 \newblock Incremental constructions con brio.
 \newblock \emph{Proceedings of the Nineteenth Annual Symposium on Computational
   Geometry (San Diego, California)}, pages 211--219, June 2003.
+
+\bibitem[Elloumi et~al.(2001)Elloumi, Labbé, and Pochet]{linearprog}
+Sourour Elloumi, Martine Labbé, and Yves Pochet.
+\newblock New formulation and resolution method for the p-center problem.
+\newblock pages 3--4, December 2001.
+
+\bibitem[Cambazard()]{incrementalcov}
+Cambazard.
 
 \bibitem[Shewchuk()]{tricomplex}
 Shewchuk.

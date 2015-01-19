@@ -6,7 +6,7 @@
 \section{Background and Definitions}
 \label{sect:problem}
 \paragraph{}
-In order to be able to quantify representativeness one must first define it. 
+In order to be able to chose the most representative subset, a concept of representativeness has to be chosen and established. 
 Starting with a set of geographic points $N$, we must choose a subset, $P$, that best matches our definition of representativeness. The size of $P$, however, should not be larger than a given value $k$, which will specify how many points we can afford to display.
 
 \paragraph{}
@@ -37,36 +37,6 @@ We can then finally define our problem as the minimising the coverage:
 \noindent
 This is known in the field of optimisation as the \textit{p-centre} problem, and is an example of a facility location problem. It is a \textit{NP-hard} problem, and cannot be solved in polynomial time.
 
-\section{Defining the Problem in Integer Linear Programming}
-A simple and straight-forward approach to the problem is to model it in  integer linear programming as follows:
-\begin{align}
-\text{minimise}   \quad& D							   &\\
-\text{subject to} \quad
-				& \sum\limits_{j=1}^{N}{y_j} = k 
-					& 							\label{ilp:1}\\
-				& \sum\limits_{j=1}^{N}{x_{ij}}	= 1   
-					& i=1,\ldots,N 				\label{ilp:2}\\
-				& \sum\limits_{j=1}^{N}{d_{ij} x_{ij}} \leq D
-					& i=1,\ldots,N				\label{ilp:3}\\
-				& x_{ij} \leq y_{j}				   
-					& i=1,\ldots,N;j=1,\ldots,N	\label{ilp:4}\\
-				& x_{ij},y_{j} \in \{0,1\}
-					& i=1,\ldots,N;j=1,\ldots,N \label{ilp:5}
-\end{align}
-In this formulation, $y_j = 1$ if point $j$ is a centroid and $y_j = 0$ if it is a non-centroid.
-$x_ij = 1$ if the point $i$ is assigned to the centroid $j$, and $x_{ij}=0$ if it is not.
-$d_{ij}$ is the Euclidean distance between points $i$ and $j$.
-Constraint \ref{ilp:1} ensures that $k$ centroids are chosen.
-Constraint \ref{ilp:2} limits the assignment of one point to more than one centroid.
-Constraint \ref{ilp:3} ensures that all active distances are lower than the limit we are minimising.
-Constraint \ref{ilp:4} limits points to being assigned only to centroids, where $y_j=1$.
-Constraint \ref{ilp:5} defines both $x_{ij}$ and $y_j$ as binary variables, in order to properly represent selection and assignment.
-\paragraph{}
-It is worth noting that this formulation minimises the objective function by selecting the best possible set of centroids, but it only minimises the maximum coverage. This way, only the farthest point from its centroid has the guarantee that it is connected to its closest centroid.\\
-Every other point, however, can be linked to any centroid so long as it is closer to it than the distance defined by the objective function, since $d_{ij}x_{ij}$ only has to be lower than $D$, but not include the lowest possible values.\\
-Likewise, it can also produce the result where one centroid is assigned to another centroid, and not itself, as long as they are close enough together.
-These cases have no effect on the outcome of the final coverage value or the centroid selection, but are rather counter-productive, since we want to minimize the coverage of all centroids, with minimal overlapping of the covered areas.\\
-In order to best display the results, a simple post-processing step can be applied, where each point will be strictly assigned to the closest centroid. This can be easily computed in $\mathcal{O}((N-k)k)$ time in case there is a need for a clearer display of the assignment.
 \section{Algorithmic Concepts}
 \subsection{Branch and Bound}
 \paragraph{}

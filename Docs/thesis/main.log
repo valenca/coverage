@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2014.12.24)  10 JAN 2015 16:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2014.12.24)  19 JAN 2015 17:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1204,34 +1204,22 @@ Chapter 1.
 ------------------------------------------------------------------------------
  1 Introduction
 ------------------------------------------------------------------------------
-) (./Chapters/sotart.tex
-Underfull \hbox (badness 10000) in paragraph at lines 6--1
-
- []
-
-[1
+) (./Chapters/theory.tex [1
 
 
-]
+] [2]
 Chapter 2.
 ------------------------------------------------------------------------------
- 2 State of the Art
-------------------------------------------------------------------------------
-) (./Chapters/theory.tex [2
-
-]
-Chapter 3.
-------------------------------------------------------------------------------
- 3 Theory and Definitions
+ 2 Theory and Definitions
 ------------------------------------------------------------------------------
 [3
 
-] [4] [5] (./Figures/vd1.tex) [6] (./Figures/dt1.tex) (./Figures/dt_vd.tex
-[7]) (./Figures/gr1.tex) [8] (./Figures/wk1.tex) [9] (./Algorithms/bw.tex
+] [4] (./Figures/vd1.tex) [5] (./Figures/dt1.tex) (./Figures/dt_vd.tex
+[6]) (./Figures/gr1.tex) [7] (./Figures/wk1.tex) [8] (./Algorithms/bw.tex
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 2.
 )
-[10] (./Figures/halfedge.tex
+[9] (./Figures/halfedge.tex
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no p in font nullfont!
@@ -1239,41 +1227,48 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--21
+Underfull \hbox (badness 10000) in paragraph at lines 124--21
 
  []
 
-) [11] (./Figures/hilbert.tex)) (./Chapters/algorithms.tex [12]
+) [10] (./Figures/hilbert.tex)) (./Chapters/sotart.tex [11]
+Chapter 3.
+------------------------------------------------------------------------------
+ 3 State of the Art
+------------------------------------------------------------------------------
+[12
+
+]) (./Chapters/algorithms.tex [13]
 Chapter 4.
 ------------------------------------------------------------------------------
  4 Optimal Minimum Coverage Algorithms
 ------------------------------------------------------------------------------
-[13
+[14
 
-] [14] [15] [16]
+] [15] [16] [17]
 Underfull \hbox (badness 10000) in paragraph at lines 78--80
 
  []
 
-) (./Chapters/future.tex [17]
+) (./Chapters/future.tex [18]
 Chapter 5.
 ------------------------------------------------------------------------------
- 5 Heuristic Algorithms and Future Work
+ 5 Future Work
 ------------------------------------------------------------------------------
-) (./Chapters/conclusion.tex [18
+[19
 
-]
+]) (./Chapters/conclusion.tex [20]
 Chapter 6.
 ------------------------------------------------------------------------------
  6 Conclusion
 ------------------------------------------------------------------------------
-) [19
+) [21
 
 ]
 ------------------------------------------------------------------------------
  Bibliography
 ------------------------------------------------------------------------------
-(./main.bbl) [20
+(./main.bbl) [22
 
 
 ]
@@ -1283,14 +1278,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 290.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 290.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 290.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A457B1487DFF25568217381B4D0681D1;5670.
+(rerunfilecheck)             Checksum: BCE294E5CA9CF1DC95D3F7204324C76F;5137.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 290.
  ) 
 Here is how much of TeX's memory you used:
- 27010 strings out of 493108
- 497364 string characters out of 6140724
- 668533 words of memory out of 5000000
- 29851 multiletter control sequences out of 15000+600000
+ 27025 strings out of 493108
+ 497594 string characters out of 6140724
+ 667798 words of memory out of 5000000
+ 29856 multiletter control sequences out of 15000+600000
  13515 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,67p,18260b,742s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1298,19 +1293,20 @@ Here is how much of TeX's memory you used:
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/a
-msfonts/symbols/msbm10.pfb>
-Output written on main.pdf (23 pages, 238545 bytes).
+/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></u
+sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><
+/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols
+/msbm10.pfb>
+Output written on main.pdf (25 pages, 254021 bytes).
 PDF statistics:
- 464 PDF objects out of 1000 (max. 8388607)
- 419 compressed objects within 5 object streams
- 116 named destinations out of 1000 (max. 500000)
- 269 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 487 PDF objects out of 1000 (max. 8388607)
+ 439 compressed objects within 5 object streams
+ 126 named destinations out of 1000 (max. 500000)
+ 245 words of extra memory for PDF output out of 10000 (max. 10000000)
 
