@@ -1,19 +1,31 @@
 \begin{figure}[H]
 	\begin{center}
-		\begin{tikzpicture}[scale=0.4]
-		%\draw [<->,thick] (0,10) node (yaxis) [left] {}
-		%|- (15,0) node (xaxis) [below] {};
+		\begin{tikzpicture}[scale=0.9]
+		\node [fill,circle,label=below:$a$] (A) at (6,1){};
+		\node [fill,circle,label=above:$b$] (B) at (5,5){};
+		\node [fill,circle,label=left: $c$] (C) at (1,2){};
+		\node [fill,circle,label=right:$d$] (D) at (9,6){};
+		\path[->,>=latex]
+		(A) edge [bend left=7](B)
+		(B) edge [bend left=7](C)
+		(C) edge [bend left=7](B)
+		(C) edge [bend left=7](A)
+		(A) edge [bend left=7](C)
 		
-		\draw [-{Straight Barb[left,scale=2]},thick] (4,8) -- 
-			node[anchor=south west]{$p_ip_j$}(6,2);
-			
-		\draw [-{Straight Barb[left,scale=2]},thick] (6,2) -- 
-			node[anchor=north east][xshift=2]{$p_jp_i$}(4,8);		
+		(B) edge [bend left=7](A)
+		(A) edge [bend left=7](D)
+		(D) edge [bend left=7](B)
+		(D) edge [bend left=7](A)
+		(B) edge [bend left=7](D)
+		;
 		
-				\fill (1,1) circle (3pt);
-		\fill (4,8) circle (3pt) node[anchor=west]{$p_i$};
-		\fill (6,2) circle (3pt) node[anchor=west]{$p_j$};
-		\fill (9,5) circle (3pt);
+		\path[-,color=gray]
+		(A) edge (B)
+		(B) edge (C)
+		(C) edge (A)
+		(A) edge (D)
+		(D) edge (B)		
+		;
 		\end{tikzpicture}
 	\end{center}
 	\caption{Example of a Representation of the Half-Edge Structure}

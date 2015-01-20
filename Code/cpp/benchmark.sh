@@ -1,10 +1,10 @@
 #C++
 
-j=40
+j=100
 
 for (( seed=0; seed<30; seed++ )); do
     echo -e "Seed $seed\nPts\tCents\tCoverage\tTime"
-    for (( i=31; i<$j; i++ )); do
+    for (( i=1; i<10; i++ )); do
 	echo "$j" > tmp
 	echo "$i" >> tmp
 	python2 ../inputs/uniform.py $seed | tail -500 | head -100 >> tmp

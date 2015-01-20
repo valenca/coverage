@@ -40,4 +40,8 @@ In order to best display the results, a simple post-processing step can be appli
 Other, more elaborate formulations can be used. \citet{linearprog} explore a new formulation to obtain tighter bounds in the LP relaxation. They also limit the values that the solution can take, by enumerating all different values of distances between points, and sorting them in decreasing order.
 
 \section{Incremental Approach}
-A different approach using procedural programming is described by \citet{incrementalcov}
+\paragraph{}
+A different approach using procedural programming is described by \citet{incrementalcov}. Their method describes algorithms to insert and remove centroids from a set of points, and update the centroid assignment in the geometrical area surrounding the changed centroid. This method is a form of local search, that allows for small modifications on an already valid solution, until a similar solution is deemed optimal is found. 
+
+\paragraph{}
+In order to minimise computation time, \citet{incrementalcov} maintain the selected centroids in a \emph{kd-tree}. Using a \emph{k-d tree} reduces the number of comparisons needed for the point location steps in the algorithm. To keep them from loosing efficiency in insertions and removal of points, the trees need to be balanced from time to time.

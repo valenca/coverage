@@ -1,21 +1,24 @@
 \chapter{Theory and Definitions}
 \label{chap:theory}
 \lhead{Chapter \ref{chap:theory}. \emph{Theory and Definitions}} % This is for the header
-
-
-\section{Background and Definitions}
+\paragraph{}
+This chapter is an introduction to and explanation of the base concepts used further in this report.
+The chapter starts by establishing the formal definition of the problem at hand. 
+Then it proceeds to detail the algorithmic and geometric concepts to be used in the different approaches described in the following chapters.
+\section{Definitions of Coverage}
 \label{sect:problem}
 \paragraph{}
-In order to be able to chose the most representative subset, a concept of representativeness has to be chosen and established. 
-Starting with a set of geographic points $N$, we must choose a subset, $P$, that best matches our definition of representativeness. The size of $P$, however, should not be larger than a given value $k$, which will specify how many points we can afford to display.
+Representation consists of finding a subset of points in a larger set. The subset chosen should be able to keep some specified properties of the original set, such as density, or general distribution. As such there can be many ways to define representativeness. For the purposes of this thesis, we will use the definition of \emph{coverage}.
+
+Given a set of points $N$ in $\mathbb{R}^2$, we must choose a subset, $P$, that best matches our definition of representativeness. The size of $P$, however, is constrained to a size $k$, which will specify how many points can be afforded to be displayed in a section of a map.
 
 \paragraph{}
-For any point in $N$ not in $P$, there must be a point in $P$ that best represents it. In a geographic or geometric plane, where points are merely described by their coordinates, the notion of representativeness may be defined by the distance, i.e.\ the point $p$ that best represents $q$ is the closest point closest to $q$, under some notion of distance. 
+For any point in $N$ not in $P$, there must be a point in $P$ that best represents it. In a geographic or geometric plane, this notion of representativeness may be defined by the distance, i.e.\ the point $p$ that best represents $q$ is the closest point closest to $q$, under some notion of distance. Given the geographic nature of the input data, this thesis will use the Euclidean norm as the distance notion.
 
-This way, finding the best representative set $P$ in $N$ will mean that every point in $N$ will be assigned to the point in $P$ that best represents it. This means that each point in $N$ will be assigned to the point in $P$ closest to it. This definition of representativeness is referred to as \textit{coverage}. The points in $P$ are called \textit{centroids}.
+Finding the most representative set $P$ in $N$ will mean that every point in $N$ will be assigned to the point in $P$ that best represents it. This means that each point in $N$ will be assigned to the point in $P$ closest to it. This definition of representativeness is referred to as \emph{coverage}. The points in $P$ are called \emph{centroids}.
 
 \paragraph{}
-The coverage value of a given centroid, is defined by the circle around that centroid with the radius defined by the distance between itself and the farthest non-centroid point assigned to it. It can thus be more formally described as:
+The coverage value of a given centroid is defined by the circle around that centroid with the radius defined by the distance between itself and the farthest non-centroid point assigned to it. The coverage value of a subset if determined by the highest coverage value of its points. It can thus be more formally described as:
 
 \begin{equation}
 \max_{n \in N}
@@ -27,7 +30,7 @@ The coverage value of a given centroid, is defined by the circle around that cen
 %\paragraph{}
 \noindent
 Where $N$ is the initial set of points in $\mathbb{R}^2$, $P$ is the centroid subset and $\lVert \cdot \rVert $ is the Euclidean distance, which we will use as our notion of distance.
-The most representative subset, however, is the one with the minimum value of coverage. This means all points will be assigned to the closest centroid, minimising the coverage of all centroids and avoid coverage areas overlapping whenever possible.
+The most representative subset, however, is the one with the minimum value of coverage. This means all points will be assigned to the closest centroid, minimising the coverage of all centroids and avoiding overlapping coverage areas whenever possible.
 We can then finally define our problem as the minimising the coverage:
 
 \begin{equation}
@@ -35,30 +38,35 @@ We can then finally define our problem as the minimising the coverage:
 \end{equation}
 
 \noindent
-This is known in the field of optimisation as the \textit{p-centre} problem, and is an example of a facility location problem. It is a \textit{NP-hard} problem, and cannot be solved in polynomial time.
+This is known in the field of optimisation as the \emph{p-centre} problem, and is an example of a facility location problem \cite{faclocation}. For the 1-dimensional case, it can be calculated in polynomial time \cite{dvaz}. However, for any other number of dimensions it is a \emph{NP-hard} problem, and cannot be solved in polynomial time \cite{complex}.
 
 \section{Algorithmic Concepts}
-\subsection{Branch and Bound}
+\subsection{Branch-and-Bound}
 \paragraph{}
-Minimising coverage, as we have seen, is a \textit{NP-hard} combinatorial problem. These problems can be approached using Branch and Bound algorithms.
+Minimising coverage, as we have seen, is a \emph{NP-hard} combinatorial problem \cite{complex}. One possible way of solving the problem is to us implicit enumeration algorithms such as \emph{Branch-and-Bound} algorithms.\\
+These algorithms solve the problems by recursively dividing the solution set in half, thus \emph{branching} it into a rooted binary tree. 
 \paragraph{}
-These algorithms solve the problems by recursively dividing the solution set in half, thus \textit{branching} it into a rooted binary tree. At each step of the subdivision, it then calculates the upper and lower bounds for the best possible value for the space of solutions considered at that node. This step is called \textit{bounding}.
-In the case of a minimisation problem, it would be the upper and lower bounds for minimum possible value for the objective function in the current node. These values are then compared with the best ones already calculated in other branches of the recursive tree, and updated if better.\\
-The idea is to use these values to \textit{prune} the search tree. This can be done when the algorithm arrives at a node where the lower bound is larger than the best calculated upper bound. At this point, no further search within the branch is required, as there is no solution in the current branch better than one that has already been calculated. \\
+At each step of the subdivision, it then calculates the upper and lower bounds for the best possible value for the space of solutions considered at that node. This step is called \emph{bounding}.
+In the case of a minimisation problem, it would be the upper and lower bounds for minimum possible value for the objective function in the current node. These values are then compared with the best ones already calculated in other branches of the recursive tree, and updated if better.
+\paragraph{}
+The idea is to use these values to \emph{prune} the search tree. This can be done when the branch-and-bound algorithm arrives at a node where the lower bound is larger than the best calculated upper bound. At this point, no further search within the branch is required, as there is no solution in the current branch better than one that has already been calculated. \\
 In the case that the global upper and lower bound meet, the algorithm has arrived at the best possible solution, and no further computation must be done.
 
 \paragraph{}
-These algorithms are very common in the field of optimisation and can be very efficient, but their performance depends on the complexity and tightness of its bounds. Tighter bounds accelerate the process, but are generally slower to compute, so a compromise has to be made in order to obtain the fastest possible algorithm, and fast bound calculation is a priority for most approaches.
+These algorithms are very common in the field of optimisation and can be very efficient, but their performance depends on the complexity and tightness of its bounds. Tighter bounds accelerate the process, but are usually slower to compute, so a compromise has to be made in order to obtain the fastest possible algorithm.
 
-\section{Geometric Concepts and Structures}
-\subsection{Nearest Neighbour Search}
+\section{Geometric Concepts and Geometric Structures}
+In the following, we explain some geometric concepts that are used in the following chapters, in order to simplify the explanation of more complex algorithms in further chapters.
+\subsection{Nearest Neighbour Search and Point Location}
 \paragraph{}
-A common step of geometry-based algorithms to solve the problem is performing a nearest neighbour search. Since we need to find the closest centroid to a given point, this operation will be one of the most used, and  so we need a fast and flexible way of determining which of the centroids is closest, in order to reduce overhead. Nearest neighbour search algorithms find a point $q$ in $N$ closest to $p$ according to a definition of distance.
-\subsection{Point Location}
+A common concept in computational geometry is point location. A point location algorithm finds the correct region on a plane that contains a given point $p$. Depending on the nature and shape of the regions, point location algorithms may differ in approach. In this thesis, most point location problems consist of finding the closest centroid to a given point, i.e.\ a nearest neighbour search algorithm.
+
 \paragraph{}
-A concept commonly associated with nearest neighbour search is point location. 
-One way to efficiently make a large number o point location queries is to partition the plane into regions. Point location algorithms direct the nearest neighbour search to smaller regions, discarding any points that are too distant from the query, thus reducing the number of calculations necessary to get the proper point location.
-Common structures used for point location are \textit{k-d trees} as described in \citet{incrementalcov}. A \textit{k-d tree} partitions the space using a divide and conquer approach to define orthogonally aligned half-planes in order to achieve point location queries in $\mathcal{O}(\log{n})$ time. A \textit{k-d tree}, however, needs to be periodically updated in order to keep its efficiency and cannot be constructed or deconstructed incrementally without considering this overhead.
+Given a point $p$, a \emph{nearest neighbour search} algorithm returns the closest point to $p$ in a given set. Since we need to find the closest centroid to a given point in order to find the correct coverage value, this operation will be one of the most used, and  so we need a fast and flexible way of determining which of the centroids is closest, in order to reduce computational overhead. 
+
+\paragraph{}
+Point location algorithms direct the nearest neighbour search to smaller regions, bypassing any regions that are too distant from $p$, thus reducing the number of calculations necessary to get the proper point location.
+Common structures used for point location are \emph{k-d trees} as described in \citet{incrementalcov}. A \emph{k-d tree} partitions the space using a divide and conquer approach to define orthogonally aligned half-planes. This approach takes $\mathcal{O}(\log{n})$ time to achieve point location queries. However, a \emph{k-d tree} needs to be periodically updated in order to keep its efficiency and cannot be constructed or deconstructed incrementally without considering this overhead.
 \subsection{Voronoi Diagrams}
 \paragraph{}
 Voronoi diagrams partition the space into regions, which are defined by the set of points in the space that are closest to a subset of those points. Definitions of distance and space may vary, but on our case we will consider the $\mathbb{R}^2$ plane and the Euclidean distance.\\
@@ -73,7 +81,7 @@ The construction of Voronoi diagrams can be done incrementally, but in order to 
 Another useful structure for geometric algorithms is the Delaunay triangulation.
 A Delaunay triangulation is a special kind of triangulation with many useful properties. 
 In an unconstrained Delaunay triangulation, each triangle's circumcircle contains no points other inside its circumference.\\
-It maximizes the minimum angle in its triangles, avoiding long or slender triangles.
+A Delaunay triangulation maximizes the minimum angle of its triangles, avoiding long or slender ones.
 The set of all its edges contains both the minimum-spanning tree and the convex hull.
 The Delaunay triangulation is unique for a set of points, except when it contains a subset that can be placed along the same circumference. Figure \ref{fig:dt1} shows the Delaunay triangulation of the same set of points used in Figure \ref{fig:vd1}:
 \input{Figures/dt1}
@@ -109,22 +117,25 @@ This algorithm was described by \citet{walking}, and is ilustrated in Figure \re
 \paragraph{}
 There are many algorithms to construct a Delaunay triangulation. 
 The particular conditions of our approach to the coverage problem impose some restrictions to the choice of the algorithm to use.\\
-In order to implement an incremental branch and bound approach, our triangulation algorithm has to not only be efficient, but also to be able to be done incrementally. The Bowyer-Watson algorithm allows us to do both.\\
-Starting with a valid Delaunay triangulation $\mathcal{T}$, we find a triangle $t = \bigtriangleup_{abc}$ that contains the vertex to insert $v$ using a point location algorithm, such as the walking algorithm. We then use algorithm \ref{alg:bowyer}:
+Building a Delaunay triangulation can be done incrementally. Starting with a valid triangulation, points can be added, creating and updating existing triangles. An efficient way to do so is to use the Bowyer-Watson algorithm.
+\paragraph{}
+Starting with a valid Delaunay triangulation $\mathcal{T}$, we find the triangle $t$ with vertices $a$,$b$ and $c$ that contains the vertex to insert $v$ using a point location algorithm, such as the line walking algorithm described in the previous section. We then follow algorithm \ref{alg:bowyer} for each vertex $v$ to be included in the triangulation:
 \input{Algorithms/bw}
 \noindent 
-For inserting $n$ points, this algorithm has an expected time complexity of $\mathcal{O}(n \log n)$.
+The algorithm starts by removing the triangle $t$ that contains the new vertex $v$, and recursively checks adjacent triangles whose circumcircle contains $v$ using the \emph{DigCavity} function. Any triangle that contains $v$ in its circumcircle, violates the Delaunay rule, and must also be deleted and have its sides recursively checked, until no adjacent triangles violate the Delaunay rule.\\
+For inserting $n$ points, this algorithm has an expected time complexity of $\mathcal{O}(n \log n)$ and is described in more detail by \citet{tricomplex}.
 
 \subsubsection{Deconstruction}
 \paragraph{}
-Deconstructing a Delaunay triangulation usually takes an algorithm as complex as the construction. However, since in our case the deconstruction has to be incremental, and the first point to remove from the triangulation is necessarily the last one to be inserted, we can use a much simpler approach. \\
+Deconstructing a Delaunay triangulation usually takes reversing the construction algorithm to remove points from the triangulation. However, as we will explain in a later chapter, in our case the deconstruction has to be incremental, and the first point to remove from the triangulation is necessarily the last one to be inserted, we can use a simpler approach. \\
 At each step of the construction, all created and removed edges and triangle from the triangulation can be stored in a LIFO structure, or a stack. When the last inserted point is to be removed, recreating the previous state of the triangulation is only a matter of rolling back and retrieving the information from the stack. This also means no geometrical calculations have to be done, and the old edges and triangles are quickly put back in place, with no new memory allocation needed.
 \subsubsection{Half-Edge Structure}
 \paragraph{}
-A useful structure to use when building and managing triangulation meshes is the half-edge structure. The half-edge structure represents one orientation of each edge in the triangulation. This means that for each pair of points ($p_i,p_j$)connected in a triangulation $\mathcal{T}$, there are two directed half-edges: one represents the edge from $p_i$ to $p_j$, and the other represents the opposite face, that connects $p_j$ to $p_i$. They both contain information about the triangle that they are part of. The triangles each of them form with two other half-edges contains both $p_i$ and $p_j$, and are thus, adjacent. The way to tell which triangle is which is by defining the triangles by listing their points in a counter-clockwise order. Figure \ref{fig:hedge} further illustrates the concept of the half-edges.\\
+A useful structure to use when building and managing triangulation meshes is the half-edge structure. The half-edge structure represents one orientation of each edge in the triangulation. This means that for each pair of points ($p_i,p_j$)connected in a triangulation $\mathcal{T}$, there are two directed half-edges: one represents the edge from $p_i$ to $p_j$, and the other represents the opposite direction, that connects $p_j$ to $p_i$. They both contain information about the triangle that they face, and thus, are part of. Triangles are defined by three half edges. All the half edges in the triangle share two of the vertices of the triangle, and are all sorted in a counter-clockwise order. 
+Figure \ref{fig:hedge} further illustrates the concept of the half-edges.\\
 \input{Figures/halfedge}
-This structure makes it easier to store the changes to the triangulation in each step, since they contain the information about the triangles themselves. This means that only the half edges need to be stored in the stack, with no need to deal with the triangles directly.
-The half-edge structure helps to obtain the triangulation neighbours for any vertex $v$, since these are all the end points to the half-edges starting at $v$, which is useful when implementing the greedy routing algorithm described in \ref{r:gr}. 
+This structure makes it easier to store the changes to the triangulation at each step, since they contain the information about the triangles themselves. This means that only the half edges need to be stored in the stack (for construction and deconstruction), with no need to manage the triangles directly.
+The half-edge structure helps to obtain the triangulation neighbours for any vertex $v$, since previously these are all the end points to the half-edges starting at $v$, which is useful when implementing the greedy routing algorithm described in \ref{r:gr}. 
 \subsection{Hilbert Curves}
 \paragraph{}
 Most of the point location algorithms aforementioned have linear time complexity, and most of the worst case scenarios include searching across the plane. These occur when the starting search position is random and does not make use of the spatial organisation of the data. In order to fully take advantage of these approaches, the points should be sorted is such a way that minimizes the distance between consecutive point such as a Hilbert curve. \\
