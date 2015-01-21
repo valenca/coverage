@@ -56,10 +56,11 @@ In the case that the global upper and lower bound meet, the algorithm has arrive
 These algorithms are very common in the field of optimisation and can be very efficient, but their performance depends on the complexity and tightness of its bounds. Tighter bounds accelerate the process, but are usually slower to compute, so a compromise has to be made in order to obtain the fastest possible algorithm.
 
 \section{Geometric Concepts and Geometric Structures}
+\paragraph{}
 In the following, we explain some geometric concepts that are used in the following chapters, in order to simplify the explanation of more complex algorithms in further chapters.
 \subsection{Nearest Neighbour Search and Point Location}
 \paragraph{}
-A common concept in computational geometry is point location. A point location algorithm finds the correct region on a plane that contains a given point $p$. Depending on the nature and shape of the regions, point location algorithms may differ in approach. In this thesis, most point location problems consist of finding the closest centroid to a given point, i.e.\ a nearest neighbour search algorithm.
+A common concept in computational geometry is point location. A point location algorithm finds the region on a plane that contains a given point $p$. Depending on the nature and shape of the regions, point location algorithms may differ in approach. In this thesis, most point location problems consist of finding the closest centroid to a given point, i.e.\ a nearest neighbour search algorithm.
 
 \paragraph{}
 Given a point $p$, a \emph{nearest neighbour search} algorithm returns the closest point to $p$ in a given set. Since we need to find the closest centroid to a given point in order to find the correct coverage value, this operation will be one of the most used, and  so we need a fast and flexible way of determining which of the centroids is closest, in order to reduce computational overhead. 

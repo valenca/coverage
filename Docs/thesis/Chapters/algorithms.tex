@@ -11,7 +11,7 @@ The first algorithm uses simple loops over arrays for point location queries, wh
 %Finding the minimum coverage value in this approach is trivial, since it is just a matter selecting the combination of centroids that has the minimum distance between the farthest point from its centroid. \\
 %This approach takes $\mathcal{O}(K!)$ time complexity, and takes no advantage from previously calculated candidate solutions.
 \section{Branch-and-Bound}
-\label{sect:bb}
+\label{alg:bb}
 \paragraph{}
 A more sophisticated approach to the problem is to use a branch-and-bound method.\\
 In this approach, the assignment of non-centroids to their correct centroids is built incrementally.\\
@@ -48,6 +48,7 @@ At all points in the branching, we calculate a lower bound for the value of the 
 After each insertion, centroid or non-centroid, one can assume that, the best case scenario, all the points not yet inserted will be centroids. This would hypothetically decrease the value the most. If this value is larger than the best value found, then there is no possible assignment that will improve the current solution in the current branch, and the branch can be pruned.
 \paragraph{}
 \section{Delaunay Assisted Branch-and-Bound}
+\label{alg:da}
 \paragraph{}
 Most of the operations in the branch-and-bound approach described in section \ref{sect:bb} have at least linear time complexity for both the best and expected cases. We can speed these up by implementing incrementally built Delaunay triangulations, which can be used to accelerate point location queries. To aid the calculations, the points are pre-processed and sorted by a Hilbert Curve approximation of a sufficiently high order.
 
@@ -91,10 +92,15 @@ This is especially true since maintaining a valid Delaunay triangulation through
 								& Centroid		& Non-Centroid	& Centroid		& Non-Centroid	\\ \hline
 		Branch-and-Bound		& $\Theta(N)$ & $\Theta(K)$ 
 									& $\Theta(N)$ & $\Theta(1)$ \\ \hline
-		Delaunay Assisted		& $\mathcal{O}(K)+\mathcal{O}(6\frac{N}{K})$& $\mathcal{O}(\log{K})$
+		Delaunay Assisted		& $\mathcal{O}(K+6\frac{N}{K})$& $\mathcal{O}(\log{K})$
 									& $\mathcal{O}(N)$ & $\mathcal{O}(1)$\\ \hline
 \end{tabular}
 	\captionof{table}{Expected time complexities for the various operations in a uniformly distributed set}
 \end{center}
 
 \subsection{Experimental Results}
+\paragraph{}
+In this section, we analyse empirically the time spent calculating the solutions to different sizes of the problem. \\
+The test cases are sets of uniformly distributed points generated with a fixed seed. The three algorithms are subjected to the same test cases. Each value of $N$ and $K$ is tested 30 times, and the average time in seconds is presented in the following table. The algorithms benchmarked are the simple branch-and-bound from section \ref{alg:bb}, the Delaunay assisted branch-and-bound from section \ref{alg:da}, and the integer linear programming formulation described in section \ref{alg:ilp}
+\input{tab:results}
+
