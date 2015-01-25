@@ -3,48 +3,50 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: unsrtnat.bst
 Database file #1: Bibliography.bib
-Warning--I didn't find a database entry for "faclocation"
-Warning--I didn't find a database entry for "dvaz"
-Warning--I didn't find a database entry for "complex"
-You've used 7 entries,
+Warning--empty author in dvaz
+Warning--empty title in dvaz
+Warning--empty journal in dvaz
+Warning--empty year in dvaz
+Warning--empty year in dvaz
+You've used 13 entries,
             2481 wiz_defined-function locations,
-            598 strings with 5792 characters,
-and the built_in function-call counts, 3215 in all, are:
-= -- 286
-> -- 145
-< -- 7
-+ -- 56
-- -- 42
-* -- 223
-:= -- 479
-add.period$ -- 25
-call.type$ -- 7
-change.case$ -- 12
-chr.to.int$ -- 7
-cite$ -- 7
-duplicate$ -- 181
-empty$ -- 299
-format.name$ -- 51
-if$ -- 722
+            628 strings with 6348 characters,
+and the built_in function-call counts, 5242 in all, are:
+= -- 465
+> -- 202
+< -- 13
++ -- 84
+- -- 58
+* -- 362
+:= -- 768
+add.period$ -- 42
+call.type$ -- 13
+change.case$ -- 21
+chr.to.int$ -- 13
+cite$ -- 19
+duplicate$ -- 306
+empty$ -- 516
+format.name$ -- 74
+if$ -- 1168
 int.to.chr$ -- 1
-int.to.str$ -- 8
-missing$ -- 9
-newline$ -- 43
-num.names$ -- 21
-pop$ -- 78
+int.to.str$ -- 14
+missing$ -- 17
+newline$ -- 71
+num.names$ -- 36
+pop$ -- 143
 preamble$ -- 1
-purify$ -- 7
+purify$ -- 13
 quote$ -- 0
-skip$ -- 114
+skip$ -- 190
 stack$ -- 0
-substring$ -- 156
-swap$ -- 51
-text.length$ -- 5
+substring$ -- 251
+swap$ -- 73
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 43
-warning$ -- 0
-while$ -- 28
+type$ -- 79
+warning$ -- 5
+while$ -- 45
 width$ -- 0
-write$ -- 101
-(There were 3 warnings)
+write$ -- 172
+(There were 5 warnings)

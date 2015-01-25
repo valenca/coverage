@@ -1,15 +1,15 @@
 \contentsline {chapter}{Abstract}{i}{dummy.1}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.2}
 \contentsline {paragraph}{}{1}{section*.3}
-\contentsline {chapter}{\numberline {2}Theory and Definitions}{3}{chapter.4}
-\contentsline {paragraph}{}{3}{section*.5}
-\contentsline {section}{\numberline {2.1}Definitions of Coverage}{3}{section.6}
-\contentsline {paragraph}{}{3}{section*.7}
+\contentsline {paragraph}{}{2}{section*.4}
+\contentsline {chapter}{\numberline {2}Concepts, Definitions and Notation}{3}{chapter.5}
+\contentsline {paragraph}{}{3}{section*.6}
+\contentsline {section}{\numberline {2.1}Definitions of Coverage}{3}{section.7}
 \contentsline {paragraph}{}{3}{section*.8}
-\contentsline {paragraph}{}{4}{section*.9}
-\contentsline {section}{\numberline {2.2}Algorithmic Concepts}{4}{section.12}
-\contentsline {subsection}{\numberline {2.2.1}Branch-and-Bound}{4}{subsection.13}
-\contentsline {paragraph}{}{4}{section*.14}
+\contentsline {paragraph}{}{3}{section*.9}
+\contentsline {paragraph}{}{4}{section*.10}
+\contentsline {section}{\numberline {2.2}Algorithmic Concepts}{4}{section.13}
+\contentsline {subsection}{\numberline {2.2.1}Branch-and-Bound}{4}{subsection.14}
 \contentsline {paragraph}{}{4}{section*.15}
 \contentsline {paragraph}{}{5}{section*.16}
 \contentsline {paragraph}{}{5}{section*.17}
@@ -21,65 +21,75 @@
 \contentsline {paragraph}{}{6}{section*.23}
 \contentsline {subsection}{\numberline {2.3.2}Voronoi Diagrams}{6}{subsection.24}
 \contentsline {paragraph}{}{6}{section*.25}
-\contentsline {subsection}{\numberline {2.3.3}Delaunay Triangulations}{6}{subsection.27}
-\contentsline {paragraph}{}{6}{section*.28}
-\contentsline {subsubsection}{\numberline {2.3.3.1}Greedy Routing}{8}{subsubsection.31}
+\contentsline {subsection}{\numberline {2.3.3}Delaunay Triangulations}{7}{subsection.27}
+\contentsline {paragraph}{}{7}{section*.28}
+\contentsline {subsubsection}{\numberline {2.3.3.1}Construction}{8}{subsubsection.31}
 \contentsline {paragraph}{}{8}{section*.32}
-\contentsline {subsubsection}{\numberline {2.3.3.2}Line Walking}{8}{subsubsection.35}
-\contentsline {paragraph}{}{8}{section*.36}
-\contentsline {subsubsection}{\numberline {2.3.3.3}Construction}{9}{subsubsection.38}
-\contentsline {paragraph}{}{9}{section*.39}
-\contentsline {paragraph}{}{9}{section*.40}
-\contentsline {subsubsection}{\numberline {2.3.3.4}Deconstruction}{10}{subsubsection.42}
-\contentsline {paragraph}{}{10}{section*.43}
-\contentsline {subsubsection}{\numberline {2.3.3.5}Half-Edge Structure}{11}{subsubsection.44}
+\contentsline {paragraph}{}{8}{section*.33}
+\contentsline {subsubsection}{\numberline {2.3.3.2}Deconstruction}{9}{subsubsection.35}
+\contentsline {paragraph}{}{9}{section*.36}
+\contentsline {subsubsection}{\numberline {2.3.3.3}Half-Edge Structure}{9}{subsubsection.37}
+\contentsline {paragraph}{}{9}{section*.38}
+\contentsline {subsubsection}{\numberline {2.3.3.4}Greedy Routing}{10}{subsubsection.40}
+\contentsline {paragraph}{}{10}{section*.41}
+\contentsline {subsubsection}{\numberline {2.3.3.5}Line Walking}{11}{subsubsection.44}
 \contentsline {paragraph}{}{11}{section*.45}
-\contentsline {subsection}{\numberline {2.3.4}Hilbert Curves}{11}{subsection.47}
-\contentsline {paragraph}{}{11}{section*.48}
-\contentsline {chapter}{\numberline {3}State of the Art}{13}{chapter.50}
-\contentsline {paragraph}{}{13}{section*.51}
-\contentsline {section}{\numberline {3.1}Defining the Problem in Integer Linear Programming}{13}{section.52}
-\contentsline {paragraph}{}{13}{section*.53}
-\contentsline {paragraph}{}{14}{section*.60}
-\contentsline {paragraph}{}{14}{section*.61}
-\contentsline {section}{\numberline {3.2}Incremental Approach}{14}{section.62}
-\contentsline {paragraph}{}{14}{section*.63}
-\contentsline {paragraph}{}{14}{section*.64}
-\contentsline {chapter}{\numberline {4}Optimal Minimum Coverage Algorithms}{15}{chapter.65}
-\contentsline {paragraph}{}{15}{section*.66}
-\contentsline {section}{\numberline {4.1}Branch-and-Bound}{15}{section.67}
-\contentsline {paragraph}{}{15}{section*.68}
-\contentsline {subsection}{\numberline {4.1.1}Branching}{15}{subsection.69}
-\contentsline {paragraph}{}{15}{section*.70}
-\contentsline {paragraph}{Inserting a Centroid}{16}{section*.71}
-\contentsline {paragraph}{Inserting a Non-Centroid}{16}{section*.72}
-\contentsline {paragraph}{}{16}{section*.73}
-\contentsline {paragraph}{Removing a Centroid}{16}{section*.74}
-\contentsline {paragraph}{Removing a Non-Centroid}{16}{section*.75}
-\contentsline {subsection}{\numberline {4.1.2}Bounds}{17}{subsection.76}
-\contentsline {paragraph}{}{17}{section*.77}
-\contentsline {paragraph}{Lower Bound}{17}{section*.78}
-\contentsline {paragraph}{}{17}{section*.79}
-\contentsline {section}{\numberline {4.2}Delaunay Assisted Branch-and-Bound}{17}{section.80}
-\contentsline {paragraph}{}{17}{section*.81}
-\contentsline {paragraph}{Inserting a Centroid}{17}{section*.82}
-\contentsline {paragraph}{Inserting a Non-Centroid}{18}{section*.83}
-\contentsline {paragraph}{Removing a Centroid}{18}{section*.84}
-\contentsline {paragraph}{Removing a Non-Centroid}{19}{section*.85}
-\contentsline {paragraph}{}{19}{section*.86}
-\contentsline {section}{\numberline {4.3}Algorithm Comparison}{19}{section.87}
-\contentsline {subsection}{\numberline {4.3.1}Expected Behaviour}{19}{subsection.88}
-\contentsline {subsection}{\numberline {4.3.2}Experimental Results}{19}{subsection.90}
-\contentsline {paragraph}{}{19}{section*.91}
-\contentsline {chapter}{\numberline {5}Future Work}{21}{chapter.93}
-\contentsline {section}{\numberline {5.1}Integration in a Visualisation Framework}{21}{section.94}
-\contentsline {paragraph}{}{21}{section*.95}
-\contentsline {paragraph}{}{21}{section*.96}
-\contentsline {paragraph}{}{21}{section*.97}
-\contentsline {section}{\numberline {5.2}Heuristic Approaches}{22}{section.98}
-\contentsline {paragraph}{}{22}{section*.99}
-\contentsline {section}{\numberline {5.3}Uniformity}{22}{section.100}
-\contentsline {paragraph}{}{22}{section*.101}
-\contentsline {chapter}{\numberline {6}Conclusion}{23}{chapter.103}
+\contentsline {subsection}{\numberline {2.3.4}Hilbert Curves}{12}{subsection.47}
+\contentsline {paragraph}{}{12}{section*.48}
+\contentsline {chapter}{\numberline {3}State of the Art}{14}{chapter.50}
+\contentsline {paragraph}{}{14}{section*.51}
+\contentsline {section}{\numberline {3.1}Integer Linear Programming Formulation}{14}{section.52}
+\contentsline {paragraph}{}{14}{section*.53}
+\contentsline {paragraph}{}{15}{section*.60}
+\contentsline {paragraph}{}{15}{section*.61}
+\contentsline {section}{\numberline {3.2}Incremental Approach}{15}{section.62}
+\contentsline {paragraph}{}{15}{section*.63}
+\contentsline {paragraph}{}{15}{section*.64}
+\contentsline {chapter}{\numberline {4}Optimal Minimum Coverage Algorithms}{17}{chapter.65}
+\contentsline {paragraph}{}{17}{section*.66}
+\contentsline {section}{\numberline {4.1}Branch-and-Bound}{17}{section.67}
+\contentsline {paragraph}{}{17}{section*.68}
+\contentsline {subsection}{\numberline {4.1.1}Branching}{17}{subsection.69}
+\contentsline {paragraph}{}{17}{section*.70}
+\contentsline {paragraph}{Inserting a Centroid}{18}{section*.71}
+\contentsline {paragraph}{Inserting a Non-Centroid}{18}{section*.72}
+\contentsline {paragraph}{}{18}{section*.73}
+\contentsline {paragraph}{Removing a Centroid}{18}{section*.74}
+\contentsline {paragraph}{Removing a Non-Centroid}{18}{section*.75}
+\contentsline {subsection}{\numberline {4.1.2}Bounds}{19}{subsection.76}
+\contentsline {paragraph}{}{19}{section*.77}
+\contentsline {paragraph}{Lower Bound}{19}{section*.78}
+\contentsline {paragraph}{}{19}{section*.79}
+\contentsline {section}{\numberline {4.2}Delaunay Assisted Branch-and-Bound}{19}{section.80}
+\contentsline {paragraph}{}{19}{section*.81}
+\contentsline {paragraph}{Inserting a Centroid}{19}{section*.82}
+\contentsline {paragraph}{Inserting a Non-Centroid}{20}{section*.83}
+\contentsline {paragraph}{Removing a Centroid}{20}{section*.84}
+\contentsline {paragraph}{Removing a Non-Centroid}{21}{section*.85}
+\contentsline {paragraph}{Bounds}{21}{section*.86}
+\contentsline {paragraph}{}{21}{section*.87}
+\contentsline {section}{\numberline {4.3}Algorithm Comparison}{21}{section.88}
+\contentsline {subsection}{\numberline {4.3.1}Expected Behaviour}{21}{subsection.89}
+\contentsline {subsection}{\numberline {4.3.2}Experimental Results}{21}{subsection.91}
+\contentsline {paragraph}{}{22}{section*.92}
+\contentsline {subsubsection}{\numberline {4.3.2.1}Fixed $N$}{22}{subsubsection.93}
+\contentsline {paragraph}{}{22}{section*.94}
+\contentsline {paragraph}{}{23}{section*.96}
+\contentsline {paragraph}{}{23}{section*.97}
+\contentsline {subsubsection}{\numberline {4.3.2.2}Fixed $K$}{23}{subsubsection.98}
+\contentsline {paragraph}{}{23}{section*.99}
+\contentsline {paragraph}{}{24}{section*.101}
+\contentsline {chapter}{\numberline {5}Future Work}{25}{chapter.102}
+\contentsline {section}{\numberline {5.1}Integration in a Visualisation Framework}{25}{section.103}
+\contentsline {paragraph}{}{25}{section*.104}
+\contentsline {paragraph}{}{25}{section*.105}
+\contentsline {paragraph}{}{25}{section*.106}
+\contentsline {section}{\numberline {5.2}Heuristic Approaches}{26}{section.107}
+\contentsline {paragraph}{}{26}{section*.108}
+\contentsline {paragraph}{}{26}{section*.109}
+\contentsline {paragraph}{}{26}{section*.110}
+\contentsline {section}{\numberline {5.3}Approximation Algorithms}{26}{section.111}
+\contentsline {paragraph}{}{26}{section*.112}
+\contentsline {chapter}{\numberline {6}Conclusion}{27}{chapter.113}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{24}{dummy.104}
+\contentsline {chapter}{Bibliography}{28}{dummy.114}

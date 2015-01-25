@@ -33,6 +33,7 @@
 \usepackage{nameref}
 \usepackage{amsthm}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{bm,array}
 \usepackage{tocloft}
 \usepackage{algorithm}
@@ -41,6 +42,8 @@
 \usepackage{booktabs}
 \usepackage{tikz}
 \usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{pifont}
 \usetikzlibrary{shapes}
 \usetikzlibrary{positioning,arrows}
 \usetikzlibrary{arrows.meta}
@@ -52,6 +55,7 @@
 \usepackage[square, numbers, comma, sort&compress]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
 \hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
 \title{\ttitle} % Defines the thesis title - don't touch this
+
 
 
 \begin{document}
@@ -68,7 +72,10 @@
 \pagestyle{fancy} % Finally, use the "fancy" page style to implement the FancyHdr headers
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
-
+\newcommand{\change}[1]{\textcolor{blue}{#1}}
+\newcommand{\smark}{\ding{110}}%
+\newcommand{\cmark}{\ding{108}}%
+\newcommand{\tmark}{\ding{115}}%
 % PDF meta-data
 \hypersetup{pdftitle={\ttitle}}
 \hypersetup{pdfsubject=\subjectname}
