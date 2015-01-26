@@ -45,9 +45,17 @@
 \usepackage{subcaption}
 \usepackage{pifont}
 \usetikzlibrary{shapes}
-\usetikzlibrary{positioning,arrows}
+\usetikzlibrary{positioning,arrows,decorations}
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{decorations.pathreplacing} 
+\pgfdeclaredecoration{sl}{initial}{
+	\state{initial}[width=\pgfdecoratedpathlength-1sp]{
+		\pgfmoveto{\pgfpointorigin}
+	}
+	\state{final}{
+		\pgflineto{\pgfpointorigin}
+	}
+}
 
 
 \graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
@@ -262,9 +270,7 @@
 \input{Chapters/sotart}
 \input{Chapters/algorithms}
 \input{Chapters/future} 
-\input{Chapters/conclusion} 
-%\input{Chapters/Chapter6} 
-%\input{Chapters/Chapter7} 
+%\input{Chapters/conclusion} 
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES

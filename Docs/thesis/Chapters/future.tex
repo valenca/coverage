@@ -11,19 +11,16 @@ The algorithm serve as the middleware responsible for filtering the response of 
 The candidate algorithms will be tested and benchmarked using data from the Open Street Map project. The project features large quantities of open source geographic data, as well as a versatile API for fetching data in the WMS standard.
 \section{Heuristic Approaches}
 \paragraph{}
-Optimal solution algorithms, and their slow time performance, makes them a poor choice for real-time applications. As such, heuristic algorithms that provide good but not optimal solution in faster time are more likely the most appropriate approach.
+Exact algorithms, due to their slow time performance, make them a poor choice for real-time applications. As such, heuristic algorithms that provide good but not optimal solution in faster time are more likely the most appropriate approach.
 Since a lot of complex structures have already been explored and implemented in the implicit enumeration approaches, a lot of the concepts and methods can be repurposed and reused when experimenting and researching heuristic approaches. 
-\change{
-	\paragraph{}
-	For instance, since the two interactions with any calculated solution will be panning and zooming, some new solutions may share some points. If that is the case, calculating a solution after a small pan or zoom may reuse the previously calculated region as a starting point, only adding the new points, and removing the previously calculated ones.
-	\paragraph{}
-	An extension to this method may include calculating a larger area than the queried one, so that a small pan and/or zoom include already calculating data. After the window moves, the new adjacent regions can be calculated. This way, the user should never see the window without processed data, and the program will only calculate areas outside the vision range of the window.
-}
-	\section {Approximation Algorithms}
-\change{
-	\paragraph{}
-	Approximation algorithms are used to used in optimisation as a means to achieve a valid solution within a guaranteed minimum factor of quality to the optimal solution. Ideally, the approximation is optimal up to a constant factor, the smaller the better. Approximation algorithms have been found and described by \citet{approx}, that give an approximation with a factor of $3.16$ to the optimal solution of \emph{p-center} problem.
-}
+\paragraph{}
+For instance, since the two interactions with any calculated solution will be panning and zooming, some new solutions may share some points. If that is the case, calculating a solution after a small pan or zoom may reuse the previously calculated region as a starting point, only adding the new points, and removing the previously calculated ones.
+\paragraph{}
+An extension to this method may include calculating a larger area than the queried one, so that a small pan and/or zoom include already calculating data. After the window moves, the new adjacent regions can be calculated. This way, the user should never see the window without processed data, and the program will only calculate areas outside the vision range of the window.
+\section {Approximation Algorithms}
+\paragraph{}
+Approximation algorithms are used to used in optimisation as a means to achieve a valid solution within a guaranteed minimum factor of quality to the optimal solution. Ideally, the approximation is optimal up to a constant factor, the smaller the better. Approximation algorithms have been found for this problem and described by \citet{approx}, which give an approximation with a factor of $3.16$ to the optimal solution of the \emph{p-center} problem.
+
 %
 %\section{Uniformity}
 %\paragraph{}

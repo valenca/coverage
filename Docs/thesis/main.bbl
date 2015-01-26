@@ -1,4 +1,4 @@
-\begin{thebibliography}{13}
+\begin{thebibliography}{14}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -11,8 +11,11 @@ Mark~S Daskin.
   Applications}.
 \newblock John Wiley \& Sons, 2011.
 
-\bibitem[dva()]{dvaz}
-
+\bibitem[Vaz(2013)]{dvaz}
+Daniel Vaz.
+\newblock Subset selection algorithms in multiobjective optimization.
+\newblock Msc in informatics engineering, University of Coimbra, Portugal,
+  2013.
 
 \bibitem[Megiddo and Tamir(1983)]{complex}
 Nimrod Megiddo and Arie Tamir.
@@ -33,6 +36,12 @@ Atsuyuki Okabe, Barry Boots, Kokichi Sugihara, and Sung~Nok Chiu.
 \newblock \emph{Spatial Tessellations: Concepts and Applications of Voronoi
   Diagrams}, volume 501.
 \newblock John Wiley \& Sons, 2009.
+
+\bibitem[De~Berg et~al.(2000)De~Berg, Van~Kreveld, Overmars, and
+  Schwarzkopf]{delbible}
+Mark De~Berg, Marc Van~Kreveld, Mark Overmars, and Otfried~Cheong Schwarzkopf.
+\newblock \emph{Computational Geometry}.
+\newblock Springer, 2000.
 
 \bibitem[Bowyer(1981)]{bwalgo}
 Adrian Bowyer.

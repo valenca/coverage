@@ -2,15 +2,16 @@
 \label{chap:algos}
 \lhead{Chapter \ref{chap:algos}. \emph{\nameref{chap:algos}}} % This is for the header
 \paragraph{}
-This chapter covers two possible algorithms that solve the coverage problem described in Section \ref{sect:problem}. Both algorithms use an incremental branch-and-bound approach for implicit enumeration of the centroid subsets.\\
-\change{The first algorithm uses simple loops over arrays for point location queries, while the second one builds and uses a Delaunay triangulation and its properties the same queries.}
+This chapter covers two possible algorithms that solve the coverage problem described in Section \ref{sect:problem}. Both algorithms use an incremental branch-and-bound approach for implicit enumeration of the centroid subsets. 
+\paragraph{}
+The first algorithm is a naive implementation of a branch-and-bound algorithm and uses simple loops over arrays for point location queries. The second algorithm builds and uses Delaunay triangulations to achieve more efficient point location queries.
 
 %\section{Combinatorial Approach}
 %\paragraph{}
 %The simplest way to implement a solution to the coverage problem is to enumerate all combinations of $K$ elements from $N$. Each of these combinations is the list of candidate centroids, and every point in $N$ is assigned to its closest centroid. This assignement step takes $\mathcal{O(NK)}$ for each combination of $K$ elements.\\
 %Finding the minimum coverage value in this approach is trivial, since it is just a matter selecting the combination of centroids that has the minimum distance between the farthest point from its centroid. \\
 %This approach takes $\mathcal{O}(K!)$ time complexity, and takes no advantage from previously calculated candidate solutions.
-\section{Branch-and-Bound}
+\section{Naive Branch-and-Bound}
 \label{alg:bb}
 \paragraph{}
 A more sophisticated approach to the problem is to use a branch-and-bound method.
@@ -43,7 +44,7 @@ Removing a non-centroid $n$ means that the next farthest point from its centroid
 \subsection{Bounds}
 \label{sec:bounds}
 \paragraph{}
-\change{At all steps in the branching, we calculate a lower bound for the value of the objective function the current state's sub-branches.} If the lower bound is larger than the upper bound calculated, then there is no purpose in further exploring the current branch. In a minimisation problem, the upper bound can be the best solution found until that point in time.
+\change{At all steps in the branching, the lower bound for the value of the objective function in the current branches is calculated. If the lower bound is larger than an already calculated upper bound, then there is no purpose in further exploring the current branch.} In a minimisation problem, the upper bound can be the best solution found until that point in time.
 
 \paragraph{Lower Bound}
 After each insertion, centroid or non-centroid, one can assume that, the best case scenario, all the points not yet inserted will be centroids. This would hypothetically decrease the value the most. If this value is larger than the best value found, then there is no possible assignment that will improve the current solution in the current branch, and the branch can be pruned.
@@ -54,23 +55,23 @@ After each insertion, centroid or non-centroid, one can assume that, the best ca
 Most of the operations in the branch-and-bound approach described in Section \ref{alg:bb} have at least linear time complexity for both the best and expected cases. We can speed these up by implementing incrementally built Delaunay triangulations, which can be used to accelerate point location queries. To aid the calculations, the points are pre-processed and sorted by a Hilbert Curve approximation of a sufficiently high order.
 
 \paragraph{Inserting a Centroid}
-In order to take advantage of Delaunay triangulations, each time a centroid is chosen, it must be included in the Delaunay triangulation. This means that the triangulation must be updated. Inserting a point in a triangulation with $K$ vertices using the Bowyer-Watson algorithm described in Section \ref{sect:dtconst} takes an estimated $\mathcal{O}(\log{K})$ for a uniformly distributed set of points \cite{tricomplex}.\\
+In order to take advantage of Delaunay triangulations, each time a centroid is chosen, it must be included in the Delaunay triangulation. This means that the triangulation must be updated. Inserting a point in a triangulation with $K$ vertices using the Bowyer-Watson algorithm described in Section \ref{sect:dtconst} takes an estimated $\mathcal{O}(\log{K})$ for a uniformly distributed set of points \cite{tricomplex}.
 After a centroid $c$ is included in a Delaunay triangulation, it is possible to know which other centroids are its Voronoi neighbours. This is due to the duality between Delaunay triangulations and Voronoi diagrams.
 Since Voronoi diagrams partition the space into regions by distance to the centroids, we only need to check the subset of non-centroids assigned to the direct neighbours of $c$ to find which points should change assignment to $c$. 
-This property lowers the expected number of comparisons to make. Since the average number of Voronoi neighbours per centroid in any given diagram cannot exceed six \cite{tricard2} \cite{tricard1}, the number of points to be compared in a uniformly distributed set of non-centroids should not include all non-centroids, but only a small fraction of them.\\
-Despite the lower number of comparisons, the worst-case time complexity still takes $\mathcal{O}(N)$ time to complete, and in the worst case scenario it can still require a check through all non-centroids, which can all be neighbours of $c$.\\
+This property lowers the expected number of comparisons to make. Since the average number of Voronoi neighbours per centroid in any given diagram cannot exceed six \cite{tricard2,tricard1}, the number of points to be compared in a uniformly distributed set of non-centroids should not include all non-centroids, but only a small fraction of them.
+Despite the lower number of comparisons, the worst-case time complexity still takes $\mathcal{O}(N)$ time to complete, and in the worst case scenario it can still require a check through all non-centroids, which can all be neighbours of $c$.
 If the objective function maximiser is assigned to $c$, all non-centroids can be candidates to become the new maximiser, so a linear search through all the non-centroids must be done, to see which one is now the farthest away from its centroid.
 
 \paragraph{Inserting a Non-Centroid}
-Since there is a triangulation built, using the centroids as its vertices, finding the closest centroid $c$ to a new non-centroid $n$ is simply a matter of using the greedy routing algorithm to find $c$ \cite{greedyroute}.\\
+Since there is a triangulation built, using the centroids as its vertices, finding the closest centroid $c$ to a new non-centroid $n$ is simply a matter of using the greedy routing algorithm to find $c$ \cite{greedyroute}.
 The greedy routing algorithm has a worst-case time complexity of $\mathcal{O}(K)$. This happens when the search starts from the farthest centroid from $n$, and all centroids are either in the direction of $n$, or are neighbours of the centroids that are. 
 The last centroid returned by the greedy routing algorithm can be used to start the new query. Since the points are inserted ordered by a Hilbert curve approximation, each consecutive point should minimise the position variation from the last.
 This means that, ideally, each inserted non-centroid $n$ will be close to its respective optimally positioned centroid $c$, and it will only need to calculate the distances to the neighbours of $c$ in order to guarantee that $c$ is indeed the correct centroid.
-The aforementioned property of the average six neighbours for each centroid means that the expected time for a query starting at the right centroid is $\mathcal{O}(N/K)$, and this is heuristically approximated by the Hilbert curves.\\
+The aforementioned property of the average six neighbours for each centroid means that the expected time for a query starting at the right centroid is $\mathcal{O}(N/K)$, and this is heuristically approximated by the Hilbert curves.
 The time complexity of inserting one non-centroid is still $\mathcal{O}(K)$ for the worst case. However, the insertion of a large number of uniformly distributed and Hilbert-sorted points \emph{should} behave closer to constant time per point.
 
 \paragraph{Removing a Centroid}
-Removing a centroid $c$ means removing it from the Delaunay triangulation and redistributing all points assigned to $c$ across its neighbours.\\
+Removing a centroid $c$ means removing it from the Delaunay triangulation and redistributing all points assigned to $c$ across its neighbours.
 Since all points are inserted in the triangulation in a LIFO order, removing a point from a triangulation is a matter of retrieving the previous state. We can do this by storing all new edges and triangles in a stack upon construction, and retrieve them upon removal, without the need of recalculating anything. Since inserting a centroid $c$ takes expected $\mathcal{O}(\log{K})$ time \cite{tricomplex}, and removing it will take exactly the same higher level operations (in reverse order), it can also be done in expected $\mathcal{O}(\log{K})$ time, without the need to do extra calculations.
 Likewise, redistributing the points assigned to $c$ takes retrieving the previous state. Each change in assignment can be saved in a stack upon insertion, and retrieving it can be done by popping the stack.
 This step also takes $\mathcal{O}(N)$ time, since all points can change assignment. Using a stack limits the number of operations to only those that changed upon insertion.
@@ -78,14 +79,13 @@ This step also takes $\mathcal{O}(N)$ time, since all points can change assignme
 \paragraph{Removing a Non-Centroid}
 Removing a non-centroid $n$ only requires recovering the second farthest point if $n$ is currently the farthest point, otherwise, no operations besides erasing $n$'s assignment, taking $\mathcal{O}(1)$ time and memory.
 \paragraph{Bounds}
-\change{
-The same lower bound described in Section \ref{sec:bounds} can be applied in this approach. Both algorithms have the same time complexity of $\mathcal{O}(N)$ for the bound.
-}
+The same lower bound described in Section \ref{sec:bounds} can be applied in this approach. Both algorithms have the same time complexity of $\mathcal{O}(N)$ for computing the bound.
+
 
 \paragraph{}
-\change{These steps occur at each iteration of the branch-and-bound algorithm, and each is performed potentially $2^N$ times for both approaches.}
-Despite having the same worst-case time complexity as the branch-and-bound algorithm described in section \ref{sect:bb}, the expected time complexity for the Delaunay assisted approach is smaller. This approach should have better performance when a large number of centroids are needed.\\
-This is especially true since maintaining a valid Delaunay triangulation through all the centroid permutations, as well as the Hilbert sorting, takes a computing cost. This extra overhead will have a negative impact in the performance in the smaller instances of the problem.\\
+These steps occur at each iteration of the branch-and-bound algorithm, and each is performed potentially $2^N$ times for both approaches.
+Despite having the same worst-case time complexity as the branch-and-bound algorithm described in Section \ref{alg:bb}, the expected time complexity for the Delaunay assisted approach is smaller. This approach should have better performance when a large number of centroids are needed.
+This is especially true since maintaining a valid Delaunay triangulation through all the centroid permutations, as well as the Hilbert sorting, takes a computing cost. This extra overhead will have a negative impact in the performance in the smaller instances of the problem.
 
 \section{Algorithm Comparison}
 
@@ -96,42 +96,52 @@ This is especially true since maintaining a valid Delaunay triangulation through
 	\hline
 	\multirow{2}{*}{Algorithm}	& \multicolumn{2}{c|}{Insert}	& \multicolumn{2}{c|}{Remove}	\\ \cline{2-5}
 								& Centroid		& Non-Centroid	& Centroid		& Non-Centroid	\\ \hline
-		Branch-and-Bound		& $\Theta(N)$ & $\Theta(K)$ 
+		Naive B\&B		& $\Theta(N)$ & $\Theta(K)$ 
 									& $\Theta(N)$ & $\Theta(1)$ \\ \hline
-		Delaunay Assisted		& $\mathcal{O}(K+N/K)$& $\mathcal{O}(\log{K})$
+		Delaunay Assisted B\&B		& $\mathcal{O}(K+N/K)$& $\mathcal{O}(\log{K})$
 									& $\mathcal{O}(N)$ & $\mathcal{O}(1)$\\ \hline
 \end{tabular}
-	\captionof{table}{Expected time complexities for the various operations in a uniformly distributed set}
+	\captionof{table}{Expected time complexities for the various operations in a uniformly distributed point set}
 \end{center}
 
 \subsection{Experimental Results}
-\change{
 \paragraph{}
-In this section, we analyse empirically the time spent calculating the solutions to different sizes of the problem. \\
-The test cases are sets of uniformly distributed points generated with a fixed seed. Each test was repeated 10 times with different sets of points. The same sets and machine were used to test the three algorithms. Each measure is taken in seconds.
-}
-\subsubsection{Fixed $N$}
+In this section, we analyse empirically the time spent calculating the solutions to different sizes of the problem. 
+\subsubsection*{Methodology and Set-up}
 \paragraph{}
-\change{
-We start by fixing the $N$ at a constant value, and varying the $K$ from 2 to $N$, by incremental steps of 2. The following tables show the results for the $N$ values of 10, 20, 30 and 40, respectively. For time reasons, the tests were stopped at the half-hour mark.
-}
+The test cases are sets of uniformly distributed points generated with a fixed seed. Each test was repeated 10 times with different sets of points. The same sets and machine were used to test the three algorithms.
+Both branch-and-bound approaches were implemented using \emph{C++} and compiled using \emph{g++ 4.9.2}. The integer linear programming version had the data preprocessed using \emph{python 2.7.9} and was solved using the \emph{GLPK LP/MIP v4.55} solver. The machine that ran the tests had the following specifications:
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|}
+			\hline
+			Operating System  & Arch Linux 3.14.4 x64\\\hline
+			CPU & Intel i7 Dual-Core, 2GHz\\\hline
+			Memory & 8 GB, 1600 MHz \\\hline
+			Storage &  Solid-State Drive, 300 MB/s (read)\\\hline
+		\end{tabular}
+		\caption{Machine specifications}
+	\end{center}
+\end{table}
+
+\subsubsection*{Effect of $N$}
+\paragraph{}
+The first test conducted analysed the variance in performance relative to changes in the value of $N$. It was done by changing $N$, with $K$ taking fixed fractional values of $N$. Figure \ref{fig:fixed_k} shows the results of these tests. The measures were taken in seconds and account for the pre-processing steps and the solving time, but not the input reading or output writing times. The tests were stopped at the half-hour mark. 
+\input{pic:fixed_k}
+\noindent
+\paragraph{}As it can be seen, the problem solving time increases exponentially with the value of $N$, as expected.
+The Integer Linear Programming Approach dominates for larger values of $N$. Comparing the branch-and-bound approaches, these tests show that the Delaunay-assisted algorithm steadily approaches and surpasses the naive branch-and-bound algorithm as the instance size grows.
+\subsubsection*{Effect of $K$}
+\paragraph{}
+In this experiment, we analysed the performance of the three algorithms in dependence of parameter $K$. We fixed $N$ and varied $K$ from 2 to $N$ by steps of 2. The following tables show the results for the $N=\{10,20,30,40\}$, respectively. The tests were stopped at the half-hour mark. Figure \ref{fig:fixed_n} shows the results of these tests.
 \input{pic:fixed_n}
 \noindent
 \paragraph{}
-\change{
-As it can be seen, the problem solving time increases exponentially with the value of $N$, as expected. The Integer Linear Programming approach seems to be the fastest approach for all cases. The Delaunay-assisted approach is slower in these test cases, although it should be noted that for each $N$, it peaks before the expected value of $K=N/2$. This is justified due to the fact that the Delaunay triangulation has an overhead which can only by taken advantage of in larger values of $K$.\\
-It is also noteworthy that no test for the values of $12<K<28$ for $N=40$ ended before the time-out mark. In fact, the Delaunay-assisted algorithm had a lot more variation in its tests, with its median time being well bellow that of the simple branch-and-bound, whose median is similar to the mean.
+The Integer Linear Programming approach seems to be the fastest approach for most cases, and seems independent to the value of $K$. The exceptions to this seem to be smaller values of $N$, as well as the smallest and largest values of $K$. This happens because the implicit enumeration methods only need to enumerate a very small number of combinations.
+As for the branch-and-bound algorithms, the Delaunay-assisted approach is slower than the Naive implementation in these test cases. However it should be noted that for each $N$, the Delaunay-assisted algorithm peaks before the expected value of $K=N/2$. This is justified due to the fact that the Delaunay triangulation has an overhead which can take advantage for in larger values of $K$.
+Furthermore, the fact that the Naive implementation had no test for the middle values of $K$ for $N=40$ that ended before the time-out mark is noteworthy.
+It is also worth noting that The Delaunay-assisted approach showed a lot more variance between tests, often taking much lower values than the mean. However, for the tests performed, two runs had values much larger than the Naive approach, approximating the Delaunay-assisted algorithm's mean to the Naive approach.
 \paragraph{}
-For larger number of $N$ (50 and more), the Delaunay-assisted algorithm showed results considerably lower to those of the regular branch-and-bound. This could mean that the Delaunay-assisted approach is only preferable for values of $N$ and $K$ to which neither approach is usable in real-time. Due to the small number of tests for large values of $N$, this result may not be statistically meaningful, but it is noteworthy.
-}
-\subsubsection{Fixed $K$}
-\paragraph{}
-\change{
-Another test conducted was done by changing $N$ and having $K$ take fixed fractional values of $N$. The following pictures show the results of these tests:
-}
-\input{pic:fixed_k}
-\noindent
-\change{
-\paragraph{}
-As it can be seen, the Integer Linear Programming Approach once more dominates both the others. However, in these tests it can better be seen that the Delaunay-assisted algorithm is steadily approaching and surpassing the regular branch-and-bound algorithm, even becoming faster in the worst cases for the larger values of $N$
-}
+The time required for each test limited the number of tests performed. Because of this, the results may not be statistically meaningful. 
+This could mean that the Delaunay-assisted approach is only preferable for values of $N$ and $K$ to which neither approach is usable in real-time. Due to the small number of tests for large values of $N$, this result may not be statistically meaningful, but it is noteworthy.

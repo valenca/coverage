@@ -25,16 +25,17 @@ A simple and straight-forward approach to the problem is to model it in  integer
 In this formulation, $y_j = 1$ if point $j$ is a centroid and $y_j = 0$ if it is a non-centroid;
 $x_{ij} = 1$ if the point $i$ is assigned to the centroid $j$, and $x_{ij}=0$ otherwise;
 $d_{ij}$ is the Euclidean distance between points $i$ and $j$.
-Constraint \ref{ilp:1} ensures that $k$ centroids are chosen.
-Constraint \ref{ilp:2} limits the assignment of one point to more than one centroid.
-Constraint \ref{ilp:3} ensures that all active distances are lower than the limit we are minimising.
-Constraint \ref{ilp:4} limits points to being assigned only to centroids, where $y_j=1$.
-Constraint \ref{ilp:5} defines both $x_{ij}$ and $y_j$ as binary variables, in order to properly represent selection and assignment.
+Constraint \eqref{ilp:1} ensures that $k$ centroids are chosen.
+Constraint \eqref{ilp:2} limits the assignment of one point to more than one centroid.
+Constraint \eqref{ilp:3} ensures that all active distances are lower than the limit we are minimising.
+Constraint \eqref{ilp:4} limits points to being assigned only to centroids, where $y_j=1$.
+Constraint \eqref{ilp:5} defines both $x_{ij}$ and $y_j$ as binary variables, in order to properly represent selection and assignment.
 \paragraph{}
 It is worth noting that this formulation minimises the objective function by selecting the best possible set of centroids, but it only minimises the maximum coverage. This way, only the farthest point from its centroid has the guarantee that it is connected to its closest centroid.
-Every other point, however, can be linked to any centroid so long as it is closer to it than the distance defined by the objective function, since $d_{ij}x_{ij}$ only has to be lower than $D$, but not include the lowest possible values.\\
+Every other point, however, can be linked to any centroid so long as it is closer to it than the distance defined by the objective function, since $d_{ij}x_{ij}$ only has to be lower than $D$, but not include the lowest possible values.
 Likewise, it can also produce the result where one centroid is assigned to another centroid as opposed to itself, as long as they are close enough together and it does not affect the coverage of the whole set.
-These cases have no effect on the outcome of the final coverage value or the centroid selection, but are rather counter-productive, since we want to minimize the coverage of all centroids, with minimal overlapping of the covered areas.\\
+These cases have no effect on the outcome of the final coverage value or the centroid selection, but are rather counter-productive, since we want to minimize the coverage of all centroids, with minimal overlapping of the covered areas.
+\paragraph{}
 In order to best display the results, a simple post-processing step can be applied, where each point will be strictly assigned to the closest centroid. This can be easily computed in $\mathcal{O}((N-k)k)$ time in case there is a need for a clearer display of the assignment.
 
 \paragraph{}
@@ -45,4 +46,4 @@ Other more elaborate formulations can be used. \citet{linearprog} explore a new 
 A different approach is described by \citet{incrementalcov}. Their method describes algorithms to insert and remove centroids from a set of points, and update the centroid assignment in the geometrical area surrounding the changed centroid. This method is a form of local search, that allows for small modifications on an already valid solution, until a similar solution is deemed optimal is found. It can be used as a fast way to calculate neighbour solutions obtained by an enumeration algorithm.
 
 \paragraph{}
-In order to minimise computation time, \citet{incrementalcov} maintain the selected centroids in a \emph{kd-tree}. Using a \emph{k-d tree} reduces the number of comparisons needed for the point location steps in the algorithm. To keep them from loosing efficiency in insertions and removal of points, the trees need to be balanced from time to time. \change{Calculating the optimal time between \emph{k-d tree} updates has to be done \emph{a priori} and can affect the performance of the algorithm.}
+In order to minimise computation time, \citet{incrementalcov} maintain the selected centroids in a \emph{kd-tree}. Using a \emph{k-d tree} reduces the number of comparisons needed for the step of point location in the algorithm. To keep the \emph{k-d trees} from loosing efficiency in insertions and removal of points, the trees need to be balanced from time to time. Calculating the optimal time interval to balance the \emph{k-d tree} has to be done \emph{a priori} and can affect the performance of the algorithm.

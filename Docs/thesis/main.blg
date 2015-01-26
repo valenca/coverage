@@ -3,50 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: unsrtnat.bst
 Database file #1: Bibliography.bib
-Warning--empty author in dvaz
-Warning--empty title in dvaz
-Warning--empty journal in dvaz
-Warning--empty year in dvaz
-Warning--empty year in dvaz
-You've used 13 entries,
+You've used 14 entries,
             2481 wiz_defined-function locations,
-            628 strings with 6348 characters,
-and the built_in function-call counts, 5242 in all, are:
-= -- 465
-> -- 202
-< -- 13
-+ -- 84
-- -- 58
-* -- 362
-:= -- 768
-add.period$ -- 42
-call.type$ -- 13
-change.case$ -- 21
-chr.to.int$ -- 13
-cite$ -- 19
-duplicate$ -- 306
-empty$ -- 516
-format.name$ -- 74
-if$ -- 1168
+            638 strings with 6599 characters,
+and the built_in function-call counts, 5611 in all, are:
+= -- 497
+> -- 236
+< -- 14
++ -- 96
+- -- 68
+* -- 378
+:= -- 855
+add.period$ -- 47
+call.type$ -- 14
+change.case$ -- 24
+chr.to.int$ -- 14
+cite$ -- 14
+duplicate$ -- 321
+empty$ -- 536
+format.name$ -- 86
+if$ -- 1242
 int.to.chr$ -- 1
-int.to.str$ -- 14
-missing$ -- 17
-newline$ -- 71
-num.names$ -- 36
-pop$ -- 143
+int.to.str$ -- 15
+missing$ -- 18
+newline$ -- 78
+num.names$ -- 42
+pop$ -- 145
 preamble$ -- 1
-purify$ -- 13
+purify$ -- 14
 quote$ -- 0
-skip$ -- 190
+skip$ -- 197
 stack$ -- 0
-substring$ -- 251
-swap$ -- 73
+substring$ -- 252
+swap$ -- 75
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 79
-warning$ -- 5
-while$ -- 45
+type$ -- 83
+warning$ -- 0
+while$ -- 49
 width$ -- 0
-write$ -- 172
-(There were 5 warnings)
+write$ -- 192

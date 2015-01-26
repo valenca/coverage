@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2014.12.24)  25 JAN 2015 00:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2014.12.24)  26 JAN 2015 00:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1118,29 +1118,29 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
 \arrowsize=\dimen197
 ))
-(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
-File: pgflibraryarrows.meta.code.tex 2013/12/13 v3.0.0 (rcs-revision 1.12)
-\pgfarrowinset=\dimen198
-\pgfarrowlength=\dimen199
-\pgfarrowwidth=\dimen200
-\pgfarrowlinewidth=\dimen201
-)
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
-decorations.pathreplacing.code.tex
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 decorations.code.tex
 (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen202
-\pgfdecoratedremainingdistance=\dimen203
-\pgfdecoratedinputsegmentcompleteddistance=\dimen204
-\pgfdecoratedinputsegmentremainingdistance=\dimen205
-\pgf@decorate@distancetomove=\dimen206
+\pgfdecoratedcompleteddistance=\dimen198
+\pgfdecoratedremainingdistance=\dimen199
+\pgfdecoratedinputsegmentcompleteddistance=\dimen200
+\pgfdecoratedinputsegmentremainingdistance=\dimen201
+\pgf@decorate@distancetomove=\dimen202
 \pgf@decorate@repeatstate=\count166
-\pgfdecorationsegmentamplitude=\dimen207
-\pgfdecorationsegmentlength=\dimen208
+\pgfdecorationsegmentamplitude=\dimen203
+\pgfdecorationsegmentlength=\dimen204
 )
 \tikz@lib@dec@box=\box68
 )
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2013/12/13 v3.0.0 (rcs-revision 1.12)
+\pgfarrowinset=\dimen205
+\pgfarrowlength=\dimen206
+\pgfarrowwidth=\dimen207
+\pgfarrowlinewidth=\dimen208
+)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+decorations.pathreplacing.code.tex
 (/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
 ons.pathreplacing.code.tex)) (/usr/share/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
@@ -1149,26 +1149,26 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count167
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 56.
+Package hyperref Info: Option `colorlinks' set `true' on input line 64.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -1196,21 +1196,21 @@ Package caption Info: End \AtBeginDocument code.
 )
 \c@lstlisting=\count174
 \AtBeginShipoutBox=\box70
-Package hyperref Info: Link coloring ON on input line 61.
-LaTeX Info: Redefining \ref on input line 61.
-LaTeX Info: Redefining \pageref on input line 61.
-LaTeX Info: Redefining \nameref on input line 61.
+Package hyperref Info: Link coloring ON on input line 69.
+LaTeX Info: Redefining \ref on input line 69.
+LaTeX Info: Redefining \pageref on input line 69.
+LaTeX Info: Redefining \nameref on input line 69.
  (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
  ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 104.
+LaTeX Font Info:    Try loading font information for U+msa on input line 112.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 104.
+LaTeX Font Info:    Try loading font information for U+msb on input line 112.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1239,27 +1239,32 @@ Chapter 1.
 ------------------------------------------------------------------------------
  1 Introduction
 ------------------------------------------------------------------------------
-) (./Chapters/theory.tex [1
+(./Figures/rep.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--63
+
+ []
+
+) [1
 
 
-] [2]
+]) (./Chapters/theory.tex [2]
 Chapter 2.
 ------------------------------------------------------------------------------
  2 Concepts, Definitions and Notation
 ------------------------------------------------------------------------------
 [3
 
-] [4] [5] (./Figures/vd1.tex) (./Figures/dt1.tex [6]) (./Figures/dt_vd.tex)
-[7] (./Algorithms/bw.tex
+] (./Figures/cov.tex) [4] [5] (./Figures/vd1.tex) [6] (./Figures/dt1.tex)
+[7] (./Figures/dt_vd.tex) (./Algorithms/bw.tex
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 2.
-) [8] (./Figures/halfedge.tex
-Underfull \hbox (badness 10000) in paragraph at lines 111--33
+put line 26.
+ [8]) [9] (./Figures/halfedge.tex
+Underfull \hbox (badness 10000) in paragraph at lines 117--58
 
  []
 
-) [9] (./Figures/gr1.tex) [10] (./Figures/wk1.tex) [11] (./Figures/hilbert.tex)
-[12]) (./Chapters/sotart.tex [13]
+) [10] (./Figures/gr1.tex) [11] (./Figures/wk1.tex) (./Figures/hilbert.tex
+[12])) (./Chapters/sotart.tex [13]
 Chapter 3.
 ------------------------------------------------------------------------------
  3 State of the Art
@@ -1275,40 +1280,50 @@ Chapter 4.
 
 ] [18] [19] [20]
 
-LaTeX Warning: Reference `sect:bb' on page 21 undefined on input line 87.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--89
-
- []
-
-
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 104.
 See the caption package documentation for explanation.
 
-[21] (./pic:fixed_n.tex <Pictures/n10.png, id=449, 518.8986pt x 403.9893pt>
-File: Pictures/n10.png Graphic file (type png)
+[21] (./pic:fixed_k.tex <Pictures/k1.png, id=459, 512.3943pt x 403.9893pt>
+File: Pictures/k1.png Graphic file (type png)
 
-<use Pictures/n10.png>
+<use Pictures/k1.png>
+Package pdftex.def Info: Pictures/k1.png used on input line 4.
+(pdftex.def)             Requested size: 187.86159pt x 148.11137pt.
+ <Pictures/k2.png, id=461, 512.3943pt x 403.9893pt>
+File: Pictures/k2.png Graphic file (type png)
+
+<use Pictures/k2.png>
+Package pdftex.def Info: Pictures/k2.png used on input line 10.
+(pdftex.def)             Requested size: 187.86159pt x 148.11137pt.
+ <Pictures/k3.png, id=462, 512.3943pt x 403.9893pt>
+File: Pictures/k3.png Graphic file (type png)
+
+<use Pictures/k3.png>
+Package pdftex.def Info: Pictures/k3.png used on input line 16.
+(pdftex.def)             Requested size: 187.86159pt x 148.11137pt.
+ [22]) (./pic:fixed_n.tex
+<Pictures/n10.png, id=475, 518.8986pt x 403.9893pt>
+File: Pictures/n10.png Graphic file (type png)
+ <use Pictures/n10.png>
 Package pdftex.def Info: Pictures/n10.png used on input line 4.
 (pdftex.def)             Requested size: 187.86159pt x 146.25589pt.
- <Pictures/n20.png, id=451, 512.3943pt x 403.9893pt>
-File: Pictures/n20.png Graphic file (type png)
 
-<use Pictures/n20.png>
+<Pictures/n20.png, id=476, 512.3943pt x 403.9893pt>
+File: Pictures/n20.png Graphic file (type png)
+ <use Pictures/n20.png>
 Package pdftex.def Info: Pictures/n20.png used on input line 11.
 (pdftex.def)             Requested size: 187.86159pt x 148.11137pt.
- <Pictures/n30.png, id=452, 512.3943pt x 403.9893pt>
-File: Pictures/n30.png Graphic file (type png)
 
-<use Pictures/n30.png>
+<Pictures/n30.png, id=477, 512.3943pt x 403.9893pt>
+File: Pictures/n30.png Graphic file (type png)
+ <use Pictures/n30.png>
 Package pdftex.def Info: Pictures/n30.png used on input line 18.
 (pdftex.def)             Requested size: 187.86159pt x 148.11137pt.
- <Pictures/n40.png, id=453, 512.3943pt x 403.9893pt>
-File: Pictures/n40.png Graphic file (type png)
 
-<use Pictures/n40.png>
+<Pictures/n40.png, id=478, 512.3943pt x 403.9893pt>
+File: Pictures/n40.png Graphic file (type png)
+ <use Pictures/n40.png>
 Package pdftex.def Info: Pictures/n40.png used on input line 24.
 (pdftex.def)             Requested size: 187.86159pt x 148.11137pt.
 
@@ -1321,88 +1336,64 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--30
 [][]
  []
 
-) [22 <./Pictures/n10.png> <./Pictures/n20.png> <./Pictures/n30.png> <./Picture
-s/n40.png>] (./pic:fixed_k.tex
-<Pictures/k1.png, id=469, 512.3943pt x 403.9893pt>
-File: Pictures/k1.png Graphic file (type png)
- <use Pictures/k1.png>
-Package pdftex.def Info: Pictures/k1.png used on input line 4.
-(pdftex.def)             Requested size: 187.86159pt x 148.11137pt.
-
-<Pictures/k2.png, id=470, 512.3943pt x 403.9893pt>
-File: Pictures/k2.png Graphic file (type png)
- <use Pictures/k2.png>
-Package pdftex.def Info: Pictures/k2.png used on input line 11.
-(pdftex.def)             Requested size: 187.86159pt x 148.11137pt.
-
-<Pictures/k3.png, id=471, 512.3943pt x 403.9893pt>
-File: Pictures/k3.png Graphic file (type png)
- <use Pictures/k3.png>
-Package pdftex.def Info: Pictures/k3.png used on input line 17.
-(pdftex.def)             Requested size: 187.8616pt x 148.11137pt.
-
-[23])) (./Chapters/future.tex [24 <./Pictures/k1.png> <./Pictures/k2.png> <./Pi
-ctures/k3.png>]
+[23 <./Pictures/k1.png> <./Pictures/k2.png> <./Pictures/k3.png>]) [24 <./Pictur
+es/n10.png> <./Pictures/n20.png> <./Pictures/n30.png> <./Pictures/n40.png>])
+(./Chapters/future.tex [25]
 Chapter 5.
 ------------------------------------------------------------------------------
  5 Future Work
 ------------------------------------------------------------------------------
-[25
+[26
 
-]) (./Chapters/conclusion.tex [26]
-Chapter 6.
-------------------------------------------------------------------------------
- 6 Conclusion
-------------------------------------------------------------------------------
-) [27
-
-]
+]) [27]
 ------------------------------------------------------------------------------
  Bibliography
 ------------------------------------------------------------------------------
-(./main.bbl [28
+(./main.bbl
+Underfull \hbox (badness 1424) in paragraph at lines 42--45
+[]\OT1/cmr/m/n/10.95 Mark De Berg, Marc Van Krev-eld, Mark Over-mars, and Ot-fr
+ied Cheong
+ []
+
+[28
 
 
 ]) [29]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 300.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 300.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 306.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 306.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 300.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 300.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 306.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 306.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7985F032EA32FF8E1E69285DBC2B0992;5229.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 300.
+(rerunfilecheck)             Checksum: BFA64778638800E954139E3B9A6BC70A;5153.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 306.
  ) 
 Here is how much of TeX's memory you used:
- 27464 strings out of 493108
- 503733 string characters out of 6140724
- 680266 words of memory out of 5000000
- 30206 multiletter control sequences out of 15000+600000
- 21123 words of font info for 76 fonts, out of 8000000 for 9000
+ 27646 strings out of 493108
+ 507344 string characters out of 6140724
+ 684199 words of memory out of 5000000
+ 30368 multiletter control sequences out of 15000+600000
+ 23290 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,12n,67p,18260b,875s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,69p,18260b,978s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/a
-msfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw/zapfding/uzdr
-.pfb>
-Output written on main.pdf (32 pages, 461111 bytes).
+sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><
+/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols
+/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on main.pdf (32 pages, 489967 bytes).
 PDF statistics:
- 613 PDF objects out of 1000 (max. 8388607)
- 543 compressed objects within 6 object streams
- 161 named destinations out of 1000 (max. 500000)
- 272 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 632 PDF objects out of 1000 (max. 8388607)
+ 561 compressed objects within 6 object streams
+ 172 named destinations out of 1000 (max. 500000)
+ 264 words of extra memory for PDF output out of 10000 (max. 10000000)
 
