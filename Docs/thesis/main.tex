@@ -44,6 +44,7 @@
 \usepackage{multirow}
 \usepackage{subcaption}
 \usepackage{pifont}
+\usepackage{lipsum}
 \usetikzlibrary{shapes}
 \usetikzlibrary{positioning,arrows,decorations}
 \usetikzlibrary{arrows.meta}
@@ -80,7 +81,7 @@
 \pagestyle{fancy} % Finally, use the "fancy" page style to implement the FancyHdr headers
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
-\newcommand{\change}[1]{\textcolor{blue}{#1}}
+\newcommand{\change}[1]{\textcolor{yellow}{#1}}
 \newcommand{\smark}{\ding{110}}%
 \newcommand{\cmark}{\ding{108}}%
 \newcommand{\tmark}{\ding{115}}%
@@ -158,10 +159,23 @@
 %----------------------------------------------------------------------------------------
 %	ABSTRACT PAGE
 %----------------------------------------------------------------------------------------
-
 \addtotoc{Abstract} % Add the "Abstract" page entry to the Contents
+\abstract{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
 
-%\abstract{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+In recent years, Geographic Information Systems have witnessed a large increase in data availability. So much so that there is a need for a viable way to process the large amounts data before it can be managed and analysed. This thesis explores a few ways to efficiently extract a representable set from a large amount of geographic data. The algorithm produced will be implemented in a web application so that it can easily be managed and analysed by a human user. The approaches covered in this report include exact algorithms for finding minimum coverage subsets.
+
+
+%\clearpage % Start a new page
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGE PT
+%----------------------------------------------------------------------------------------
+
+\addtotoc{Resumo} % Add the "Abstract" page entry to the Contents
+
+\abstractpt{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+
+Nos últimos anos, Sistemas de Informação Geográficos viram um grande aumento na quantidade de dados disponíveis. De facto, existe agora uma necessidade de encontrar uma maneira viável de processar grandes quantidades de dados para que tanta informação possa ser facilmente gerida e analisada. Esta tese explora alguns métodos de extrair um subconjunto representativo de uma grande quantidade de dados de modo eficiente. O algoritmo produzido será implementado numa aplicação web para que os dados possam ser facilmente analisada por um humano. As abordagens tratadas neste relatório incluem algoritmos exactos para encontrar o subconjunto de cobertura mínima.
 
 %The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
 %}
@@ -299,7 +313,7 @@
 
 \lhead{\emph{Bibliography}} % Change the page header to say "Bibliography"
 
-\bibliographystyle{unsrtnat} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
+\bibliographystyle{abbrvnat} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
 
 \bibliography{Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
 

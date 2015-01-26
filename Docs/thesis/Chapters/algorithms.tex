@@ -44,7 +44,7 @@ Removing a non-centroid $n$ means that the next farthest point from its centroid
 \subsection{Bounds}
 \label{sec:bounds}
 \paragraph{}
-\change{At all steps in the branching, the lower bound for the value of the objective function in the current branches is calculated. If the lower bound is larger than an already calculated upper bound, then there is no purpose in further exploring the current branch.} In a minimisation problem, the upper bound can be the best solution found until that point in time.
+At all steps in the branching, the lower bound for the value of the objective function in the current branches is calculated. If the lower bound is larger than an already calculated upper bound, then there is no purpose in further exploring the current branch. In a minimisation problem, the upper bound can be the best solution found until that point in time.
 
 \paragraph{Lower Bound}
 After each insertion, centroid or non-centroid, one can assume that, the best case scenario, all the points not yet inserted will be centroids. This would hypothetically decrease the value the most. If this value is larger than the best value found, then there is no possible assignment that will improve the current solution in the current branch, and the branch can be pruned.

@@ -290,25 +290,26 @@
 %----------------------------------------------------------------------------------------
 \newenvironment{abstract}
 {
-  \btypeout{Abstract Page}
-  \thispagestyle{empty}
-  \null\vfil
-  \begin{center}
-    \setlength{\parskip}{0pt}
-    {\normalsize \UNIVNAME \par} % University name in capitals
-    \bigskip
-    {\huge{\textit{Abstract}} \par}
-    \bigskip
-    {\normalsize \facname \par} % Faculty name
-    {\normalsize \deptname \par} % Department name
-    \bigskip
-    {\normalsize \degreename\par} % Degree name
-    \bigskip
-    {\normalsize\bf \@title \par} % Thesis title
-    \medskip
-    {\normalsize by \authornames \par} % Author name
-    \bigskip
-  \end{center}
+	\btypeout{Abstract Page}
+	\thispagestyle{empty}
+	\null\vfil
+	\begin{center}
+		\setlength{\parskip}{0pt}
+		{\huge{\textit{Abstract}} \par}
+		\bigskip
+	\end{center}
+}
+
+\newenvironment{abstractpt}
+{
+	\btypeout{Abstract Page PT}
+	\thispagestyle{empty}
+	\null\vfil
+	\begin{center}
+		\setlength{\parskip}{0pt}
+		{\huge{\textit{Resumo}} \par}
+		\bigskip
+	\end{center}
 }
 %----------------------------------------------------------------------------------------
 {

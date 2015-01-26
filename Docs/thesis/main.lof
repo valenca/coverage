@@ -1,15 +1,16 @@
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Example of a Representative Set\relax }}{2}{figure.caption.7}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Different assignments for the same set of points\relax }}{4}{figure.caption.15}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Example of a Voronoi Diagram\relax }}{7}{figure.caption.30}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Example of a Delaunay Triangulation\relax }}{8}{figure.caption.34}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Overlap of a Voronoi Diagram and its Delaunay Triangulation\relax }}{8}{figure.caption.35}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Illustration of the Half-Edge Structure\relax }}{10}{figure.caption.44}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Example of the Greedy Routing Algorithm\relax }}{11}{figure.caption.47}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Illustration of the Walking Algorithm\relax }}{12}{figure.caption.52}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces First Five Orders of Hilbert Curve Approximation\relax }}{13}{figure.caption.55}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Different assignments for the same set of points\relax }}{4}{figure.caption.18}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Example of a Voronoi Diagram\relax }}{7}{figure.caption.33}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Example of a Delaunay Triangulation\relax }}{8}{figure.caption.37}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Overlap of a Voronoi Diagram and its Delaunay Triangulation\relax }}{8}{figure.caption.38}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Illustration of the Half-Edge Structure\relax }}{10}{figure.caption.47}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Example of the Greedy Routing Algorithm\relax }}{11}{figure.caption.50}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Illustration of the Walking Algorithm\relax }}{12}{figure.caption.55}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces First Five Orders of Hilbert Curve Approximation\relax }}{13}{figure.caption.58}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Result times for different values of $K$ with varying values of $N$\relax }}{23}{figure.caption.106}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Result times for different values of $N$ with varying $K$\relax }}{24}{figure.caption.110}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Result times for different values of $K$ with varying values of $N$\relax }}{23}{figure.caption.109}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Result times for different values of $N$ with varying $K$\relax }}{24}{figure.caption.113}
 \addvspace {10\p@ }
