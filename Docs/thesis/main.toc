@@ -32,7 +32,7 @@
 \contentsline {paragraph}{Removing a Non-Centroid}{21}{section*.54}
 \contentsline {paragraph}{Bounds}{21}{section*.55}
 \contentsline {section}{\numberline {4.3}Algorithm Comparison}{21}{section.56}
-\contentsline {subsection}{\numberline {4.3.1}Expected Behaviour}{21}{subsection.57}
+\contentsline {subsection}{\numberline {4.3.1}Time Complexity}{21}{subsection.57}
 \contentsline {subsection}{\numberline {4.3.2}Experimental Results}{22}{subsection.59}
 \contentsline {paragraph}{}{22}{section*.60}
 \contentsline {chapter}{\numberline {5}Future Work}{26}{chapter.67}

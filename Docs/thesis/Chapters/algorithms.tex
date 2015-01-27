@@ -84,16 +84,16 @@ Despite having the same worst-case time complexity as the branch-and-bound algor
 This is especially true since maintaining a valid Delaunay triangulation through all the centroid permutations, as well as the Hilbert sorting, takes a computing cost. This extra overhead will have a negative impact in the performance in the smaller instances of the problem.
 \section{Algorithm Comparison}
 
-\subsection{Expected Behaviour}
+\subsection{Time Complexity}
 
-Each of the procedures mentioned in the previous Section are performed at each step of the recursive tree. At each step the bound is also calculated, which takes $\mathcal{O}(N)$ time. Table \ref{tab:exptime} shows the time complexities for each procedure in both algorithms.
+Each of the procedures mentioned in the previous Section are performed at each step of the recursive tree. At each step the bound is also calculated, which takes $\mathcal{O}(N)$ time. Table \ref{tab:exptime} shows the time complexities for each procedure in both algorithms. The values presented at the row corresponding to the average case of the Delaunay-assisted algorithm are conjectured and need to be shown in a more formal manner.
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
 	\hline
 	\multirow{2}{*}{Algorithm}	& \multicolumn{2}{c|}{Insert}	& \multicolumn{2}{c|}{Remove}	\\ \cline{2-5}
 								& Centroid		& Non-Centroid	& Centroid		& Non-Centroid	\\ \hline
-				Naïve BB		& $\Theta(N)$ & $\Theta(K)$ 	& $\Theta(N)$ & $\Theta(1)$ \\ \hline\hline
+				Naïve BB		& $\Theta(N)$ & $\Theta(K)$ 	& $\Theta(N)$ & $\mathcal{O}(1)$ \\ \hline\hline
 		Del. Assisted BB	
 				& \multirow{2}{*}{$\mathcal{O}(\log{K}+N/K)$}
 				& \multirow{2}{*}{$\mathcal{O}(\sqrt{K})$}
@@ -107,7 +107,7 @@ Each of the procedures mentioned in the previous Section are performed at each s
 				& \multirow{2}{*}{$\mathcal{O}(1)$}\\ 
 				Worst Case 	& & & & \\ \hline
 \end{tabular}
-	\captionof{table}{Expected time complexities for the various operations in a uniformly distributed point set}
+	\captionof{table}{Time complexities for the various operations in a uniformly distributed point set}
 	\label{tab:exptime}
 \end{center}
 \end{table}
@@ -140,7 +140,7 @@ The first test conducted analysed the variance in performance relative to change
 As it can be seen, the problem solving time increases exponentially with the value of $N$, as expected.
 The Integer Linear Programming Approach performs faster for larger values of $N$. Comparing the branch-and-bound approaches, these tests show that the Delaunay-assisted algorithm steadily approaches and surpasses the naïve branch-and-bound algorithm as the instance size grows.
 \subsubsection*{Effect of $K$}
-In this experiment, we analysed the performance of the three algorithms in dependence of parameter $K$. We fixed $N$ and varied $K$ from 2 to $N$ by steps of 2. The following tables show the results for the $N=\{10,20,30,40\}$, respectively. The tests were stopped at the half-hour mark. Figure \ref{fig:fixed_n} shows the results of these tests.
+In this experiment, we analysed the performance of the three algorithms in dependence of parameter $K$. We fixed $N$ and varied $K$ from 2 to $N$ by steps of 2. Figure \cite{fig:fixed_n} show the results for the $N=\{10,20,30,40\}$, respectively. The tests were stopped at the half-hour mark. Figure \ref{fig:fixed_n} shows the results of these tests.
 \input{Figures/fixed_n}
 \noindent
 The Integer Linear Programming approach seems to be the fastest approach for most cases, and seems independent to the value of $K$. The exceptions to this seem to be smaller values of $N$, as well as the smallest and largest values of $K$. This happens because the implicit enumeration methods only need to enumerate a very small number of combinations.
