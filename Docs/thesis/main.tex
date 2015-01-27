@@ -27,7 +27,6 @@
 
 \documentclass[11pt, oneside]{Thesis} % The default font size and one-sided printing (no margin offsets)
 
-
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{nameref}
@@ -38,7 +37,7 @@
 \usepackage{tocloft}
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
-\usepackage{xcolor}
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{booktabs}
 \usepackage{tikz}
 \usepackage{multirow}
@@ -81,7 +80,7 @@
 \pagestyle{fancy} % Finally, use the "fancy" page style to implement the FancyHdr headers
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
-\newcommand{\change}[1]{\textcolor{yellow}{#1}}
+% \newcommand{\change}[1]{\textcolor{blue}{#1}}
 \newcommand{\smark}{\ding{110}}%
 \newcommand{\cmark}{\ding{108}}%
 \newcommand{\tmark}{\ding{115}}%
@@ -159,10 +158,13 @@
 %----------------------------------------------------------------------------------------
 %	ABSTRACT PAGE
 %----------------------------------------------------------------------------------------
-\addtotoc{Abstract} % Add the "Abstract" page entry to the Contents
+%\addtotoc{Abstract} % Add the "Abstract" page entry to the Contents
 \abstract{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
 
-In recent years, Geographic Information Systems have witnessed a large increase in data availability. So much so that there is a need for a viable way to process the large amounts data before it can be managed and analysed. This thesis explores a few ways to efficiently extract a representable set from a large amount of geographic data. The algorithm produced will be implemented in a web application so that it can easily be managed and analysed by a human user. The approaches covered in this report include exact algorithms for finding minimum coverage subsets.
+In recent years, Geographic Information Systems (GIS) have witnessed a large increase in data availability. There is a need to process a large amount of data before it can be managed and analysed. This project aims to develop a GIS application operating through a Web platform in order to allow for a low cost and simplified integration, management and manipulation of georeferenced information. Special emphasis is given to the implementation of efficient clustering algorithms for finding a representative set of points in a map, which can be recast as a \emph{k-center} problem. The approaches covered in this report include exact algorithms for finding minimum coverage subsets.
+
+\noindent
+\paragraph{Keywords:} Geographic Clustering, k-Center, Coverage, Branch-and-Bound, Delaunay Triangulations
 
 
 %\clearpage % Start a new page
@@ -171,11 +173,14 @@ In recent years, Geographic Information Systems have witnessed a large increase 
 %	ABSTRACT PAGE PT
 %----------------------------------------------------------------------------------------
 
-\addtotoc{Resumo} % Add the "Abstract" page entry to the Contents
+%\addtotoc{Resumo} % Add the "Abstract" page entry to the Contents
 
 \abstractpt{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
 
-Nos últimos anos, Sistemas de Informação Geográficos viram um grande aumento na quantidade de dados disponíveis. De facto, existe agora uma necessidade de encontrar uma maneira viável de processar grandes quantidades de dados para que tanta informação possa ser facilmente gerida e analisada. Esta tese explora alguns métodos de extrair um subconjunto representativo de uma grande quantidade de dados de modo eficiente. O algoritmo produzido será implementado numa aplicação web para que os dados possam ser facilmente analisada por um humano. As abordagens tratadas neste relatório incluem algoritmos exactos para encontrar o subconjunto de cobertura mínima.
+Nos últimos anos, os Sistemas de Informação Geográfica (GIS) têm assistido a um grande aumento na quantidade de dados disponíveis. De facto, existe uma necessidade de encontrar uma maneira eficiente de processar grandes quantidades de dados para que tanta informação possa ser facilmente gerida e analisada. Este projeto visa desenvolver uma aplicação GIS para uma plataforma Web, de modo a obter uma integração simples e de baixo custo que manipule e analise dados georeferenciados. Uma ênfase especial é dada à implementação de algoritmos para encontrar um conjunto representativo de pontos num mapa, que pode ser formulado como um problema de \emph{k-center}. As abordagens descritas neste relatório incluem algoritmos exactos para encontrar o subconjunto ótimo.
+
+\noindent
+\paragraph{Palavras-chave:} Clustering Geográfico, k-Center, Cobertura, Branch-and-Bound, Triangulações Delaunay
 
 %The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
 %}
@@ -309,9 +314,11 @@ Nos últimos anos, Sistemas de Informação Geográficos viram um grande aumento
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
 
-\label{Bibliography}
+\label{References}
 
-\lhead{\emph{Bibliography}} % Change the page header to say "Bibliography"
+\renewcommand\bibname{References}
+
+\lhead{\emph{References}} % Change the page header to say "Bibliography"
 
 \bibliographystyle{abbrvnat} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
 

@@ -7,7 +7,7 @@
 
 \bibitem[Amenta et~al.(2003)Amenta, Choi, and Rote]{walking}
 N.~Amenta, S.~Choi, and G.~Rote.
-\newblock Incremental constructions con brio.
+\newblock Incremental constructions con {BRIO}.
 \newblock In \emph{Proceedings of the Nineteenth Annual Symposium on
   Computational Geometry}, pages 211--219. ACM Press, 2003.
 
@@ -30,10 +30,10 @@ H.~Cambazard, D.~Mehta, B.~O’Sullivan, and L.~Quesada.
 \newblock In \emph{Integration of AI and OR Techniques in Contraint Programming
   for Combinatorial Optimzation Problems}, pages 97--112. Springer, 2012.
 
-\bibitem[Daskin(2011)]{pcenter}
+\bibitem[Daskin(2011)]{thisfref}
 M.~S. Daskin.
-\newblock \emph{Network and Discrete Location: Models, Algorithms, and
-  Applications}.
+\newblock \emph{Network and discrete location: models, algorithms, and
+  applications}.
 \newblock John Wiley \& Sons, 2011.
 
 \bibitem[De~Berg et~al.(2000)De~Berg, Van~Kreveld, Overmars, and
@@ -82,12 +82,12 @@ J.~R. Shewchuk.
 D.~Shmoys, {\'E}.~Tardos, and K.~Aardal.
 \newblock Approximation algorithms for facility location problems.
 \newblock In \emph{Proceedings of the twenty-ninth annual ACM symposium on
-  Theory of computing}, pages 265--274. ACM, 1997.
+  Theory of computing}, pages 265--274. ACM Press, 1997.
 
 \bibitem[Vaz(2013)]{dvaz}
 D.~Vaz.
 \newblock Subset selection algorithms in multiobjective optimization.
-\newblock Msc in informatics engineering, University of Coimbra, Portugal,
+\newblock {MSc} in informatics engineering, University of Coimbra, Portugal,
   2013.
 
 \end{thebibliography}

@@ -2,24 +2,26 @@
 \label{chap:future}
 \lhead{Chapter \ref{chap:future}. \emph{\nameref{chap:future}}}
 \section{Integration in a Visualisation Framework}
-\paragraph{}
-The final objective of this study is to integrate an algorithm in a web application that can display the most representative set. There is, however, a time constraint to do this. The feedback time on the application needs to be as small as possible while still delivering an acceptable set of points, in order to not lose engagement from the user.
-\paragraph{}
+
+The final objective of this study is to integrate an algorithm in a web application that can display the most representative set. However, the feedback time on the application needs to be as small as possible while still delivering an acceptable set of points, in order to not lose engagement from the user.
+
 The application will display a rectangular window, showing a cut of geographical region containing a set of points. The algorithm chosen will need to be able to choose a representative set of points within the cut quickly, as well as be able to recalculate a new set points for a new cut, resulting from panning or zooming the display window over the region.
-\paragraph{}
+
 The algorithm serve as the middleware responsible for filtering the response of a GIS server to a Web Map Service, or WMS request. WMS lists the geographic coordinates of the points to be represented in an image by the coordinates mapped into orthogonally organised pixels on an image displaying the cut of the region requested by the application.
 The candidate algorithms will be tested and benchmarked using data from the Open Street Map project. The project features large quantities of open source geographic data, as well as a versatile API for fetching data in the WMS standard.
 \section{Heuristic Approaches}
-\paragraph{}
+
 Exact algorithms, due to their slow time performance, make them a poor choice for real-time applications. As such, heuristic algorithms that provide good but not optimal solution in faster time are more likely the most appropriate approach.
 Since a lot of complex structures have already been explored and implemented in the implicit enumeration approaches, a lot of the concepts and methods can be repurposed and reused when experimenting and researching heuristic approaches. 
-\paragraph{}
+
 For instance, since the two interactions with any calculated solution will be panning and zooming, some new solutions may share some points. If that is the case, calculating a solution after a small pan or zoom may reuse the previously calculated region as a starting point, only adding the new points, and removing the previously calculated ones.
-\paragraph{}
+
 An extension to this method may include calculating a larger area than the queried one, so that a small pan and/or zoom include already calculating data. After the window moves, the new adjacent regions can be calculated. This way, the user should never see the window without processed data, and the program will only calculate areas outside the vision range of the window.
 \section {Approximation Algorithms}
-\paragraph{}
-Approximation algorithms are used to used in optimisation as a means to achieve a valid solution within a guaranteed minimum factor of quality to the optimal solution. Ideally, the approximation is optimal up to a constant factor, the smaller the better. Approximation algorithms have been found for this problem and described by \citet{approx}, which give an approximation with a factor of $3.16$ to the optimal solution of the \emph{p-center} problem.
+
+Approximation algorithms are used to used in optimisation as a means to achieve a valid solution within a guaranteed minimum factor of quality to the optimal solution. Ideally, the approximation is optimal up to a constant factor, the smaller the better.
+
+Approximation algorithms have been found for this problem and described by \citet{approx}, which give an approximation with a factor of $3.16$ to the optimal solution of the \emph{k-centre} problem. The efficiency of approximation algorithms makes them appropriate for solving hard problems, and will be considered for the final approach.
 
 %
 %\section{Uniformity}

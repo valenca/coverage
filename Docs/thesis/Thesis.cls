@@ -74,14 +74,14 @@
 %----------------------------------------------------------------------------------------
 %	MARGINS
 %----------------------------------------------------------------------------------------
-\setmarginsrb  { 1.5in}  % left margin
-                        { 0.6in}  % top margin
-                        { 1.0in}  % right margin
-                        { 0.8in}  % bottom margin
-                        {  20pt}  % head height
-                        {0.25in}  % head sep
-                        {   9pt}  % foot height
-                        { 0.3in}  % foot sep
+\setmarginsrb  { 1.25in}  % left margin
+		       { 0.6in}  % top margin
+               { 1.25in}  % right margin
+               { 0.8in}  % bottom margin
+               {  20pt}  % head height
+               {0.25in}  % head sep
+               {   9pt}  % foot height
+               { 0.3in}  % foot sep
 %----------------------------------------------------------------------------------------
 \raggedbottom
 \setlength{\topskip}{1\topskip \@plus 5\p@}
@@ -433,7 +433,7 @@
   \else
     \clearpage
   \fi
-  \addtotoc{\bibname}
+  %\addtotoc{\bibname}
   \btypeout{\bibname}
   \@mainmatterfalse}
 \endinput
