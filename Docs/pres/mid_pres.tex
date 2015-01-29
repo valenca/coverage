@@ -1,0 +1,40 @@
+\documentclass{beamer}
+
+\usepackage{default}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,decorations,shapes}
+\author{João Valença\\valenca@student.dei.uc.pt}
+\institute{Department of Informatics Engineering\\University of Coimbra}
+\date{February 2, 2015}
+\subject{Theoretical Computer Science}
+\title{Visualisation and Analysis of Geographic Information}
+\subtitle{Algorithms and Data Structures}
+
+\setbeamertemplate{navigation symbols}{}
+\addtobeamertemplate{navigation symbols}{}{%
+	\usebeamerfont{footline}%
+	\usebeamercolor[fg]{footline}%
+	\hspace{1em}%
+	-- \insertframenumber\ --
+}
+
+\begin{document}
+\frame{
+	\titlepage
+}
+\frame{
+	\frametitle{Motivation}
+	\begin{itemize}
+		\item Reduce visual information when displaying large numbers of geographic points
+		\item Find a representative subset of a collection of geographic points
+		\input{Figures/rep}
+	\end{itemize}
+	
+}
+
+\frame{
+	\frametitle{}	
+}
+
+\end{document}

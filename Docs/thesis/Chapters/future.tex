@@ -7,8 +7,8 @@ The final objective of this study is to integrate an algorithm in a web applicat
 
 The application will display a rectangular window, showing a cut of geographical region containing a set of points. The algorithm chosen will need to be able to choose a representative set of points within the cut quickly, as well as be able to recalculate a new set points for a new cut, resulting from panning or zooming the display window over the region.
 
-The algorithm serve as the middleware responsible for filtering the response of a GIS server to a Web Map Service, or WMS request. WMS lists the geographic coordinates of the points to be represented in an image by the coordinates mapped into orthogonally organised pixels on an image displaying the cut of the region requested by the application.
-The candidate algorithms will be tested and benchmarked using data from the Open Street Map project. The project features large quantities of open source geographic data, as well as a versatile API for fetching data in the WMS standard.
+The algorithm serve as the middleware responsible for filtering the response of a GIS server to a Web Feature Service, or WFS request. WFS lists the geographic coordinates of the points to be represented in an image by the coordinates mapped into an orthogonal plane, representing an image containing the cut of the region requested by the application.
+The candidate algorithms will be tested and benchmarked using data from the Open Street Map project. The project features large quantities of open source geographic data, as well as a versatile API for fetching data in the WFS standard.
 \section{Heuristic Approaches}
 
 Exact algorithms, due to their slow time performance, make them a poor choice for real-time applications. As such, heuristic algorithms that provide good but not optimal solution in faster time are more likely the most appropriate approach.

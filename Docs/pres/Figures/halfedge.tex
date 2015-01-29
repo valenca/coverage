@@ -1,0 +1,58 @@
+\begin{figure}[H]
+	\begin{center}
+		\begin{tikzpicture}[scale=0.9,
+		arr/.style={->,>=stealth',thick,black,shorten >=3pt,shorten <=3pt},
+		edg/.style={black,shorten >=6pt,shorten <=6pt},
+		par/.style={decoration={sl,raise=2pt},decorate}]
+		
+		\node [fill,circle,inner sep=3pt,label=below right:$a$] (A) at (6,1){};
+		\node [fill,circle,inner sep=3pt,label=above: $b$] (B) at (5,5){};
+		\node [fill,circle,inner sep=3pt,label=left: $c$] (C) at (1,2){};
+		\node [fill,circle,inner sep=3pt,label=above right:$d$] (D) at (9,6){};
+		
+		\path[->,>=latex]
+		(A) edge [arr,par](B)
+		(B) edge [arr,par](C)
+		(C) edge [arr,par](B)
+		(C) edge [arr,par](A)
+		(A) edge [arr,par](C)
+		
+		(B) edge [arr,par](A)
+		(A) edge [arr,par](D)
+		(D) edge [arr,par](B)
+		(D) edge [arr,par](A)
+		(B) edge [arr,par](D);
+		\draw [arr,par,dashed,gray] (B) -- (3,7);
+		\draw [arr,par,dashed,gray] (3,7) -- (B);
+		
+		\draw [arr,par,dashed,gray] (C) -- (0.5,0);
+		\draw [arr,par,dashed,gray] (0.5,0) -- (C);
+		
+		\draw [arr,par,dashed,gray] (C) -- (0,4);
+		\draw [arr,par,dashed,gray] (0,4) -- (C);
+		
+		\draw [arr,par,dashed,gray] (A) -- (5,0);
+		\draw [arr,par,dashed,gray] (5,0) -- (A);
+		
+		\draw [arr,par,dashed,gray] (A) -- (10,2);
+		\draw [arr,par,dashed,gray] (10,2) -- (A);
+		
+		\draw [arr,par,dashed,gray] (D) -- (10,4);
+		\draw [arr,par,dashed,gray] (10,4) -- (D);
+		
+		\draw [arr,par,dashed,gray] (D) -- (7,7);
+		\draw [arr,par,dashed,gray] (7,7) -- (D);
+
+		
+%		\path[-,color=gray]
+%		(A) edge (B)
+%		(B) edge (C)
+%		(C) edge (A)
+%		(A) edge (D)
+%		(D) edge (B)		
+%		;
+		\end{tikzpicture}
+	\end{center}
+	\caption{Illustration of the Half-Edge Structure}
+	\label{fig:hedge}
+\end{figure}
