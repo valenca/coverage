@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2014.12.24)  1 FEB 2015 19:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2014.12.24)  1 FEB 2015 19:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1441,52 +1441,48 @@ File: Pictures/k1.png Graphic file (type png)
 
 <use Pictures/k1.png>
 Package pdftex.def Info: Pictures/k1.png used on input line 4.
-(pdftex.def)             Requested size: 110.6219pt x 87.69916pt.
+(pdftex.def)             Requested size: 82.96854pt x 65.77911pt.
  <Pictures/k2.png, id=152, 523.2348pt x 414.8298pt>
 File: Pictures/k2.png Graphic file (type png)
 
 <use Pictures/k2.png>
 Package pdftex.def Info: Pictures/k2.png used on input line 10.
-(pdftex.def)             Requested size: 110.6219pt x 87.69916pt.
+(pdftex.def)             Requested size: 82.96854pt x 65.77911pt.
  <Pictures/k3.png, id=153, 523.2348pt x 414.8298pt>
 File: Pictures/k3.png Graphic file (type png)
 
 <use Pictures/k3.png>
 Package pdftex.def Info: Pictures/k3.png used on input line 16.
-(pdftex.def)             Requested size: 110.6219pt x 87.69916pt.
-)
-Overfull \vbox (62.32521pt too high) detected at line 323
- []
+(pdftex.def)             Requested size: 82.96854pt x 65.77911pt.
+) [25
 
-[25
-
- <./Pictures/k1.png> <./Pictures/k2.png> <./Pictures/k3.png>]
-(./Figures/fixed_n.tex <Pictures/n10.png, id=172, 529.7391pt x 414.8298pt>
+ <./Pictures/k1.png> <./Pictures/k2.png> <./Pictures/k3.png>] (./Figures/fixed_
+n.tex
+<Pictures/n10.png, id=171, 529.7391pt x 414.8298pt>
 File: Pictures/n10.png Graphic file (type png)
-
-<use Pictures/n10.png>
+ <use Pictures/n10.png>
 Package pdftex.def Info: Pictures/n10.png used on input line 4.
-(pdftex.def)             Requested size: 110.6219pt x 86.6231pt.
- <Pictures/n20.png, id=173, 523.2348pt x 414.8298pt>
+(pdftex.def)             Requested size: 82.96854pt x 64.9689pt.
+
+<Pictures/n20.png, id=172, 523.2348pt x 414.8298pt>
 File: Pictures/n20.png Graphic file (type png)
+ <use Pictures/n20.png>
+Package pdftex.def Info: Pictures/n20.png used on input line 10.
+(pdftex.def)             Requested size: 82.96854pt x 65.77911pt.
 
-<use Pictures/n20.png>
-Package pdftex.def Info: Pictures/n20.png used on input line 11.
-(pdftex.def)             Requested size: 110.6219pt x 87.69916pt.
- <Pictures/n30.png, id=174, 523.2348pt x 414.8298pt>
+<Pictures/n30.png, id=173, 523.2348pt x 414.8298pt>
 File: Pictures/n30.png Graphic file (type png)
+ <use Pictures/n30.png>
+Package pdftex.def Info: Pictures/n30.png used on input line 16.
+(pdftex.def)             Requested size: 82.96854pt x 65.77911pt.
 
-<use Pictures/n30.png>
-Package pdftex.def Info: Pictures/n30.png used on input line 18.
-(pdftex.def)             Requested size: 110.6219pt x 87.69916pt.
- <Pictures/n40.png, id=175, 523.2348pt x 414.8298pt>
+<Pictures/n40.png, id=174, 523.2348pt x 414.8298pt>
 File: Pictures/n40.png Graphic file (type png)
-
-<use Pictures/n40.png>
-Package pdftex.def Info: Pictures/n40.png used on input line 24.
-(pdftex.def)             Requested size: 110.6219pt x 87.69916pt.
+ <use Pictures/n40.png>
+Package pdftex.def Info: Pictures/n40.png used on input line 22.
+(pdftex.def)             Requested size: 82.96854pt x 65.77911pt.
 )
-Overfull \vbox (83.52513pt too high) detected at line 327
+Overfull \vbox (1.01842pt too high) detected at line 329
  []
 
 [26
@@ -1504,11 +1500,11 @@ Overfull \vbox (83.52513pt too high) detected at line 327
 \tf@snm=\write8
 \openout8 = `mid_pres.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 340.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 340.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 342.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 342.
  (./mid_pres.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 340.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 340.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 342.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 342.
 Package rerunfilecheck Info: File `mid_pres.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1516,14 +1512,14 @@ Package rerunfilecheck Info: File `mid_pres.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 340.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 342.
  ) 
 Here is how much of TeX's memory you used:
- 25407 strings out of 493108
- 518812 string characters out of 6140724
- 813385 words of memory out of 5000000
- 28146 multiletter control sequences out of 15000+600000
- 28032 words of font info for 88 fonts, out of 8000000 for 9000
+ 25412 strings out of 493108
+ 519019 string characters out of 6140724
+ 813219 words of memory out of 5000000
+ 28153 multiletter control sequences out of 15000+600000
+ 28392 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,12n,67p,18218b,837s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
@@ -1538,10 +1534,10 @@ onts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
 pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr
 /share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/share/tex
 mf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on mid_pres.pdf (27 pages, 401563 bytes).
+Output written on mid_pres.pdf (27 pages, 403049 bytes).
 PDF statistics:
- 260 PDF objects out of 1000 (max. 8388607)
- 195 compressed objects within 2 object streams
- 71 named destinations out of 1000 (max. 500000)
+ 258 PDF objects out of 1000 (max. 8388607)
+ 193 compressed objects within 2 object streams
+ 69 named destinations out of 1000 (max. 500000)
  78 words of extra memory for PDF output out of 10000 (max. 10000000)
 

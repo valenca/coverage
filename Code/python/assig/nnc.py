@@ -98,7 +98,7 @@ for j in w+x:
 		print("\draw [-,thick]"+str(j)+" -- "+str(k)+";")
 
 for i in range(len(path[:-1])):
-	print "\\draw [-,dashed,blue,thick]"+str(path[i])+" -- "+str(path[i+1])+";"
+	print "\\draw [->,>=latex,dashed,blue,thick]"+str(path[i])+" -- "+str(path[i+1])+";"
 
 		
 for i in v:
