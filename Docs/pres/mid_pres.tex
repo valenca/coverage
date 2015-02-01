@@ -33,7 +33,7 @@
 	\usebeamerfont{footline}%
 	\usebeamercolor[fg]{footline}%
 	\hspace{1em}%
-	-- \textcolor{black}{\insertframenumber}\ --
+	-- \textcolor{black}\insertframenumber\ --
 }
 
 \newcommand{\smark}{\ding{110}}%
@@ -59,7 +59,7 @@
 		\item Reduce visual information when displaying large numbers of geographic points (e.g. Points of interest)
 		\item Find a representative subset of a collection of points in a map
 		\input{Figures/rep}
-		\item The set of points is dynamic
+		\item The set of points can change (zooming/panning)
 	\end{itemize}
 }
 
@@ -199,9 +199,9 @@
 		\item Unnecessary number of calculations
 		\begin{itemize}	
 			\item Use geometric structures to speed-up the update of the objective function
-			\pause
-			\item Delaunay triangulations
 		\end{itemize}
+		\pause
+		\item Delaunay triangulations
 	\end{itemize}
 	\input{Figures/dt1}
 }
