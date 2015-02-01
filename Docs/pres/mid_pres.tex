@@ -2,8 +2,25 @@
 
 \usepackage{default}
 \usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{nameref}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm,array}
+\usepackage{algorithm}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage[noend]{algpseudocode}
+\usepackage{pifont}
+\usepackage{lipsum}
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,decorations,shapes}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{decorations.pathreplacing} 
+
 \author{João Valença\\valenca@student.dei.uc.pt}
 \institute{Department of Informatics Engineering\\University of Coimbra}
 \date{February 2, 2015}
@@ -18,6 +35,10 @@
 	\hspace{1em}%
 	-- \insertframenumber\ --
 }
+
+\newcommand{\smark}{\ding{110}}%
+\newcommand{\cmark}{\ding{108}}%
+\newcommand{\tmark}{\ding{115}}%
 
 \begin{document}
 \frame{
@@ -34,7 +55,204 @@
 }
 
 \frame{
-	\frametitle{}	
+	\frametitle{Coverage}	
+	\begin{itemize}
+		\item Minimising Coverage
+	\end{itemize}
+	\input{Figures/cov}
+	\pause
+	\begin{equation*}
+	\min_{\substack{P \subseteq N\\ \lvert P \rvert = k}}{\max_{n \in N}{\min_{p \in P}{\lVert p-n \rVert}}}
+	\end{equation*}
+}
+
+\frame{
+\frametitle{Work Plan}
+	\begin{itemize}
+		\item $1^{st}$ Semester
+		\begin{itemize}
+			\item Literature Review: Geographic Information Systems, OGC Standards WMS, WFS, Map Projections, algorithms and heuristics for clustering and facility-location problems.
+			\item Development of a Branch-and-Bound approach.
+		\end{itemize}
+	\end{itemize}
+	\begin{itemize}
+		\item $2^{nd}$ Semester
+		\begin{itemize}
+			\item Development of heuristic approaches.
+			\item Experimental analysis of the algorithms.
+			\item Integration of the algorithms in the visualisation framework through web-mapping standards (WMS/WFS).
+			\item Comparison between different approaches using Open Street Map data.
+		\end{itemize}
+	\end{itemize}
+}
+
+
+\frame{
+	\frametitle{Integer Linear Programming}
+	\begin{align*}
+	\text{minimise}   \quad& D							   &\\
+	\text{subject to} \quad
+	& \sum\limits_{j=1}^{N}{y_j} = k 
+	& 							\\
+	& \sum\limits_{j=1}^{N}{x_{ij}}	= 1   
+	& i=1,\ldots,N 				\\
+	& \sum\limits_{j=1}^{N}{d_{ij} x_{ij}} \leq D
+	& i=1,\ldots,N				\\
+	& x_{ij} \leq y_{j}				   
+	& i=1,\ldots,N;j=1,\ldots,N	\\
+	& x_{ij},y_{j} \in \{0,1\}
+	& i=1,\ldots,N;j=1,\ldots,N 
+	\end{align*}
+}
+
+\frame{
+	\frametitle{Branch-and-bound}
+	\begin{itemize}
+		\item Branching
+		\begin{itemize}
+			\item Divide search space in a binary tree
+			\item At each step, decide if a point is a centroid or non-centroid
+			\item Update objective function accordingly
+		\end{itemize}
+		\pause
+		\item Bound
+		\begin{itemize}
+			\item Assume best possible case
+			\item Prune tree
+		\end{itemize}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Branch-and-bound}
+	\begin{itemize}
+		\item Inserting a Centroid
+		\begin{itemize}
+			\item Search all non-centroids for assignment update
+			\item Smaller coverage value
+		\end{itemize}
+		\item Inserting a Non-centroid
+		\begin{itemize}
+			\item Search for closest centroid
+			\item Higher coverage value
+		\end{itemize}
+		\pause
+		\item Removing a Centroid
+		\begin{itemize}
+			\item Update all non-centroids
+			\item Higher coverage value
+		\end{itemize}
+		\item Removing a Non-centroid
+		\begin{itemize}
+			\item Update objective function
+			\item Smaller coverage value
+		\end{itemize}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Geometric Approach}	
+	\begin{itemize}
+		\item Unnecessary number of calculations
+		\begin{itemize}	
+			\item Use geometric structures to speed objective function update
+			\pause
+			\item Delaunay triangulations
+		\end{itemize}
+	\end{itemize}
+	\input{Figures/dt1}
+}
+
+\frame{
+	\frametitle{Geometric Approach}	
+	\begin{itemize}
+		\item Greedy Routing
+	\end{itemize}
+	\input{Figures/gr1}
+}
+
+\frame{
+	\frametitle{Geometric Approach}	
+	\begin{itemize}
+		\item Greedy Routing
+		\item Use Hilbert curves to minimise distance between consecutive routing calls
+	\end{itemize}
+	\input{Figures/hilbert}
+}
+
+\frame{
+	\frametitle{Geometric Approach}
+	\begin{itemize}
+		\item Initialize triangulation
+		\item Sort points using a Hilbert curve
+		\item Inserting a Centroid
+		\begin{itemize}
+			\item Insert centroid in triangulation
+			\item Search all neighbours for closer non-centroids for assignment update
+			\item Smaller coverage value
+		\end{itemize}
+		\item Inserting a Non-centroid
+		\begin{itemize}
+			\item Search for closest centroid using greedy routing
+			\item Higher coverage value
+		\end{itemize}
+		\pause
+		\item Removing a Centroid
+		\begin{itemize}
+			\item Revert assignment
+			\item Remove centroid from triangulation
+			\item Higher coverage value
+		\end{itemize}
+		\item Removing a Non-centroid
+		\begin{itemize}
+			\item Update objective function
+			\item Revert assignment
+			\item Smaller coverage value
+		\end{itemize}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Algorithm Comparison}
+	\resizebox{\linewidth}{!}{
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\multirow{2}{*}{Algorithm}	& \multicolumn{2}{c|}{Insert}	& \multicolumn{2}{c|}{Remove}	\\ \cline{2-5}
+		& Centroid		& Non-Centroid	& Centroid		& Non-Centroid	\\ \hline
+		Naïve BB		& $\Theta(N)$ & $\Theta(K)$ 	& $\Theta(N)$ & $\mathcal{O}(1)$ \\ \hline\hline
+		Geometric BB	
+		& \multirow{2}{*}{$\mathcal{O}(\log{K}+N/K)$}
+		& \multirow{2}{*}{$\mathcal{O}(\sqrt{K})$}
+		& \multirow{2}{*}{$\mathcal{O}(N/K)$ }
+		& \multirow{2}{*}{$\mathcal{O}(1)$}\\
+		Average Case & & & & \\ \hline
+		Geometric BB 
+		& \multirow{2}{*}{$\mathcal{O}(K+N)$}
+		& \multirow{2}{*}{$\mathcal{O}(K)$}	
+		& \multirow{2}{*}{$\mathcal{O}(N)$} 
+		& \multirow{2}{*}{$\mathcal{O}(1)$}\\ 
+		Worst Case 	& & & & \\ \hline
+	\end{tabular}
+	}
+}
+
+\frame{
+	\frametitle{Algorithm Comparison}
+	\input{Figures/fixed_k}		
+}
+\frame{
+	\frametitle{Algorithm Comparison}
+	\input{Figures/fixed_n}		
+}
+
+\frame{
+	\frametitle{Future Work}
+	\begin{itemize}
+		\item Integration with WFS standard
+		\item Heuristic Approach
+		\item Approximation Algorithms
+		\item Benchmark with real data
+	\end{itemize}
 }
 
 \end{document}
