@@ -215,8 +215,11 @@
 \frame{
 	\frametitle{Geometric Approach}
 	\begin{itemize}
-		\item Initialize Delaunay Triangulation
-		\item Sort points by Hilbert curve
+		\item Pre-process:
+		\begin{itemize}
+			\item Initialize Delaunay Triangulation
+			\item Sort points by Hilbert curve
+		\end{itemize}
 	\end{itemize}
 }
 
@@ -326,9 +329,10 @@
 \frame{
 	\frametitle{Future Work}
 	\begin{itemize}
-		\item Integration with WFS standard
 		\item Heuristic Approach
 		\item Approximation Algorithms
+		\item Adapt to dynamic set
+		\item Integration with WFS standard
 		\item Benchmark with real data
 	\end{itemize}
 }

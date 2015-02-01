@@ -10,9 +10,14 @@ w=[(8.230,0.953),(12.116,3.766),(3.479,7.617),(12.650,7.468),(2.755,0.344),(13.1
 
 x=[( 8, 4)]
 
+
+
 v=map(lambda y: (y[0]*15/17.0,0.5+y[1]*12/13.0),v)
 w=map(lambda y: (y[0]*15/17.0,0.5+y[1]*12/13.0),w)
 x=map(lambda y: (y[0]*15/17.0,0.5+y[1]*12/13.0),x)
+
+path=[v[8],v[5],v[3],v[1]]
+path=[v[8],v[3],v[1]]
 
 points=np.array(v)
 tri=Delaunay(points,incremental=True)
@@ -92,7 +97,10 @@ for j in w+x:
 	if j in x:
 		print("\draw [-,thick]"+str(j)+" -- "+str(k)+";")
 
+for i in range(len(path[:-1])):
+	print "\\draw [-,dashed,blue,thick]"+str(path[i])+" -- "+str(path[i+1])+";"
 
+		
 for i in v:
 	print "\\fill [white]"+str(i)+"circle(4pt);"
 	print "\\draw "+str(i)+"circle(4pt);"
