@@ -16,53 +16,11 @@ print "\\begin{figure}[H]\n\\centering\n\\begin{minipage}{0.45\linewidth}\n\\cen
 
 print "\\draw [<->,thick] (0,0) rectangle (15,10) {};"
 
-
 tog=0
 
 for j in w:
 	d=300
-	for i in v+x:
-		if(dist(j,i)<d):
-			if i not in x:
-				d=dist(j,i)
-				k=i
-				tog = 0
-			else:
-				tog = 1
-	if tog == 0:
-		print("\draw [-]"+str(j)+" -- "+str(k)+";")
-	#if tog == 1:
-	#	print("\draw [-,dashed]"+str(j)+" -- "+str(k)+";")
-
-for j in w:
-	d=300
-	for i in v+x:
-		if(dist(j,i)<d):
-			d=dist(j,i)
-			k=i
-	if k in x:
-		print("\draw [-]"+str(j)+" -- "+str(k)+";")
-
-
-for i in v:
-	print "\\fill [white]"+str(i)+"circle(4pt);"
-	print "\\draw "+str(i)+"circle(4pt);"
-
-for i in x:
-	print "\\fill [white]"+str(i)+"circle(4pt);"
-	print "\\draw [red,thick]"+str(i)+"circle(4pt);"
-	
-for i in w:
-	print "\\fill"+str(i)+"circle(4pt);"
-
-print "\\end{tikzpicture}\\end{minipage}\\begin{minipage}{0.45\linewidth}\\centering\\begin{tikzpicture}[scale=0.3]"
-
-print "\\draw [<->,thick] (0,0) rectangle (15,10) {};"
-
-tog=0
-for j in w:
-	d=300
-	for i in v+x:
+	for i in v:
 		if(dist(j,i)<d):
 			if i not in x:
 				d=dist(j,i)
@@ -73,15 +31,56 @@ for j in w:
 	if tog == 0:
 		print("\draw [-]"+str(j)+" -- "+str(k)+";")
 	if tog == 1:
-		print("\draw [-,thick]"+str(j)+" -- "+str(k)+";")
+		print("\draw [-,dashed]"+str(j)+" -- "+str(k)+";")
 
-for j in w:
+for j in w+x:
 	d=300
-	for i in v+x:
+	for i in v:
 		if(dist(j,i)<d):
 			d=dist(j,i)
 			k=i
-	if k in x:
+	if j in x:
+		print("\draw [-]"+str(j)+" -- "+str(k)+";")
+
+for i in v:
+	print "\\fill [white]"+str(i)+"circle(4pt);"
+	print "\\draw "+str(i)+"circle(4pt);"
+
+for i in x:
+	print "\\fill [red]"+str(i)+"circle(4pt);"
+	#print "\\draw [red,thick]"+str(i)+"circle(4pt);"
+	
+for i in w:
+	print "\\fill"+str(i)+"circle(4pt);"
+
+print "\\end{tikzpicture}\\end{minipage}\\begin{minipage}{0.45\linewidth}\\centering\\begin{tikzpicture}[scale=0.3]"
+
+print "\\draw [<->,thick] (0,0) rectangle (15,10) {};"
+
+tog=0
+
+for j in w:
+	d=300
+	for i in v:
+		if(dist(j,i)<d):
+			if i not in x:
+				d=dist(j,i)
+				k=i
+				tog = 0
+			else:
+				tog = 1
+	if tog == 0:
+		print("\draw [-]"+str(j)+" -- "+str(k)+";")
+	if tog == 1:
+		print("\draw [-,dashed]"+str(j)+" -- "+str(k)+";")
+		
+for j in w+x:
+	d=300
+	for i in v:
+		if(dist(j,i)<d):
+			d=dist(j,i)
+			k=i
+	if j in x:
 		print("\draw [-,dashed]"+str(j)+" -- "+str(k)+";")
 		
 for i in v:
@@ -89,8 +88,8 @@ for i in v:
 	print "\\draw "+str(i)+"circle(4pt);"
 
 for i in x:
-	print "\\fill [white]"+str(i)+"circle(4pt);"
-	print "\\draw [red,thick]"+str(i)+"circle(4pt);"
+	print "\\fill [red]"+str(i)+"circle(4pt);"
+	#print "\\draw [red,thick]"+str(i)+"circle(4pt);"
 	
 for i in w:
 	print "\\fill"+str(i)+"circle(4pt);"
