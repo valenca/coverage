@@ -33,7 +33,7 @@
 	\usebeamerfont{footline}%
 	\usebeamercolor[fg]{footline}%
 	\hspace{1em}%
-	-- \insertframenumber\ --
+	-- \textcolor{black}{\insertframenumber}\ --
 }
 
 \newcommand{\smark}{\ding{110}}%
@@ -48,17 +48,16 @@
 \frame{
 	\frametitle{Motivation}
 	\begin{itemize}
-		\item Geometric Information System Project
-		\item Collaboration with Smartgeo
-		\item Web application
+		\item To develop a Web application for Geographic information system
+		\item A QREN project with Smartgeo and UC
 	\end{itemize}
 }
 
 \frame{
 	\frametitle{Motivation}
 	\begin{itemize}
-		\item Reduce visual information when displaying large numbers of geographic points
-		\item Find a representative subset of a collection of geographic points
+		\item Reduce visual information when displaying large numbers of geographic points (e.g. Points of interest)
+		\item Find a representative subset of a collection of points in a map
 		\input{Figures/rep}
 		\item The set of points is dynamic
 	\end{itemize}
@@ -139,7 +138,7 @@
 		\item Inserting a Centroid
 		\begin{itemize}
 			\item Search all non-centroids for assignment update
-			\item Smaller coverage value
+			\item Smaller or equal coverage value
 		\end{itemize}
 	\end{itemize}
 	\input{Figures/ncent}
@@ -151,7 +150,7 @@
 		\item Inserting a Non-centroid
 		\begin{itemize}
 			\item Search for closest centroid
-			\item Higher coverage value
+			\item Larger or equal coverage value
 		\end{itemize}
 	\end{itemize}
 	\input{Figures/nncent}
@@ -164,7 +163,7 @@
 				\item Removing a Centroid
 				\begin{itemize}
 					\item Update all non-centroids
-					\item Higher coverage value
+					\item Larger or equal coverage value
 				\end{itemize}
 	\end{itemize}
 	\input{Figures/rcent}
@@ -176,10 +175,22 @@
 				\item Removing a Non-centroid
 				\begin{itemize}
 					\item Update objective function
-				\item Smaller coverage value
+				\item Smaller or equal coverage value
 				\end{itemize}
 	\end{itemize}
 	\input{Figures/rncent}
+}
+
+\frame{
+	\frametitle{Branch-and-bound}
+	\begin{itemize}
+		\item Applying the bound
+	\end{itemize}		
+	\input{Figures/bound}
+	\pause
+	\begin{itemize}
+		\item (Only if a better solution has been found)
+	\end{itemize}		
 }
 
 \frame{
@@ -187,7 +198,7 @@
 	\begin{itemize}
 		\item Unnecessary number of calculations
 		\begin{itemize}	
-			\item Use geometric structures to speed objective function update
+			\item Use geometric structures to speed-up the update of the objective function
 			\pause
 			\item Delaunay triangulations
 		\end{itemize}
@@ -230,7 +241,7 @@
 		\begin{itemize}
 			\item Insert centroid in triangulation
 			\item Search all non-centroids for assignment update
-			\item Smaller coverage value
+			\item Smaller or equal coverage value
 		\end{itemize}
 	\end{itemize}
 	\input{Figures/gncent}
@@ -241,7 +252,8 @@
 		\item Inserting a Non-centroid
 		\begin{itemize}
 			\item Search for closest centroid using greedy routing
-			\item Higher coverage value
+			\item Update objective function
+			\item Larger or equal coverage value
 		\end{itemize}
 	\end{itemize}
 	\input{Figures/gnncent}
@@ -254,7 +266,7 @@
 		\begin{itemize}
 			\item Revert assignment
 			\item Remove centroid from triangulation
-			\item Higher coverage value
+			\item Larger or equal coverage value
 	\end{itemize}
 	
 	\end{itemize}
@@ -268,7 +280,7 @@
 		\begin{itemize}
 			\item Update objective function
 			\item Revert assignment
-			\item Smaller coverage value
+			\item Smaller or equal coverage value
 		\end{itemize}
 	\end{itemize}
 	\input{Figures/grncent}
@@ -276,6 +288,9 @@
 
 \frame{
 	\frametitle{Algorithm Comparison}
+	\begin{itemize}
+		\item Complexity of operations
+	\end{itemize}
 	\resizebox{\linewidth}{!}{
 	\begin{tabular}{|c|c|c|c|c|}
 		\hline
@@ -287,7 +302,8 @@
 		& \multirow{2}{*}{$\mathcal{O}(\sqrt{K})$}
 		& \multirow{2}{*}{$\mathcal{O}(N/K)$ }
 		& \multirow{2}{*}{$\mathcal{O}(1)$}\\
-		Average Case* & & & & \\ \hline
+		Average Case
+		\footnote{to be shown} & & & & \\ \hline
 		Geometric BB 
 		& \multirow{2}{*}{$\mathcal{O}(K+N)$}
 		& \multirow{2}{*}{$\mathcal{O}(K)$}	
@@ -333,7 +349,7 @@
 	\begin{itemize}
 		\item Heuristic Approach
 		\item Approximation Algorithms
-		\item Adapt to dynamic set
+		\item Adapt to allow panning and zooming
 		\item Integration with WFS standard
 		\item Benchmark with real data
 	\end{itemize}
