@@ -131,24 +131,43 @@
 			\item Search all non-centroids for assignment update
 			\item Smaller coverage value
 		\end{itemize}
+	\end{itemize}
+	\input{Figures/ncent}
+}
+
+\frame{
+	\frametitle{Branch-and-bound}
+	\begin{itemize}
 		\item Inserting a Non-centroid
 		\begin{itemize}
 			\item Search for closest centroid
 			\item Higher coverage value
 		\end{itemize}
-		\pause
-		\item Removing a Centroid
-		\begin{itemize}
-			\item Update all non-centroids
-			\item Higher coverage value
-		\end{itemize}
-		\item Removing a Non-centroid
-		\begin{itemize}
-			\item Update objective function
-			\item Smaller coverage value
-		\end{itemize}
 	\end{itemize}
+	\input{Figures/nncent}
 }
+
+
+\frame{
+	\frametitle{Branch-and-bound}
+	\begin{itemize}
+				\item Removing a Centroid
+				\begin{itemize}
+					\item Update all non-centroids
+					\item Higher coverage value
+				\end{itemize}
+	\end{itemize}
+	\input{Figures/rcent}
+}
+
+
+%		\item Removing a Non-centroid
+%		\begin{itemize}
+%			\item Update objective function
+%			\item Smaller coverage value
+%		\end{itemize}
+%	\end{itemize}
+%}
 
 \frame{
 	\frametitle{Geometric Approach}	
