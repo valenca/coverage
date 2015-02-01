@@ -44,14 +44,24 @@
 \frame{
 	\titlepage
 }
+
+\frame{
+	\frametitle{Motivation}
+	\begin{itemize}
+		\item Geometric Information System Project
+		\item Collaboration with Smartgeo
+		\item Web application
+	\end{itemize}
+}
+
 \frame{
 	\frametitle{Motivation}
 	\begin{itemize}
 		\item Reduce visual information when displaying large numbers of geographic points
 		\item Find a representative subset of a collection of geographic points
 		\input{Figures/rep}
+		\item The set of points is dynamic
 	\end{itemize}
-	
 }
 
 \frame{
@@ -205,26 +215,52 @@
 \frame{
 	\frametitle{Geometric Approach}
 	\begin{itemize}
-		\item Initialize triangulation
-		\item Sort points using a Hilbert curve
+		\item Initialize Delaunay Triangulation
+		\item Sort points by Hilbert curve
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Geometric Approach}
+	\begin{itemize}
 		\item Inserting a Centroid
 		\begin{itemize}
 			\item Insert centroid in triangulation
-			\item Search all neighbours for closer non-centroids for assignment update
+			\item Search all non-centroids for assignment update
 			\item Smaller coverage value
 		\end{itemize}
+	\end{itemize}
+	\input{Figures/gncent}
+}
+\frame{
+	\frametitle{Geometric Approach}
+	\begin{itemize}
 		\item Inserting a Non-centroid
 		\begin{itemize}
 			\item Search for closest centroid using greedy routing
 			\item Higher coverage value
 		\end{itemize}
-		\pause
+	\end{itemize}
+	\input{Figures/gnncent}
+}
+
+\frame{
+	\frametitle{Geometric Approach}
+	\begin{itemize}
 		\item Removing a Centroid
 		\begin{itemize}
 			\item Revert assignment
 			\item Remove centroid from triangulation
 			\item Higher coverage value
-		\end{itemize}
+	\end{itemize}
+	
+	\end{itemize}
+	\input{Figures/grcent}
+}
+
+\frame{
+	\frametitle{Geometric Approach}
+	\begin{itemize}
 		\item Removing a Non-centroid
 		\begin{itemize}
 			\item Update objective function
@@ -232,6 +268,7 @@
 			\item Smaller coverage value
 		\end{itemize}
 	\end{itemize}
+	\input{Figures/grncent}
 }
 
 \frame{
@@ -256,6 +293,25 @@
 		Worst Case 	& & & & \\ \hline
 	\end{tabular}
 	}
+}
+
+\frame{
+	\frametitle{Algorithm Comparison}
+	\begin{itemize}
+		\item Tests Performed
+		\begin{itemize}
+			\item Effect of N
+			\begin{itemize}
+				\item Change N
+				\item Keep proportional K
+			\end{itemize}
+			\item Effect of K
+			\begin{itemize}
+				\item Fixed N
+				\item Change K
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
 }
 
 \frame{

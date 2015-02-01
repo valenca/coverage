@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2014.12.24)  1 FEB 2015 18:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2014.12.24)  1 FEB 2015 19:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1383,104 +1383,116 @@ line 55.
 (/usr/share/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
-)
-(./Figures/rep.tex) [2
+) [2
 
-] (./Figures/cov.tex) [3
+]
+(./Figures/rep.tex) [3
 
 ] (./Figures/cov.tex) [4
 
-]
-[5
+] (./Figures/cov.tex) [5
 
-] [6
+]
+[6
 
 ] [7
 
 ] [8
 
-] (./Figures/ncent.tex) [9
+] [9
 
-] (./Figures/nncent.tex) [10
+] (./Figures/ncent.tex) [10
+
+] (./Figures/nncent.tex) [11
 
 ]
-(./Figures/rcent.tex) [11
+(./Figures/rcent.tex) [12
 
-] (./Figures/rncent.tex) [12
+] (./Figures/rncent.tex) [13
 
 ] (./Figures/dt1.tex)
-[13
+[14
 
-] (./Figures/dt1.tex) [14
+] (./Figures/dt1.tex) [15
 
-] (./Figures/gr1.tex) [15
+] (./Figures/gr1.tex) [16
 
 ] (./Figures/hilbert.tex)
-[16
-
-] [17
+[17
 
 ] [18
 
-] [19
+] (./Figures/gncent.tex) [19
 
-] (./Figures/fixed_k.tex
-<Pictures/k1.png, id=124, 523.2348pt x 414.8298pt>
+] (./Figures/gnncent.tex) [20
+
+]
+(./Figures/grcent.tex) [21
+
+] (./Figures/grncent.tex) [22
+
+] [23
+
+] [24
+
+]
+(./Figures/fixed_k.tex <Pictures/k1.png, id=150, 523.2348pt x 414.8298pt>
 File: Pictures/k1.png Graphic file (type png)
- <use Pictures/k1.png>
+
+<use Pictures/k1.png>
 Package pdftex.def Info: Pictures/k1.png used on input line 4.
 (pdftex.def)             Requested size: 110.6219pt x 87.69916pt.
-
-<Pictures/k2.png, id=126, 523.2348pt x 414.8298pt>
+ <Pictures/k2.png, id=152, 523.2348pt x 414.8298pt>
 File: Pictures/k2.png Graphic file (type png)
- <use Pictures/k2.png>
+
+<use Pictures/k2.png>
 Package pdftex.def Info: Pictures/k2.png used on input line 10.
 (pdftex.def)             Requested size: 110.6219pt x 87.69916pt.
-
-<Pictures/k3.png, id=127, 523.2348pt x 414.8298pt>
+ <Pictures/k3.png, id=153, 523.2348pt x 414.8298pt>
 File: Pictures/k3.png Graphic file (type png)
- <use Pictures/k3.png>
+
+<use Pictures/k3.png>
 Package pdftex.def Info: Pictures/k3.png used on input line 16.
 (pdftex.def)             Requested size: 110.6219pt x 87.69916pt.
 )
-Overfull \vbox (62.32521pt too high) detected at line 264
+Overfull \vbox (62.32521pt too high) detected at line 320
  []
 
-[20
+[25
 
  <./Pictures/k1.png> <./Pictures/k2.png> <./Pictures/k3.png>]
-(./Figures/fixed_n.tex <Pictures/n10.png, id=144, 529.7391pt x 414.8298pt>
+(./Figures/fixed_n.tex <Pictures/n10.png, id=172, 529.7391pt x 414.8298pt>
 File: Pictures/n10.png Graphic file (type png)
 
 <use Pictures/n10.png>
 Package pdftex.def Info: Pictures/n10.png used on input line 4.
 (pdftex.def)             Requested size: 110.6219pt x 86.6231pt.
- <Pictures/n20.png, id=145, 523.2348pt x 414.8298pt>
+ <Pictures/n20.png, id=173, 523.2348pt x 414.8298pt>
 File: Pictures/n20.png Graphic file (type png)
 
 <use Pictures/n20.png>
 Package pdftex.def Info: Pictures/n20.png used on input line 11.
 (pdftex.def)             Requested size: 110.6219pt x 87.69916pt.
- <Pictures/n30.png, id=146, 523.2348pt x 414.8298pt>
+ <Pictures/n30.png, id=174, 523.2348pt x 414.8298pt>
 File: Pictures/n30.png Graphic file (type png)
 
 <use Pictures/n30.png>
 Package pdftex.def Info: Pictures/n30.png used on input line 18.
 (pdftex.def)             Requested size: 110.6219pt x 87.69916pt.
- <Pictures/n40.png, id=147, 523.2348pt x 414.8298pt>
+ <Pictures/n40.png, id=175, 523.2348pt x 414.8298pt>
 File: Pictures/n40.png Graphic file (type png)
 
 <use Pictures/n40.png>
 Package pdftex.def Info: Pictures/n40.png used on input line 24.
 (pdftex.def)             Requested size: 110.6219pt x 87.69916pt.
 )
-Overfull \vbox (83.52513pt too high) detected at line 268
+Overfull \vbox (83.52513pt too high) detected at line 324
  []
 
-[21
+[26
 
  <./Pictures/n10.png> <./Pictures/n20.png> <./Pictures/n30.png> <./Pictures/n40
-.png>] [22
+.png>] [27
 
 ]
 \tf@nav=\write6
@@ -1492,11 +1504,11 @@ Overfull \vbox (83.52513pt too high) detected at line 268
 \tf@snm=\write8
 \openout8 = `mid_pres.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 280.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 280.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 336.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 336.
  (./mid_pres.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 280.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 280.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 336.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 336.
 Package rerunfilecheck Info: File `mid_pres.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1504,13 +1516,13 @@ Package rerunfilecheck Info: File `mid_pres.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 280.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 336.
  ) 
 Here is how much of TeX's memory you used:
- 25328 strings out of 493108
- 517180 string characters out of 6140724
- 813157 words of memory out of 5000000
- 28089 multiletter control sequences out of 15000+600000
+ 25407 strings out of 493108
+ 518812 string characters out of 6140724
+ 813385 words of memory out of 5000000
+ 28146 multiletter control sequences out of 15000+600000
  28032 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,12n,67p,18218b,837s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1518,17 +1530,18 @@ Here is how much of TeX's memory you used:
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></u
-sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf
--dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/share/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/m
-sam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-</usr/share/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on mid_pres.pdf (22 pages, 390423 bytes).
+cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmssi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr
+/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/share/tex
+mf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on mid_pres.pdf (27 pages, 418873 bytes).
 PDF statistics:
- 229 PDF objects out of 1000 (max. 8388607)
- 170 compressed objects within 2 object streams
- 61 named destinations out of 1000 (max. 500000)
+ 260 PDF objects out of 1000 (max. 8388607)
+ 195 compressed objects within 2 object streams
+ 71 named destinations out of 1000 (max. 500000)
  78 words of extra memory for PDF output out of 10000 (max. 10000000)
 
