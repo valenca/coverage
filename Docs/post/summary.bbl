@@ -1,0 +1,31 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bose and Morin(1999)]{greedy}
+P.~Bose and P.~Morin.
+\newblock Online routing in triangulations.
+\newblock \emph{Algorithms and Computation, LNCS}, 1741:\penalty0 113--122,
+  1999.
+
+\bibitem[De~Berg et~al.(2000)De~Berg, Van~Kreveld, Overmars, and
+  Schwarzkopf]{delbible}
+M.~De~Berg, M.~Van~Kreveld, M.~Overmars, and O.~C. Schwarzkopf.
+\newblock \emph{Computational Geometry}.
+\newblock Springer, 2000.
+
+\bibitem[Megiddo and Tamir(1983)]{complex}
+N.~Megiddo and A.~Tamir.
+\newblock New results on the complexity of p-centre problems.
+\newblock \emph{SIAM Journal on Computing}, 12\penalty0 (4):\penalty0 751--758,
+  1983.
+
+\bibitem[Sagan(1994)]{sfcurves}
+H.~Sagan.
+\newblock \emph{Space-Filling Curves}, volume~18.
+\newblock Springer-Verlag New York, 1994.
+
+\end{thebibliography}
