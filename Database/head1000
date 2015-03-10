@@ -1,0 +1,1000 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version="0.6" generator="osmconvert 0.8" timestamp="2015-02-18T21:21:02Z">
+	<bounds minlat="32.03126" minlon="-17.93724" maxlat="42.14565" maxlon="-6.18269"/>
+	<node id="13787735" lat="38.9569491" lon="-9.4014889" version="5" timestamp="2009-01-07T03:20:34Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787736" lat="38.9538128" lon="-9.4019359" version="6" timestamp="2011-12-22T02:19:18Z" changeset="10176691" uid="458162" user="ftavares87"/>
+	<node id="13787737" lat="38.9502704" lon="-9.4081535" version="5" timestamp="2009-01-07T03:20:33Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787742" lat="38.9575155" lon="-9.4014934" version="5" timestamp="2009-01-07T03:20:34Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787744" lat="38.9530634" lon="-9.4031272" version="5" timestamp="2009-01-07T03:20:34Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787745" lat="38.9477832" lon="-9.4109176" version="5" timestamp="2009-01-07T03:20:33Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787746" lat="38.9529935" lon="-9.4034275" version="5" timestamp="2009-01-07T03:20:34Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787749" lat="38.9528691" lon="-9.4049755" version="6" timestamp="2011-11-19T21:53:05Z" changeset="9877522" uid="451289" user="jsimoes"/>
+	<node id="13787750" lat="38.9508997" lon="-9.4076255" version="6" timestamp="2011-11-19T21:53:05Z" changeset="9877522" uid="451289" user="jsimoes"/>
+	<node id="13787752" lat="38.9551873" lon="-9.3994056" version="1" timestamp="2007-01-16T15:22:59Z" changeset="195871" uid="5404" user="jmorais"/>
+	<node id="13787754" lat="38.9541614" lon="-9.4014291" version="6" timestamp="2011-12-22T02:19:18Z" changeset="10176691" uid="458162" user="ftavares87"/>
+	<node id="13787756" lat="38.9565719" lon="-9.4013555" version="6" timestamp="2011-12-22T02:19:18Z" changeset="10176691" uid="458162" user="ftavares87"/>
+	<node id="13787757" lat="38.9484458" lon="-9.4099736" version="5" timestamp="2009-01-07T03:20:33Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787758" lat="38.9587475" lon="-9.401234" version="5" timestamp="2009-01-07T03:20:34Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787759" lat="38.9559047" lon="-9.400196" version="2" timestamp="2011-12-22T02:19:18Z" changeset="10176691" uid="458162" user="ftavares87"/>
+	<node id="13787760" lat="38.9557448" lon="-9.4009647" version="6" timestamp="2011-12-22T02:19:18Z" changeset="10176691" uid="458162" user="ftavares87"/>
+	<node id="13787761" lat="38.955056" lon="-9.400885" version="6" timestamp="2011-12-22T02:19:18Z" changeset="10176691" uid="458162" user="ftavares87"/>
+	<node id="13787762" lat="38.949996" lon="-9.408414" version="5" timestamp="2009-01-07T03:20:33Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787763" lat="38.957895" lon="-9.4014508" version="6" timestamp="2009-01-07T03:20:34Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787765" lat="38.9559007" lon="-9.4004874" version="2" timestamp="2011-12-22T02:19:18Z" changeset="10176691" uid="458162" user="ftavares87"/>
+	<node id="13787768" lat="38.9560791" lon="-9.4011874" version="6" timestamp="2011-12-22T02:19:18Z" changeset="10176691" uid="458162" user="ftavares87"/>
+	<node id="13787770" lat="38.9545782" lon="-9.4011147" version="6" timestamp="2011-12-22T02:19:19Z" changeset="10176691" uid="458162" user="ftavares87"/>
+	<node id="13787772" lat="38.952122" lon="-9.4069016" version="6" timestamp="2011-11-19T21:53:05Z" changeset="9877522" uid="451289" user="jsimoes"/>
+	<node id="13787773" lat="38.952229" lon="-9.4066218" version="6" timestamp="2011-11-19T21:53:05Z" changeset="9877522" uid="451289" user="jsimoes"/>
+	<node id="13787774" lat="38.9459986" lon="-9.4128097" version="5" timestamp="2009-01-07T03:20:33Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787775" lat="38.9558474" lon="-9.4007248" version="2" timestamp="2011-12-22T02:19:19Z" changeset="10176691" uid="458162" user="ftavares87"/>
+	<node id="13787776" lat="38.9609707" lon="-9.399903" version="6" timestamp="2009-01-07T03:20:32Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787777" lat="38.9512574" lon="-9.4074243" version="6" timestamp="2011-11-19T21:53:05Z" changeset="9877522" uid="451289" user="jsimoes"/>
+	<node id="13787778" lat="38.9527523" lon="-9.4052531" version="6" timestamp="2011-11-19T21:53:05Z" changeset="9877522" uid="451289" user="jsimoes"/>
+	<node id="13787779" lat="38.9549998" lon="-9.39917" version="1" timestamp="2007-01-16T15:23:01Z" changeset="195871" uid="5404" user="jmorais"/>
+	<node id="13787780" lat="38.9471241" lon="-9.4119124" version="5" timestamp="2009-01-07T03:20:33Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787781" lat="38.9604831" lon="-9.4000345" version="7" timestamp="2009-01-07T03:20:32Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787782" lat="38.9556979" lon="-9.3998681" version="1" timestamp="2007-01-16T15:23:01Z" changeset="195871" uid="5404" user="jmorais"/>
+	<node id="13787783" lat="38.9601398" lon="-9.4003236" version="7" timestamp="2009-01-07T03:20:32Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787784" lat="38.9529332" lon="-9.4042832" version="5" timestamp="2009-01-07T03:20:34Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787785" lat="38.9547048" lon="-9.398452" version="1" timestamp="2007-01-16T15:23:02Z" changeset="195871" uid="5404" user="jmorais"/>
+	<node id="13787786" lat="38.944901" lon="-9.4136921" version="15" timestamp="2012-01-01T22:17:06Z" changeset="10266401" uid="246146" user="FPE"/>
+	<node id="13787787" lat="38.9505095" lon="-9.4079549" version="5" timestamp="2009-01-07T03:20:34Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787790" lat="38.9592883" lon="-9.4010929" version="6" timestamp="2009-01-07T03:20:34Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787792" lat="38.9524653" lon="-9.4059" version="6" timestamp="2011-11-19T21:53:05Z" changeset="9877522" uid="451289" user="jsimoes"/>
+	<node id="13787793" lat="38.9554397" lon="-9.4008409" version="6" timestamp="2011-12-22T02:19:19Z" changeset="10176691" uid="458162" user="ftavares87"/>
+	<node id="13787795" lat="38.9544271" lon="-9.3979195" version="1" timestamp="2007-01-16T15:23:03Z" changeset="195871" uid="5404" user="jmorais"/>
+	<node id="13787797" lat="38.9468168" lon="-9.4122019" version="5" timestamp="2009-01-07T03:20:33Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787799" lat="38.9518832" lon="-9.4071317" version="6" timestamp="2011-11-19T21:53:05Z" changeset="9877522" uid="451289" user="jsimoes"/>
+	<node id="13787800" lat="38.9494871" lon="-9.4088797" version="5" timestamp="2009-01-07T03:20:33Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787801" lat="38.9597448" lon="-9.400822" version="7" timestamp="2009-01-07T03:20:44Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787802" lat="38.9488692" lon="-9.409403" version="5" timestamp="2009-01-07T03:20:33Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="13787803" lat="38.9621243" lon="-9.3996596" version="7" timestamp="2011-12-21T15:32:41Z" changeset="10172607" uid="458162" user="ftavares87"/>
+	<node id="13787804" lat="38.9553642" lon="-9.3995345" version="1" timestamp="2007-01-16T15:23:03Z" changeset="195871" uid="5404" user="jmorais"/>
+	<node id="13787805" lat="38.9555336" lon="-9.3996782" version="1" timestamp="2007-01-16T15:23:03Z" changeset="195871" uid="5404" user="jmorais"/>
+	<node id="13787806" lat="38.9548398" lon="-9.3987325" version="1" timestamp="2007-01-16T15:23:03Z" changeset="195871" uid="5404" user="jmorais"/>
+	<node id="20629105" lat="38.9551027" lon="-9.3985607" version="1" timestamp="2007-01-16T15:23:04Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629106" lat="38.9527506" lon="-9.3994934" version="1" timestamp="2007-01-16T15:23:04Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629107" lat="38.9553731" lon="-9.3990608" version="1" timestamp="2007-01-16T15:23:04Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629108" lat="38.955861" lon="-9.3996379" version="3" timestamp="2011-12-22T02:19:18Z" changeset="10176691" uid="458162" user="ftavares87">
+		<tag k="name" v="Lapa da Serra"/>
+		<tag k="place" v="village"/>
+	</node>
+	<node id="20629109" lat="38.9560624" lon="-9.3994393" version="1" timestamp="2007-01-16T15:23:04Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629110" lat="38.9569956" lon="-9.3960061" version="4" timestamp="2009-01-07T03:20:02Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="20629111" lat="38.9571046" lon="-9.3985297" version="1" timestamp="2007-01-16T15:23:04Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629112" lat="38.9544539" lon="-9.3988716" version="1" timestamp="2007-01-16T15:23:05Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629113" lat="38.9574242" lon="-9.4147894" version="4" timestamp="2013-05-23T16:37:33Z" changeset="16254842" uid="44221" user="dcp"/>
+	<node id="20629114" lat="38.9570268" lon="-9.3969722" version="1" timestamp="2007-01-16T15:23:05Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629116" lat="38.9565128" lon="-9.3960533" version="1" timestamp="2007-01-16T15:23:05Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629117" lat="38.951068" lon="-9.4134139" version="4" timestamp="2011-09-05T23:14:17Z" changeset="9222804" uid="162435" user="victorferreira"/>
+	<node id="20629118" lat="38.9618392" lon="-9.4138779" version="4" timestamp="2013-05-23T16:37:33Z" changeset="16254842" uid="44221" user="dcp">
+		<tag k="highway" v="crossing"/>
+	</node>
+	<node id="20629119" lat="38.9543592" lon="-9.4002504" version="1" timestamp="2007-01-16T15:23:05Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629120" lat="38.9558275" lon="-9.3959443" version="1" timestamp="2007-01-16T15:23:05Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629121" lat="38.9723864" lon="-9.419457" version="3" timestamp="2013-04-15T17:51:32Z" changeset="15739924" uid="43262" user="KonTur"/>
+	<node id="20629122" lat="38.9575631" lon="-9.4009467" version="1" timestamp="2007-01-16T15:23:05Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629123" lat="38.9532539" lon="-9.4140811" version="2" timestamp="2009-01-05T16:58:17Z" changeset="740677" uid="64645" user="rockenrola"/>
+	<node id="20629124" lat="38.97058" lon="-9.4195847" version="2" timestamp="2009-01-05T16:59:07Z" changeset="740677" uid="64645" user="rockenrola"/>
+	<node id="20629125" lat="38.9635528" lon="-9.4135131" version="7" timestamp="2011-01-21T16:32:34Z" changeset="7041910" uid="18069" user="Claudius Henrichs"/>
+	<node id="20629126" lat="38.957581" lon="-9.4147847" version="4" timestamp="2013-05-23T16:37:34Z" changeset="16254842" uid="44221" user="dcp"/>
+	<node id="20629127" lat="38.9478528" lon="-9.4145982" version="4" timestamp="2012-01-01T22:34:21Z" changeset="10266515" uid="246146" user="FPE"/>
+	<node id="20629128" lat="38.9555472" lon="-9.3951967" version="1" timestamp="2007-01-16T15:23:07Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629129" lat="38.9558119" lon="-9.3953525" version="1" timestamp="2007-01-16T15:23:07Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629130" lat="38.9564816" lon="-9.3992928" version="1" timestamp="2007-01-16T15:23:07Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629131" lat="38.9503803" lon="-9.4143938" version="4" timestamp="2011-09-05T23:14:17Z" changeset="9222804" uid="162435" user="victorferreira"/>
+	<node id="20629132" lat="38.9561702" lon="-9.3990748" version="1" timestamp="2007-01-16T15:23:07Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629133" lat="38.9565751" lon="-9.3973304" version="1" timestamp="2007-01-16T15:23:07Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629134" lat="38.9723655" lon="-9.4164099" version="3" timestamp="2007-11-12T23:14:59Z" changeset="499634" uid="2664" user="Jorge Seixal">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629135" lat="38.9528588" lon="-9.4000882" version="1" timestamp="2007-01-16T15:23:07Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629140" lat="38.9565128" lon="-9.3985141" version="1" timestamp="2007-01-16T15:23:08Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629143" lat="38.9555472" lon="-9.3984985" version="1" timestamp="2007-01-16T15:23:08Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629145" lat="38.9560923" lon="-9.3953057" version="1" timestamp="2007-01-16T15:23:08Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629147" lat="38.9730421" lon="-9.4164513" version="2" timestamp="2007-11-22T22:40:11Z" changeset="593692" uid="2664" user="Jorge Seixal">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629150" lat="38.9730698" lon="-9.4176012" version="1" timestamp="2007-01-16T15:23:08Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629152" lat="38.9549675" lon="-9.400683" version="1" timestamp="2007-01-16T15:23:08Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629156" lat="38.9520612" lon="-9.399142" version="1" timestamp="2007-01-16T15:23:08Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629159" lat="38.9725418" lon="-9.4196132" version="3" timestamp="2013-04-15T17:51:32Z" changeset="15739924" uid="43262" user="KonTur"/>
+	<node id="20629162" lat="38.957443" lon="-9.4006034" version="1" timestamp="2007-01-16T15:23:09Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629164" lat="38.9543998" lon="-9.3990608" version="1" timestamp="2007-01-16T15:23:09Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629169" lat="38.9541454" lon="-9.3937483" version="1" timestamp="2007-01-16T15:23:09Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629172" lat="38.9724161" lon="-9.4194231" version="3" timestamp="2013-04-15T17:51:32Z" changeset="15739924" uid="43262" user="KonTur"/>
+	<node id="20629176" lat="38.9564972" lon="-9.3963804" version="1" timestamp="2007-01-16T15:23:09Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629178" lat="38.9565128" lon="-9.39881" version="1" timestamp="2007-01-16T15:23:09Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629181" lat="38.9571602" lon="-9.3960764" version="4" timestamp="2009-01-07T03:20:02Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="20629185" lat="38.9717301" lon="-9.4163838" version="3" timestamp="2007-11-12T23:14:59Z" changeset="499634" uid="2664" user="Jorge Seixal">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629191" lat="38.9507722" lon="-9.4141775" version="3" timestamp="2009-01-05T16:58:18Z" changeset="740677" uid="64645" user="rockenrola"/>
+	<node id="20629197" lat="38.9540162" lon="-9.4137322" version="4" timestamp="2013-05-23T16:37:34Z" changeset="16254842" uid="44221" user="dcp"/>
+	<node id="20629200" lat="38.9556028" lon="-9.398804" version="1" timestamp="2007-01-16T15:23:10Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629202" lat="38.9546972" lon="-9.3989662" version="1" timestamp="2007-01-16T15:23:10Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629208" lat="38.9559521" lon="-9.3984207" version="1" timestamp="2007-01-16T15:23:10Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629215" lat="38.9531426" lon="-9.3986688" version="1" timestamp="2007-01-16T15:23:10Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629220" lat="38.9648996" lon="-9.4150701" version="3" timestamp="2009-01-05T16:59:08Z" changeset="740677" uid="64645" user="rockenrola"/>
+	<node id="20629225" lat="38.9542916" lon="-9.3990203" version="1" timestamp="2007-01-16T15:23:10Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629229" lat="38.9528792" lon="-9.4140882" version="3" timestamp="2009-01-05T16:58:17Z" changeset="740677" uid="64645" user="rockenrola"/>
+	<node id="20629234" lat="38.9697168" lon="-9.4192452" version="2" timestamp="2009-01-05T16:59:07Z" changeset="740677" uid="64645" user="rockenrola"/>
+	<node id="20629239" lat="38.9524262" lon="-9.3988175" version="1" timestamp="2007-01-16T15:23:11Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629247" lat="38.954927" lon="-9.3985472" version="1" timestamp="2007-01-16T15:23:11Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629250" lat="38.9571854" lon="-9.3998824" version="1" timestamp="2007-01-16T15:23:12Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629256" lat="38.9552357" lon="-9.3984674" version="1" timestamp="2007-01-16T15:23:12Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629263" lat="38.9454242" lon="-9.4139113" version="4" timestamp="2011-09-05T23:14:17Z" changeset="9222804" uid="162435" user="victorferreira"/>
+	<node id="20629268" lat="38.9725504" lon="-9.4194685" version="3" timestamp="2013-04-15T17:51:32Z" changeset="15739924" uid="43262" user="KonTur"/>
+	<node id="20629272" lat="38.9565751" lon="-9.3990748" version="1" timestamp="2007-01-16T15:23:12Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629276" lat="38.9573571" lon="-9.4002257" version="1" timestamp="2007-01-16T15:23:12Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629279" lat="38.949045" lon="-9.4138612" version="4" timestamp="2011-09-05T23:14:17Z" changeset="9222804" uid="162435" user="victorferreira"/>
+	<node id="20629282" lat="38.9713423" lon="-9.4195385" version="3" timestamp="2013-04-15T17:51:32Z" changeset="15739924" uid="43262" user="KonTur"/>
+	<node id="20629287" lat="38.9521424" lon="-9.3989662" version="1" timestamp="2007-01-16T15:23:12Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629289" lat="38.9724241" lon="-9.4196482" version="3" timestamp="2013-04-15T17:51:32Z" changeset="15739924" uid="43262" user="KonTur"/>
+	<node id="20629293" lat="38.9566685" lon="-9.3986076" version="1" timestamp="2007-01-16T15:23:13Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629296" lat="38.9725738" lon="-9.4191393" version="2" timestamp="2013-04-15T17:51:32Z" changeset="15739924" uid="43262" user="KonTur"/>
+	<node id="20629300" lat="38.946697" lon="-9.4142753" version="4" timestamp="2011-09-05T23:14:17Z" changeset="9222804" uid="162435" user="victorferreira"/>
+	<node id="20629305" lat="38.9723805" lon="-9.4195975" version="3" timestamp="2013-04-15T17:51:32Z" changeset="15739924" uid="43262" user="KonTur"/>
+	<node id="20629306" lat="38.9703181" lon="-9.4195556" version="2" timestamp="2009-01-05T16:59:07Z" changeset="740677" uid="64645" user="rockenrola"/>
+	<node id="20629308" lat="38.9571669" lon="-9.3982493" version="1" timestamp="2007-01-16T15:23:14Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629309" lat="38.957385" lon="-9.3982338" version="1" timestamp="2007-01-16T15:23:15Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629311" lat="38.9667785" lon="-9.4164473" version="4" timestamp="2009-01-05T16:59:07Z" changeset="740677" uid="64645" user="rockenrola"/>
+	<node id="20629313" lat="38.9559408" lon="-9.3991825" version="1" timestamp="2007-01-16T15:23:15Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629315" lat="38.9569108" lon="-9.3996935" version="1" timestamp="2007-01-16T15:23:15Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629316" lat="38.9690378" lon="-9.4185953" version="2" timestamp="2009-01-05T16:59:07Z" changeset="740677" uid="64645" user="rockenrola"/>
+	<node id="20629318" lat="38.9527777" lon="-9.4005478" version="1" timestamp="2007-01-16T15:23:16Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629321" lat="38.9539807" lon="-9.3987229" version="1" timestamp="2007-01-16T15:23:16Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629322" lat="38.9647171" lon="-9.4146527" version="4" timestamp="2009-01-05T16:59:08Z" changeset="740677" uid="64645" user="rockenrola"/>
+	<node id="20629323" lat="38.9547996" lon="-9.3940286" version="1" timestamp="2007-01-16T15:23:16Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629325" lat="38.9536158" lon="-9.4002909" version="1" timestamp="2007-01-16T15:23:17Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629327" lat="38.9540889" lon="-9.4000882" version="1" timestamp="2007-01-16T15:23:18Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629328" lat="38.9569177" lon="-9.3985764" version="1" timestamp="2007-01-16T15:23:18Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629331" lat="38.9563726" lon="-9.3991527" version="1" timestamp="2007-01-16T15:23:18Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629335" lat="38.9564661" lon="-9.3955238" version="1" timestamp="2007-01-16T15:23:19Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629338" lat="38.9472403" lon="-9.414592" version="4" timestamp="2012-01-01T22:34:21Z" changeset="10266515" uid="246146" user="FPE"/>
+	<node id="20629342" lat="38.949531" lon="-9.4142603" version="3" timestamp="2009-01-05T16:58:18Z" changeset="740677" uid="64645" user="rockenrola"/>
+	<node id="20629343" lat="38.9522905" lon="-9.4137057" version="5" timestamp="2011-09-05T23:14:17Z" changeset="9222804" uid="162435" user="victorferreira"/>
+	<node id="20629346" lat="38.970016" lon="-9.4194407" version="2" timestamp="2009-01-05T16:59:07Z" changeset="740677" uid="64645" user="rockenrola"/>
+	<node id="20629348" lat="38.9555627" lon="-9.3984207" version="1" timestamp="2007-01-16T15:23:20Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629350" lat="38.9577176" lon="-9.4012214" version="1" timestamp="2007-01-16T15:23:21Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629353" lat="38.9533184" lon="-9.400345" version="1" timestamp="2007-01-16T15:23:21Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629355" lat="38.9531832" lon="-9.4003585" version="1" timestamp="2007-01-16T15:23:21Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629356" lat="38.9488283" lon="-9.4137844" version="4" timestamp="2011-09-05T23:14:17Z" changeset="9222804" uid="162435" user="victorferreira"/>
+	<node id="20629359" lat="38.9728706" lon="-9.4195249" version="2" timestamp="2013-04-15T17:51:32Z" changeset="15739924" uid="43262" user="KonTur"/>
+	<node id="20629362" lat="38.9535211" lon="-9.3987229" version="1" timestamp="2007-01-16T15:23:22Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629364" lat="38.9522775" lon="-9.3993312" version="1" timestamp="2007-01-16T15:23:23Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629366" lat="38.9564038" lon="-9.3953057" version="1" timestamp="2007-01-16T15:23:23Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629368" lat="38.9721483" lon="-9.4194755" version="3" timestamp="2013-04-15T17:51:32Z" changeset="15739924" uid="43262" user="KonTur"/>
+	<node id="20629371" lat="38.946329" lon="-9.4140612" version="3" timestamp="2009-01-05T16:58:20Z" changeset="740677" uid="64645" user="rockenrola"/>
+	<node id="20629374" lat="38.9538996" lon="-9.4000882" version="1" timestamp="2007-01-16T15:23:24Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629375" lat="38.9557786" lon="-9.3990608" version="1" timestamp="2007-01-16T15:23:25Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629377" lat="38.954197" lon="-9.3988175" version="1" timestamp="2007-01-16T15:23:25Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629380" lat="38.9570579" lon="-9.3967853" version="1" timestamp="2007-01-16T15:23:26Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629383" lat="38.9646452" lon="-9.4145053" version="5" timestamp="2011-01-21T16:32:34Z" changeset="7041910" uid="18069" user="Claudius Henrichs"/>
+	<node id="20629386" lat="38.9528453" lon="-9.3996556" version="1" timestamp="2007-01-16T15:23:26Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629388" lat="38.9499444" lon="-9.4144419" version="4" timestamp="2011-09-05T23:14:17Z" changeset="9222804" uid="162435" user="victorferreira"/>
+	<node id="20629392" lat="38.9554774" lon="-9.4141833" version="6" timestamp="2013-05-23T16:37:34Z" changeset="16254842" uid="44221" user="dcp"/>
+	<node id="20629394" lat="38.9566218" lon="-9.3959287" version="3" timestamp="2009-01-07T03:20:02Z" changeset="754173" uid="64645" user="rockenrola"/>
+	<node id="20629398" lat="38.9528453" lon="-9.3987364" version="1" timestamp="2007-01-16T15:23:27Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629402" lat="38.9535076" lon="-9.4002369" version="1" timestamp="2007-01-16T15:23:27Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629404" lat="38.9638406" lon="-9.413571" version="4" timestamp="2010-08-21T12:08:59Z" changeset="5551384" uid="329606" user="tenuki"/>
+	<node id="20629406" lat="38.9642489" lon="-9.413803" version="5" timestamp="2011-01-21T16:32:38Z" changeset="7041910" uid="18069" user="Claudius Henrichs"/>
+	<node id="20629409" lat="38.9560923" lon="-9.3962402" version="1" timestamp="2007-01-16T15:23:28Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629411" lat="38.9543168" lon="-9.3936548" version="1" timestamp="2007-01-16T15:23:28Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629415" lat="38.951291" lon="-9.4131902" version="4" timestamp="2011-09-05T23:14:17Z" changeset="9222804" uid="162435" user="victorferreira"/>
+	<node id="20629416" lat="38.9579317" lon="-9.4147206" version="5" timestamp="2009-01-05T16:59:10Z" changeset="740677" uid="64645" user="rockenrola"/>
+	<node id="20629419" lat="38.9542985" lon="-9.4138221" version="3" timestamp="2011-09-05T23:14:17Z" changeset="9222804" uid="162435" user="victorferreira"/>
+	<node id="20629422" lat="38.9574161" lon="-9.3980936" version="1" timestamp="2007-01-16T15:23:29Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629426" lat="38.9551266" lon="-9.3942622" version="1" timestamp="2007-01-16T15:23:29Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629428" lat="38.9651934" lon="-9.4155452" version="2" timestamp="2009-01-05T16:59:08Z" changeset="740677" uid="64645" user="rockenrola"/>
+	<node id="20629430" lat="38.954535" lon="-9.3986553" version="1" timestamp="2007-01-16T15:23:30Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629434" lat="38.9483873" lon="-9.4144303" version="4" timestamp="2011-09-05T23:14:18Z" changeset="9222804" uid="162435" user="victorferreira"/>
+	<node id="20629437" lat="38.9562792" lon="-9.3952434" version="1" timestamp="2007-01-16T15:23:30Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629440" lat="38.9557341" lon="-9.3956017" version="1" timestamp="2007-01-16T15:23:31Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629443" lat="38.9662624" lon="-9.416122" version="3" timestamp="2009-01-05T16:59:07Z" changeset="740677" uid="64645" user="rockenrola"/>
+	<node id="20629447" lat="38.9553758" lon="-9.3948852" version="1" timestamp="2007-01-16T15:23:31Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629450" lat="38.9486562" lon="-9.4138842" version="4" timestamp="2011-09-05T23:14:18Z" changeset="9222804" uid="162435" user="victorferreira"/>
+	<node id="20629452" lat="38.9553866" lon="-9.3986283" version="1" timestamp="2007-01-16T15:23:32Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="20629454" lat="38.9514647" lon="-9.4131952" version="3" timestamp="2011-09-05T23:14:18Z" changeset="9222804" uid="162435" user="victorferreira"/>
+	<node id="20629457" lat="38.9655435" lon="-9.4157932" version="3" timestamp="2009-01-05T16:59:07Z" changeset="740677" uid="64645" user="rockenrola"/>
+	<node id="20629458" lat="38.9566685" lon="-9.3976108" version="1" timestamp="2007-01-16T15:23:33Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21270958" lat="38.7574365" lon="-9.1699407" version="4" timestamp="2009-01-09T12:40:28Z" changeset="764567" uid="89955" user="Miguel_A"/>
+	<node id="21270959" lat="38.7572876" lon="-9.1661566" version="5" timestamp="2011-05-28T03:46:59Z" changeset="8268202" uid="350918" user="JPFer"/>
+	<node id="21270960" lat="38.7573336" lon="-9.1653117" version="4" timestamp="2011-05-28T03:46:59Z" changeset="8268202" uid="350918" user="JPFer"/>
+	<node id="21270961" lat="38.7574117" lon="-9.1645969" version="4" timestamp="2011-05-28T03:46:59Z" changeset="8268202" uid="350918" user="JPFer"/>
+	<node id="21270962" lat="38.7577567" lon="-9.162633" version="3" timestamp="2009-01-09T12:40:28Z" changeset="764567" uid="89955" user="Miguel_A"/>
+	<node id="21270963" lat="38.7598095" lon="-9.1544935" version="9" timestamp="2011-05-28T01:52:27Z" changeset="8267849" uid="350918" user="JPFer"/>
+	<node id="21270964" lat="38.7601608" lon="-9.1534632" version="11" timestamp="2012-09-25T15:59:03Z" changeset="13247644" uid="602999" user="rtafav2"/>
+	<node id="21270965" lat="38.7620716" lon="-9.1474085" version="4" timestamp="2009-01-09T12:42:29Z" changeset="764567" uid="89955" user="Miguel_A"/>
+	<node id="21270968" lat="38.7631258" lon="-9.1411713" version="5" timestamp="2011-10-01T19:38:14Z" changeset="9445320" uid="152074" user="beweta"/>
+	<node id="21270969" lat="38.7632177" lon="-9.1373854" version="6" timestamp="2011-10-01T19:38:14Z" changeset="9445320" uid="152074" user="beweta"/>
+	<node id="21270970" lat="38.7631482" lon="-9.1327277" version="6" timestamp="2013-04-11T20:01:45Z" changeset="15694131" uid="458162" user="ftavares87"/>
+	<node id="21270971" lat="38.764431" lon="-9.1285501" version="5" timestamp="2013-04-11T20:01:45Z" changeset="15694131" uid="458162" user="ftavares87"/>
+	<node id="21270972" lat="38.7659652" lon="-9.1267831" version="4" timestamp="2013-04-11T20:01:45Z" changeset="15694131" uid="458162" user="ftavares87"/>
+	<node id="21270973" lat="38.7694755" lon="-9.1244935" version="4" timestamp="2012-09-25T23:49:50Z" changeset="13253596" uid="602999" user="rtafav2"/>
+	<node id="21270974" lat="38.7720906" lon="-9.1240491" version="3" timestamp="2012-09-13T21:58:29Z" changeset="13101434" uid="380552" user="topolusitania"/>
+	<node id="21270975" lat="38.7798957" lon="-9.1235741" version="2" timestamp="2008-01-19T11:31:34Z" changeset="667642" uid="20354" user="SamR">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21270989" lat="38.8870988" lon="-9.0558055" version="2" timestamp="2012-04-05T14:24:03Z" changeset="11190027" uid="584846" user="vaduarte"/>
+	<node id="21271160" lat="39.5951597" lon="-8.3630641" version="3" timestamp="2011-01-14T00:56:55Z" changeset="6963371" uid="364739" user="j123b567"/>
+	<node id="21271162" lat="39.5976622" lon="-8.3619682" version="1" timestamp="2006-11-25T18:50:29Z" changeset="157599" uid="4238" user="pixolex">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271163" lat="39.6010945" lon="-8.3612459" version="2" timestamp="2011-01-14T00:57:33Z" changeset="6963371" uid="364739" user="j123b567"/>
+	<node id="21271164" lat="39.6028918" lon="-8.3613021" version="3" timestamp="2013-02-01T22:11:19Z" changeset="14876901" uid="568696" user="pmlmartins"/>
+	<node id="21271165" lat="39.6042642" lon="-8.3616687" version="3" timestamp="2013-02-01T22:11:19Z" changeset="14876901" uid="568696" user="pmlmartins"/>
+	<node id="21271166" lat="39.6057833" lon="-8.3622387" version="3" timestamp="2013-02-01T22:11:19Z" changeset="14876901" uid="568696" user="pmlmartins"/>
+	<node id="21271167" lat="39.6066105" lon="-8.3624565" version="3" timestamp="2013-02-01T22:11:19Z" changeset="14876901" uid="568696" user="pmlmartins"/>
+	<node id="21271168" lat="39.6085323" lon="-8.3625251" version="2" timestamp="2013-02-01T22:11:19Z" changeset="14876901" uid="568696" user="pmlmartins"/>
+	<node id="21271169" lat="39.6163424" lon="-8.3626" version="3" timestamp="2012-08-24T15:25:58Z" changeset="12846365" uid="363489" user="RomainDC"/>
+	<node id="21271170" lat="39.6185162" lon="-8.3619586" version="2" timestamp="2011-01-14T00:57:57Z" changeset="6963371" uid="364739" user="j123b567"/>
+	<node id="21271171" lat="39.6205716" lon="-8.3596328" version="3" timestamp="2013-03-17T12:40:23Z" changeset="15395055" uid="44221" user="dcp"/>
+	<node id="21271172" lat="39.622277" lon="-8.3581064" version="2" timestamp="2012-12-22T16:07:33Z" changeset="14367915" uid="380552" user="topolusitania"/>
+	<node id="21271173" lat="39.6254983" lon="-8.3567637" version="3" timestamp="2012-12-22T16:07:33Z" changeset="14367915" uid="380552" user="topolusitania"/>
+	<node id="21271174" lat="39.6281678" lon="-8.3564003" version="2" timestamp="2012-12-22T16:07:33Z" changeset="14367915" uid="380552" user="topolusitania"/>
+	<node id="21271175" lat="39.6302687" lon="-8.3569629" version="3" timestamp="2012-12-22T16:07:33Z" changeset="14367915" uid="380552" user="topolusitania"/>
+	<node id="21271176" lat="39.6440897" lon="-8.3618188" version="3" timestamp="2012-12-22T16:07:33Z" changeset="14367915" uid="380552" user="topolusitania"/>
+	<node id="21271177" lat="39.6454218" lon="-8.3626545" version="3" timestamp="2012-12-22T16:07:33Z" changeset="14367915" uid="380552" user="topolusitania"/>
+	<node id="21271178" lat="39.6491707" lon="-8.3665082" version="3" timestamp="2012-12-22T16:07:33Z" changeset="14367915" uid="380552" user="topolusitania"/>
+	<node id="21271179" lat="39.6511275" lon="-8.3675521" version="3" timestamp="2012-12-22T16:07:33Z" changeset="14367915" uid="380552" user="topolusitania"/>
+	<node id="21271180" lat="39.6531291" lon="-8.3676767" version="3" timestamp="2012-12-22T16:07:33Z" changeset="14367915" uid="380552" user="topolusitania"/>
+	<node id="21271181" lat="39.6642944" lon="-8.3602368" version="2" timestamp="2011-01-14T00:57:55Z" changeset="6963371" uid="364739" user="j123b567"/>
+	<node id="21271182" lat="39.6661339" lon="-8.3596692" version="4" timestamp="2012-12-25T22:42:56Z" changeset="14406183" uid="801876" user="rieeal">
+		<tag k="highway" v="motorway_junction"/>
+		<tag k="name" v="Alviobeira"/>
+		<tag k="ref" v="20"/>
+	</node>
+	<node id="21271189" lat="39.669435" lon="-8.360541" version="5" timestamp="2013-07-20T15:17:40Z" changeset="17024212" uid="1210967" user="Portugaltg"/>
+	<node id="21271190" lat="39.6707734" lon="-8.3577943" version="3" timestamp="2012-09-27T23:22:11Z" changeset="13279133" uid="602999" user="rtafav2"/>
+	<node id="21271191" lat="39.6713008" lon="-8.3572636" version="4" timestamp="2012-09-27T23:22:11Z" changeset="13279133" uid="602999" user="rtafav2"/>
+	<node id="21271192" lat="39.6700784" lon="-8.3488282" version="3" timestamp="2012-09-27T23:22:11Z" changeset="13279133" uid="602999" user="rtafav2"/>
+	<node id="21271195" lat="39.6753408" lon="-8.3414379" version="2" timestamp="2011-02-25T14:03:25Z" changeset="7390727" uid="40397" user="Zartbitter"/>
+	<node id="21271196" lat="39.680899" lon="-8.330478" version="3" timestamp="2012-09-27T23:22:11Z" changeset="13279133" uid="602999" user="rtafav2"/>
+	<node id="21271197" lat="39.6813214" lon="-8.3289142" version="3" timestamp="2012-09-27T23:22:11Z" changeset="13279133" uid="602999" user="rtafav2"/>
+	<node id="21271199" lat="39.6813272" lon="-8.3259046" version="1" timestamp="2006-11-25T18:50:35Z" changeset="157599" uid="4238" user="pixolex">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271200" lat="39.681548" lon="-8.3248087" version="2" timestamp="2011-02-25T14:03:25Z" changeset="7390727" uid="40397" user="Zartbitter"/>
+	<node id="21271201" lat="39.6856826" lon="-8.3174383" version="2" timestamp="2011-02-25T14:03:26Z" changeset="7390727" uid="40397" user="Zartbitter"/>
+	<node id="21271202" lat="39.6866669" lon="-8.3167567" version="2" timestamp="2011-02-25T14:03:26Z" changeset="7390727" uid="40397" user="Zartbitter"/>
+	<node id="21271203" lat="39.6877471" lon="-8.3164826" version="2" timestamp="2011-02-25T14:03:24Z" changeset="7390727" uid="40397" user="Zartbitter"/>
+	<node id="21271204" lat="39.6892678" lon="-8.3165076" version="2" timestamp="2011-02-25T14:03:25Z" changeset="7390727" uid="40397" user="Zartbitter"/>
+	<node id="21271205" lat="39.6903802" lon="-8.316134" version="2" timestamp="2013-07-20T15:17:40Z" changeset="17024212" uid="1210967" user="Portugaltg"/>
+	<node id="21271207" lat="39.692184" lon="-8.3129501" version="2" timestamp="2011-02-25T14:03:26Z" changeset="7390727" uid="40397" user="Zartbitter"/>
+	<node id="21271208" lat="39.6920698" lon="-8.3121147" version="3" timestamp="2013-07-20T15:17:40Z" changeset="17024212" uid="1210967" user="Portugaltg"/>
+	<node id="21271209" lat="39.6919855" lon="-8.3115873" version="2" timestamp="2011-02-25T14:03:25Z" changeset="7390727" uid="40397" user="Zartbitter"/>
+	<node id="21271210" lat="39.691578" lon="-8.3103479" version="2" timestamp="2011-02-25T14:03:26Z" changeset="7390727" uid="40397" user="Zartbitter"/>
+	<node id="21271211" lat="39.6914488" lon="-8.3099699" version="2" timestamp="2011-02-25T14:03:25Z" changeset="7390727" uid="40397" user="Zartbitter"/>
+	<node id="21271212" lat="39.691402" lon="-8.3096169" version="3" timestamp="2011-02-25T16:39:24Z" changeset="7392019" uid="40397" user="Zartbitter"/>
+	<node id="21271231" lat="39.6961026" lon="-8.3059556" version="3" timestamp="2012-09-27T23:22:11Z" changeset="13279133" uid="602999" user="rtafav2"/>
+	<node id="21271232" lat="39.6960514" lon="-8.3050165" version="3" timestamp="2012-09-27T23:22:11Z" changeset="13279133" uid="602999" user="rtafav2"/>
+	<node id="21271233" lat="39.6958193" lon="-8.303652" version="2" timestamp="2012-09-27T23:22:11Z" changeset="13279133" uid="602999" user="rtafav2"/>
+	<node id="21271234" lat="39.6954229" lon="-8.3023886" version="3" timestamp="2012-09-27T23:22:11Z" changeset="13279133" uid="602999" user="rtafav2"/>
+	<node id="21271235" lat="39.6954027" lon="-8.3020798" version="3" timestamp="2012-09-27T23:22:11Z" changeset="13279133" uid="602999" user="rtafav2"/>
+	<node id="21271236" lat="39.6951908" lon="-8.3022224" version="3" timestamp="2012-09-27T23:22:11Z" changeset="13279133" uid="602999" user="rtafav2"/>
+	<node id="21271238" lat="39.6953491" lon="-8.3020577" version="3" timestamp="2012-09-27T23:22:11Z" changeset="13279133" uid="602999" user="rtafav2"/>
+	<node id="21271239" lat="39.6952644" lon="-8.3024065" version="3" timestamp="2012-09-27T23:22:11Z" changeset="13279133" uid="602999" user="rtafav2"/>
+	<node id="21271240" lat="39.6954759" lon="-8.3022635" version="3" timestamp="2012-09-27T23:22:12Z" changeset="13279133" uid="602999" user="rtafav2"/>
+	<node id="21271243" lat="39.697293" lon="-8.3079599" version="2" timestamp="2013-10-23T09:17:02Z" changeset="18499091" uid="571263" user="Lobinho"/>
+	<node id="21271244" lat="39.7011564" lon="-8.3094504" version="1" timestamp="2007-01-16T15:24:04Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271245" lat="39.7015582" lon="-8.3095296" version="1" timestamp="2007-01-16T15:24:04Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271246" lat="39.7020263" lon="-8.3092006" version="1" timestamp="2007-01-16T15:24:04Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271247" lat="39.7033815" lon="-8.3083983" version="2" timestamp="2013-10-23T09:17:01Z" changeset="18499091" uid="571263" user="Lobinho"/>
+	<node id="21271248" lat="39.7051152" lon="-8.3080507" version="2" timestamp="2013-10-23T09:17:02Z" changeset="18499091" uid="571263" user="Lobinho"/>
+	<node id="21271249" lat="39.7058138" lon="-8.3079881" version="1" timestamp="2007-01-16T15:24:04Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271250" lat="39.707504" lon="-8.3064058" version="2" timestamp="2013-10-23T09:17:02Z" changeset="18499091" uid="571263" user="Lobinho"/>
+	<node id="21271251" lat="39.709135" lon="-8.3053795" version="2" timestamp="2013-10-23T09:17:02Z" changeset="18499091" uid="571263" user="Lobinho"/>
+	<node id="21271252" lat="39.7098998" lon="-8.3051925" version="2" timestamp="2013-10-23T09:17:02Z" changeset="18499091" uid="571263" user="Lobinho"/>
+	<node id="21271253" lat="39.7114136" lon="-8.3031034" version="1" timestamp="2007-01-16T15:24:04Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271254" lat="39.7126692" lon="-8.3024617" version="2" timestamp="2013-10-22T10:48:51Z" changeset="18483642" uid="571263" user="Lobinho"/>
+	<node id="21271255" lat="39.721264" lon="-8.3020494" version="1" timestamp="2007-01-16T15:24:05Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271256" lat="39.7247463" lon="-8.3001291" version="2" timestamp="2014-04-19T09:26:15Z" changeset="21793419" uid="451289" user="jsimoes"/>
+	<node id="21271257" lat="39.72506" lon="-8.2997276" version="2" timestamp="2014-04-19T09:26:15Z" changeset="21793419" uid="451289" user="jsimoes"/>
+	<node id="21271258" lat="39.7255956" lon="-8.2997954" version="2" timestamp="2014-04-19T09:26:15Z" changeset="21793419" uid="451289" user="jsimoes"/>
+	<node id="21271259" lat="39.7258809" lon="-8.2999942" version="2" timestamp="2014-04-19T09:26:15Z" changeset="21793419" uid="451289" user="jsimoes"/>
+	<node id="21271260" lat="39.7260971" lon="-8.2999362" version="2" timestamp="2014-04-19T09:26:15Z" changeset="21793419" uid="451289" user="jsimoes"/>
+	<node id="21271261" lat="39.7263438" lon="-8.2995503" version="2" timestamp="2014-04-19T09:26:15Z" changeset="21793419" uid="451289" user="jsimoes"/>
+	<node id="21271262" lat="39.7268302" lon="-8.2995605" version="2" timestamp="2014-04-19T09:26:15Z" changeset="21793419" uid="451289" user="jsimoes"/>
+	<node id="21271263" lat="39.7271611" lon="-8.2995361" version="2" timestamp="2014-04-19T09:26:15Z" changeset="21793419" uid="451289" user="jsimoes"/>
+	<node id="21271264" lat="39.7272793" lon="-8.2992799" version="2" timestamp="2014-04-19T09:26:15Z" changeset="21793419" uid="451289" user="jsimoes"/>
+	<node id="21271265" lat="39.7268205" lon="-8.2983366" version="2" timestamp="2014-04-19T09:26:15Z" changeset="21793419" uid="451289" user="jsimoes"/>
+	<node id="21271266" lat="39.72681" lon="-8.2980981" version="2" timestamp="2014-04-19T09:26:15Z" changeset="21793419" uid="451289" user="jsimoes"/>
+	<node id="21271267" lat="39.7269394" lon="-8.2977765" version="2" timestamp="2014-04-19T09:26:15Z" changeset="21793419" uid="451289" user="jsimoes"/>
+	<node id="21271268" lat="39.7276144" lon="-8.2964389" version="1" timestamp="2007-01-16T15:24:07Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271269" lat="39.7276352" lon="-8.2960819" version="2" timestamp="2014-04-19T09:26:15Z" changeset="21793419" uid="451289" user="jsimoes"/>
+	<node id="21271270" lat="39.727555" lon="-8.2957922" version="2" timestamp="2012-02-29T13:47:21Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271271" lat="39.7275029" lon="-8.2954963" version="2" timestamp="2012-02-29T13:47:21Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271272" lat="39.7284456" lon="-8.2934234" version="2" timestamp="2012-02-29T13:47:21Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271273" lat="39.7289365" lon="-8.292242" version="2" timestamp="2012-02-29T13:47:21Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271274" lat="39.7301538" lon="-8.2913312" version="2" timestamp="2012-02-29T13:47:21Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271275" lat="39.731233" lon="-8.2908892" version="1" timestamp="2007-01-16T15:24:07Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271276" lat="39.7319094" lon="-8.2898684" version="2" timestamp="2013-10-22T10:48:51Z" changeset="18483642" uid="571263" user="Lobinho"/>
+	<node id="21271277" lat="39.7318036" lon="-8.2875849" version="2" timestamp="2012-02-29T13:47:21Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271278" lat="39.728746" lon="-8.2827425" version="3" timestamp="2013-10-22T10:23:42Z" changeset="18483642" uid="571263" user="Lobinho"/>
+	<node id="21271279" lat="39.7284064" lon="-8.282311" version="2" timestamp="2012-02-29T13:47:21Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271280" lat="39.7285631" lon="-8.2818176" version="2" timestamp="2012-02-29T13:47:21Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271281" lat="39.7289331" lon="-8.2815941" version="2" timestamp="2012-02-29T13:47:21Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271282" lat="39.7296181" lon="-8.2803148" version="2" timestamp="2012-02-29T13:47:21Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271283" lat="39.7268304" lon="-8.2750361" version="2" timestamp="2012-02-29T13:47:21Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271284" lat="39.7268512" lon="-8.2738143" version="1" timestamp="2007-01-16T15:24:08Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271285" lat="39.7277535" lon="-8.2729247" version="2" timestamp="2012-02-29T13:47:21Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271286" lat="39.7281186" lon="-8.2728709" version="2" timestamp="2012-02-29T13:47:22Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271287" lat="39.7285641" lon="-8.2729197" version="2" timestamp="2012-02-29T13:47:22Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271288" lat="39.7288955" lon="-8.2728168" version="2" timestamp="2012-02-29T13:47:22Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271289" lat="39.7294107" lon="-8.2720034" version="2" timestamp="2012-02-29T13:47:22Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271290" lat="39.7301789" lon="-8.2717293" version="1" timestamp="2007-01-16T15:24:08Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271291" lat="39.7306478" lon="-8.2709502" version="1" timestamp="2007-01-16T15:24:08Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271292" lat="39.7311421" lon="-8.2702916" version="2" timestamp="2012-02-29T13:47:22Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271293" lat="39.7323504" lon="-8.2700412" version="1" timestamp="2007-01-16T15:24:09Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271294" lat="39.7329608" lon="-8.2694602" version="2" timestamp="2012-02-29T13:47:22Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271295" lat="39.7335665" lon="-8.2683611" version="2" timestamp="2012-02-29T13:47:22Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271296" lat="39.7349232" lon="-8.2679294" version="2" timestamp="2012-02-29T13:47:22Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271297" lat="39.7363338" lon="-8.2672962" version="2" timestamp="2012-02-29T13:47:22Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271298" lat="39.7370344" lon="-8.2665429" version="2" timestamp="2012-02-29T13:47:22Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271299" lat="39.7371304" lon="-8.2652459" version="2" timestamp="2012-02-29T13:47:22Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271300" lat="39.7375695" lon="-8.2643398" version="2" timestamp="2012-02-29T13:47:22Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271301" lat="39.7377783" lon="-8.2641664" version="2" timestamp="2012-02-29T13:47:22Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271302" lat="39.7380621" lon="-8.2640904" version="2" timestamp="2012-02-29T13:47:22Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271303" lat="39.7385403" lon="-8.2640317" version="1" timestamp="2007-01-16T15:24:09Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271304" lat="39.7386085" lon="-8.263826" version="2" timestamp="2012-02-29T13:47:22Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271305" lat="39.7385703" lon="-8.2636266" version="2" timestamp="2012-02-29T13:47:22Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271306" lat="39.7382012" lon="-8.2633206" version="2" timestamp="2012-02-29T13:47:22Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271307" lat="39.7381291" lon="-8.2628557" version="1" timestamp="2007-01-16T15:24:10Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271308" lat="39.7384164" lon="-8.2625141" version="2" timestamp="2012-02-29T13:47:23Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271309" lat="39.7391886" lon="-8.2622875" version="2" timestamp="2012-02-29T13:47:23Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271310" lat="39.739407" lon="-8.2620796" version="2" timestamp="2012-02-29T13:47:23Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271311" lat="39.7399904" lon="-8.2614489" version="1" timestamp="2007-01-16T15:24:10Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271312" lat="39.7401827" lon="-8.2613722" version="2" timestamp="2012-02-29T13:47:23Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271313" lat="39.7408313" lon="-8.2616035" version="2" timestamp="2012-02-29T13:47:23Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271314" lat="39.7410049" lon="-8.2617885" version="2" timestamp="2012-02-29T13:47:23Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271315" lat="39.7411364" lon="-8.2627853" version="2" timestamp="2012-02-29T13:47:23Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271316" lat="39.741592" lon="-8.2633102" version="1" timestamp="2007-01-16T15:24:11Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271317" lat="39.7419181" lon="-8.2638891" version="2" timestamp="2012-02-29T13:47:23Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271318" lat="39.7421345" lon="-8.2638864" version="2" timestamp="2012-02-29T13:47:23Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271319" lat="39.7427978" lon="-8.26358" version="2" timestamp="2012-02-29T13:47:23Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271320" lat="39.7430802" lon="-8.2636163" version="2" timestamp="2012-02-29T13:47:23Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271321" lat="39.7439529" lon="-8.2639606" version="2" timestamp="2012-02-29T13:47:23Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271322" lat="39.7443217" lon="-8.2638504" version="2" timestamp="2012-02-29T13:47:23Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271323" lat="39.7448131" lon="-8.2636689" version="2" timestamp="2012-02-29T13:47:23Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271324" lat="39.7453367" lon="-8.2635099" version="2" timestamp="2012-02-29T13:47:24Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271325" lat="39.7454914" lon="-8.2633316" version="2" timestamp="2012-02-29T13:47:24Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271326" lat="39.7452921" lon="-8.262632" version="2" timestamp="2012-02-29T13:47:24Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271327" lat="39.7450308" lon="-8.2621165" version="2" timestamp="2012-02-29T13:47:24Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271328" lat="39.7450496" lon="-8.2618847" version="2" timestamp="2012-02-29T13:47:24Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271329" lat="39.7454326" lon="-8.2614754" version="2" timestamp="2012-02-29T13:47:24Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271330" lat="39.7462616" lon="-8.2614474" version="2" timestamp="2012-02-29T13:47:24Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271331" lat="39.7465887" lon="-8.2615252" version="2" timestamp="2012-02-29T13:47:24Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271332" lat="39.7475443" lon="-8.262294" version="2" timestamp="2012-02-29T13:47:24Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271333" lat="39.7484803" lon="-8.2626295" version="1" timestamp="2007-01-16T15:24:16Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271334" lat="39.7496172" lon="-8.2631531" version="1" timestamp="2007-01-16T15:24:18Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271335" lat="39.7498205" lon="-8.2631957" version="2" timestamp="2012-02-29T13:47:24Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271336" lat="39.750197" lon="-8.2627509" version="2" timestamp="2012-02-29T13:47:24Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271337" lat="39.7504255" lon="-8.2614946" version="2" timestamp="2012-02-29T13:47:24Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271338" lat="39.750506" lon="-8.2608203" version="2" timestamp="2012-02-29T13:47:25Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271339" lat="39.7505844" lon="-8.2597899" version="2" timestamp="2012-02-29T13:47:25Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271340" lat="39.7511431" lon="-8.2588298" version="1" timestamp="2007-01-16T15:24:19Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271341" lat="39.7516816" lon="-8.2583361" version="1" timestamp="2007-01-16T15:24:20Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271342" lat="39.751767" lon="-8.2572208" version="2" timestamp="2012-02-29T13:47:25Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271343" lat="39.7519315" lon="-8.2570618" version="2" timestamp="2012-02-29T13:47:25Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271344" lat="39.752108" lon="-8.2570513" version="2" timestamp="2012-02-29T13:47:25Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271345" lat="39.7525942" lon="-8.2570047" version="1" timestamp="2007-01-16T15:24:21Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271346" lat="39.7529658" lon="-8.2562173" version="2" timestamp="2012-02-29T13:47:25Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271347" lat="39.7532091" lon="-8.2559756" version="2" timestamp="2012-02-29T13:47:25Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271348" lat="39.7533561" lon="-8.2547437" version="2" timestamp="2012-02-29T13:47:25Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271349" lat="39.7538807" lon="-8.253923" version="1" timestamp="2007-01-16T15:24:22Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271350" lat="39.7548446" lon="-8.2528647" version="2" timestamp="2012-02-29T13:47:25Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271351" lat="39.7551669" lon="-8.2516693" version="2" timestamp="2012-02-29T13:47:25Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271352" lat="39.7556477" lon="-8.2514059" version="2" timestamp="2012-02-29T13:47:25Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271353" lat="39.7561378" lon="-8.2513622" version="2" timestamp="2012-02-29T13:47:25Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271354" lat="39.7565162" lon="-8.2516173" version="2" timestamp="2012-02-29T13:47:26Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271355" lat="39.7567251" lon="-8.2516428" version="2" timestamp="2012-02-29T13:47:26Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271356" lat="39.757098" lon="-8.251128" version="2" timestamp="2012-02-29T13:47:26Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271357" lat="39.7575907" lon="-8.2508413" version="1" timestamp="2007-01-16T15:24:24Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271358" lat="39.7575476" lon="-8.2502005" version="2" timestamp="2012-02-29T13:47:26Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271359" lat="39.7575716" lon="-8.2499563" version="2" timestamp="2012-02-29T13:47:26Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271360" lat="39.7577178" lon="-8.2498299" version="2" timestamp="2012-02-29T13:47:26Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271361" lat="39.7586889" lon="-8.2496102" version="2" timestamp="2012-02-29T13:47:26Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271362" lat="39.7589982" lon="-8.2496786" version="2" timestamp="2012-02-29T13:47:26Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271363" lat="39.7591537" lon="-8.249644" version="2" timestamp="2012-02-29T13:47:26Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271364" lat="39.7595354" lon="-8.2490312" version="1" timestamp="2007-01-16T15:24:26Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271365" lat="39.7598944" lon="-8.2488966" version="1" timestamp="2007-01-16T15:24:26Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271366" lat="39.7617494" lon="-8.248747" version="1" timestamp="2007-01-16T15:24:27Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271367" lat="39.7624675" lon="-8.2488218" version="1" timestamp="2007-01-16T15:24:27Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271368" lat="39.7636218" lon="-8.2486935" version="2" timestamp="2012-02-29T13:47:26Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271369" lat="39.7639879" lon="-8.2485839" version="2" timestamp="2012-02-29T13:47:26Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271370" lat="39.7645135" lon="-8.2488597" version="2" timestamp="2012-02-29T13:47:26Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271371" lat="39.7648998" lon="-8.2487957" version="2" timestamp="2012-02-29T13:47:26Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271372" lat="39.765212" lon="-8.2479829" version="2" timestamp="2012-02-29T13:47:27Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271373" lat="39.7654594" lon="-8.2476615" version="1" timestamp="2007-01-16T15:24:29Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271374" lat="39.7659011" lon="-8.2475523" version="2" timestamp="2012-02-29T13:47:27Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271375" lat="39.7665077" lon="-8.2473084" version="2" timestamp="2012-02-29T13:47:27Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271376" lat="39.7669219" lon="-8.2470962" version="2" timestamp="2012-02-29T13:47:27Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271377" lat="39.7696463" lon="-8.2462735" version="1" timestamp="2007-01-16T15:24:30Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271378" lat="39.7702952" lon="-8.2458005" version="1" timestamp="2007-01-16T15:24:30Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271379" lat="39.7706628" lon="-8.245914" version="2" timestamp="2012-02-29T13:47:27Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271380" lat="39.7709351" lon="-8.2461545" version="2" timestamp="2012-02-29T13:47:27Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271381" lat="39.7733684" lon="-8.2496367" version="2" timestamp="2012-02-29T13:47:27Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271382" lat="39.7739579" lon="-8.2499367" version="2" timestamp="2012-02-29T13:47:27Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271383" lat="39.7753786" lon="-8.2499874" version="2" timestamp="2012-02-29T13:47:27Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271384" lat="39.7756805" lon="-8.2498818" version="2" timestamp="2012-02-29T13:47:27Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271385" lat="39.7767502" lon="-8.2482035" version="2" timestamp="2011-02-08T11:44:40Z" changeset="7225752" uid="364739" user="j123b567"/>
+	<node id="21271386" lat="39.776975" lon="-8.2480529" version="3" timestamp="2012-02-29T13:47:27Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271387" lat="39.7772124" lon="-8.2480017" version="3" timestamp="2012-02-29T13:47:27Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271388" lat="39.7777664" lon="-8.2481075" version="2" timestamp="2012-02-29T13:47:27Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271389" lat="39.7798314" lon="-8.2486992" version="2" timestamp="2011-02-08T11:45:04Z" changeset="7225752" uid="364739" user="j123b567"/>
+	<node id="21271390" lat="39.7801603" lon="-8.2486352" version="2" timestamp="2011-02-08T11:45:01Z" changeset="7225752" uid="364739" user="j123b567"/>
+	<node id="21271391" lat="39.7804689" lon="-8.2481148" version="2" timestamp="2011-02-08T11:45:00Z" changeset="7225752" uid="364739" user="j123b567"/>
+	<node id="21271392" lat="39.780645" lon="-8.2478183" version="2" timestamp="2011-02-08T11:45:01Z" changeset="7225752" uid="364739" user="j123b567"/>
+	<node id="21271393" lat="39.7812523" lon="-8.2475053" version="2" timestamp="2011-02-08T11:44:42Z" changeset="7225752" uid="364739" user="j123b567"/>
+	<node id="21271394" lat="39.7814137" lon="-8.2471959" version="2" timestamp="2011-02-08T11:44:41Z" changeset="7225752" uid="364739" user="j123b567"/>
+	<node id="21271395" lat="39.7812625" lon="-8.2464821" version="2" timestamp="2011-02-08T11:45:21Z" changeset="7225752" uid="364739" user="j123b567"/>
+	<node id="21271396" lat="39.7811592" lon="-8.2454729" version="2" timestamp="2011-02-08T11:44:35Z" changeset="7225752" uid="364739" user="j123b567"/>
+	<node id="21271397" lat="39.7814596" lon="-8.2444293" version="2" timestamp="2011-02-08T11:45:21Z" changeset="7225752" uid="364739" user="j123b567"/>
+	<node id="21271398" lat="39.7818759" lon="-8.2442782" version="2" timestamp="2011-02-08T11:45:04Z" changeset="7225752" uid="364739" user="j123b567"/>
+	<node id="21271399" lat="39.7830528" lon="-8.2448676" version="1" timestamp="2007-01-16T15:24:34Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271400" lat="39.7845773" lon="-8.2467829" version="1" timestamp="2007-01-16T15:24:34Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271401" lat="39.7849503" lon="-8.2472567" version="1" timestamp="2007-01-16T15:24:34Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271402" lat="39.7851419" lon="-8.2471962" version="1" timestamp="2007-01-16T15:24:35Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271403" lat="39.7853233" lon="-8.2468736" version="1" timestamp="2007-01-16T15:24:35Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271404" lat="39.7852326" lon="-8.2464199" version="1" timestamp="2007-01-16T15:24:35Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271405" lat="39.7841338" lon="-8.244938" version="1" timestamp="2007-01-16T15:24:35Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271406" lat="39.7840531" lon="-8.2444945" version="1" timestamp="2007-01-16T15:24:35Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271407" lat="39.7842245" lon="-8.2430025" version="1" timestamp="2007-01-16T15:24:36Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271408" lat="39.784537" lon="-8.2426496" version="1" timestamp="2007-01-16T15:24:36Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271409" lat="39.7850411" lon="-8.2423069" version="1" timestamp="2007-01-16T15:24:36Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271410" lat="39.7852427" lon="-8.2415004" version="1" timestamp="2007-01-16T15:24:36Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271411" lat="39.7855754" lon="-8.2411072" version="1" timestamp="2007-01-16T15:24:36Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271412" lat="39.7871178" lon="-8.2402201" version="1" timestamp="2007-01-16T15:24:36Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271413" lat="39.7874605" lon="-8.2397664" version="1" timestamp="2007-01-16T15:24:37Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271414" lat="39.7877125" lon="-8.2390204" version="1" timestamp="2007-01-16T15:24:37Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271415" lat="39.7880553" lon="-8.2387684" version="1" timestamp="2007-01-16T15:24:37Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271416" lat="39.7885795" lon="-8.2388692" version="1" timestamp="2007-01-16T15:24:37Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271417" lat="39.7893054" lon="-8.2394438" version="1" timestamp="2007-01-16T15:24:37Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271418" lat="39.789517" lon="-8.2394943" version="1" timestamp="2007-01-16T15:24:38Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271419" lat="39.7897892" lon="-8.2390406" version="1" timestamp="2007-01-16T15:24:38Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271420" lat="39.789507" lon="-8.2383652" version="1" timestamp="2007-01-16T15:24:38Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271421" lat="39.7882368" lon="-8.2375889" version="1" timestamp="2007-01-16T15:24:38Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271422" lat="39.788025" lon="-8.2370042" version="1" timestamp="2007-01-16T15:24:38Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271423" lat="39.7883678" lon="-8.236349" version="1" timestamp="2007-01-16T15:24:39Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271424" lat="39.7893901" lon="-8.2359784" version="2" timestamp="2014-11-25T00:11:36Z" changeset="27012298" uid="451289" user="jsimoes"/>
+	<node id="21271425" lat="39.7895351" lon="-8.2357378" version="2" timestamp="2014-11-25T00:11:36Z" changeset="27012298" uid="451289" user="jsimoes"/>
+	<node id="21271426" lat="39.7896431" lon="-8.2352578" version="2" timestamp="2014-11-25T00:11:36Z" changeset="27012298" uid="451289" user="jsimoes"/>
+	<node id="21271427" lat="39.7893836" lon="-8.23444" version="2" timestamp="2014-11-25T00:11:36Z" changeset="27012298" uid="451289" user="jsimoes"/>
+	<node id="21271428" lat="39.7888416" lon="-8.2340404" version="1" timestamp="2007-01-16T15:24:39Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271429" lat="39.788267" lon="-8.2336775" version="1" timestamp="2007-01-16T15:24:39Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271430" lat="39.7878234" lon="-8.232871" version="1" timestamp="2007-01-16T15:24:40Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271431" lat="39.7868254" lon="-8.2301491" version="1" timestamp="2007-01-16T15:24:40Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271432" lat="39.7866036" lon="-8.2297257" version="1" timestamp="2007-01-16T15:24:40Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271433" lat="39.7858274" lon="-8.2291914" version="1" timestamp="2007-01-16T15:24:40Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271434" lat="39.7852326" lon="-8.2291208" version="1" timestamp="2007-01-16T15:24:40Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271435" lat="39.7844463" lon="-8.2278809" version="1" timestamp="2007-01-16T15:24:40Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271436" lat="39.7843959" lon="-8.2267518" version="1" timestamp="2007-01-16T15:24:41Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271437" lat="39.7833374" lon="-8.2258344" version="1" timestamp="2007-01-16T15:24:41Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271438" lat="39.7833676" lon="-8.2253102" version="1" timestamp="2007-01-16T15:24:41Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271439" lat="39.7840942" lon="-8.2248656" version="2" timestamp="2014-11-25T10:39:49Z" changeset="27018385" uid="451289" user="jsimoes"/>
+	<node id="21271440" lat="39.7844372" lon="-8.2237887" version="2" timestamp="2014-11-25T10:39:49Z" changeset="27018385" uid="451289" user="jsimoes"/>
+	<node id="21271441" lat="39.7850915" lon="-8.2228404" version="1" timestamp="2007-01-16T15:24:41Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271442" lat="39.7858677" lon="-8.2222556" version="1" timestamp="2007-01-16T15:24:41Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271443" lat="39.7865028" lon="-8.2222254" version="1" timestamp="2007-01-16T15:24:42Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271444" lat="39.7870875" lon="-8.222175" version="1" timestamp="2007-01-16T15:24:42Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271445" lat="39.7878033" lon="-8.2226387" version="1" timestamp="2007-01-16T15:24:42Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271446" lat="39.7886904" lon="-8.2229512" version="1" timestamp="2007-01-16T15:24:42Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271447" lat="39.7893154" lon="-8.2231932" version="1" timestamp="2007-01-16T15:24:42Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271448" lat="39.789706" lon="-8.2227446" version="1" timestamp="2007-01-16T15:24:42Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271449" lat="39.7913769" lon="-8.2233847" version="1" timestamp="2007-01-16T15:24:42Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271450" lat="39.7932672" lon="-8.2235259" version="1" timestamp="2007-01-16T15:24:43Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271451" lat="39.7942451" lon="-8.2226186" version="1" timestamp="2007-01-16T15:24:43Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271452" lat="39.7948802" lon="-8.2221347" version="1" timestamp="2007-01-16T15:24:43Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271453" lat="39.7949407" lon="-8.2218322" version="1" timestamp="2007-01-16T15:24:43Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271454" lat="39.7945777" lon="-8.2210661" version="1" timestamp="2007-01-16T15:24:43Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271455" lat="39.7946282" lon="-8.2207233" version="1" timestamp="2007-01-16T15:24:43Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271456" lat="39.794981" lon="-8.2205419" version="1" timestamp="2007-01-16T15:24:43Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271457" lat="39.7962613" lon="-8.2204209" version="1" timestamp="2007-01-16T15:24:44Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271458" lat="39.796441" lon="-8.2202767" version="2" timestamp="2014-11-25T10:39:49Z" changeset="27018385" uid="451289" user="jsimoes"/>
+	<node id="21271459" lat="39.7964882" lon="-8.2195425" version="2" timestamp="2014-11-25T10:39:49Z" changeset="27018385" uid="451289" user="jsimoes"/>
+	<node id="21271460" lat="39.796652" lon="-8.2186531" version="2" timestamp="2014-11-25T10:39:49Z" changeset="27018385" uid="451289" user="jsimoes"/>
+	<node id="21271461" lat="39.7965096" lon="-8.2180217" version="2" timestamp="2014-11-25T10:39:49Z" changeset="27018385" uid="451289" user="jsimoes"/>
+	<node id="21271462" lat="39.7966847" lon="-8.2159348" version="1" timestamp="2007-01-16T15:24:44Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271463" lat="39.7973904" lon="-8.2146243" version="1" timestamp="2007-01-16T15:24:44Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271464" lat="39.7982775" lon="-8.2120334" version="1" timestamp="2007-01-16T15:24:44Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271465" lat="39.7993789" lon="-8.2107147" version="2" timestamp="2014-11-23T21:59:00Z" changeset="26983030" uid="451289" user="jsimoes"/>
+	<node id="21271466" lat="39.7997019" lon="-8.2083895" version="2" timestamp="2014-11-23T21:25:54Z" changeset="26983030" uid="451289" user="jsimoes"/>
+	<node id="21271467" lat="39.801099" lon="-8.2051639" version="2" timestamp="2012-02-29T13:47:27Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271468" lat="39.8025062" lon="-8.2035685" version="2" timestamp="2012-02-29T13:47:27Z" changeset="10828045" uid="50938" user="Markus Nentwig"/>
+	<node id="21271469" lat="39.8033789" lon="-8.2015093" version="1" timestamp="2007-01-16T15:24:45Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271470" lat="39.8054455" lon="-8.2002358" version="2" timestamp="2012-10-01T10:57:36Z" changeset="13320765" uid="380552" user="topolusitania"/>
+	<node id="21271471" lat="39.8073507" lon="-8.1959" version="1" timestamp="2007-01-16T15:24:46Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271472" lat="39.8121412" lon="-8.191876" version="1" timestamp="2007-01-16T15:24:46Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271473" lat="39.8144929" lon="-8.190465" version="1" timestamp="2007-01-16T15:24:46Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271474" lat="39.814972" lon="-8.1891781" version="2" timestamp="2011-02-04T19:16:20Z" changeset="7184832" uid="77322" user="Enif"/>
+	<node id="21271475" lat="39.8165227" lon="-8.1871615" version="1" timestamp="2007-01-16T15:24:46Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271476" lat="39.8168252" lon="-8.1869832" version="1" timestamp="2007-01-16T15:24:46Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271477" lat="39.818064" lon="-8.1831834" version="1" timestamp="2007-01-16T15:24:46Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271478" lat="39.8234935" lon="-8.1689471" version="2" timestamp="2014-11-23T21:59:00Z" changeset="26983030" uid="451289" user="jsimoes"/>
+	<node id="21271479" lat="39.8262187" lon="-8.1596186" version="1" timestamp="2007-01-16T15:24:47Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271480" lat="39.8262374" lon="-8.1574077" version="1" timestamp="2006-11-25T18:51:24Z" changeset="157599" uid="4238" user="pixolex">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271481" lat="39.826261" lon="-8.1573823" version="1" timestamp="2006-11-25T18:51:25Z" changeset="157599" uid="4238" user="pixolex">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271482" lat="39.8262998" lon="-8.1573823" version="1" timestamp="2006-11-25T18:51:25Z" changeset="157599" uid="4238" user="pixolex">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271483" lat="39.8266254" lon="-8.1577275" version="1" timestamp="2006-11-25T18:51:25Z" changeset="157599" uid="4238" user="pixolex">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271484" lat="39.8275299" lon="-8.159279" version="2" timestamp="2012-10-01T18:34:13Z" changeset="13325804" uid="380552" user="topolusitania"/>
+	<node id="21271485" lat="39.8291562" lon="-8.1609399" version="1" timestamp="2006-11-25T18:51:25Z" changeset="157599" uid="4238" user="pixolex">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271486" lat="39.829653" lon="-8.1623236" version="1" timestamp="2006-11-25T18:51:25Z" changeset="157599" uid="4238" user="pixolex">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271487" lat="39.8295199" lon="-8.1636186" version="1" timestamp="2006-11-25T18:51:25Z" changeset="157599" uid="4238" user="pixolex">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271488" lat="39.8291296" lon="-8.1641153" version="1" timestamp="2006-11-25T18:51:26Z" changeset="157599" uid="4238" user="pixolex">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271489" lat="39.8284289" lon="-8.1643105" version="1" timestamp="2006-11-25T18:51:26Z" changeset="157599" uid="4238" user="pixolex">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271490" lat="39.8282071" lon="-8.1646209" version="1" timestamp="2006-11-25T18:51:27Z" changeset="157599" uid="4238" user="pixolex">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271491" lat="39.8282071" lon="-8.1657386" version="1" timestamp="2007-01-16T15:24:48Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271492" lat="39.8287748" lon="-8.1669804" version="1" timestamp="2007-01-16T15:24:48Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271493" lat="39.8290498" lon="-8.1682399" version="1" timestamp="2007-01-16T15:24:48Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271494" lat="39.8292716" lon="-8.168373" version="1" timestamp="2007-01-16T15:24:48Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271495" lat="39.8295554" lon="-8.1683907" version="1" timestamp="2007-01-16T15:24:48Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271496" lat="39.8300078" lon="-8.1687899" version="1" timestamp="2007-01-16T15:24:48Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271497" lat="39.8300965" lon="-8.1688165" version="1" timestamp="2007-01-16T15:24:49Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271498" lat="39.8305932" lon="-8.1684439" version="1" timestamp="2007-01-16T15:24:49Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271499" lat="39.8316044" lon="-8.1665901" version="1" timestamp="2007-01-16T15:24:49Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271500" lat="39.8317818" lon="-8.1659958" version="1" timestamp="2007-01-16T15:24:49Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271501" lat="39.8318971" lon="-8.1653483" version="1" timestamp="2007-01-16T15:24:49Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271502" lat="39.8325874" lon="-8.1639526" version="2" timestamp="2012-10-01T21:08:13Z" changeset="13328049" uid="380552" user="topolusitania"/>
+	<node id="21271503" lat="39.8327223" lon="-8.1636157" version="2" timestamp="2012-10-01T21:08:13Z" changeset="13328049" uid="380552" user="topolusitania"/>
+	<node id="21271504" lat="39.8337792" lon="-8.1647908" version="1" timestamp="2007-01-16T15:24:49Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271505" lat="39.6705344" lon="-8.3586862" version="3" timestamp="2012-09-27T23:22:12Z" changeset="13279133" uid="602999" user="rtafav2"/>
+	<node id="21271506" lat="39.8154626" lon="-8.1878037" version="1" timestamp="2007-01-16T15:24:50Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271649" lat="39.7900299" lon="-8.2227745" version="1" timestamp="2007-01-16T15:25:01Z" changeset="195871" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271709" lat="39.1218367" lon="-8.9091816" version="2" timestamp="2013-02-25T00:39:30Z" changeset="15156008" uid="380552" user="topolusitania"/>
+	<node id="21271710" lat="39.1218698" lon="-8.9089051" version="2" timestamp="2013-02-25T00:39:30Z" changeset="15156008" uid="380552" user="topolusitania"/>
+	<node id="21271711" lat="39.1219892" lon="-8.9086926" version="2" timestamp="2013-02-25T00:39:30Z" changeset="15156008" uid="380552" user="topolusitania"/>
+	<node id="21271712" lat="39.1222859" lon="-8.9081971" version="2" timestamp="2013-02-25T00:39:30Z" changeset="15156008" uid="380552" user="topolusitania"/>
+	<node id="21271713" lat="39.122375" lon="-8.9080525" version="2" timestamp="2013-02-25T00:39:30Z" changeset="15156008" uid="380552" user="topolusitania"/>
+	<node id="21271714" lat="39.1223347" lon="-8.9079982" version="2" timestamp="2013-02-25T00:39:30Z" changeset="15156008" uid="380552" user="topolusitania"/>
+	<node id="21271715" lat="39.1223126" lon="-8.9078904" version="2" timestamp="2013-02-25T00:39:30Z" changeset="15156008" uid="380552" user="topolusitania"/>
+	<node id="21271716" lat="39.1223043" lon="-8.9078034" version="2" timestamp="2013-02-25T00:39:30Z" changeset="15156008" uid="380552" user="topolusitania"/>
+	<node id="21271717" lat="39.1223633" lon="-8.9077036" version="2" timestamp="2013-02-25T00:39:30Z" changeset="15156008" uid="380552" user="topolusitania"/>
+	<node id="21271718" lat="39.1227051" lon="-8.9071398" version="2" timestamp="2013-02-25T00:39:30Z" changeset="15156008" uid="380552" user="topolusitania"/>
+	<node id="21271719" lat="39.1228021" lon="-8.9070759" version="2" timestamp="2013-02-25T00:39:30Z" changeset="15156008" uid="380552" user="topolusitania"/>
+	<node id="21271720" lat="39.1229665" lon="-8.907115" version="1" timestamp="2007-02-03T15:34:48Z" changeset="207290" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271721" lat="39.1231632" lon="-8.9070618" version="1" timestamp="2007-02-03T15:34:50Z" changeset="207290" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21271722" lat="39.1234827" lon="-8.9068812" version="1" timestamp="2007-02-03T15:34:52Z" changeset="207290" uid="5404" user="jmorais">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21272071" lat="38.7576921" lon="-9.1762795" version="4" timestamp="2011-05-28T03:46:59Z" changeset="8268202" uid="350918" user="JPFer"/>
+	<node id="21272072" lat="38.7573177" lon="-9.1789362" version="3" timestamp="2008-01-18T00:47:28Z" changeset="659293" uid="20354" user="SamR">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21272073" lat="38.7552478" lon="-9.1842036" version="3" timestamp="2014-07-10T07:56:31Z" changeset="24058676" uid="43262" user="KonTur"/>
+	<node id="21272074" lat="38.7518976" lon="-9.187819" version="3" timestamp="2014-10-23T01:38:48Z" changeset="26269056" uid="445220" user="Rui Oliveira"/>
+	<node id="21272086" lat="38.7485774" lon="-9.1883038" version="2" timestamp="2014-10-14T00:11:20Z" changeset="26062323" uid="2101088" user="Silva1989">
+		<tag k="crossing" v="zebra"/>
+		<tag k="highway" v="crossing"/>
+		<tag k="tactile_paving" v="no"/>
+	</node>
+	<node id="21272087" lat="38.7479515" lon="-9.1883663" version="1" timestamp="2007-04-25T12:12:44Z" changeset="25519" uid="4238" user="pixolex">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21272088" lat="38.747754" lon="-9.1883966" version="1" timestamp="2007-04-25T12:12:34Z" changeset="25519" uid="4238" user="pixolex">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21272444" lat="38.7439779" lon="-9.2323741" version="2" timestamp="2007-11-08T23:10:46Z" changeset="451330" uid="2664" user="Jorge Seixal">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21272458" lat="38.7457972" lon="-9.2331936" version="3" timestamp="2007-11-08T23:10:46Z" changeset="451330" uid="2664" user="Jorge Seixal">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21272460" lat="38.7486738" lon="-9.2341026" version="4" timestamp="2011-01-15T21:48:26Z" changeset="6982438" uid="202858" user="kellerma"/>
+	<node id="21272461" lat="38.7499843" lon="-9.2341995" version="3" timestamp="2011-01-15T21:48:16Z" changeset="6982438" uid="202858" user="kellerma"/>
+	<node id="21272462" lat="38.7544983" lon="-9.2339314" version="2" timestamp="2008-09-10T20:07:16Z" changeset="598180" uid="39787" user="jakomo">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21272463" lat="38.7559758" lon="-9.2345457" version="2" timestamp="2008-09-09T21:53:55Z" changeset="588723" uid="39787" user="jakomo">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21272464" lat="38.7562784" lon="-9.2345404" version="3" timestamp="2008-09-10T19:46:44Z" changeset="598180" uid="39787" user="jakomo">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21272465" lat="38.7565865" lon="-9.2343109" version="3" timestamp="2008-09-10T19:46:45Z" changeset="598180" uid="39787" user="jakomo">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21272466" lat="38.7569267" lon="-9.2309266" version="2" timestamp="2008-09-10T19:46:44Z" changeset="598180" uid="39787" user="jakomo">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21272468" lat="38.7576138" lon="-9.2298103" version="5" timestamp="2012-05-18T18:14:04Z" changeset="11635792" uid="9176" user="Maarten Deen"/>
+	<node id="21272469" lat="38.7581311" lon="-9.228045" version="4" timestamp="2012-01-08T21:34:27Z" changeset="10337036" uid="568324" user="Sofia Martins"/>
+	<node id="21272470" lat="38.7584974" lon="-9.2282904" version="2" timestamp="2008-09-20T21:18:04Z" changeset="670232" uid="39787" user="jakomo">
+		<tag k="created_by" v="JOSM"/>
+	</node>
+	<node id="21272471" lat="38.7590266" lon="-9.2288446" version="2" timestamp="2008-09-20T21:18:04Z" changeset="670232" uid="39787" user="jakomo">
+		<tag k="created_by" v="JOSM"/>

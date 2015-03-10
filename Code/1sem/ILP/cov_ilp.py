@@ -19,28 +19,16 @@ start = time.time()
 for i in xrange(N):
 	v.append(map(float,raw_input().split()))
 
-x_max=0.0
-x_min=float("inf")
-	
-for i in v:
-	x_max=max(x_max,i[0])
-	x_min=min(x_min,i[0])
-
-D=(x_max-x_min)*0.2
-print D
 d=dict()
 	
 for i,vi in enumerate(v):
 	for j,vj in enumerate(v):
-		if(dist(vi,vj)>D):
-			d[i+1,j+1]=0
-		else:
-			d[i+1,j+1]=1
-		
+		d[i+1,j+1]=dist(vi,vj)
+
 with open("../ILP/distances.dat","w") as f:
-	
+
 	f.write("data;\nparam N:= %d;" % N)
-	f.write("\nparam D:= %f;" % D)
+	f.write("\nparam K:= %d;" % K)
 	
 	f.write("\nparam C: ")
 
@@ -57,9 +45,9 @@ with open("../ILP/distances.dat","w") as f:
 	f.write(";\nend;\n")
 
 if len(argv)==2:
-	call("glpsol -m ../ILP/form.mod -d ../ILP/distances.dat -y ../ILP/output --nomip > /dev/null")
+	call("glpsol -m ../ILP/form.mod -d ../ILP/distances.dat -y ../ILP/output > /dev/null")
 else:
-	call("glpsol -m ../ILP/form.mod -d ../ILP/distances.dat -y ../ILP/output --nomip")
+	call("glpsol -m ../ILP/form.mod -d ../ILP/distances.dat -y ../ILP/output")
 call("cat ../ILP/output | tail -1")
 end = time.time()
 print ("T = %f" % float(end-start))
