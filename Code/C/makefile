@@ -1,4 +1,4 @@
-main: main.cpp 
-	g++ main.cpp -o main -std=c++11 -g
+main: main.cpp makefile
+	g++ main.cpp -o main -std=c++11 -O2
 
 

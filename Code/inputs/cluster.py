@@ -4,8 +4,8 @@ from math import sqrt
 from scipy.spatial import distance
 
 N=int(argv[2])
-K=15
-S=10
+K=50
+S=3
 seed((argv[1],argv[2]))
 
 #print N

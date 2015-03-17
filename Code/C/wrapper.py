@@ -31,7 +31,7 @@ with open(".tmp") as f:
 	t=float(f.readline())
 	dat=f.readline()
 
-#call("rm .tmp")
+call("rm .tmp")
 	
 max_x=math.ceil(max_x)
 max_y=math.ceil(max_y)
@@ -91,9 +91,8 @@ class PyApp(gtk.Window):
 		cr.translate(self.allocation.width/2.0, self.allocation.height/2.0)
 		cr.scale(5,5)
 		cr.translate(-max_x/2.0, max_y/2.0)
-
 		cr.rotate(-math.pi/2)
-		
+
 		cr.set_line_width(0.3)
 		cr.set_source_rgb(0,0,0)
 		for i in v:
@@ -105,6 +104,7 @@ class PyApp(gtk.Window):
 		for i in b:
 			cr.arc(i[0], i[1], t, 0, 2*math.pi)
 			cr.stroke()
+			
 		cr.set_line_width(0.5)
 		for i,p in enumerate(b):
 			cr.set_source_rgb(1,1-(float(i)/K),0)

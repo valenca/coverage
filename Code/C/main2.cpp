@@ -48,9 +48,9 @@ double euclidean(point &p,point &q){
 
 int readVector(){
   int i,j,it;
-  double mx,mn,d;
+  double mx,mn,d,fact;
   cin >> N;
-  cin >> K;
+  cin >> fact;
   
   K=0;
   
@@ -69,7 +69,7 @@ int readVector(){
     min_x=min(v[i].x,min_x);
     min_y=min(v[i].y,min_y);
   }
-  thres=(max_x-min_x)*0.1;
+  thres=(max_x-min_x)*fact;
   
   link = new int*[N];
   for(i=0;i<N;i++){

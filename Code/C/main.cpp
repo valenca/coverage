@@ -27,6 +27,7 @@ int N;
 int K;
 
 double thres;
+double fact;
 point *v;
 int *w;
 int ** link;
@@ -45,7 +46,7 @@ double euclidean(point &p,point &q){
 
 int readVector(){
   int i,j,it;
-  double mx,mn,fact;
+  double mx,mn;
   cin >> N;
   cin >> fact;
   
@@ -106,8 +107,8 @@ void coverage(){
     }
         
     if(m!=-1){
-      v[i].c=1;
       K++;
+      v[i].c=K;
       for(j=0;j<N;j++){
 	if(link[i][j]==1){
 	  for(k=0;k<N;k++){
@@ -134,11 +135,11 @@ int main(){
   coverage();
   T = clock() - T;
   cout << K << endl;
-  for(i=N;i>=0;i--)
-    if(v[i].c==1)
-      cout << v[i].x << " " << v[i].y << endl; //" - " << v[i].adj <<endl;
+  for(j=1;j<=K;j++)
+    for(i=N;i>=0;i--)
+      if(v[i].c==j)
+	cout << v[i].x << " " << v[i].y << endl; //" - " << v[i].adj <<endl;
   cout << thres << endl;
-  cout << c << endl;
-  printf("N = %d,\tK = %d,\tB = %f,\tT = %f\n",N,K,thres,((float)T)/CLOCKS_PER_SEC);
+  printf("%d\t%g\t%d\t%f\n",N,fact,K,((float)T)/CLOCKS_PER_SEC);
   return 0;
 }
