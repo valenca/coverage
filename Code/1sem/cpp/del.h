@@ -21,7 +21,6 @@ typedef unordered_map<long int,triangle*>::iterator map_it;
 extern int N;			//number of points on original set
 extern int N5;			//number of points on extended set (includes outer rectangle)
 extern unordered_map<long int,triangle*> E;	//hashtable of half-edges
-
 struct triangle{		//half-edge str
   bool fake;			//auxiliary triangle flag. true if triangle is outside of the convex hull
   int index;			//index of the triangle

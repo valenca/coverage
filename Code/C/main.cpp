@@ -67,8 +67,11 @@ int readVector(){
     min_x=min(v[i].x,min_x);
     min_y=min(v[i].y,min_y);
   }
-  
-  thres=(max_x-min_x)*fact;
+
+  if((max_x-min_x)>max_y-min_y)
+    thres=(max_x-min_x)*fact;
+  else
+    thres=(max_y-min_y)*fact;
   
   link = new int*[N];
   for(i=0;i<N;i++){
@@ -129,6 +132,14 @@ void coverage(){
 int main(){
   int i,j;
   readVector();
+  /*
+  for(i=0;i<N;i++){
+    for(j=0;j<N;j++){
+      cout << link[i][j];
+    }
+    cout << endl;
+  }
+  */
   cout << N << endl;
   for(i=0;i<N;i++)
     cout << v[i].x << " " << v[i].y /*<< " - " << i*/ << endl;

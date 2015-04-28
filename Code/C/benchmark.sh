@@ -1,27 +1,27 @@
 #C++
 
-j=30000
+j=10000
 
 #for (( seed=0; seed<30; seed++ )); do
 #echo -e "Seed $seed\nPts\tCents\tCoverage\tTime"
 rm results_unif
 rm results_clus
 
-for (( i=1000; i<=j; i+=1000 )); do
+for (( i=10; i<=50; i+=5 )); do
     for (( seed=0; seed<30; seed++ )); do
-	echo "$i" > utmp
-	echo "0.30" >> utmp
-	echo "$i" > ctmp
-	echo "0.30" >> ctmp
-	python2 ../inputs/uniform.py $seed $i >> utmp
-	python2 ../inputs/cluster.py $seed $i >> ctmp
+	echo "$j" > utmp
+	echo "0.$i" >> utmp
+	#echo "$j" > ctmp
+	#echo "0.$i" >> ctmp
+	python2 ../inputs/uniform.py $seed $j >> utmp
+	#python2 ../inputs/cluster.py $seed $j >> ctmp
 	./main < utmp > tmp2
-	cat tmp2 | tail -1 >> results_unif
-	./main < ctmp > tmp2
-	cat tmp2 | tail -1 >> results_clus
+	cat tmp2 | tail -1 >> res/results_unif10k
+	#./main < ctmp > tmp2
+	#cat tmp2 | tail -1 >> results_clus20k
     done
-    echo -e "" >> results_unif
-    echo -e "" >> results_clus
+    echo -e "" >> res/results_unif10k
+    #echo -e "" >> results_clus20k
     notify-send "Batch Done" "size $(( i ))"
 done
 

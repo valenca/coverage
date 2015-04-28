@@ -11,11 +11,11 @@ P.~Bose and P.~Morin.
 \newblock \emph{Algorithms and Computation, LNCS}, 1741:\penalty0 113--122,
   1999.
 
-\bibitem[De~Berg et~al.(2000)De~Berg, Van~Kreveld, Overmars, and
-  Schwarzkopf]{delbible}
-M.~De~Berg, M.~Van~Kreveld, M.~Overmars, and O.~C. Schwarzkopf.
-\newblock \emph{Computational Geometry}.
-\newblock Springer, 2000.
+\bibitem[Chvatal(1979)]{approx}
+V.~Chvatal.
+\newblock A greedy heuristic for the set-covering problem.
+\newblock \emph{Mathematics of operations research}, 4\penalty0 (3):\penalty0
+  233--235, 1979.
 
 \bibitem[Megiddo and Tamir(1983)]{complex}
 N.~Megiddo and A.~Tamir.
@@ -23,9 +23,9 @@ N.~Megiddo and A.~Tamir.
 \newblock \emph{SIAM Journal on Computing}, 12\penalty0 (4):\penalty0 751--758,
   1983.
 
-\bibitem[Sagan(1994)]{sfcurves}
-H.~Sagan.
-\newblock \emph{Space-Filling Curves}, volume~18.
-\newblock Springer-Verlag New York, 1994.
+\bibitem[of~the University~of Waterloo()]{dataset}
+M.~D. of~the University~of Waterloo.
+\newblock Travelling salesman problem datasets - sweden.
+\newblock URL \url{http://www.math.uwaterloo.ca/tsp/world/sw24978.tsp}.
 
 \end{thebibliography}
