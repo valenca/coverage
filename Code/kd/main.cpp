@@ -192,7 +192,6 @@ int readVector(){
   cin >> fact;
   
   K=0;
-  
   v=new point[N]; 
   max_x=max_y=0;
   min_x=min_y=INT_MAX;

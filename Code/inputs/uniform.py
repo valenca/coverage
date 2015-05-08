@@ -10,4 +10,4 @@ K=10
 #print K
 
 for i in range(N):
-	print i,random()*100,random()*100
+	print i,75+random()*100,75+random()*100

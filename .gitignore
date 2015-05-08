@@ -3,3 +3,4 @@
 tree
 *test
 *.osm
+callgrind.out*
