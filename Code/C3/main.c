@@ -8,6 +8,7 @@
 #define min(a,b) ((a)<(b))?(a):(b)
 
 typedef struct point point;
+typedef struct link link;
 
 struct point{			
   int index;
@@ -18,15 +19,26 @@ struct point{
   double y;  
 };
 
+struct link{
+  link* next;
+  link* prev;
+  link* mirr;
+  int id;
+};
+
 int N;	 
 int K;
 
 double thres;
 double fact;
 point *v;
-int *w;
-int ** link;
+
+link **heads;
+link **tails;
+link *pool;
 int c;
+
+int *w;
 
 double max_x;
 double max_y;
@@ -47,8 +59,7 @@ int compare(const void *p1, const void *p2){
 }
 
 int readVector(){
-  int i,j,it;
-  double mx,mn;
+  int i,j;
   scanf("%d %lf",&N,&fact);
   
   K=0;
@@ -71,20 +82,41 @@ int readVector(){
     thres=(max_x-min_x)*fact;
   else
     thres=(max_y-min_y)*fact;
+
+  pool=(link*)malloc(N*5000*sizeof(link));
+  heads=(link**)malloc(N*sizeof(link*));
+  tails=(link**)malloc(N*sizeof(link*));
   
-  link = (int**)malloc(sizeof(int*)*N);
-  for(i=0;i<N;i++){
-    link[i]=(int*)malloc(sizeof(int*)*N);
-  }
   T=clock();
   
   qsort(v,N,sizeof(point),compare);
   
   for(i=0;i<N;i++){
-    for(j=i;j<N;j++){
+    heads[i]=&pool[c++];
+    heads[i]->mirr=heads[i];
+    heads[i]->next=NULL;
+    heads[i]->id=i;
+  }
+  
+  for(i=0;i<N;i++){
+    for(j=i+1;j<N;j++){
       if(v[j].x-v[i].x<=thres){
 	if(euclidean(v[i],v[j])<=thres){
-	  link[i][j]=link[j][i]=1;
+	  pool[c].next=heads[i];
+	  heads[i]->prev=&pool[c];
+	  heads[i]=heads[i]->prev;
+	  heads[i]->id=i;
+	  c++;
+
+	  pool[c].next=heads[j];
+	  heads[j]->prev=&pool[c];
+	  heads[j]=heads[j]->prev;
+	  heads[j]->id=j;
+	  c++;
+
+	  heads[i]->mirr=heads[j];
+	  heads[j]->mirr=heads[i];
+	  
 	  v[i].adj++;
 	  v[j].adj++;
 	}
@@ -93,12 +125,13 @@ int readVector(){
 	break;
     }
   }
+  return 0;
 }
 
 void coverage(){
-  int i,j,k,c;
-  double m;
-  m=0;
+  int i,j,m;
+  link* it;
+  i=m=0;
   while(1){
     m=-1;
     for(j=0;j<N;j++){
@@ -107,21 +140,26 @@ void coverage(){
 	i=j;
       }
     }
-        
     if(m!=-1){
       K++;
       v[i].c=K;
-      for(j=0;j<N;j++){
-	if(link[i][j]==1){
-	  for(k=0;k<N;k++){
-	    if(link[j][k]==1){
-	      link[k][j]=0;
-	      v[k].adj--;
-	    }
-	  }
-	  v[j].adj=-1;
+      
+      for(it=heads[i];it && it->next;it=it->next){
+	v[it->mirr->id].adj=-1;
+	if(!it->mirr->prev){
+	  heads[it->mirr->id]=it->next;
+	  heads[it->mirr->id]->prev=NULL;
 	}
-      }
+	else{
+	  it->mirr->prev->next=it->mirr->next;
+	}
+	it->mirr->next->prev=it->mirr->prev;	
+	v[it->mirr->id].adj--;
+	v[it->id].adj=-1;
+      }      
+      heads[i]=NULL;
+      v[i].adj=-1;
+      
     }
     else
       break;
@@ -136,13 +174,15 @@ int main(){
   for(i=0;i<N;i++)
     printf("%g %g\n",v[i].x,v[i].y);
   coverage();
+  
   T = clock() - T;
   printf("%d\n",K);
   for(j=1;j<=K;j++)
     for(i=N;i>=0;i--)
       if(v[i].c==j)
 	printf("%g %g\n",v[i].x,v[i].y);
-  printf("%lf\n",thres);
-  printf("%d\t%g\t%d\t%lf\n",N,fact,K,((float)T)/CLOCKS_PER_SEC);
+  printf("%g\n",thres);
+
+  printf("%d\t%g\t%d\t%g\n",N,fact,K,((float)T)/CLOCKS_PER_SEC);
   return 0;
 }
