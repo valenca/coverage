@@ -5,7 +5,8 @@ from matplotlib import pyplot as plt
 plt.style.use(plt.style.available[1])
 
 labels=[]
-for directory in ["results_unif10","results_unif20","results_unif30"]:
+#for directory in ["results_unif10","results_unif20","results_unif30"]:
+for directory in []:
 	w=[]
 	x=[]
 	with open("res/"+directory) as f:
@@ -37,7 +38,7 @@ for directory in ["results_unif30k","results_unif20k","results_unif10k"]:
 		for j in range(8):
 			v=[]
 			for i in range(30):
-				v.append(float(f.readline().split()[2]))
+				v.append(float(f.readline().split()[3]))
 			f.readline()
 			w.append(v)
 	arr=np.array(w)
