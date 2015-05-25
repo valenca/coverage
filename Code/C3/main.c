@@ -33,6 +33,7 @@ int *ord;
 link **heads;
 link *pool;
 int p;
+int C;
 
 int *w;
 
@@ -61,6 +62,10 @@ int readVector(){
   v=(point*)malloc(sizeof(point)*N);
   adj=(int*)calloc(N,sizeof(int));
   ord=(int*)calloc(N,sizeof(int));
+  C=N*N/5;
+  T=clock();
+  pool=(link*)malloc(C*sizeof(link));
+  heads=(link**)malloc(N*sizeof(link*));
   max_x=max_y=0;
   min_x=min_y=INT_MAX;
   
@@ -73,15 +78,12 @@ int readVector(){
     min_y=min(v[i].y,min_y);
   }
 
+  /*fact=0.1;*/
+  
   if((max_x-min_x)>max_y-min_y)
     thres=(max_x-min_x)*fact;
   else
     thres=(max_y-min_y)*fact;
-
-  pool=(link*)malloc(N*5000*sizeof(link));
-  heads=(link**)malloc(N*sizeof(link*));
-  
-  T=clock();
   
   qsort(v,N,sizeof(point),compare);
   
@@ -96,6 +98,10 @@ int readVector(){
     for(j=i+1;j<N;j++){
       if(v[j].x-v[i].x<=thres){
 	if(euclidean(v[i],v[j])<=thres){
+	  if(p>C-2){
+	    pool=(link*)malloc(C*sizeof(link));
+	    p=0;
+	  }
 	  pool[p].next=heads[i];
 	  heads[i]->prev=&pool[p];
 	  heads[i]=heads[i]->prev;

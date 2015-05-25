@@ -43,6 +43,7 @@
 \usepackage{multirow}
 \usepackage{subcaption}
 \usepackage{pifont}
+\usepackage{xspace}
 \usepackage{lipsum}
 \usetikzlibrary{shapes}
 \usetikzlibrary{positioning,arrows,decorations}
@@ -80,7 +81,13 @@
 \pagestyle{fancy} % Finally, use the "fancy" page style to implement the FancyHdr headers
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
-% \newcommand{\change}[1]{\textcolor{blue}{#1}}
+\newcommand{\change}[1]{\textcolor{magenta}{#1}}
+\newcommand{\incomp}[1]{\textcolor{blue}{#1}}
+\newcommand{\kdtree}{\textit{k}-d tree\xspace}
+\newcommand{\kdTree}{\textit{k}-d Tree\xspace}
+\newcommand{\kdtrees}{\textit{k}-d trees\xspace}
+\newcommand{\kdTrees}{\textit{k}-d Trees\xspace}
+\newcommand{\bigo}{\mathcal{O}}
 \newcommand{\smark}{\ding{110}}%
 \newcommand{\cmark}{\ding{108}}%
 \newcommand{\tmark}{\ding{115}}%

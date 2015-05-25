@@ -52,6 +52,11 @@ In the case that the global upper and lower bound meet, the algorithm has arrive
 
 These algorithms are very common in the field of optimisation and can be very efficient, but their performance depends on the complexity and tightness of its bounds. Tighter bounds accelerate the process, but are usually slower to compute, so a compromise has to be made in order to obtain the fastest possible algorithm.
 
+\subsection{Approximation Algorithms}
+\change{Optimal solution algorithms, even very optimized ones, are oftentimes still too inefficient to be used in any practical, time constrained application. One possible strategy to solve an \emph{NP-hard} problem is to use an \emph{approximation algorithm}.}
+
+\change{Approximation algorithms do not compute the optimal solution to a given problem. Instead, for the sake of time efficiency, these algorithms are designed to compute a solution that differs from the optimal by a given factor. For example, a 2-approximation algorithm for a minimising problem will not compute any solution that is more than double the optimal value for any given input. By compromising the quality of the solution, the algorithms can end within polynomial time.}\change{}
+
 \section{Geometric Concepts and Geometric Structures}
 In the following, we explain some geometric concepts that are used in the following chapters, in order to simplify the explanation of more complex algorithms in further chapters.
 \subsection{Nearest Neighbour Search and Point Location}
@@ -60,7 +65,63 @@ A common concept in computational geometry is point location. A point location a
 Given a point $p$, a \emph{nearest neighbour search} algorithm returns the closest point to $p$ in a given set. Since we need to find the closest centroid to a given point in order to find the correct coverage value, this operation will be one of the most used, and  so we need a fast and flexible way of determining which of the centroids is closest, in order to reduce computational overhead. 
 
 Point location algorithms direct the nearest neighbour search to smaller regions, bypassing any regions that are too distant from $p$, thus reducing the number of calculations necessary to get the proper point location.
-Common structures used for point location are \emph{k-d trees} as described in \citet{incrementalcov}. A \emph{k-d tree} partitions the space using a divide and conquer approach to define orthogonally aligned half-planes. This approach takes $\mathcal{O}(\log{n})$ time to achieve point location queries. However, a \emph{k-d tree} needs to be periodically updated in order to keep its efficiency and cannot be constructed or deconstructed incrementally without considering this overhead.
+Common structures used for point location are \emph{k-d trees} as described in \citet{incrementalcov}. A \emph{k-d tree} partitions the space using a divide and conquer approach to define orthogonally aligned half-planes. This approach takes $\bigo(\log{n})$ time to achieve point location queries. However, a \emph{k-d tree} needs to be periodically updated in order to keep its efficiency and cannot be constructed or deconstructed incrementally without considering this overhead.
+\subsection{\textit{k}-Dimensional Trees}
+\change{
+A \textit{k}-dimensional tree, or \kdtree, is a space partitioning structure used for point location and nearest neighbour queries. A \kdtree is a binary tree, which each of whose nodes represents an axis-aligned hyper-rectangle. Each node specifies an axis and splits the set of points based on whether their coordinate along that axis is greater than or less than a particular value. The axis chosen to split each subgroup is chosen via a rotation system, which in the 2-dimensional space means that each level alternates between the vertical and horizontal axis.}
+
+\change{
+During construction, the splitting point is chosen to be the point whose relevant coordinate best divides the group intro two subgroups. The best possible choice for the splitting point at each level is the point which has the median of the relevant coordinate in the group. This ensures that each node divides the number of points in half for so that the resulting tree becomes balanced, and that each point is reachable by performing $\bigo(\log{n})$ operations.
+}
+
+\subsubsection*{Construction}
+\change{Constructing a \kdtree requires selecting a pivot, which divides the set into two groups: the points whose relevant coordinate is smaller than the pivot, the points whose relevant coordinate is larger than the pivot. The same process is then repeated recursively for each of the groups, alternating the relevant coordinate between both axes. Each recursive call fixes one pivot, which ideally will contain the median value of the relevant coordinate. The time complexity of the construction of a \kdtree relies on the pivot selection function. Calculating the median usually requires sorting a list of $n$ and then picking the $n/2$th element. Since sorting algorithms typically take $\bigo(n \log{n})$, building a \kdtree would take $\bigo(n^2)$ time. To achieve better time complexity and performance the median of medians algorithm described in \ref{median} can be used.
+}
+
+\change{
+Even though the median of medians algorithm does not necessarily return the actual median, the query complexity in a \kdtree constructed using this still achieves the $\bigo(\log{n})$. This occurs because the median of medians always outputs a value between the $30$th and $70$th percentile. This guarantees that at each level of the \kdtree the group of points covered by each of the children nodes is substantially smaller than the parent node by a constant factor, and there will never be a redundant node that covers the same set of points the parent does. At each level of a given query, each decision discards at least 30\% of the points, maintaining the $\bigo(\log{n})$ time complexity. \cite{kdmedian}
+}
+
+
+\subsection{Median of Medians}
+\label{median}
+\change{
+Efficiently constructing a balance \kdtree depends on an efficient method to pick the point that divides the hyper-rectangle in two. One way to reasonably quickly find a value close to the median is to find the median of a sample. To ensure the quality of this sample, is to gather the medians of smaller subsets which can be quickly calculated. This algorithm is an example of a \emph{selection algorithm} \cite{selection} and is known as the \emph{median of medians} algorithm \cite{medians}.}
+
+\change{
+The median of medians algorithms works as follows. Any starting array $S$ consisting of $n$ arbitrary values is split into $n/5$ sub-arrays, each containing at most 5 elements (the last array might have less, depending on whether $n$ is divisible by 5 or not). For each of the sub-arrays, the median can be calculated in constant time, since for 5 values it can be done in at most 6 comparisons, which for the whole array $S$ takes $6n/5$ comparisons. After finding all the sub-arrays' medians and gathering them in a new array $F$, the algorithm then is called recursively for $F$ until only one value $M$ remains. $M$ is then used to partition the input into two sub-groups: elements smaller than $M$ and elements larger than $M$. The two subgroups are then concatenated in increasing order and with $M$ in between them, and the algorithm is recursively called again for the group that contains the $n/2$th point of the newly concatenated list. Whenever the list has less than a given number of elements, the median is calculated via brute-force, to avoid infinite recursion. This value will be the value returned by the initial recursive call of the function.
+}
+
+\change{As stated above, this algorithm only returns a value close to the real median. Despite this, it can proven that for any array $S$, the value $M$ will always be between the 30th and the 70th percentiles. At each recursive stage, the values in $F$ larger than $M$ are discarded. This means that out of the $n/5$ values for any given vector, $n/10$ will be larger by definition, since $M$ is picked as the median. For each value in $F$ larger than $M$, there will also be two other values that are larger than $M$, since each value in $F$ was chosen as a median out of 5 different values. This means that the number of values greater than $M$ will be at most $3n/10$. Similarly, by a symmetric proof, there will also be $3n/10$ values in $S$ smaller than $M$. This also means that the second recursive call will at worst have $7n/10$ elements, which is a constant fraction of the input. This property is essential in proving the linear complexity of the algorithm.
+}
+
+\change{Analyzing the time complexity $T()$ of this algorithm requires analyzing separatly both recursive calls of the algorithm. The first recursive call occurs in a list of size $n/5$, and takes $T(n/5)$ time. The second recursive call occurs in a list with $7n/10$ elements, which takes $T(7/n)$. Finding the median for a group of 5 elements requires a constant number of comparisons. These comparisons can be arranged in such way that only 6 are necessary for a group of 5 elements. This means that the algorithm has a constant factor of $6/5$ for calculating a median on its smallest division. $T(n)$ is then given by:}
+\begin{align}
+T(n) \le 6n/5 + T(n/5) + T(7n/10)
+\end{align}
+
+\change{If $T(n)$ has, in fact, linear time complexity, then there is a constant $c$ such that: }
+\begin{align}
+\begin{aligned}
+T(n) & \le 6n/5 + cn/5 + 7cn/10\\
+     & \le n(12/5 + 9c/10)
+\end{aligned}
+\end{align}
+\change{If $T(n)$ is to be at most $cn$, so that the induction proof is valid, then is must be true that:}
+\begin{align}
+\begin{aligned}
+    n (6/5 + 9c/10) & \le cn \\
+    6/5 + 9c/10 & \le c \\
+    6/5 & \le c/10 \\
+    c & \le 12 \\
+\end{aligned}
+\end{align}
+
+\change{This proves that $T(n) \le 12n$, or any larger constants than 12 multiplied by $n$ comparisons.}
+
+%http://www.ics.uci.edu/~eppstein/161/960130.html  \cite{eppstein}
+
+
 \subsection{Voronoi Diagrams}
 Voronoi diagrams \cite{tricard2} partition the space into regions, which are defined by the set of points in the space that are closest to a subset of those points. Definitions of distance and space may vary, but on our case we will consider the $\mathbb{R}^2$ plane and the Euclidean distance.
 Figure \ref{fig:vd1} shows a partitioning of a plane using a Voronoi Diagram for a set of points:
@@ -93,7 +154,7 @@ Building a Delaunay triangulation can be done incrementally. Starting with a val
 Starting with a valid Delaunay triangulation $\mathcal{T}$, we find the triangle $t$ with vertices $a$,$b$ and $c$ that contains the vertex to insert $v$ using a point location algorithm, such as the line walking algorithm described in the previous section. We then follow algorithm \ref{alg:bowyer} for each vertex $v$ to be included in the triangulation:
 \input{Algorithms/bw}
 
-The algorithm starts by removing the triangle $t$ that contains the new vertex $v$, and recursively checks adjacent triangles whose circumcircle contains $v$ using the \emph{DigCavity} function. Any triangle that contains $v$ in its circumcircle (calculated with the \emph{InCircle} function), violates the Delaunay rule, and must also be deleted and have its sides recursively checked, until no adjacent triangles violate the Delaunay rule. Whenever the \emph{DigCavity} function reaches a set of three points whose circumcircle does not contain $v$, it creates the triangle by creating counter-clockwise half-edges between those three points (\emph{AddTriangle}). For inserting $n$ points, this algorithm has an expected time complexity of $\mathcal{O}(n \log n)$ and is described in more detail by \citet{tricomplex}.
+The algorithm starts by removing the triangle $t$ that contains the new vertex $v$, and recursively checks adjacent triangles whose circumcircle contains $v$ using the \emph{DigCavity} function. Any triangle that contains $v$ in its circumcircle (calculated with the \emph{InCircle} function), violates the Delaunay rule, and must also be deleted and have its sides recursively checked, until no adjacent triangles violate the Delaunay rule. Whenever the \emph{DigCavity} function reaches a set of three points whose circumcircle does not contain $v$, it creates the triangle by creating counter-clockwise half-edges between those three points (\emph{AddTriangle}). For inserting $n$ points, this algorithm has an expected time complexity of $\bigo(n \log n)$ and is described in more detail by \citet{tricomplex}.
 
 \subsubsection*{Deconstruction}
 Deconstructing a Delaunay triangulation usually consists of reversing the construction algorithm to remove points from the triangulation. However, as we will explain in a later chapter, in our case the deconstruction has to be incremental. Since the first point to be removed from the triangulation is necessarily the last one to be inserted, we can use a simpler approach. 
@@ -124,7 +185,7 @@ For every vertex $v$ in a triangulation $\mathcal{T}$, let the perpendicular bis
 Another point location algorithm to consider is the line walking algorithm \cite{walking}. This algorithm finds a triangle $t$ in a triangulation $\mathcal{T}$ that contains a given point $v$. 
 Starting at any triangle $s$, with the geometrical centre $m$, if point $v$ is not contained in $s$, then the line segment $(v,m)$ intersects a finite set of triangles.  
 The line segment $(v,m)$ intersects two edges of each triangle in this set, with the exception of $s$ and $t$ where $(v,m)$ only intersects one edge each. 
-By iterating through each triangle choosing the neighbour triangle that contains the next edge that intersects $(v,m)$, triangle $t$ can be found in $\mathcal{O}(n)$ time.
+By iterating through each triangle choosing the neighbour triangle that contains the next edge that intersects $(v,m)$, triangle $t$ can be found in $\bigo(n)$ time.
 
 This algorithm was described by \citet{walking}, and is illustrated in the following figure, where the dark shaded triangles represent the starting and finishing triangles, and the light shaded triangles the path the algorithm takes to find the final triangle that contains the vertex $v$.
 \input{Figures/wk1}
@@ -142,7 +203,7 @@ Since the coordinates of the points in our problem are continuous rather than di
 In order to sort an array of 2-dimensional points to follow a Hilbert approximation, each point should be assigned the 1-dimensional coordinate of the square tile that contains that point. The array is then sorted using the square coordinates along the Hilbert approximation as a key.
 This means that there are cases where more than one point will share the same discrete approximation coordinates, but this has little effect on the performance of the point location algorithms, as long as the grid is fine enough to separate most of the points. The space must be partitioned into a grid of $2^n$ squares in height and width and the grid must contain all points.
 
-
+\
 
 
 
