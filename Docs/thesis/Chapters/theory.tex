@@ -55,7 +55,50 @@ These algorithms are very common in the field of optimisation and can be very ef
 \subsection{Approximation Algorithms}
 \change{Optimal solution algorithms, even very optimized ones, are oftentimes still too inefficient to be used in any practical, time constrained application. One possible strategy to solve an \emph{NP-hard} problem is to use an \emph{approximation algorithm}.}
 
-\change{Approximation algorithms do not compute the optimal solution to a given problem. Instead, for the sake of time efficiency, these algorithms are designed to compute a solution that differs from the optimal by a given factor. For example, a 2-approximation algorithm for a minimising problem will not compute any solution that is more than double the optimal value for any given input. By compromising the quality of the solution, the algorithms can end within polynomial time.}\change{}
+\change{Approximation algorithms do not compute the optimal solution to a given problem. Instead, for the sake of time efficiency, these algorithms are designed to compute a solution that differs from the optimal by a given predictable factor. For example, a 2-approximation algorithm for a minimising problem will not compute any solution that is more than double the optimal value for any given input. By compromising the quality of the solution, the algorithms can be run in polynomial time.}
+
+\subsubsection*{Set Cover}
+\change{One example of an approximation algorithm is the greedy approach to solving the \emph{Set Cover} problem. Given a Universe $U$ of $n$ elements, and sets $S_1,\dotsc,S_k \subseteq U$, one must find the smallest cardinality collection of sets whose union covers $U$.}
+
+\change{Calculating the optimal solution to the Set Cover problem is \emph{NP-hard}, and thus cannot be solved in polynomial time. However, by using the greedy approach of iteratively picking the set that contains the most uncovered points, it is possible to achieve an approximated solution in polynomial time. Assuming the instance of the problem has an optimal solution of $m$ sets, the greedy algorithm guarantees that its solution is bound above by $m \log_e n$}.
+
+\begin{theorem}
+\change{
+The greedy algorithm for the Set Cover can find a collection with at most $m \log_e n$ sets, where $m$ is the optimal number, and $n$ is the number of elements covered by all sets.}
+\begin{proof}
+\change{
+Let the universe $U$ contain $n$ points, which can be covered by at least $m$ sets. The first set picked by the algorithm has size at least $n/m$. The number of elements of $U$ left to cover $n_1$ is }
+
+\begin{equation}
+n_1 \leq n - n/m = n(1-1/m)
+\end{equation}
+\change{
+The remaining sets must contain at least $n_1/(m-1)$ elements, otherwise the optimal solution would have to contain more than $m$ sets. By iteratively calling the same process, the number of sets at stage $i$ is given by
+}
+\begin{align}
+\begin{aligned}
+n_{i+1} & \leq n_i(1-1/m) \\ 
+n_{i+1} & \leq n(1-1/m)^{i+1}
+\end{aligned}
+\end{align}
+If it takes $k$ stages for the greedy algorithm to cover $U$, then $n_k \leq n(1-1/m)^1$ needs to be less than 1.
+\begin{align}
+\begin{aligned}
+n(1-1/m)^k & < 1 \\
+n(1-1/m)^{m \frac{k}{m}} & < 1\\
+(1-1/m)^{m \frac{k}{m}} & < 1/n\\
+e^{-\frac{k}{m}} & < 1/n \ldots (1-x)^\frac{1}{x} \approx 1/e\\
+k/m & > \log_e n \\
+k & < m\log_e n
+\end{aligned}
+\end{align}
+\change{
+This means that the size of the collection of sets picked by the greedy algorithm is bound above by $m \log_e n$, which gives the greedy algorithm a $\bigo(\log_e n)$ approximation to the optimal solution.
+}
+\end{proof}
+\end{theorem}
+
+
 
 \section{Geometric Concepts and Geometric Structures}
 In the following, we explain some geometric concepts that are used in the following chapters, in order to simplify the explanation of more complex algorithms in further chapters.
@@ -111,16 +154,15 @@ T(n) & \le 6n/5 + cn/5 + 7cn/10\\
 \begin{align}
 \begin{aligned}
     n (6/5 + 9c/10) & \le cn \\
-    6/5 + 9c/10 & \le c \\
-    6/5 & \le c/10 \\
-    c & \le 12 \\
+        6/5 + 9c/10 & \le c \\
+                6/5 & \le c/10 \\
+                 12 & \le c \\
 \end{aligned}
 \end{align}
 
 \change{This proves that $T(n) \le 12n$, or any larger constants than 12 multiplied by $n$ comparisons.}
 
 %http://www.ics.uci.edu/~eppstein/161/960130.html  \cite{eppstein}
-
 
 \subsection{Voronoi Diagrams}
 Voronoi diagrams \cite{tricard2} partition the space into regions, which are defined by the set of points in the space that are closest to a subset of those points. Definitions of distance and space may vary, but on our case we will consider the $\mathbb{R}^2$ plane and the Euclidean distance.

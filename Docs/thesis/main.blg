@@ -3,10 +3,13 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: abbrvnat.bst
 Database file #1: Bibliography.bib
+Warning--I didn't find a database entry for "kdmedian"
+Warning--I didn't find a database entry for "selection"
+Warning--I didn't find a database entry for "medians"
 Warning--I didn't find a database entry for "fig:fixed_n"
 You've used 14 entries,
             2773 wiz_defined-function locations,
-            680 strings with 6761 characters,
+            683 strings with 6785 characters,
 and the built_in function-call counts, 6662 in all, are:
 = -- 603
 > -- 338
@@ -45,4 +48,4 @@ warning$ -- 0
 while$ -- 63
 width$ -- 0
 write$ -- 192
-(There was 1 warning)
+(There were 4 warnings)

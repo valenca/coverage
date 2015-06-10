@@ -62,7 +62,7 @@ int readVector(){
   v=(point*)malloc(sizeof(point)*N);
   adj=(int*)calloc(N,sizeof(int));
   ord=(int*)calloc(N,sizeof(int));
-  C=N*N/5;
+  C=N;
   T=clock();
   pool=(link*)malloc(C*sizeof(link));
   heads=(link**)malloc(N*sizeof(link*));

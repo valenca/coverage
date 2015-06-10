@@ -1,0 +1,151 @@
+% 		\begin{tikzpicture}[scale=1.4]
+% 			\draw (-0.5,-0.4) rectangle (3.3,2.4);
+% 			
+% 			\fill (0.456,0.778)circle (1.5pt);
+% 			\fill (0.622,0.478)circle (1.5pt);
+% 			\fill (0.457,0.64)circle (1.5pt);
+% 			\fill (0.614,0.807)circle (1.5pt);
+% 			\fill (0.314,0.724)circle (1.5pt);
+% 			\fill (0.533,0.75)circle (1.5pt);
+% 			\fill (0.514,0.605)circle (1.5pt);
+% 			\fill (0.307,0.346)circle (1.5pt);
+% 			\fill (0.406,0.349)circle (1.5pt);
+% 			\fill (0.587,0.564)circle (1.5pt);
+% 			
+% 			\fill (2.065,1.061)circle (1.5pt);
+% 			\fill (2.045,1.215)circle (1.5pt);
+% 			\fill (2.292,1.07)circle (1.5pt);
+% 			\fill (2.381,0.724)circle (1.5pt);
+% 			\fill (2.43,0.608)circle (1.5pt);
+% 			\fill (2.342,1.274)circle (1.5pt);
+% 			\fill (2.329,0.731)circle (1.5pt);
+% 			\fill (2.462,0.941)circle (1.5pt);
+% 			\fill (2.357,0.698)circle (1.5pt);
+% 			\fill (2.07,0.833)circle (1.5pt);
+% 			
+% 			\fill (0.765,1.734)circle (1.5pt);
+% 			\fill (0.557,1.943)circle (1.5pt);
+% 			\fill (0.698,1.613)circle (1.5pt);
+% 			\fill (0.634,1.766)circle (1.5pt);
+% 			\fill (0.979,1.993)circle (1.5pt);
+% 			\fill (0.99 ,1.675)circle (1.5pt);
+% 			\fill (0.538,1.756)circle (1.5pt);
+% 			\fill (0.932,1.913)circle (1.5pt);
+% 			\fill (0.982,1.786)circle (1.5pt);
+% 			\fill (0.94 ,1.686)circle (1.5pt);
+% 
+% 
+% 			\begin{scope}[shift={(0,-3)}]
+% 			\draw (-0.5,-0.4) rectangle (3.3,2.4);
+% 		
+% 			\fill (0.765,1.734)circle (1.5pt);
+% 			\fill (0.514,0.605)circle (1.5pt);
+% 			\fill (2.292,1.07)circle (1.5pt);
+% 			\end{scope}
+% 		\end{tikzpicture}
+
+
+\usetikzlibrary{shapes}
+\usetikzlibrary{positioning,arrows,decorations}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{decorations.pathreplacing} 
+
+\begin{tikzpicture}[scale=0.4]
+		
+		\draw [<->,thick] (0,0) rectangle (15,10) {};
+		%centroids
+		
+		%Left Group
+%		\fill ( 7,7) circle (5pt);
+		\fill ( 1,4) circle (5pt);
+		\fill ( 4,4) circle (5pt);
+		\fill ( 2,3) circle (5pt);
+		\fill (3.5,1) circle (5pt);
+		\fill ( 6,5) circle (5pt);
+		
+		%Middle Group
+		
+		\fill ( 7,7) circle (5pt);
+		\fill ( 6,8) circle (5pt);
+		
+		%Right Group
+		\fill (12,2) circle (5pt);
+		\fill (12,4) circle (5pt);
+		\fill (13,2) circle (5pt);
+		
+		%Lines
+		\draw [-] (1,4) -- (3,5);
+		\draw [-] (4,4) -- (3,5);
+		\draw [-] (2,3) -- (3,5);
+		\draw [-] (3.5,1) -- (3,5);
+		\draw [-] (6,5) -- (3,5);
+		
+		\draw [-] (7,7) -- (9,8);
+		\draw [-] (6,8) -- (9,8);
+		
+		\draw [-] (12,2) -- (11,1);
+		\draw [-] (12,4) -- (11,1);
+		\draw [-] (13,2) -- (11,1);
+		\fill [white] (11,1) circle (5pt);
+		\fill [white] ( 3,5) circle (5pt);
+		\fill [white] ( 9,8) circle (5pt);
+		
+		\draw (11,1) circle (5pt);
+		\draw ( 3,5) circle (5pt);
+		\draw ( 9,8) circle (5pt);
+		
+		\draw [decorate,decoration={brace,amplitude=5pt},xshift=12pt,yshift=-1pt]
+		(3,5) -- (3.5,1)node [black,midway,xshift=10pt] {\footnotesize$d$};
+ 			\begin{scope}[shift={(16,0)}]
+		
+		\draw [<->,thick] (0,0) rectangle (15,10) {};
+		%centroids
+		
+		%Left Group
+		\fill ( 1,4) circle (5pt);
+		\fill ( 4,4) circle (5pt);
+		\fill ( 3,5) circle (5pt);
+		\fill (3.5,1) circle (5pt);
+		
+		%Middle Group
+		\fill ( 6,5) circle (5pt);
+		\fill ( 9,8) circle (5pt);
+		\fill ( 6,8) circle (5pt);
+		
+		%Right Group
+		\fill (11,1) circle (5pt);
+		\fill (12,4) circle (5pt);
+		\fill (13,2) circle (5pt);
+		
+		%\pause
+		%Lines
+		\draw [-] (1,4) -- (2,3);
+		\draw [-] (4,4) -- (2,3);
+		\draw [-] (3,5) -- (2,3);
+		\draw [-] (3.5,1) -- (2,3);
+		
+		\draw [-] (6,5) -- (7,7);
+		\draw [-] (9,8) -- (7,7);
+		\draw [-] (6,8) -- (7,7);
+		
+		\draw [-] (11,1) -- (12,2);
+		\draw [-] (12,4) -- (12,2);
+		\draw [-] (13,2) -- (12,2);
+		
+		\fill [white] ( 2,3) circle (5pt);
+		\fill [white] (12,2) circle (5pt);
+		\fill [white] ( 7,7) circle (5pt);
+		
+		\draw ( 2,3) circle (5pt);
+		\draw (12,2) circle (5pt);
+		\draw ( 7,7) circle (5pt);
+		
+		%Circles
+		%\draw [dashed] (2,3) circle (2.5);
+		%\draw [dashed] (7,7) circle (2.236);
+		%\draw [dashed] (12,2) circle (2);
+		%\pause
+		\draw [decorate,decoration={brace,amplitude=5pt},xshift=-5pt,yshift=-5pt]
+		(3.5,1) -- (2,3)node [black,midway,xshift=-10pt,yshift=-5pt] {\footnotesize$d$};
+\end{scope}
+		\end{tikzpicture}		

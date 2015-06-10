@@ -4,11 +4,14 @@ from pprint import pprint
 from matplotlib import pyplot as plt
 
 d={}
+plt.style.use(plt.style.available[1])
 
-lab=["b-o","g-s","r-^"]
+leg=["ILP","Naive BB","Geo BB"]
+#lab=["b-o","g-s","r-^"]
 siz=[7,6,8]
 
-s=40 #int(argv[1][-2:])
+s=40
+#s=int(argv[1][-2:])
 q=(argv[1][-1:])
 for k,algo in enumerate(["ILP","C","cpp"]):
 	print algo
@@ -31,12 +34,14 @@ for k,algo in enumerate(["ILP","C","cpp"]):
 
 	d[algo][:,1]/=n
 	
-	plt.plot(d[algo][:,0],d[algo][:,1],lab[k],linewidth=2,markersize=siz[k])
+	plt.plot(d[algo][:,0],d[algo][:,1],linewidth=2,markersize=siz[k])
 
 	
 plt.xlabel('$N$',fontsize=24)
 plt.ylabel('$time(s)$',fontsize=24)
 plt.yscale('log')
+plt.grid(False)
+plt.legend(leg,loc=4)
 plt.axis([0, s+2, 10**-5, 10**4])
 plt.savefig("/home/valenca/Uni/Docs/thesis/Pictures/k"+str(q)+".png", bbox_inches="tight") 
 plt.show()

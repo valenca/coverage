@@ -6,7 +6,6 @@
 #include<algorithm>
 #include<vector>
 
-
 using namespace std;
 
 typedef struct point point;
