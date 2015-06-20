@@ -4,48 +4,49 @@ The top-level auxiliary file: main.aux
 The style file: abbrvnat.bst
 Database file #1: Bibliography.bib
 Warning--I didn't find a database entry for "kdmedian"
+Warning--I didn't find a database entry for "fig:fixed_n"
+Warning--I didn't find a database entry for "geodisk"
 Warning--I didn't find a database entry for "selection"
 Warning--I didn't find a database entry for "medians"
-Warning--I didn't find a database entry for "fig:fixed_n"
 You've used 14 entries,
             2773 wiz_defined-function locations,
-            683 strings with 6785 characters,
-and the built_in function-call counts, 6662 in all, are:
-= -- 603
-> -- 338
+            685 strings with 6778 characters,
+and the built_in function-call counts, 6464 in all, are:
+= -- 582
+> -- 329
 < -- 14
-+ -- 116
-- -- 102
-* -- 495
-:= -- 998
-add.period$ -- 47
++ -- 113
+- -- 99
+* -- 483
+:= -- 978
+add.period$ -- 46
 call.type$ -- 14
-change.case$ -- 72
+change.case$ -- 71
 chr.to.int$ -- 14
 cite$ -- 28
-duplicate$ -- 342
-empty$ -- 571
-format.name$ -- 120
-if$ -- 1437
+duplicate$ -- 329
+empty$ -- 555
+format.name$ -- 119
+if$ -- 1383
 int.to.chr$ -- 1
 int.to.str$ -- 1
 missing$ -- 18
 newline$ -- 78
 num.names$ -- 56
-pop$ -- 176
+pop$ -- 169
 preamble$ -- 1
-purify$ -- 62
+purify$ -- 61
 quote$ -- 0
-skip$ -- 254
+skip$ -- 244
 stack$ -- 0
-substring$ -- 252
-swap$ -- 61
-text.length$ -- 7
+substring$ -- 239
+swap$ -- 51
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 129
 warning$ -- 0
-while$ -- 63
+while$ -- 62
 width$ -- 0
-write$ -- 192
-(There were 4 warnings)
+write$ -- 191
+(There were 5 warnings)

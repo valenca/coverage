@@ -1,10 +1,24 @@
 \chapter{State of the Art}
 \label{chap:sota}
 \lhead{Chapter \ref{chap:sota}. \emph{\nameref{chap:sota}}}
+\section{Previous Work}
+\change{Chosing the detail resolution for a map is a necessary decision for all kinds of map displays, eletronic or otherwise.}
+\subsection{Preprocessed/Stored Data}
+\change{Some famous web applications and services already pick from large sets of points. Most of these rely on having different preprocessed layers of information, which contain similarly ranked points. For example, a map of a continent would only request the layer containing the capitals of the visible contries, whilst a map of a singular country would only request the layer containing the cities within the viewing window's coordinates. This requires that a lot of preprocessed data be stored in a fairly large and robust database. It also skips the representation problem by having points with different importance ranks. If any query were to return too many points for the application to render, then it could choose to only display the higher ranked ones or, alternatively, repeat the same query to the layer above to reduce the stress.}
 
+\change{Since this problem requires that no storage space is used, other solutions must be found.}
+
+\subsection{Image Mapping}
+\change{Reducing visual information on a map can be done by projecting all points to a limited resolution image format. Mapping vectorial points into a bitmap format with no aliasing means that all points that are closer together than a pixel will likely be rounded off to the same spot, effectively merging the two points.}
+  	
+\change{
+Explicitly creating an image file may result in a larger file, which may cause problems in a bandwidth-dependant web application. The solution to this would be to round the coordinates of every point to a grid, and only relay the coordinates of the grid that would contain any points. This method, however, would mean a loss of precision increasing with the size of the grid. Furthermore, the points selected would be grid-aligned, and not necessarily correspond with any of the original, vectorial set. This would make for a visual pattern, which would be obvious for a human user.
+}
+
+\section{k-centre}
 The \emph{k-centre} problem is a well known problem in the optimisation field of study. As such, several approaches have been explored over the years. In the following, two important approaches are described: an Integer Linear Programming approach and an Incremental Approach.
 
-\section{Integer Linear Programming Formulation}
+\subsection{Integer Linear Programming Formulation}
 \label{alg:ilp}
 
 A simple and straight-forward approach to the problem is to model it in  integer linear programming as follows:
@@ -40,7 +54,7 @@ In order to best display the results, a simple post-processing step can be appli
 
 Other more elaborate formulations can be used. \citet{linearprog} explore a new formulation to obtain tighter bounds in the LP relaxation. They also limit the values that the solution can take by enumerating all different values of distances between points and sorting them in decreasing order.
 
-\section{Local Search Approach}
+\subsection{Local Search Approach}
 \citet{incrementalcov} solve the \emph{k-centre} problem heuristically using local search. Their method describes algorithms to incrementally insert and remove centroids from a set of points, and update the centroid assignment only in the geometrical area surrounding the changed centroid. This method allows for small modifications on an already valid solution, until a similar solution is deemed optimal is found. It can be used as a fast way to calculate neighbour solutions to be used in heuristic approaches to the \emph{k-centre} problem.
 
 In order to minimise computation time, \citet{incrementalcov} maintain the selected centroids in a \emph{k-d tree}. Using a \emph{k-d tree} reduces the number of comparisons needed for the step of point location in the algorithm. To keep the \emph{k-d trees} from loosing efficiency in insertions and removal of points, the trees need to be balanced from time to time. Calculating the optimal time interval to balance the \emph{k-d tree} has to be done \emph{a priori} and can affect the performance of the algorithm.

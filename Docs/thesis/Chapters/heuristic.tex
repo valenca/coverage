@@ -1,0 +1,91 @@
+\chapter{\change{Geometric Disk Cover}}
+\label{chap:approx}
+\lhead{Chapter \ref{chap:approx}. \emph{\nameref{chap:approx}}} % This is for the header
+
+The algorithms in the previous chapter presented some obstacles to its use in a web application. Not only were the computational times too high to be used in real-time, but it also required some a priori knowledge about the number of clusters on a given window, which is infeasible. As such, the requirements for the algorithm were renegotiated. The new approach should be able to calculate the final number of selected points, constrained to a minimum distance factor between them.
+
+Given a set $N$ of $n$ points and a minimum distance $d$, find a set of centroids $C$ of size $k$, such that every point in $N$ will covered by a disk with radius $d$ and centre in one of the points in $C$ whilst minimising the value of $k$. This problem is known as \emph{geometric disk cover}\cite{geodisk}.
+
+This chapter describes an efficient way to approximate the optimal solution to this new problem.
+
+\section{Approximation Algorithm}
+Calculating the optimal solution for Geometric Disk Cover is a \emph{NP-hard} problem, and as such, would require a lot of computation time. However, there are ways of finding an acceptable solution in real time. One such way it to use an approximation algorithm to this problem.
+
+\subsubsection*{Graph Construction}
+The first step is to create a graph connecting all pairs points that are within a distance of each other. The naïve approach to doing this would be to test all the distances between each pair of points, taking $\bigo(n^2)$ operations. Alternatively a line sweep algorithm or a series of range searches on a \kdtree could be used to speed up the process.
+
+The line sweep algorithm would require a $\bigo(n \log{n})$ sorting algorithm, followed by $\bigo(n^2)$ comparisons. The latter is limited by the number of points within the sliding window, which should only contain a fraction of the total number of points on the map, since the distance chosen is a fraction of its dimensions.
+
+The \kdtree range search, on the other hand, requires a $\bigo(n \log{n})$ construction of a \kdtree using a median of medians algorithm. This is followed by $n$ queries consisting of finding the points within a square of side $2d$ centred around each of the points. Each one of these operations has a $\bigo(2N^{\frac{1}{2}})$ time complexity.
+
+Even though the complexity of the \kdtree range search is theoretically faster than the line sweep method, it comes with an extra overhead of handling a more complex structure. As such, both methods are to be considered for testing.
+
+\input{Figures/apx1}
+
+After this operation, the graph connecting all neighbors is build, and stored in adjacency lists. The lists offer an advantage over an adjacency matrix as linked lists can be used to reduce the memory footprint, and only use the necessary space to build the graph, instead of the constant $\bigo{n^2}$ chunk of memory. It also allows for faster sequential access to the neighbours of any given point. The linked lists share similarities to the half-edge structure, in which each node represents a unidirectional edge that contains a pointer to its counterpart.
+
+\subsubsection*{Set Cover}
+The second step to the algorithm is to chose a small subset of points whose neighbours unions are equal to the whole graph. Each point and its neighbours can be interpreted as a subset of elements, where the union of all subsets is equal to the larger set. Thus, the problem can be seen as finding the smallest collection of subsets whose union is sufficient to match the whole set. This is known as \emph{set cover}, and its solution can be approximated using a greedy approach. Starting with the whole uncovered graph, the point with the largest number of uncovered neighbours is selected, thus covering it and its neighbours. This is done iteratively until no uncovered points remain on the graph. This approach approximates the number of points to within $m \ln{n}$ points, were $m$ is the optimal number.
+
+At each step of this algorithm, one point $p$ and all its neighbours and respective edges must be removed from the graph. This is done by iterating through the adjacency lists of the neighbours of $p$ and deleting all the connections to their neighbours (second-degree neighbours of $p$). This operation takes exactly $\bigo(n)$ time where $n$ is proportional to the number of edges to be deleted.
+
+\input{Figures/apx2}
+
+After all the points are covered, the centers make the subset of centroids that will be displayed as the final output. The cardianality of this set will not exceed the approximation factor as described above.
+
+\input{Figures/apx3}
+\subsection{Results}
+This section will compare both approaches (\kdtrees and line sweeping) to the graph building portion of the algorithm. The value of $d$ is the radius of the disks. It is given as a percentage of the largest dimension of the window, as this value is easier to adjust evaluate by a human user. Figure \ref{img:sweden_dist} shows the outputs for different values of $d$.
+
+\input{Figures/sweden_dist}
+The values were picked arbitrarily and the value agreed upon to be used should be between 10 and 15 percent, as those values are the easiest to look at without losing sense of shape of the area. The performance tests still use the value of 20 percent to stress test the algorithms, since the higher the value of $d$, the denser and more time consuming to build the graph will be.
+
+To benchmark the performance of the algorithms, random inputs were used. Both uniform and clustered inputs were tested. Each test was done 30 times, with shared seeds between the algorithms. The machine specifications are listed in Annex \ref{ann:specs}.
+
+\input{Figures/kd_ls_t}
+
+As Figure \ref{fig:kd_ls_t} shows, the line sweep method performs faster in both the uniform and the clustered data. The lower expected complexity of the \kdtrees does not compensate the higher overhead in their construction. It can also be seen that both algorithms become slower the higher the number of points, as was expected.
+
+Applying both methods to a general case gives similar results. The coverage algorithm picks the points with most neighbours. Since two different points may have the same number of neighbours, and the two algorithms sort the points in two different ways, there may occur a case where the sets are completely different, based on which point is select first in case of a draw. The values will still fall bellow the upper bound for the approximation factor, and no algorithm should have the advantage. Figure \ref{kd_ls_k} shows the number of points selected by each algorithm in the same instances as above.
+
+\input{Figures/kd_ls_k}
+
+Figure \ref{fig:kd_ls_k} shows that no algorithm has the advantage on the number of points chosen. So much so, that the results overlap each other almost completely. This suggests that the best algorithm to use is the line sweep algorithm, as it takes less time to compute similar results.
+
+\section{Heuristic Speed-ups}
+The approximation algorithm runs rather efficiently, clocking at just under 1 second for 30 thousand points. This result can be improved upon by employing some heuristic filtering methods to the inputs. By using these approaches, the guarantee of the quality is lost. Nevertheless, the results should still be considered for larger number of points.
+\subsection{Sampling}
+The simplest method to accelerating the algorithms is to simply ignore a random set of those points. With the smaller sample of points, the algorithm should run faster. If the points are removed uniformly, then the shape should still be kept.
+
+Figure \ref{fig:ls_rs_t} shows the time difference between the regular line sweep and the sampled input.
+
+\input{Figures/ls_rs_t}
+
+The graph in Figure \ref{fig:ls_rs_t} proves that the sampling is indeed faster. However, upon closer inspection, it can be noted that the result is not optimal. Figure \ref{fig:ls_rs_k} shows that the number of selected points is inferior:
+
+\input{Figures/ls_rs_k}
+
+This can be explained by the fact that the algorithm is not accounting for all points. In fact, the number of cases where a point is left isolated in the full set algorithms is decreased by the factor of the sampling in these algorithms. This means that not all points are being covered, and the number of selected points decreases. Figure \ref{fig:ls_rs_grece} shows this effect in a real map:
+
+\input{Figures/ls_rs_greece}
+
+As shown, the sampled subset does not cover the most isolated points. In fact, the very last point to be covered in the original algorithm, the island in dark red at the westernmost point in the map, is not present in the sample, as as such, is not covered. This method is therefore not suitable for the initial requirements, as very isolated points have only a small chance of being represented.
+
+\subsection{Biphasic Filtering}
+A solution to the random sampling algorithm problems is to do a two-stage geometric disk cover. The first pass over the points is done with a very small radius. This can be done very quickly, since the range search will only have to look in a very small area. Using a small distance accelerates the algorithm, as shown in Figure \ref{kd_ls_t}. This means that a lot of the very close points will be discarded, but a representative neighbour will be left in its place. This means that isolated points will not be discarded. The resulting set will be much smaller than the original, whilst still keeping a representativeness degree. The second pass, with the final intended distance will take advantage of the much smaller set of points for the speed up. The cpu times for two instances of the algorithm can be seen in Figure \ref{fig:ls_bp_t}. The values of the first pass distance $d'$ are given as a percentage of the final pass distance $d$. One of the instances uses $d'=5\%$ and the other $d'=10\%$
+
+\input{Figures/ls_bp_t}
+
+As it can be seen, the biphasic filtering shows very fast speed, which does not seem to vary a lot with the total number of points. This is because the first pass eliminates a very large number of points, and the resulting set will be very similar for different values of $N$, since the intermediate subset is still representative of the original. Figure \ref{fig:ls_bp_k} shows the variation in size of the final subset chosen by the biphasic filtering:
+
+\input{Figures/ls_bp_k}
+
+The graph shows that despite returning lower numbers of $K$, they are not as low as the random sampling. The resulting set does not necessarily cover all the points with disks of radii $d$. Because the first pass transforms the set into disks of radii $d'$, and the second pass only considers their centre point as the measure of cover, then there can be points that are further away from the centroids than $d$, the maximum distance being $d+d'$, as show in Figure \ref{fig:bp_error}:
+
+\input{Figures/bp_error}
+
+This result has some effect on the quality, but it is not nearly as noticeable as the results from the random sampling. Figure \ref{ls_bp_greece} shows the compared output between the original line sweep algorithm, and the two versions, as well as the intermediate phases.
+
+\input{Figures/bp_sweden}
+
+This final result shows that the biphasic filter, especially with $d'=0.1d$, can yield very approximate results at a fraction of the time, thus making a good candidate to use with inputs larger than the regular Line Sweep method can handle.
