@@ -23,8 +23,6 @@ if argv[1]=='../inputs/greece.in':
 	min_x=34000
 	min_y=19300
 	
-
-
 with open(".tmp") as f:
 	N=int(f.readline())
 	v=[]

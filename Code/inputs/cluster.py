@@ -1,24 +1,28 @@
 from sys import argv
-from random import random,seed
-from math import sqrt
-from scipy.spatial import distance
+from random import random,randint,seed
+from math import pi,sin,cos
+from matplotlib import pyplot as plt
 
 N=int(argv[2])
-K=50
-S=3
 seed((argv[1],argv[2]))
+	
+K=randint(10,20)
+d=15
+v=[]
+w=[]
 
-#print N
-#print K
-k=0
 for i in range(K):
-	x=(random()*100,random()*100)
-	j=1
-	print k,x[0],x[1]
-	k+=1
-	while(j < (N/K)+1):
-		y=(random()*S*2)+x[0]-S,(random()*S*2)+x[1]-S
-		if(distance.euclidean(x,y)<=S):
-			print k,y[0],y[1]
-			j+=1
-			k+=1
+	xx=random()*100
+	yy=random()*100
+	for i in range(N/K):
+		x=y=-1
+		while(not(0<x<100 and 0<y<100)):
+			t=random()*pi*2
+			r=random()*d
+			x=xx+(cos(t)*r)
+			y=yy+(sin(t)*r)
+		v.append(x)
+		w.append(y)
+
+plt.plot(v,w,"o")	
+plt.show()

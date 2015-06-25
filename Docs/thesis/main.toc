@@ -42,13 +42,13 @@
 \contentsline {subsection}{\numberline {4.3.1}Time Complexity}{27}{subsection.75}
 \contentsline {subsection}{\numberline {4.3.2}Experimental Results}{28}{subsection.77}
 \contentsline {paragraph}{}{28}{section*.78}
-\contentsline {chapter}{\numberline {5}\leavevmode {\color {magenta}Geometric Disk Cover}}{32}{chapter.84}
+\contentsline {chapter}{\numberline {5}\leavevmode {\color {black}Geometric Disk Cover}}{32}{chapter.84}
 \contentsline {section}{\numberline {5.1}Approximation Algorithm}{32}{section.85}
 \contentsline {subsection}{\numberline {5.1.1}Results}{35}{subsection.91}
 \contentsline {section}{\numberline {5.2}Heuristic Speed-ups}{37}{section.95}
 \contentsline {subsection}{\numberline {5.2.1}Sampling}{37}{subsection.96}
 \contentsline {subsection}{\numberline {5.2.2}Biphasic Filtering}{39}{subsection.100}
 \contentsline {chapter}{\numberline {6}Annexes}{42}{chapter.105}
-\contentsline {section}{\numberline {6.1}Computer Specifications}{42}{section.106}
+\contentsline {section}{\numberline {6.1}Machine Specifications}{42}{section.106}
 \contentsline {subsection}{\numberline {6.1.1}Median of Medians}{42}{subsection.108}
 \vspace {2em}

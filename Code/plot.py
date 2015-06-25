@@ -6,7 +6,8 @@ from itertools import product
 
 plt.style.use(plt.style.available[1])
 
-lista=["LS","BP10","BP5"]
+lista=["KD","LS"]
+files=["results_unif10","results_unif15","results_unif20"]
 
 trans={"KD"    :{"10":"#00CDCD","15":"#388E8E","20":"#2F4F4F"},
 	   "LS"    :{"10":"#FF3030","15":"#CD0000","20":"#8D0000"},
@@ -17,7 +18,7 @@ trans={"KD"    :{"10":"#00CDCD","15":"#388E8E","20":"#2F4F4F"},
 }
 
 labels=[]
-for directory in product(lista,["results_unif10","results_unif15","results_unif20"]):
+for directory in product(lista,files):
 	w=[]
 	x=[]
 	with open(directory[0]+"/res/"+directory[1]) as f:
@@ -45,7 +46,7 @@ plt.legend(labels,loc='center left', bbox_to_anchor=(1, 0.5))
 plt.show()
 
 labels=[]
-for directory in product(lista,["results_unif10","results_unif15","results_unif20"]):
+for directory in product(lista,files):
 	w=[]
 	x=[]
 	with open(directory[0]+"/res/"+directory[1]) as f:
