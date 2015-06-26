@@ -2,17 +2,27 @@
 \label{chap:intro}
 \lhead{Chapter \ref{chap:intro}. \emph{\nameref{chap:intro}}} % This is for the header
 
+\change{
 In recent years, there has been a large increase in both the quantity and availability of geographic data. This new surge of such large quantities of data has prompted a similar rise on the number of applications to capture, store, manipulate and analyse this data.
 A lot of these applications share the need to visualise the geographic information in such a way that it can be easily understood by a human.
-This is usually done by displaying points of interest on a map so that their relative position or direction can be easily interpreted without much thought by the user.
+This is usually done by displaying points of interest on a map so that their relative position or direction can be easily interpreted without much thought by the user.}
 
-One obstacle when representing large amounts of geographic data is that the sheer number of points to display can be overwhelming for a human, as well as computationally intensive to render for a machine. As such, there is a need to develop and implement a viable way to reliably calculate and display a subset of geographic points, whilst keeping a degree of representability of the larger set, so that as little information as possible is absent when the representative subset is shown.
+\change{
+One obstacle when representing large amounts of geographic data is that the sheer number of points to display can be overwhelming for a human, as well as computationally intensive to render for a machine. As such, there is a need to develop and implement a viable way to reliably calculate and display a subset of geographic points, whilst keeping a degree of representability of the larger set, so that as little information as possible is absent when the representative subset is shown.}
 
-The purpose of this project is to research and develop a real-time algorithm that can analyse geographic data provided by a geographic information system (GIS) infrastructure developed and maintained at Smartgeo. More precisely, the developed algorithm will have to be able to aggregate and select geographic points according to a given a set of criteria. Figure \ref{fig:rep} shows an example of a representative subset of an original, larger set.
+\change{
+The purpose of this project is to research and develop a real-time algorithm that can analyse geographic data provided by a geographic information system (GIS) infrastructure developed and maintained at Smartgeo. More precisely, the developed algorithm will have to be able to aggregate and select geographic points according to a given a set of criteria. Figure \ref{fig:rep} shows an example of a representative subset of an original, larger set. }
 \input{Figures/rep}
 
+\change{
 This thesis aims to research, develop, and analyse different algorithms to choose a representative subset of geographic points, whilst being able to dynamically change that set of points via zooming or panning over a geographic region containing a large amount of geographical data. In case the optimal solution algorithms prove to be too slow, heuristic approaches will be implemented. Heuristic algorithms will have their solution quality and speed benchmarked against implicit enumeration algorithms.
-The algorithm that is deemed the best will be implemented in the web framework via the \emph{WFS} and \emph{WMS} web mapping standards.
+The algorithm that is deemed the best will be integrated in the web framework via the \emph{geojson} and \emph{WFS} (web feature service) geographic data communication standards . Figure \ref{fig:arch} shows a basic idea of the architecture for the web application.}
 
+\input{Figures/arch}
+
+\change{
+The idea of the application is for it to function as an independent module capable of being decoupled and used for different clients and/or servers, should the need arise in the future.}
+
+\change{
 This report is organized as follows:
-Chapter \ref{chap:theory} - \nameref{chap:theory} defines the base theoretical concepts, such as a notion of representativeness, as well as some useful structures used in the algorithms. Chapter \ref{chap:sota} - \nameref{chap:sota} analyses previous related work. Chapter \ref{chap:algos} - \nameref{chap:algos} describes the implicit enumeration algorithms implemented so far, as well as an analysis on their time and space complexities. Chapter \ref{chap:approx} - \nameref{chap:approx} describes an approximation algorithm. 
+Chapter \ref{chap:theory} - \nameref{chap:theory} defines the base theoretical concepts, such as a notion of representativeness, as well as some useful structures used in the algorithms. Chapter \ref{chap:sota} - \nameref{chap:sota} analyses previous related work. Chapter \ref{chap:algos} - \nameref{chap:algos} describes the implicit enumeration algorithms implemented for the minimum coverage set problem, as well as an analysis on their time and space complexities. Chapter \ref{chap:approx} - \nameref{chap:approx} describes an approximation algorithm for the geometric disk coverage problem, possible heuristic accelerations and a time and space complexity analysis. }

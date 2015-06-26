@@ -4,9 +4,10 @@
 \section{Previous Work}
 \change{Chosing the detail resolution for a map is a necessary decision for all kinds of map displays, eletronic or otherwise.}
 \subsection{Preprocessed/Stored Data}
-\change{Some famous web applications and services already pick from large sets of points. Most of these rely on having different preprocessed layers of information, which contain similarly ranked points. For example, a map of a continent would only request the layer containing the capitals of the visible contries, whilst a map of a singular country would only request the layer containing the cities within the viewing window's coordinates. This requires that a lot of preprocessed data be stored in a fairly large and robust database. It also skips the representation problem by having points with different importance ranks. If any query were to return too many points for the application to render, then it could choose to only display the higher ranked ones or, alternatively, repeat the same query to the layer above to reduce the stress.}
+\change{Some famous web applications and services already pick from large sets of points. Most of these rely on having different preprocessed layers of information, which contain similarly ranked points. For example, a map of a continent would only request the layer containing the capitals of the visible contries, whilst a map of a singular country would only request the layer containing the cities within the viewing window's coordinates. }
 
-\change{Since this problem requires that no storage space is used, other solutions must be found.}
+\change{	
+This solution requires that a lot of preprocessed data be stored in a fairly large and robust database. It also skips the representation problem by having points with different importance ranks. If any query were to return too many points for the application to render, then it could choose to only display the higher ranked ones or, alternatively, repeat the same query to the layer above to reduce the stress. Since this problem requires that no storage space is used, other solutions must be found.}
 
 \subsection{Image Mapping}
 \change{Reducing visual information on a map can be done by projecting all points to a limited resolution image format. Mapping vectorial points into a bitmap format with no aliasing means that all points that are closer together than a pixel will likely be rounded off to the same spot, effectively merging the two points.}

@@ -6,11 +6,12 @@ Database file #1: Bibliography.bib
 Warning--I didn't find a database entry for "kdmedian"
 Warning--I didn't find a database entry for "fig:fixed_n"
 Warning--I didn't find a database entry for "geodisk"
+Warning--I didn't find a database entry for "greedyapprox"
 Warning--I didn't find a database entry for "selection"
 Warning--I didn't find a database entry for "medians"
 You've used 14 entries,
             2773 wiz_defined-function locations,
-            685 strings with 6778 characters,
+            686 strings with 6790 characters,
 and the built_in function-call counts, 6464 in all, are:
 = -- 582
 > -- 329
@@ -49,4 +50,4 @@ warning$ -- 0
 while$ -- 62
 width$ -- 0
 write$ -- 191
-(There were 5 warnings)
+(There were 6 warnings)

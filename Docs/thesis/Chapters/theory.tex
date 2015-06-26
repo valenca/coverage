@@ -6,12 +6,22 @@ The chapter starts by establishing the formal definition of the problem at hand.
 Then it proceeds to detail the algorithmic and geometric concepts to be used in the different approaches described in the following chapters.
 \section{Definitions of Coverage}
 \label{sect:problem}
-Representativeness consists of finding a subset of points in a larger set. The subset chosen should be able to keep some specified properties of the original set, such as density, or general distribution. As such there can be many ways to define representativeness. For the purposes of this thesis, we will use the definition of \emph{coverage}.
-Given a set of points $N$ in $\mathbb{R}^2$, we must choose a subset, $P$, that best matches our definition of representativeness. The size of $P$, however, is constrained to a size $k$, which specifies how many points can be displayed in a section of a map.
+Representativeness consists of finding a subset of points in a larger set. The subset chosen should be able to keep some specified properties of the original set, such as general distribution and shape. As such there can be many ways to define representativeness. For the purposes of this thesis, we will use the definition of \emph{coverage}.
 
-For any point in $N$ not in $P$, there must be a point in $P$ that best represents it. In a geographic or geometric plane, this notion of representativeness may be defined by the distance, i.e.\ the point $p$ that best represents $q$ is the closest point closest to $q$, under some notion of distance. 
-Although the points represent geographic locations, the metric that would measure their distance on the surface of the globe, the geodesic distance, will not be used in this thesis. The triangular inequality property does not apply to geodesic distances as a sphere (or an approximation of thereof) is not an Euclidean space, and it would add an unnecessary layer of complexity to computing the coverage.
-Because of this, in this thesis, the coordinates of the points are the planar projection of the geographic coordinates to their location counterparts, as implemented by the WMS and WFS web mapping standards. Therefore, the Euclidean norm will be used as the spatial distance notion. 
+\change{
+Coverage measures the total volume occupied by the union of a set of shapes in space. In the 2-dimensional space, which we are using for this thesis, it means the total area occupied by a collection of 2-dimensional shapes. Since our method for representing points is the euclidean distance to other close points, the shapes in question will invariably be circles, since their circumference delimits all the possible points within a smaller distance of the given radius. As such, any point $p$ is covered by centroid $c$ if and only if it is contained in a geometric disk of the context chosen radius centred around $c$.}
+
+\change{
+Although the points in this thesis represent geographic locations, the metric that would measure their distance on the surface of the globe, the geodesic distance, will not be used. The triangular inequality property does not apply to geodesic distances as a sphere (or an approximation of thereof) is not an Euclidean space, and it would add an unnecessary layer of complexity to computing the coverage.
+Because of this, in this thesis, the coordinates of the points are the planar projection of the geographic coordinates to their location counterparts, as implemented by the WMS and WFS web mapping standards. Therefore, the Euclidean norm will be used as the spatial distance notion. }
+
+\subsubsection*{Minimum Coverage Subset}
+\change{
+One of coverage problems approached in this thesis is the minimum coverage subset problem. Given a set of points $N$ in $\mathbb{R}^2$, we must choose a subset, $P$, that best matches our definition of representativeness.
+The size of $P$, however, is constrained to a size $k$, which specifies how many points can be displayed in a section of a map.}
+
+\change{
+For any point in $N$ not in $P$, there must be a point in $P$ that best represents it. This notion of representativeness may be defined by the distance, i.e.\ the point $p$ that best represents $q$ is the closest point closest to $q$, or the one that minimises euclidean distance between the pair.}
 
 Finding the most representative set $P$ in $N$ will mean that every point in $N$ will be assigned to the point in $P$ closest to it. This definition of representativeness is referred to as \emph{coverage} and the points in $P$ are called \emph{centroids}.
 
@@ -24,7 +34,6 @@ The coverage value of a given centroid is defined by the circle around that cent
 	}
 \end{equation}
 
-%\paragraph{}
 \noindent
 where $N$ is the initial set of points in $\mathbb{R}^2$, $P$ is the centroid subset and $\lVert \cdot \rVert $ is the Euclidean distance.
 The most representative subset, however, is the one with the minimum value of coverage. This means all points will be assigned to the closest centroid, minimising the coverage of all centroids and avoiding overlapping coverage areas whenever possible.
@@ -39,6 +48,10 @@ This is known in the field of optimisation as the \emph{k-centre} problem, and i
 \input{Figures/cov}
 
 For the 1-dimensional case, the minimum coverage value can be calculated in polynomial time \cite{dvaz}. However, for any other number of dimensions it is a \emph{NP-hard} problem, and cannot be solved in polynomial time \cite{complex}.
+
+\subsubsection*{Geometric Disk Coverage}
+
+\change{Another coverage problem considered in this thesis is the geometric disk coverage problem. Given a set of objects $O$ and a fixed distance $d$, find the set of disks of radius $d$ centred around a set of centroids $P$, such that all points in $O$ are covered. The cardinality of $P$ must be as small as possible. In the most general variation of this problem, and in the problem at hand, $O$ is the original set of 2-dimensional points $N$ as described above. Added to this, there is the restriction that $C$ must be contained in $N$. This is also a variation of a facility location problem.}
 
 \section{Algorithmic Concepts}
 \subsection{Branch-and-Bound}

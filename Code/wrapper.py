@@ -108,7 +108,7 @@ class PyApp(gtk.Window):
 
 		cr.set_line_width(0.3)
 		cr.set_source_rgb(0,0,0)
-		"""
+		
 		for i in v:
 			cr.arc(i[0], i[1], 0.1, 0, 2*math.pi)
 			cr.stroke()
@@ -120,7 +120,7 @@ class PyApp(gtk.Window):
 		for i in b:
 			cr.arc(i[0], i[1], t, 0, 2*math.pi)
 			cr.stroke()
-			"""
+			
 		cr.set_line_width(0.7)
 		for i,p in enumerate(b):
 			if i==0:

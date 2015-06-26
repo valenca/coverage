@@ -117,7 +117,21 @@ In this section, we analyse empirically the time spent calculating the solutions
 \subsubsection*{Methodology and Set-up}
 The test cases are sets of uniformly distributed points generated with a fixed seed. Each test was repeated 10 times with different sets of points. The same sets and machine were used to test the three algorithms.
 
-Both branch-and-bound approaches were implemented using \emph{C++} and compiled using \emph{g++ 4.9.2}. The integer linear programming version had the data preprocessed using \emph{python 2.7.9} and was solved using the \emph{GLPK LP/MIP v4.55} solver. The machine that ran the tests had the specifications described in Annex \ref{ann:specs}.
+Both branch-and-bound approaches were implemented using \emph{C++} and compiled using \emph{g++ 4.9.2}. The integer linear programming version had the data preprocessed using \emph{python 2.7.9} and was solved using the \emph{GLPK LP/MIP v4.55} solver. The machine that ran the tests had the specifications described in Table \ref{tab:specs}.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|}
+			\hline
+			Operating System  & Arch Linux 3.14.4 x64\\\hline
+			CPU & Intel i7 Dual-Core, 2GHz\\\hline
+			Memory & 8 GB, 1600 MHz \\\hline
+			Storage &  Solid-State Drive, 300 MB/s (read)\\\hline
+		\end{tabular}
+		\caption{Machine specifications}
+		\label{tab:specs}
+	\end{center}
+\end{table}
 
 \subsubsection*{Effect of $N$}
 
