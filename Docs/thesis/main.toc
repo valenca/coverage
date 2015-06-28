@@ -3,51 +3,49 @@
 \vspace {1em}
 \contentsline {paragraph}{Palavras-chave:}{i}{section*.2}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.3}
-\contentsline {chapter}{\numberline {2}Concepts, Definitions and Notation}{4}{chapter.6}
-\contentsline {section}{\numberline {2.1}Definitions of Coverage}{4}{section.7}
-\contentsline {section}{\numberline {2.2}Algorithmic Concepts}{6}{section.13}
-\contentsline {subsection}{\numberline {2.2.1}Branch-and-Bound}{6}{subsection.14}
-\contentsline {subsection}{\numberline {2.2.2}Approximation Algorithms}{7}{subsection.15}
-\contentsline {section}{\numberline {2.3}Geometric Concepts and Geometric Structures}{8}{section.21}
-\contentsline {subsection}{\numberline {2.3.1}Nearest Neighbour Search and Point Location}{9}{subsection.22}
-\contentsline {subsection}{\numberline {2.3.2}\textit {k}-Dimensional Trees}{9}{subsection.23}
-\contentsline {subsection}{\numberline {2.3.3}Orthogonal Aligned Range Search}{10}{subsection.26}
-\contentsline {subsection}{\numberline {2.3.4}Voronoi Diagrams}{12}{subsection.31}
-\contentsline {subsection}{\numberline {2.3.5}Delaunay Triangulations}{13}{subsection.33}
-\contentsline {subsection}{\numberline {2.3.6}Hilbert Curves}{18}{subsection.46}
-\contentsline {chapter}{\numberline {3}State of the Art}{20}{chapter.48}
-\contentsline {section}{\numberline {3.1}Previous Work}{20}{section.49}
-\contentsline {subsection}{\numberline {3.1.1}Preprocessed/Stored Data}{20}{subsection.50}
-\contentsline {subsection}{\numberline {3.1.2}Image Mapping}{20}{subsection.51}
-\contentsline {section}{\numberline {3.2}k-centre}{21}{section.52}
-\contentsline {subsection}{\numberline {3.2.1}Integer Linear Programming Formulation}{21}{subsection.53}
-\contentsline {subsection}{\numberline {3.2.2}Local Search Approach}{22}{subsection.60}
-\contentsline {chapter}{\numberline {4}Optimal Minimum Coverage Algorithms}{24}{chapter.61}
-\contentsline {section}{\numberline {4.1}Na\IeC {\"\i }ve Branch-and-Bound}{24}{section.62}
-\contentsline {subsection}{\numberline {4.1.1}Branching}{24}{subsection.63}
-\contentsline {paragraph}{Inserting a Centroid}{25}{section*.64}
-\contentsline {paragraph}{Inserting a Non-Centroid}{25}{section*.65}
-\contentsline {paragraph}{}{25}{section*.66}
-\contentsline {paragraph}{Removing a Centroid}{25}{section*.67}
-\contentsline {paragraph}{Removing a Non-Centroid}{25}{section*.68}
-\contentsline {subsection}{\numberline {4.1.2}Bounds}{26}{subsection.69}
-\contentsline {paragraph}{Lower Bound}{26}{section*.70}
-\contentsline {section}{\numberline {4.2}Delaunay Assisted Branch-and-Bound}{26}{section.71}
-\contentsline {paragraph}{Inserting a Centroid}{26}{section*.72}
-\contentsline {paragraph}{Inserting a Non-Centroid}{27}{section*.73}
-\contentsline {paragraph}{Removing a Centroid}{27}{section*.74}
-\contentsline {paragraph}{Removing a Non-Centroid}{28}{section*.75}
-\contentsline {paragraph}{Bounds}{28}{section*.76}
-\contentsline {section}{\numberline {4.3}Algorithm Comparison}{28}{section.77}
-\contentsline {subsection}{\numberline {4.3.1}Time Complexity}{28}{subsection.78}
-\contentsline {subsection}{\numberline {4.3.2}Experimental Results}{29}{subsection.80}
-\contentsline {paragraph}{}{29}{section*.81}
-\contentsline {chapter}{\numberline {5}Geometric Disk Cover}{33}{chapter.88}
-\contentsline {section}{\numberline {5.1}Approximation Algorithm}{33}{section.89}
-\contentsline {subsection}{\numberline {5.1.1}Results}{36}{subsection.95}
-\contentsline {section}{\numberline {5.2}Heuristic Speed-ups}{38}{section.100}
-\contentsline {subsection}{\numberline {5.2.1}Sampling}{38}{subsection.101}
-\contentsline {subsection}{\numberline {5.2.2}Two-phase filtering}{40}{subsection.105}
-\contentsline {chapter}{\numberline {6}Annexes}{44}{chapter.110}
-\contentsline {subsection}{\numberline {6.0.3}Median of Medians}{44}{subsection.111}
+\contentsline {chapter}{\numberline {2}Concepts, Definitions and Notation}{5}{chapter.6}
+\contentsline {section}{\numberline {2.1}Definition of Coverage}{5}{section.7}
+\contentsline {section}{\numberline {2.2}Minimum Coverage Subset}{6}{section.8}
+\contentsline {subsection}{\numberline {2.2.1}Integer Linear Programming Formulation}{7}{subsection.12}
+\contentsline {subsection}{\numberline {2.2.2}Local Search Approach \leavevmode {\color {red}\#\# Mudar para o capitulo do B\&B??}}{8}{subsection.19}
+\contentsline {section}{\numberline {2.3}Geometric Disk Coverage}{9}{section.20}
+\contentsline {subsection}{\numberline {2.3.1}Integer Linear Programming}{9}{subsection.21}
+\contentsline {section}{\numberline {2.4}Algorithmic Concepts}{10}{section.28}
+\contentsline {subsection}{\numberline {2.4.1}Branch-and-Bound}{10}{subsection.29}
+\contentsline {subsection}{\numberline {2.4.2}Approximation Algorithms}{11}{subsection.30}
+\contentsline {section}{\numberline {2.5}Geometric Concepts and Geometric Structures}{12}{section.36}
+\contentsline {subsection}{\numberline {2.5.1}Nearest Neighbour Search and Point Location}{12}{subsection.37}
+\contentsline {subsection}{\numberline {2.5.2}\textit {k}-Dimensional Trees}{13}{subsection.38}
+\contentsline {subsection}{\numberline {2.5.3}Orthogonal Aligned Range Search}{14}{subsection.41}
+\contentsline {subsection}{\numberline {2.5.4}Voronoi Diagrams}{16}{subsection.46}
+\contentsline {subsection}{\numberline {2.5.5}Delaunay Triangulations}{17}{subsection.48}
+\contentsline {subsection}{\numberline {2.5.6}Hilbert Curves}{22}{subsection.61}
+\contentsline {chapter}{\numberline {3}Optimal Minimum Coverage Algorithms}{24}{chapter.63}
+\contentsline {section}{\numberline {3.1}Na\IeC {\"\i }ve Branch-and-Bound}{24}{section.64}
+\contentsline {subsection}{\numberline {3.1.1}Branching}{24}{subsection.65}
+\contentsline {paragraph}{Inserting a Centroid}{25}{section*.66}
+\contentsline {paragraph}{Inserting a Non-Centroid}{25}{section*.67}
+\contentsline {paragraph}{}{25}{section*.68}
+\contentsline {paragraph}{Removing a Centroid}{25}{section*.69}
+\contentsline {paragraph}{Removing a Non-Centroid}{25}{section*.70}
+\contentsline {subsection}{\numberline {3.1.2}Bounds}{26}{subsection.71}
+\contentsline {paragraph}{Lower Bound}{26}{section*.72}
+\contentsline {section}{\numberline {3.2}Delaunay Assisted Branch-and-Bound}{26}{section.73}
+\contentsline {paragraph}{Inserting a Centroid}{26}{section*.74}
+\contentsline {paragraph}{Inserting a Non-Centroid}{27}{section*.75}
+\contentsline {paragraph}{Removing a Centroid}{27}{section*.76}
+\contentsline {paragraph}{Removing a Non-Centroid}{28}{section*.77}
+\contentsline {paragraph}{Bounds}{28}{section*.78}
+\contentsline {section}{\numberline {3.3}Algorithm Comparison}{28}{section.79}
+\contentsline {subsection}{\numberline {3.3.1}Time Complexity}{28}{subsection.80}
+\contentsline {subsection}{\numberline {3.3.2}Experimental Results}{29}{subsection.82}
+\contentsline {paragraph}{}{29}{section*.83}
+\contentsline {chapter}{\numberline {4}Geometric Disk Cover}{33}{chapter.90}
+\contentsline {section}{\numberline {4.1}Approximation Algorithm}{33}{section.91}
+\contentsline {subsection}{\numberline {4.1.1}Results}{36}{subsection.97}
+\contentsline {section}{\numberline {4.2}Heuristic Speed-ups}{38}{section.102}
+\contentsline {subsection}{\numberline {4.2.1}Sampling}{38}{subsection.103}
+\contentsline {subsection}{\numberline {4.2.2}Two-phase filtering}{40}{subsection.107}
+\contentsline {chapter}{\numberline {5}Annexes}{44}{chapter.112}
+\contentsline {subsection}{\numberline {5.0.3}Median of Medians}{44}{subsection.113}
 \vspace {2em}

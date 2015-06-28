@@ -201,12 +201,7 @@ int main(){
   thres/=SKIP;
   rangeSearch();
   coverage();
-  /*
-  thres*=SKIP;
-  compress();
-  rangeSearch();
-  coverage();
-  */
+  
   T = clock() - T;
   
 #ifndef DEBUG

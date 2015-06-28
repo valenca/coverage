@@ -206,7 +206,7 @@ int main(){
   compress();
   rangeSearch();
   coverage();
-  
+
   T = clock() - T;
   
 #ifndef DEBUG

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.5.29)  26 JUN 2015 09:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.5.29)  28 JUN 2015 03:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1213,12 +1213,12 @@ LaTeX Info: Redefining \nameref on input line 70.
 \openout4 = `main.out'.
 
  ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 120.
+LaTeX Font Info:    Try loading font information for U+msa on input line 121.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 120.
+LaTeX Font Info:    Try loading font information for U+msb on input line 121.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1234,7 +1234,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  Abstract Page PT
 ------------------------------------------------------------------------------
 
-Overfull \hbox (2.17181pt too wide) in paragraph at lines 191--192
+Overfull \hbox (2.17181pt too wide) in paragraph at lines 192--193
  []\OT1/cmr/bx/n/10.95 Palavras-chave:[] \OT1/cmr/m/n/10.95 Clus-ter-ing Ge-ogr
 ^^Safico, k-Center, Cober-tura, Branch-and-Bound, Tri-
  []
@@ -1251,11 +1251,11 @@ Overfull \hbox (2.17181pt too wide) in paragraph at lines 191--192
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- (./main.lot [4])
+ (./main.lot)
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [5]
+ [4]
 (./Chapters/introduction.tex
 Chapter 1.
 ------------------------------------------------------------------------------
@@ -1264,65 +1264,59 @@ Chapter 1.
 (./Figures/rep.tex) [1
 
 
-] (./Figures/arch.tex)) (./Chapters/theory.tex [2]
-[3]
+] (./Figures/arch.tex) [2] [3]) (./Chapters/theory.tex
+[4]
 Chapter 2.
 ------------------------------------------------------------------------------
  2 Concepts, Definitions and Notation
 ------------------------------------------------------------------------------
-[4
+[5
 
-] [5] (./Figures/cov.tex) [6] [7] [8] (./Figures/kd1.tex) [9]
+] [6] (./Figures/cov.tex) [7] [8] [9] [10] [11] [12] (./Figures/kd1.tex)
+[13]
 
-Package natbib Warning: Citation `kdmedian' on page 10 undefined on input line 
-141.
+Package natbib Warning: Citation `kdmedian' on page 14 undefined on input line 
+214.
 
-[10] (./Figures/kdrs.tex
+[14] (./Figures/kdrs.tex
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 8.
 
-) [11] (./Figures/ls1.tex
+) [15] (./Figures/ls1.tex
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 15.
 
-) (./Figures/vd1.tex) [12] (./Figures/dt1.tex) (./Figures/dt_vd.tex [13])
+) (./Figures/vd1.tex) [16] (./Figures/dt1.tex) (./Figures/dt_vd.tex [17])
 (./Algorithms/bw.tex
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 26.
-) [14] [15] (./Figures/halfedge.tex
-Underfull \hbox (badness 10000) in paragraph at lines 207--58
+) [18] [19] (./Figures/halfedge.tex
+Underfull \hbox (badness 10000) in paragraph at lines 280--58
 
  []
 
-) (./Figures/gr1.tex [16]) [17] (./Figures/wk1.tex) (./Figures/hilbert.tex
-[18])) (./Chapters/sotart.tex [19]
+) (./Figures/gr1.tex [20]) [21] (./Figures/wk1.tex) (./Figures/hilbert.tex
+[22])) (./Chapters/algorithms.tex [23]
 Chapter 3.
 ------------------------------------------------------------------------------
- 3 State of the Art
-------------------------------------------------------------------------------
-[20
-
-] [21] [22]) (./Chapters/algorithms.tex [23]
-Chapter 4.
-------------------------------------------------------------------------------
- 4 Optimal Minimum Coverage Algorithms
+ 3 Optimal Minimum Coverage Algorithms
 ------------------------------------------------------------------------------
 [24
 
 ] [25] [26] [27] [28] (./Figures/fixed_k.tex
-<Pictures/k1.png, id=603, 523.2348pt x 415.5525pt>
+<Pictures/k1.png, id=579, 523.2348pt x 415.5525pt>
 File: Pictures/k1.png Graphic file (type png)
  <use Pictures/k1.png>
 Package pdftex.def Info: Pictures/k1.png used on input line 4.
 (pdftex.def)             Requested size: 187.86159pt x 149.19931pt.
 
-<Pictures/k2.png, id=605, 523.2348pt x 414.8298pt>
+<Pictures/k2.png, id=581, 523.2348pt x 414.8298pt>
 File: Pictures/k2.png Graphic file (type png)
  <use Pictures/k2.png>
 Package pdftex.def Info: Pictures/k2.png used on input line 10.
 (pdftex.def)             Requested size: 187.86159pt x 148.93983pt.
 
-<Pictures/k3.png, id=606, 523.2348pt x 414.8298pt>
+<Pictures/k3.png, id=582, 523.2348pt x 414.8298pt>
 File: Pictures/k3.png Graphic file (type png)
  <use Pictures/k3.png>
 Package pdftex.def Info: Pictures/k3.png used on input line 16.
@@ -1333,25 +1327,25 @@ Package pdftex.def Info: Pictures/k3.png used on input line 16.
 Package natbib Warning: Citation `fig:fixed_n' on page 30 undefined on input li
 ne 144.
 
-(./Figures/fixed_n.tex <Pictures/n10.png, id=617, 529.7391pt x 414.8298pt>
+(./Figures/fixed_n.tex <Pictures/n10.png, id=593, 529.7391pt x 414.8298pt>
 File: Pictures/n10.png Graphic file (type png)
 
 <use Pictures/n10.png>
 Package pdftex.def Info: Pictures/n10.png used on input line 4.
 (pdftex.def)             Requested size: 187.86159pt x 147.11052pt.
- <Pictures/n20.png, id=618, 523.2348pt x 414.8298pt>
+ <Pictures/n20.png, id=594, 523.2348pt x 414.8298pt>
 File: Pictures/n20.png Graphic file (type png)
 
 <use Pictures/n20.png>
 Package pdftex.def Info: Pictures/n20.png used on input line 11.
 (pdftex.def)             Requested size: 187.86159pt x 148.93983pt.
- <Pictures/n30.png, id=619, 523.2348pt x 414.8298pt>
+ <Pictures/n30.png, id=595, 523.2348pt x 414.8298pt>
 File: Pictures/n30.png Graphic file (type png)
 
 <use Pictures/n30.png>
 Package pdftex.def Info: Pictures/n30.png used on input line 18.
 (pdftex.def)             Requested size: 187.86159pt x 148.93983pt.
- <Pictures/n40.png, id=620, 523.2348pt x 414.8298pt>
+ <Pictures/n40.png, id=596, 523.2348pt x 414.8298pt>
 File: Pictures/n40.png Graphic file (type png)
 
 <use Pictures/n40.png>
@@ -1370,9 +1364,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--29
 [30 <./Pictures/k1.png> <./Pictures/k2.png> <./Pictures/k3.png>]) [31 <./Pictur
 es/n10.png> <./Pictures/n20.png> <./Pictures/n30.png> <./Pictures/n40.png>])
 (./Chapters/heuristic.tex [32]
-Chapter 5.
+Chapter 4.
 ------------------------------------------------------------------------------
- 5 Geometric Disk Cover
+ 4 Geometric Disk Cover
 ------------------------------------------------------------------------------
 
 Package natbib Warning: Citation `geodisk' on page 33 undefined on input line 9
@@ -1380,6 +1374,10 @@ Package natbib Warning: Citation `geodisk' on page 33 undefined on input line 9
 
 
 LaTeX Warning: Reference `diskcomplex' on page 33 undefined on input line 12.
+
+
+Package natbib Warning: Citation `proximity' on page 33 undefined on input line
+ 15.
 
 [33
 
@@ -1391,28 +1389,28 @@ Package natbib Warning: Citation `greedyapprox' on page 34 undefined on input l
 ine 22.
 
 [34] (./Figures/apx2.tex) (./Figures/apx3.tex) [35] (./Figures/sweden_dist.tex
-<Pictures/sweden.png, id=672, 798.985pt x 881.2925pt>
+<Pictures/sweden.png, id=647, 798.985pt x 881.2925pt>
 File: Pictures/sweden.png Graphic file (type png)
 
 <use Pictures/sweden.png>
 Package pdftex.def Info: Pictures/sweden.png used on input line 4.
 (pdftex.def)             Requested size: 90.17561pt x 99.45714pt.
 
-<Pictures/10_sweden.png, id=673, 798.985pt x 881.2925pt>
+<Pictures/10_sweden.png, id=648, 798.985pt x 881.2925pt>
 File: Pictures/10_sweden.png Graphic file (type png)
 
 <use Pictures/10_sweden.png>
 Package pdftex.def Info: Pictures/10_sweden.png used on input line 11.
 (pdftex.def)             Requested size: 90.17561pt x 99.45714pt.
 
-<Pictures/15_sweden.png, id=674, 798.985pt x 881.2925pt>
+<Pictures/15_sweden.png, id=649, 798.985pt x 881.2925pt>
 File: Pictures/15_sweden.png Graphic file (type png)
 
 <use Pictures/15_sweden.png>
 Package pdftex.def Info: Pictures/15_sweden.png used on input line 18.
 (pdftex.def)             Requested size: 90.17561pt x 99.45714pt.
 
-<Pictures/20_sweden.png, id=675, 798.985pt x 881.2925pt>
+<Pictures/20_sweden.png, id=650, 798.985pt x 881.2925pt>
 File: Pictures/20_sweden.png Graphic file (type png)
 
 <use Pictures/20_sweden.png>
@@ -1421,137 +1419,156 @@ Package pdftex.def Info: Pictures/20_sweden.png used on input line 25.
 ) [36 <./Pictures/sweden.png> <./Pictures/10_sweden.png> <./Pictures/15_sweden.
 png> <./Pictures/20_sweden.png>]
 (./Figures/kd_ls_t.tex
-<Pictures/unif_kd_ls_t.png, id=687, 430.0065pt x 258.7266pt>
+<Pictures/unif_kd_ls_t.png, id=662, 430.0065pt x 258.7266pt>
 File: Pictures/unif_kd_ls_t.png Graphic file (type png)
 
 <use Pictures/unif_kd_ls_t.png>
 Package pdftex.def Info: Pictures/unif_kd_ls_t.png used on input line 4.
 (pdftex.def)             Requested size: 187.86159pt x 113.03073pt.
-File: Pictures/unif_kd_ls_t.png Graphic file (type png)
- <use Pictures/unif_kd_ls_t.png>
-Package pdftex.def Info: Pictures/unif_kd_ls_t.png used on input line 11.
+
+<Pictures/clus_kd_ls_t.png, id=663, 430.0065pt x 258.7266pt>
+File: Pictures/clus_kd_ls_t.png Graphic file (type png)
+
+<use Pictures/clus_kd_ls_t.png>
+Package pdftex.def Info: Pictures/clus_kd_ls_t.png used on input line 11.
 (pdftex.def)             Requested size: 187.86159pt x 113.03073pt.
-) [37 <./Pictures/unif_kd_ls_t.png>] (./Figures/kd_ls_k.tex
-<Pictures/unif_kd_ls_k.png, id=698, 430.0065pt x 258.7266pt>
+) [37 <./Pictures/unif_kd_ls_t.png> <./Pictures/clus_kd_ls_t.png>] (./Figures/k
+d_ls_k.tex
+<Pictures/unif_kd_ls_k.png, id=675, 430.0065pt x 258.7266pt>
 File: Pictures/unif_kd_ls_k.png Graphic file (type png)
 
 <use Pictures/unif_kd_ls_k.png>
 Package pdftex.def Info: Pictures/unif_kd_ls_k.png used on input line 4.
 (pdftex.def)             Requested size: 187.86159pt x 113.03073pt.
-File: Pictures/unif_kd_ls_k.png Graphic file (type png)
- <use Pictures/unif_kd_ls_k.png>
-Package pdftex.def Info: Pictures/unif_kd_ls_k.png used on input line 11.
+
+<Pictures/clus_kd_ls_k.png, id=676, 430.0065pt x 258.7266pt>
+File: Pictures/clus_kd_ls_k.png Graphic file (type png)
+
+<use Pictures/clus_kd_ls_k.png>
+Package pdftex.def Info: Pictures/clus_kd_ls_k.png used on input line 11.
 (pdftex.def)             Requested size: 187.86159pt x 113.03073pt.
-)
-(./Figures/ls_rs_t.tex
-<Pictures/unif_ls_rs_t.png, id=701, 430.0065pt x 258.7266pt>
+) (./Figures/ls_rs_t.tex
+<Pictures/unif_ls_rs_t.png, id=679, 430.0065pt x 258.7266pt>
 File: Pictures/unif_ls_rs_t.png Graphic file (type png)
 
 <use Pictures/unif_ls_rs_t.png>
 Package pdftex.def Info: Pictures/unif_ls_rs_t.png used on input line 4.
 (pdftex.def)             Requested size: 187.86159pt x 113.03073pt.
-File: Pictures/unif_ls_rs_t.png Graphic file (type png)
- <use Pictures/unif_ls_rs_t.png>
-Package pdftex.def Info: Pictures/unif_ls_rs_t.png used on input line 11.
+
+<Pictures/clus_ls_rs_t.png, id=680, 430.0065pt x 258.7266pt>
+File: Pictures/clus_ls_rs_t.png Graphic file (type png)
+
+<use Pictures/clus_ls_rs_t.png>
+Package pdftex.def Info: Pictures/clus_ls_rs_t.png used on input line 11.
 (pdftex.def)             Requested size: 187.86159pt x 113.03073pt.
- [38 <./Pictures/unif_kd_ls_k.png>]) (./Figures/ls_rs_k.tex
-<Pictures/unif_ls_rs_k.png, id=711, 430.0065pt x 258.7266pt>
+ [38 <./Pictures/unif_kd_ls_k.png> <./Pictures/clus_kd_ls_k.png>]) (./Figures/l
+s_rs_k.tex
+<Pictures/unif_ls_rs_k.png, id=692, 430.0065pt x 258.7266pt>
 File: Pictures/unif_ls_rs_k.png Graphic file (type png)
 
 <use Pictures/unif_ls_rs_k.png>
 Package pdftex.def Info: Pictures/unif_ls_rs_k.png used on input line 4.
 (pdftex.def)             Requested size: 187.86159pt x 113.03073pt.
-File: Pictures/unif_ls_rs_k.png Graphic file (type png)
- <use Pictures/unif_ls_rs_k.png>
-Package pdftex.def Info: Pictures/unif_ls_rs_k.png used on input line 11.
+
+<Pictures/clus_ls_rs_k.png, id=693, 430.0065pt x 258.7266pt>
+File: Pictures/clus_ls_rs_k.png Graphic file (type png)
+
+<use Pictures/clus_ls_rs_k.png>
+Package pdftex.def Info: Pictures/clus_ls_rs_k.png used on input line 11.
 (pdftex.def)             Requested size: 187.86159pt x 113.03073pt.
-)
-(./Figures/ls_rs_greece.tex
-<Pictures/ls_greece.png, id=713, 798.985pt x 580.1675pt>
+) (./Figures/ls_rs_greece.tex
+<Pictures/ls_greece.png, id=695, 798.985pt x 580.1675pt>
 File: Pictures/ls_greece.png Graphic file (type png)
 
 <use Pictures/ls_greece.png>
 Package pdftex.def Info: Pictures/ls_greece.png used on input line 4.
 (pdftex.def)             Requested size: 187.86159pt x 136.41019pt.
 
-<Pictures/rs_greece.png, id=714, 798.985pt x 580.1675pt>
+<Pictures/rs_greece.png, id=696, 798.985pt x 580.1675pt>
 File: Pictures/rs_greece.png Graphic file (type png)
 
 <use Pictures/rs_greece.png>
 Package pdftex.def Info: Pictures/rs_greece.png used on input line 11.
 (pdftex.def)             Requested size: 187.86159pt x 136.41019pt.
- [39 <./Pictures/unif_ls_rs_t.png> <./Pictures/unif_ls_rs_k.png>]) (./Figures/l
-s_bp_t.tex
-<Pictures/unif_ls_bp_t.png, id=725, 430.0065pt x 258.7266pt>
+ [39 <./Pictures/unif_ls_rs_t.png> <./Pictures/clus_ls_rs_t.png> <./Pictures/un
+if_ls_rs_k.png> <./Pictures/clus_ls_rs_k.png>])
+(./Figures/ls_bp_t.tex
+<Pictures/unif_ls_bp_t.png, id=709, 430.0065pt x 258.7266pt>
 File: Pictures/unif_ls_bp_t.png Graphic file (type png)
 
 <use Pictures/unif_ls_bp_t.png>
 Package pdftex.def Info: Pictures/unif_ls_bp_t.png used on input line 4.
 (pdftex.def)             Requested size: 187.86159pt x 113.03073pt.
-File: Pictures/unif_ls_bp_t.png Graphic file (type png)
- <use Pictures/unif_ls_bp_t.png>
-Package pdftex.def Info: Pictures/unif_ls_bp_t.png used on input line 11.
+
+<Pictures/clus_ls_bp_t.png, id=710, 430.0065pt x 258.7266pt>
+File: Pictures/clus_ls_bp_t.png Graphic file (type png)
+
+<use Pictures/clus_ls_bp_t.png>
+Package pdftex.def Info: Pictures/clus_ls_bp_t.png used on input line 11.
 (pdftex.def)             Requested size: 187.86159pt x 113.03073pt.
  [40 <./Pictures/ls_greece.png> <./Pictures/rs_greece.png>]) (./Figures/ls_bp_k
 .tex
-<Pictures/unif_ls_bp_k.png, id=735, 430.0065pt x 258.7266pt>
+<Pictures/unif_ls_bp_k.png, id=720, 430.0065pt x 258.7266pt>
 File: Pictures/unif_ls_bp_k.png Graphic file (type png)
 
 <use Pictures/unif_ls_bp_k.png>
 Package pdftex.def Info: Pictures/unif_ls_bp_k.png used on input line 4.
 (pdftex.def)             Requested size: 187.86159pt x 113.03073pt.
-File: Pictures/unif_ls_bp_k.png Graphic file (type png)
- <use Pictures/unif_ls_bp_k.png>
-Package pdftex.def Info: Pictures/unif_ls_bp_k.png used on input line 11.
+
+<Pictures/clus_ls_bp_k.png, id=721, 430.0065pt x 258.7266pt>
+File: Pictures/clus_ls_bp_k.png Graphic file (type png)
+
+<use Pictures/clus_ls_bp_k.png>
+Package pdftex.def Info: Pictures/clus_ls_bp_k.png used on input line 11.
 (pdftex.def)             Requested size: 187.86159pt x 113.03073pt.
-)
-(./Figures/bp_error.tex) [41 <./Pictures/unif_ls_bp_t.png> <./Pictures/unif_ls_
-bp_k.png>] (./Figures/bp_sweden.tex
+) (./Figures/bp_error.tex) [41 <./Pictures/unif_ls_bp_t.png> <./Pictures/clus_l
+s_bp_t.png> <./Pictures/unif_ls_bp_k.png> <./Pictures/clus_ls_bp_k.png>] (./Fig
+ures/bp_sweden.tex
 File: Pictures/sweden.png Graphic file (type png)
  <use Pictures/sweden.png>
 Package pdftex.def Info: Pictures/sweden.png used on input line 6.
 (pdftex.def)             Requested size: 108.9572pt x 120.17961pt.
 
-<Pictures/bp5_1_sweden.png, id=746, 798.985pt x 881.2925pt>
-File: Pictures/bp5_1_sweden.png Graphic file (type png)
-
-<use Pictures/bp5_1_sweden.png>
-Package pdftex.def Info: Pictures/bp5_1_sweden.png used on input line 13.
-(pdftex.def)             Requested size: 108.9572pt x 120.17961pt.
-
-<Pictures/bp10_1_sweden.png, id=747, 798.985pt x 881.2925pt>
+<Pictures/bp10_1_sweden.png, id=734, 798.985pt x 881.2925pt>
 File: Pictures/bp10_1_sweden.png Graphic file (type png)
 
 <use Pictures/bp10_1_sweden.png>
-Package pdftex.def Info: Pictures/bp10_1_sweden.png used on input line 20.
+Package pdftex.def Info: Pictures/bp10_1_sweden.png used on input line 13.
 (pdftex.def)             Requested size: 108.9572pt x 120.17961pt.
 
-<Pictures/ls_10_sweden.png, id=748, 798.985pt x 881.2925pt>
+<Pictures/bp5_1_sweden.png, id=735, 798.985pt x 881.2925pt>
+File: Pictures/bp5_1_sweden.png Graphic file (type png)
+
+<use Pictures/bp5_1_sweden.png>
+Package pdftex.def Info: Pictures/bp5_1_sweden.png used on input line 20.
+(pdftex.def)             Requested size: 108.9572pt x 120.17961pt.
+
+<Pictures/ls_10_sweden.png, id=736, 798.985pt x 881.2925pt>
 File: Pictures/ls_10_sweden.png Graphic file (type png)
 
 <use Pictures/ls_10_sweden.png>
 Package pdftex.def Info: Pictures/ls_10_sweden.png used on input line 30.
 (pdftex.def)             Requested size: 108.9572pt x 120.17961pt.
 
-<Pictures/bp5_2_sweden.png, id=749, 798.985pt x 881.2925pt>
-File: Pictures/bp5_2_sweden.png Graphic file (type png)
-
-<use Pictures/bp5_2_sweden.png>
-Package pdftex.def Info: Pictures/bp5_2_sweden.png used on input line 37.
-(pdftex.def)             Requested size: 108.9572pt x 120.17961pt.
-
-<Pictures/bp10_2_sweden.png, id=750, 798.985pt x 881.2925pt>
+<Pictures/bp10_2_sweden.png, id=737, 798.985pt x 881.2925pt>
 File: Pictures/bp10_2_sweden.png Graphic file (type png)
 
 <use Pictures/bp10_2_sweden.png>
-Package pdftex.def Info: Pictures/bp10_2_sweden.png used on input line 44.
+Package pdftex.def Info: Pictures/bp10_2_sweden.png used on input line 37.
 (pdftex.def)             Requested size: 108.9572pt x 120.17961pt.
- [42])) (./Chapters/annex.tex [43 <./Pictures/bp5_1_sweden.png> <./Pictures/bp1
-0_1_sweden.png> <./Pictures/ls_10_sweden.png> <./Pictures/bp5_2_sweden.png> <./
-Pictures/bp10_2_sweden.png>]
-Chapter 6.
+
+<Pictures/bp5_2_sweden.png, id=738, 798.985pt x 881.2925pt>
+File: Pictures/bp5_2_sweden.png Graphic file (type png)
+
+<use Pictures/bp5_2_sweden.png>
+Package pdftex.def Info: Pictures/bp5_2_sweden.png used on input line 44.
+(pdftex.def)             Requested size: 108.9572pt x 120.17961pt.
+)) (./Chapters/annex.tex [42 <./Pictures/bp10_1_sweden.png> <./Pictures/bp5_1_s
+weden.png> <./Pictures/ls_10_sweden.png> <./Pictures/bp10_2_sweden.png> <./Pict
+ures/bp5_2_sweden.png>] [43]
+Chapter 5.
 ------------------------------------------------------------------------------
- 6 Annexes
+ 5 Annexes
 ------------------------------------------------------------------------------
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
@@ -1579,29 +1596,29 @@ Package natbib Warning: Citation `medians' on page 44 undefined on input line 2
 Package natbib Warning: There were undefined citations.
 
 [47]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 337.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 337.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 338.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 338.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 337.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 337.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 338.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 338.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 51E2DCD30A69905D5DDA0675A8C858C1;6754.
+(rerunfilecheck)             Checksum: EFD00FA4F76696CD79312B612D1E9BF1;6785.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 337.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 338.
  )
 (\end occurred inside a group at level 2)
 
-### simple group (level 2) entered at line 186 ({)
-### simple group (level 1) entered at line 170 ({)
+### simple group (level 2) entered at line 187 ({)
+### simple group (level 1) entered at line 171 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 28298 strings out of 493109
- 518053 string characters out of 6140856
- 799533 words of memory out of 5000000
- 30931 multiletter control sequences out of 15000+600000
+ 28332 strings out of 493109
+ 518868 string characters out of 6140856
+ 795062 words of memory out of 5000000
+ 30961 multiletter control sequences out of 15000+600000
  24701 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,15n,69p,18260b,1121s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1623,10 +1640,10 @@ sfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
 re/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/
 fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/typ
 e1/urw/zapfding/uzdr.pfb>
-Output written on main.pdf (53 pages, 1338833 bytes).
+Output written on main.pdf (52 pages, 1629225 bytes).
 PDF statistics:
- 902 PDF objects out of 1000 (max. 8388607)
- 770 compressed objects within 8 object streams
- 183 named destinations out of 1000 (max. 500000)
- 421 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 890 PDF objects out of 1000 (max. 8388607)
+ 747 compressed objects within 8 object streams
+ 184 named destinations out of 1000 (max. 500000)
+ 435 words of extra memory for PDF output out of 10000 (max. 10000000)
 

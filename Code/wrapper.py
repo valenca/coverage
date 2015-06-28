@@ -97,7 +97,7 @@ class PyApp(gtk.Window):
 		w = max_x #self.allocation.width
 		h = max_y #self.allocation.height
 		
-		cr.set_source_rgb(0.85,0.85,0.85)
+		cr.set_source_rgb(0.95,0.95,0.95)
 		cr.rectangle(0,0,self.allocation.width,self.allocation.height)
 		cr.fill()
 		
@@ -108,29 +108,31 @@ class PyApp(gtk.Window):
 
 		cr.set_line_width(0.3)
 		cr.set_source_rgb(0,0,0)
-		
+		"""
 		for i in v:
 			cr.arc(i[0], i[1], 0.1, 0, 2*math.pi)
 			cr.stroke()
 			
-			
+		
 		cr.set_source_rgb(1,1,1)
 		cr.set_line_width(0.1)
 		
 		for i in b:
 			cr.arc(i[0], i[1], t, 0, 2*math.pi)
 			cr.stroke()
-			
+		"""	
 		cr.set_line_width(0.7)
 		for i,p in enumerate(b):
 			if i==0:
-				cr.set_source_rgb(0,1,0)
+				cr.set_source_rgb(0,0,0)
+				#cr.set_source_rgb(0,1,0)
 			elif i==len(b)-1:
-				cr.set_source_rgb(0.5,0,0)
+				cr.set_source_rgb(0,0,0)
+				#cr.set_source_rgb(0.5,0,0)
 			
 			else:
-				cr.set_source_rgb(1,0.75-((float(i)/K)*3/4),0)
-				#cr.set_source_rgb(0,0,0)
+				#cr.set_source_rgb(1,0.75-((float(i)/K)*3/4),0)
+				cr.set_source_rgb(0,0,0)
 			cr.arc(p[0], p[1], 0.6, 0, 2*math.pi)
 			cr.stroke()
 		

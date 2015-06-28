@@ -6,15 +6,16 @@ from itertools import product
 
 plt.style.use(plt.style.available[1])
 
-lista=["BP20","BP10"]
-files=["results_clus10"]#,"results_clus15","results_clus20"]
+lista=["LS","BP10","BP20"]
+#files=["results_clus10","results_clus15","results_clus20"]
+files=["results_unif10","results_unif15","results_unif20"]
 
-trans={"KD"    :{"10":"#00CDCD","15":"#388E8E","20":"#2F4F4F"},
-	   "LS"    :{"10":"#FF3030","15":"#CD0000","20":"#8D0000"},
-	   "RS5"   :{"10":"#49E20E","15":"#308014","20":"#3A6629"},
-	   "RS10"  :{"10":"#FFCC11","15":"#FFB90F","20":"#8B6508"},
-	   "BP10"  :{"10":"#CC00FF","15":"#9A32CD","20":"#4B0082"},
-	   "BP20"   :{"10":"#87421F","15":"#8A360F","20":"#691F01"},
+trans={"KD"		:{"10":"#00CDCD","15":"#388E8E","20":"#2F4F4F"},
+	   "LS"		:{"10":"#FF3030","15":"#CD0000","20":"#8D0000"},
+	   "RS5"	:{"10":"#49E20E","15":"#308014","20":"#3A6629"},
+	   "RS10"	:{"10":"#FFCC11","15":"#FFB90F","20":"#8B6508"},
+	   "BP10"	:{"10":"#CC00FF","15":"#9A32CD","20":"#4B0082"},
+	   "BP20"	:{"10":"#87421F","15":"#8A360F","20":"#691F01"},
 }
 
 labels=[]
@@ -35,7 +36,6 @@ for directory in product(lista,files):
 	labels.append(directory[0]+" d="+directory[1][-2:]+"%")
 	
 plt.yscale('log')
-#plt.axis([0, s+2, 10**-5, 10**4])
 plt.xticks(range(0,31000,10000))
 plt.xlabel('N')
 plt.ylabel('time(s)')

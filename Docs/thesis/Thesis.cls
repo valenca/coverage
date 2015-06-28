@@ -183,7 +183,7 @@
 
 \thesistitle{Visualisation and Analysis of Geographic Information: Algorithms and Data Structures} % Your thesis title - this is used in the title and abstract
 %-------------------------------------------------  
-\supervisor{Prof. Dr. Luís \textsc{Paquete}\\Eng. \textsc{Pedro Reino}} % You supervisor's name - this is used in the title page
+\supervisor{Prof. Dr. Luís \textsc{Paquete}\\Eng. Pedro \textsc{Reino}} % You supervisor's name - this is used in the title page
 %-------------------------------------------------   
 \examiner{} % Your examiner's name - this is not currently used anywhere in the template, cite it with \examname if you want it
 %-------------------------------------------------   

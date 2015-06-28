@@ -4,7 +4,7 @@
 This chapter gives an introduction to the base concepts used further in this report.
 The chapter starts by establishing the formal definition of the problem at hand. 
 Then it proceeds to detail the algorithmic and geometric concepts to be used in the different approaches described in the following chapters.
-\section{Definitions of Coverage}
+\section{Definition of Coverage}
 \label{sect:problem}
 Representativeness consists of finding a subset of points in a larger set. The subset chosen should be able to keep some specified properties of the original set, such as general distribution and shape. As such there can be many ways to define representativeness. For the purposes of this thesis, we will use the definition of \emph{coverage}.
 
@@ -13,9 +13,9 @@ Coverage measures the total volume occupied by the union of a set of shapes in s
 
 \change{
 Although the points in this thesis represent geographic locations, the metric that would measure their distance on the surface of the globe, the geodesic distance, will not be used. The triangular inequality property does not apply to geodesic distances as a sphere (or an approximation of thereof) is not an Euclidean space, and it would add an unnecessary layer of complexity to computing the coverage.
-Because of this, in this thesis, the coordinates of the points are the planar projection of the geographic coordinates to their location counterparts, as implemented by the WMS and WFS web mapping standards. Therefore, the Euclidean norm will be used as the spatial distance notion. }
+Because of this, in this thesis, the coordinates of the points are the planar projection of the geographic coordinates to their location counterparts, as implemented by the WFS web mapping communication standard. Therefore, the Euclidean norm will be used as the spatial distance notion. }
 
-\subsubsection*{Minimum Coverage Subset}
+\section{Minimum Coverage Subset}
 \change{
 One of coverage problems approached in this thesis is the minimum coverage subset problem. Given a set of points $N$ in $\mathbb{R}^2$, we must choose a subset, $P$, that best matches our definition of representativeness.
 The size of $P$, however, is constrained to a size $k$, which specifies how many points can be displayed in a section of a map.}
@@ -49,10 +49,83 @@ This is known in the field of optimisation as the \emph{k-centre} problem, and i
 
 For the 1-dimensional case, the minimum coverage value can be calculated in polynomial time \cite{dvaz}. However, for any other number of dimensions it is a \emph{NP-hard} problem, and cannot be solved in polynomial time \cite{complex}.
 
-\subsubsection*{Geometric Disk Coverage}
+%\section{k-Centre}
+The \emph{k-centre} problem is a well known problem in the optimisation field of study. As such, several approaches have been explored over the years. In the following, two important approaches are described: an Integer Linear Programming approach and an Incremental Approach.
 
-\change{Another coverage problem considered in this thesis is the geometric disk coverage problem. Given a set of objects $O$ and a fixed distance $d$, find the set of disks of radius $d$ centred around a set of centroids $P$, such that all points in $O$ are covered. The cardinality of $P$ must be as small as possible. In the most general variation of this problem, and in the problem at hand, $O$ is the original set of 2-dimensional points $N$ as described above. Added to this, there is the restriction that $C$ must be contained in $N$. This is also a variation of a facility location problem.}
+\subsection{Integer Linear Programming Formulation}
+\label{alg:ilp}
 
+A simple and straight-forward approach to the problem is to model it in  integer linear programming as follows:
+\begin{align}
+\text{minimise}   \quad& D				   &\\
+\text{subject to} \quad
+& \sum\limits_{j=1}^{N}{y_j} = k 
+& 							\label{ilp:1}\\
+& \sum\limits_{j=1}^{N}{x_{ij}}	= 1   
+& i=1,\ldots,N 				\label{ilp:2}\\
+& \sum\limits_{j=1}^{N}{d_{ij} x_{ij}} \leq D
+& i=1,\ldots,N				\label{ilp:3}\\
+& x_{ij} \leq y_{j}				   
+& i=1,\ldots,N;j=1,\ldots,N	\label{ilp:4}\\
+& x_{ij},y_{j} \in \{0,1\}
+& i=1,\ldots,N;j=1,\ldots,N \label{ilp:5}
+\end{align}
+In this formulation, $y_j = 1$ if point $j$ is a centroid and $y_j = 0$ if it is a non-centroid;
+$x_{ij} = 1$ if the point $i$ is assigned to the centroid $j$, and $x_{ij}=0$ otherwise;
+$d_{ij}$ is the Euclidean distance between points $i$ and $j$.
+Constraint \eqref{ilp:1} ensures that $k$ centroids are chosen.
+Constraint \eqref{ilp:2} limits the assignment of one point to more than one centroid.
+Constraint \eqref{ilp:3} ensures that all active distances are lower than the limit we are minimising.
+Constraint \eqref{ilp:4} limits points to being assigned only to centroids, where $y_j=1$.
+Constraint \eqref{ilp:5} defines both $x_{ij}$ and $y_j$ as binary variables, in order to properly represent selection and assignment.
+
+It is worth noting that this formulation minimises the objective function by selecting the best possible set of centroids, but it only minimises the maximum coverage. This way, only the farthest point from its centroid has the guarantee that it is connected to its closest centroid.
+Every other point, however, can be linked to any centroid so long as it is closer to it than the distance defined by the objective function, since $d_{ij}x_{ij}$ only has to be lower than $D$, but not include the lowest possible values.
+Likewise, it can also produce the result where one centroid is assigned to another centroid as opposed to itself, as long as they are close enough together and it does not affect the coverage of the whole set.
+These cases have no effect on the outcome of the final coverage value or the centroid selection, but are rather counter-productive, since we want to minimize the coverage of all centroids, with minimal overlapping of the covered areas.
+
+In order to best display the results, a simple post-processing step can be applied, where each point will be strictly assigned to the closest centroid. This can be easily computed in $\mathcal{O}((N-k)k)$ time in case there is a need for a clearer display of the assignment.
+
+Other more elaborate formulations can be used. \citet{linearprog} explore a new formulation to obtain tighter bounds in the LP relaxation. They also limit the values that the solution can take by enumerating all different values of distances between points and sorting them in decreasing order.
+
+\subsection{Local Search Approach \incomp{\#\# Mudar para o capitulo do B\&B??}}
+\citet{incrementalcov} solve the \emph{k-centre} problem heuristically using local search. Their method describes algorithms to incrementally insert and remove centroids from a set of points, and update the centroid assignment only in the geometrical area surrounding the changed centroid. This method allows for small modifications on an already valid solution, until a similar solution is deemed optimal is found. It can be used as a fast way to calculate neighbour solutions to be used in heuristic approaches to the \emph{k-centre} problem.
+
+In order to minimise computation time, \citet{incrementalcov} maintain the selected centroids in a \emph{k-d tree}. Using a \emph{k-d tree} reduces the number of comparisons needed for the step of point location in the algorithm. To keep the \emph{k-d trees} from loosing efficiency in insertions and removal of points, the trees need to be balanced from time to time. Calculating the optimal time interval to balance the \emph{k-d tree} has to be done \emph{a priori} and can affect the performance of the algorithm.
+
+The structures and incremental procedures can be used with enumeration algorithms in order to obtain the global optimum solution.
+
+\section{Geometric Disk Coverage}
+\label{ilp2}
+\begin{changed}
+Another coverage problem considered in this thesis is the geometric disk coverage problem. Given a set of objects $O$ and a fixed distance $d$, find the set of disks of radius $d$ centred around a set of centroids $P$, such that all points in $O$ are covered. The cardinality of $P$ must be as small as possible. In the most general variation of this problem, and in the problem at hand, $O$ is the original set of 2-dimensional points $N$ as described above. Added to this, there is the restriction that $C$ must be contained in $N$. This is also a variation of a facility location problem, and shares some similarities with the minimum coverage subset. 
+
+\subsection{Integer Linear Programming}
+The geometric distance cover problem can be seen as a dual problem to the minimum cover subset. In fact, an Integer Linear Programming formulation can be obtained by swapping the objective function for one of the constraints:
+
+\begin{align}
+\text{minimise}   \quad& k							   &\\
+\text{subject to} \quad
+& \sum\limits_{j=1}^{N}{y_j} \leq k 
+& 							\label{ilp2:1}\\
+& \sum\limits_{j=1}^{N}{x_{ij}}	= 1   
+& i=1,\ldots,N 				\label{ilp2:2}\\
+& \sum\limits_{j=1}^{N}{d_{ij} x_{ij}} \leq D
+& i=1,\ldots,N				\label{ilp2:3}\\
+& x_{ij} \leq y_{j}				   
+& i=1,\ldots,N;j=1,\ldots,N	\label{ilp2:4}\\
+& x_{ij},y_{j} \in \{0,1\}
+& i=1,\ldots,N;j=1,\ldots,N \label{ilp2:5}
+\end{align}
+In this formulation, the value for the minimum distance $D$ is given as a parameter and $k$ is the value minimized. The value for $y_j = 1$ if point $j$ is a centroid and $y_j = 0$ if it is a non-centroid;
+$x_{ij} = 1$ if the point $i$ is assigned to the centroid $j$, and $x_{ij}=0$ otherwise;
+$d_{ij}$ is the Euclidean distance between points $i$ and $j$.
+Constraint \eqref{ilp2:1} ensures that $k$ or less centroids are chosen.
+Constraint \eqref{ilp2:2} limits the assignment of one point to more than one centroid.
+Constraint \eqref{ilp2:3} ensures that all active distances are lower than the limit we are minimising.
+Constraint \eqref{ilp2:4} limits points to being assigned only to centroids, where $y_j=1$.
+Constraint \eqref{ilp2:5} defines both $x_{ij}$ and $y_j$ as binary variables, in order to properly represent selection and assignment.
+\end{changed}
 \section{Algorithmic Concepts}
 \subsection{Branch-and-Bound}
 Minimising coverage, as shown, is a \emph{NP-hard} combinatorial problem \cite{complex}. One possible way of solving the problem is to use implicit enumeration algorithms such as \emph{Branch-and-Bound} algorithms.
@@ -245,14 +318,4 @@ True Hilbert curves map a 2-dimensional space in a 1-dimension line. This line h
 Since the coordinates of the points in our problem are continuous rather than discrete, the points must first be mapped into a square grid with tile size and number appropriate to the Hilbert approximation chosen.
 In order to sort an array of 2-dimensional points to follow a Hilbert approximation, each point should be assigned the 1-dimensional coordinate of the square tile that contains that point. The array is then sorted using the square coordinates along the Hilbert approximation as a key.
 This means that there are cases where more than one point will share the same discrete approximation coordinates, but this has little effect on the performance of the point location algorithms, as long as the grid is fine enough to separate most of the points. The space must be partitioned into a grid of $2^n$ squares in height and width and the grid must contain all points.
-
-\
-
-
-
-
-
-
-
-
 

@@ -83,7 +83,8 @@
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
 %\newcommand{\change}[1]{\textcolor{magenta}{#1}}
 \newcommand{\change}[1]{\textcolor{blue}{#1}}
-\newcommand{\incomp}[1]{\textcolor{blue}{#1}}
+\newcommand{\incomp}[1]{\textcolor{red}{#1}}
+\newenvironment{changed}{\color{blue}}{\ignorespacesafterend}
 \newcommand{\kdtree}{\textit{k}-d tree\xspace}
 \newcommand{\kdTree}{\textit{k}-d Tree\xspace}
 \newcommand{\kdtrees}{\textit{k}-d trees\xspace}
@@ -294,7 +295,7 @@ Nos últimos anos, os Sistemas de Informação Geográfica (GIS) têm assistido 
 
 \input{Chapters/introduction}
 \input{Chapters/theory} 
-\input{Chapters/sotart}
+%\input{Chapters/sotart}
 \input{Chapters/algorithms}
 \input{Chapters/heuristic} 
 %\input{Chapters/future} 
