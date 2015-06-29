@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.5.29)  28 JUN 2015 03:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.5.29)  28 JUN 2015 23:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1276,7 +1276,7 @@ Chapter 2.
 [13]
 
 Package natbib Warning: Citation `kdmedian' on page 14 undefined on input line 
-214.
+203.
 
 [14] (./Figures/kdrs.tex
 
@@ -1291,7 +1291,7 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 15.
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 26.
 ) [18] [19] (./Figures/halfedge.tex
-Underfull \hbox (badness 10000) in paragraph at lines 280--58
+Underfull \hbox (badness 10000) in paragraph at lines 268--58
 
  []
 
@@ -1369,15 +1369,15 @@ Chapter 4.
  4 Geometric Disk Cover
 ------------------------------------------------------------------------------
 
-Package natbib Warning: Citation `geodisk' on page 33 undefined on input line 9
+Package natbib Warning: Citation `geodisk' on page 33 undefined on input line 7
 .
 
 
-LaTeX Warning: Reference `diskcomplex' on page 33 undefined on input line 12.
+LaTeX Warning: Reference `diskcomplex' on page 33 undefined on input line 10.
 
 
 Package natbib Warning: Citation `proximity' on page 33 undefined on input line
- 15.
+ 13.
 
 [33
 
@@ -1386,7 +1386,7 @@ Missing character: There is no - in font nullfont!
 )
 
 Package natbib Warning: Citation `greedyapprox' on page 34 undefined on input l
-ine 22.
+ine 20.
 
 [34] (./Figures/apx2.tex) (./Figures/apx3.tex) [35] (./Figures/sweden_dist.tex
 <Pictures/sweden.png, id=647, 798.985pt x 881.2925pt>
@@ -1576,11 +1576,11 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 
 
 Package natbib Warning: Citation `selection' on page 44 undefined on input line
- 23.
+ 22.
 
 
 Package natbib Warning: Citation `medians' on page 44 undefined on input line 2
-3.
+2.
 
 [44
 
@@ -1617,11 +1617,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 338.
 Here is how much of TeX's memory you used:
  28332 strings out of 493109
  518868 string characters out of 6140856
- 795062 words of memory out of 5000000
+ 795063 words of memory out of 5000000
  30961 multiletter control sequences out of 15000+600000
  24701 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,15n,69p,18260b,1121s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,15n,69p,18260b,1124s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pf
 b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/f
@@ -1640,7 +1640,7 @@ sfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
 re/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/
 fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/typ
 e1/urw/zapfding/uzdr.pfb>
-Output written on main.pdf (52 pages, 1629225 bytes).
+Output written on main.pdf (52 pages, 1628939 bytes).
 PDF statistics:
  890 PDF objects out of 1000 (max. 8388607)
  747 compressed objects within 8 object streams
