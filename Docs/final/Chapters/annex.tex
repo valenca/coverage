@@ -1,0 +1,54 @@
+\appendix
+\chapter{Theorems and Proofs}
+\label{chap:append}
+\lhead{Chapter \ref{chap:append}. \emph{\nameref{chap:append}}} %
+
+%\section{Machine Specifications}
+%\label{ann:specs}
+%\begin{table}[H]
+%	\begin{center}
+%		\begin{tabular}{|c|c|}
+%			\hline
+%			Operating System  & Arch Linux 3.14.4 x64\\\hline
+%			CPU & Intel i7 Dual-Core, 2GHz\\\hline
+%			Memory & 8 GB, 1600 MHz \\\hline
+%			Storage &  Solid-State Drive, 300 MB/s (read)\\\hline
+%		\end{tabular}
+%		\caption{Machine specifications}
+%	\end{center}
+%\end{table}
+
+\section{Median of Medians}
+\label{median}
+Efficiently constructing a balance \kdtree depends on an efficient method to pick the point that divides the hyper-rectangle in two. One way to reasonably quickly find a value close to the median is to find the median of a sample. To ensure the quality of this sample, is to gather the medians of smaller subsets which can be quickly calculated. This algorithm is an example of a \emph{selection algorithm} \cite{selection} and is known as the \emph{median of medians} algorithm \cite{medians}.
+
+The median of medians algorithms works as follows. Any starting array $S$ consisting of $n$ arbitrary values is split into $n/5$ sub-arrays, each containing at most 5 elements (the last array might have less, depending on whether $n$ is divisible by 5 or not). For each of the sub-arrays, the median can be calculated in constant time, since for 5 values it can be done in at most 6 comparisons, which for the whole array $S$ takes $6n/5$ comparisons. After finding all the sub-arrays' medians and gathering them in a new array $F$, the algorithm then is called recursively for $F$ until only one value $M$ remains. $M$ is then used to partition the input into two sub-groups: elements smaller than $M$ and elements larger than $M$. The two subgroups are then concatenated in increasing order and with $M$ in between them, and the algorithm is recursively called again for the group that contains the $n/2$th point of the newly concatenated list. Whenever the list has less than a given number of elements, the median is calculated via brute-force, to avoid infinite recursion. This value will be the value returned by the initial recursive call of the function.
+
+As stated above, this algorithm only returns a value close to the real median. Despite this, it can proven that for any array $S$, the value $M$ will always be between the 30th and the 70th percentiles. At each recursive stage, the values in $F$ larger than $M$ are discarded. This means that out of the $n/5$ values for any given vector, $n/10$ will be larger by definition, since $M$ is picked as the median. For each value in $F$ larger than $M$, there will also be two other values that are larger than $M$, since each value in $F$ was chosen as a median out of 5 different values. This means that the number of values greater than $M$ will be at most $3n/10$. Similarly, by a symmetric proof, there will also be $3n/10$ values in $S$ smaller than $M$. This also means that the second recursive call will at worst have $7n/10$ elements, which is a constant fraction of the input. This property is essential in proving the linear complexity of the algorithm.
+
+Analyzing the time complexity $T()$ of this algorithm requires analyzing separatly both recursive calls of the algorithm. The first recursive call occurs in a list of size $n/5$, and takes $T(n/5)$ time. The second recursive call occurs in a list with $7n/10$ elements, which takes $T(7/n)$. Finding the median for a group of 5 elements requires a constant number of comparisons. These comparisons can be arranged in such way that only 6 are necessary for a group of 5 elements. This means that the algorithm has a constant factor of $6/5$ for calculating a median on its smallest division. $T(n)$ is then given by:
+
+\begin{align}
+T(n) \le 6n/5 + T(n/5) + T(7n/10)
+\end{align}
+
+If $T(n)$ has, in fact, linear time complexity, then there is a constant $c$ such that:
+\begin{align}
+\begin{aligned}
+T(n) & \le 6n/5 + cn/5 + 7cn/10\\
+     & \le n(12/5 + 9c/10)
+\end{aligned}
+\end{align}
+If $T(n)$ is to be at most $cn$, so that the induction proof is valid, then is must be true that:
+\begin{align}
+\begin{aligned}
+    n (6/5 + 9c/10) & \le cn \\
+        6/5 + 9c/10 & \le c \\
+                6/5 & \le c/10 \\
+                 12 & \le c \\
+\end{aligned}
+\end{align}
+
+This proves that $T(n) \le 12n$, or any larger constants than 12 multiplied by $n$ comparisons.
+
+%http://www.ics.uci.edu/~eppstein/161/960130.html  \cite{eppstein}

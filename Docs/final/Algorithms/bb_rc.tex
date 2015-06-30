@@ -1,0 +1,17 @@
+\begin{algorithm}[H]
+    \caption{Remove Centroid}
+    \begin{algorithmic}[1]
+        \Procedure {remove\_centroid X}{}
+            \For {$N$ \textbf{in} $\text{\text{Neighbours}}(X)$}
+                \For{$i$ \textbf{in} $\text{CoveredBy}(N)$}
+                   	\If {$dist(i,N) = min{dist(i,\text{Neighbours}(X))}$}
+	                   	\State $\text{CoveredBy}(N) \gets \text{CoveredBy}(N) \cap i$
+                        \State $\text{CoveredBy}(X) \gets \text{CoveredBy}(X) \setminus i$
+                        \State Update Objective Function
+                    \EndIf
+                \EndFor
+            \EndFor
+        \EndProcedure
+    \end{algorithmic}
+    \label{alg:bb_rc}
+\end{algorithm}

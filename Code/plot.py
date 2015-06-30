@@ -6,9 +6,10 @@ from itertools import product
 
 plt.style.use(plt.style.available[1])
 
-lista=["LS","BP10","BP20"]
+lista=["LS","BP20","BP10"]
 #files=["results_clus10","results_clus15","results_clus20"]
-files=["results_unif10","results_unif15","results_unif20"]
+#files=["results_unif10","results_unif15","results_unif20"]
+files=["results_unif20","results_clus20"]
 
 trans={"KD"		:{"10":"#00CDCD","15":"#388E8E","20":"#2F4F4F"},
 	   "LS"		:{"10":"#FF3030","15":"#CD0000","20":"#8D0000"},
@@ -63,7 +64,7 @@ for directory in product(lista,files):
 	labels.append(directory[0]+" d="+directory[1][-2:]+"%")
 	
 #plt.yscale('log')
-#plt.axis([15, 45, 10**1, 10**2])
+plt.axis([0, 30000, 0, 90])
 plt.ylabel('K')
 plt.xlabel('N')
 plt.xticks(range(0,31000,10000))

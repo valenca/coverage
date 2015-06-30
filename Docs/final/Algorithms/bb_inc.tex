@@ -1,0 +1,13 @@
+\begin{algorithm}[H]
+    \caption{Insert Non-Centroid}
+    \begin{algorithmic}[1]
+        \Procedure {insert\_non-centroid}{P}
+	        \For {C \textbf{in} centroids}
+		        \If {$dist(P,C) = min{dist(P,centroids)}$}
+			        \State $\text{CoveredBy}(C) \gets \text{CoveredBy}(C) \cap i$
+		        \EndIf
+		    \EndFor
+        \EndProcedure
+    \end{algorithmic}
+    \label{alg:bb_inc}
+\end{algorithm}

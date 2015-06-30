@@ -1,0 +1,72 @@
+\documentclass[11pt, twoside]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{array}
+\usepackage[colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{nameref}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm,array}
+\usepackage{tocloft}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{pifont}
+\usepackage{xspace}
+\usepackage{lipsum}
+\usepackage[square, numbers, comma, sort&compress]{natbib}
+\usetikzlibrary{shapes}
+\usetikzlibrary{positioning,arrows,decorations}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{decorations.pathreplacing} 
+
+\usepackage{style}
+
+
+\newcommand{\change}[1]{\textcolor{blue}{#1}}
+\newcommand{\incomp}[1]{\textcolor{red}{#1}}
+\newenvironment{changed}{\color{blue}}{\ignorespacesafterend}
+\newcommand{\kdtree}{\textit{k}-d tree\xspace}
+\newcommand{\kdTree}{\textit{k}-d Tree\xspace}
+\newcommand{\kdtrees}{\textit{k}-d trees\xspace}
+\newcommand{\kdTrees}{\textit{k}-d Trees\xspace}
+\newcommand{\bigo}{\mathcal{O}}
+\newcommand{\smark}{\ding{110}}%
+\newcommand{\cmark}{\ding{108}}%
+\newcommand{\tmark}{\ding{115}}%
+
+\begin{document}
+
+\include{front}
+\include{initial}
+\input{Chapters/introduction}
+\input{Chapters/theory} 
+%\input{Chapters/sotart}
+\input{Chapters/algorithms}
+\input{Chapters/heuristic} 
+%\input{Chapters/future} 
+%\input{Chapters/conclusion} 
+\input{Chapters/annex}
+
+\pagestyle{plain}
+\cleardoublepage
+\thispagestyle{plain}
+
+\label{References}
+
+\renewcommand\bibname{References}
+
+\lhead{\emph{References}} % Change the page header to say "Bibliography"
+
+\bibliographystyle{abbrvnat} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
+
+\bibliography{references} % The references (bibliography) information are stored in the file named "Bibliography.bib"
+
+\end{document}  

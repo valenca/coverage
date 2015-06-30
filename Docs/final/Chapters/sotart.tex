@@ -1,0 +1,63 @@
+\chapter{State of the Art}
+\label{chap:sota}
+\lhead{Chapter \ref{chap:sota}. \emph{\nameref{chap:sota}}}
+\section{Previous Work}
+\change{Chosing the detail resolution for a map is a necessary decision for all kinds of map displays, eletronic or otherwise.}
+\subsection{Preprocessed/Stored Data}
+\change{Some famous web applications and services already pick from large sets of points. Most of these rely on having different preprocessed layers of information, which contain similarly ranked points. For example, a map of a continent would only request the layer containing the capitals of the visible contries, whilst a map of a singular country would only request the layer containing the cities within the viewing window's coordinates. }
+
+\change{	
+This solution requires that a lot of preprocessed data be stored in a fairly large and robust database. It also skips the representation problem by having points with different importance ranks. If any query were to return too many points for the application to render, then it could choose to only display the higher ranked ones or, alternatively, repeat the same query to the layer above to reduce the stress. Since this problem requires that no storage space is used, other solutions must be found.}
+
+\subsection{Image Mapping}
+\change{Reducing visual information on a map can be done by projecting all points to a limited resolution image format. Mapping vectorial points into a bitmap format with no aliasing means that all points that are closer together than a pixel will likely be rounded off to the same spot, effectively merging the two points.}
+  	
+\change{
+Explicitly creating an image file may result in a larger file, which may cause problems in a bandwidth-dependant web application. The solution to this would be to round the coordinates of every point to a grid, and only relay the coordinates of the grid that would contain any points. This method, however, would mean a loss of precision increasing with the size of the grid. Furthermore, the points selected would be grid-aligned, and not necessarily correspond with any of the original, vectorial set. This would make for a visual pattern, which would be obvious for a human user.
+}
+
+\section{k-Centre}
+The \emph{k-centre} problem is a well known problem in the optimisation field of study. As such, several approaches have been explored over the years. In the following, two important approaches are described: an Integer Linear Programming approach and an Incremental Approach.
+
+\subsection{Integer Linear Programming Formulation}
+\label{alg:ilp}
+
+A simple and straight-forward approach to the problem is to model it in  integer linear programming as follows:
+\begin{align}
+\text{minimise}   \quad& D							   &\\
+\text{subject to} \quad
+& \sum\limits_{j=1}^{N}{y_j} = k 
+& 							\label{ilp:1}\\
+& \sum\limits_{j=1}^{N}{x_{ij}}	= 1   
+& i=1,\ldots,N 				\label{ilp:2}\\
+& \sum\limits_{j=1}^{N}{d_{ij} x_{ij}} \leq D
+& i=1,\ldots,N				\label{ilp:3}\\
+& x_{ij} \leq y_{j}				   
+& i=1,\ldots,N;j=1,\ldots,N	\label{ilp:4}\\
+& x_{ij},y_{j} \in \{0,1\}
+& i=1,\ldots,N;j=1,\ldots,N \label{ilp:5}
+\end{align}
+In this formulation, $y_j = 1$ if point $j$ is a centroid and $y_j = 0$ if it is a non-centroid;
+$x_{ij} = 1$ if the point $i$ is assigned to the centroid $j$, and $x_{ij}=0$ otherwise;
+$d_{ij}$ is the Euclidean distance between points $i$ and $j$.
+Constraint \eqref{ilp:1} ensures that $k$ centroids are chosen.
+Constraint \eqref{ilp:2} limits the assignment of one point to more than one centroid.
+Constraint \eqref{ilp:3} ensures that all active distances are lower than the limit we are minimising.
+Constraint \eqref{ilp:4} limits points to being assigned only to centroids, where $y_j=1$.
+Constraint \eqref{ilp:5} defines both $x_{ij}$ and $y_j$ as binary variables, in order to properly represent selection and assignment.
+
+It is worth noting that this formulation minimises the objective function by selecting the best possible set of centroids, but it only minimises the maximum coverage. This way, only the farthest point from its centroid has the guarantee that it is connected to its closest centroid.
+Every other point, however, can be linked to any centroid so long as it is closer to it than the distance defined by the objective function, since $d_{ij}x_{ij}$ only has to be lower than $D$, but not include the lowest possible values.
+Likewise, it can also produce the result where one centroid is assigned to another centroid as opposed to itself, as long as they are close enough together and it does not affect the coverage of the whole set.
+These cases have no effect on the outcome of the final coverage value or the centroid selection, but are rather counter-productive, since we want to minimize the coverage of all centroids, with minimal overlapping of the covered areas.
+
+In order to best display the results, a simple post-processing step can be applied, where each point will be strictly assigned to the closest centroid. This can be easily computed in $\mathcal{O}((N-k)k)$ time in case there is a need for a clearer display of the assignment.
+
+Other more elaborate formulations can be used. \citet{linearprog} explore a new formulation to obtain tighter bounds in the LP relaxation. They also limit the values that the solution can take by enumerating all different values of distances between points and sorting them in decreasing order.
+
+\subsection{Local Search Approach}
+\citet{incrementalcov} solve the \emph{k-centre} problem heuristically using local search. Their method describes algorithms to incrementally insert and remove centroids from a set of points, and update the centroid assignment only in the geometrical area surrounding the changed centroid. This method allows for small modifications on an already valid solution, until a similar solution is deemed optimal is found. It can be used as a fast way to calculate neighbour solutions to be used in heuristic approaches to the \emph{k-centre} problem.
+
+In order to minimise computation time, \citet{incrementalcov} maintain the selected centroids in a \emph{k-d tree}. Using a \emph{k-d tree} reduces the number of comparisons needed for the step of point location in the algorithm. To keep the \emph{k-d trees} from loosing efficiency in insertions and removal of points, the trees need to be balanced from time to time. Calculating the optimal time interval to balance the \emph{k-d tree} has to be done \emph{a priori} and can affect the performance of the algorithm.
+
+The structures and incremental procedures can be used with enumeration algorithms in order to obtain the global optimum solution.

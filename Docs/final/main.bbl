@@ -1,0 +1,93 @@
+\begin{thebibliography}{14}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Amenta et~al.(2003)Amenta, Choi, and Rote]{walking}
+N.~Amenta, S.~Choi, and G.~Rote.
+\newblock Incremental constructions con {BRIO}.
+\newblock In \emph{Proceedings of the Nineteenth Annual Symposium on
+  Computational Geometry}, pages 211--219. ACM Press, 2003.
+
+\bibitem[Bose and Morin(1999)]{greedyroute}
+P.~Bose and P.~Morin.
+\newblock Online routing in triangulations.
+\newblock In \emph{Algorithms and Computation}, pages 113--122. Springer, 1999.
+
+\bibitem[Bowyer(1981)]{bwalgo}
+A.~Bowyer.
+\newblock Computing dirichlet tessellations.
+\newblock \emph{The Computer Journal}, 24\penalty0 (2):\penalty0 162--166,
+  1981.
+
+\bibitem[Cambazard et~al.(2012)Cambazard, Mehta, O’Sullivan, and
+  Quesada]{incrementalcov}
+H.~Cambazard, D.~Mehta, B.~O’Sullivan, and L.~Quesada.
+\newblock A computational geometry-based local search algorithm for planar
+  location problems.
+\newblock In \emph{Integration of AI and OR Techniques in Contraint Programming
+  for Combinatorial Optimzation Problems}, pages 97--112. Springer, 2012.
+
+\bibitem[Daskin(2011)]{thisfref}
+M.~S. Daskin.
+\newblock \emph{Network and discrete location: models, algorithms, and
+  applications}.
+\newblock John Wiley \& Sons, 2011.
+
+\bibitem[De~Berg et~al.(2000)De~Berg, Van~Kreveld, Overmars, and
+  Schwarzkopf]{delbible}
+M.~De~Berg, M.~Van~Kreveld, M.~Overmars, and O.~C. Schwarzkopf.
+\newblock \emph{Computational Geometry}.
+\newblock Springer, 2000.
+
+\bibitem[Elloumi et~al.(2004)Elloumi, Labb{\'e}, and Pochet]{linearprog}
+S.~Elloumi, M.~Labb{\'e}, and Y.~Pochet.
+\newblock A new formulation and resolution method for the p-center problem.
+\newblock \emph{INFORMS Journal on Computing}, 16\penalty0 (1):\penalty0
+  84--94, 2004.
+
+\bibitem[Hu et~al.(2010)Hu, Ku, Bakiras, and Shahabi]{tricard1}
+L.~Hu, W.-S. Ku, S.~Bakiras, and C.~Shahabi.
+\newblock Verifying spatial queries using voronoi neighbors.
+\newblock In \emph{Proceedings of the 18th SIGSPATIAL International Conference
+  on Advances in Geographic Information Systems}, pages 350--359. ACM Press,
+  2010.
+
+\bibitem[Lee and Wong(1977)]{kdrange}
+D.-T. Lee and C.~Wong.
+\newblock Worst-case analysis for region and partial region searches in
+  multidimensional binary search trees and balanced quad trees.
+\newblock \emph{Acta Informatica}, 9\penalty0 (1):\penalty0 23--29, 1977.
+
+\bibitem[Megiddo and Tamir(1983)]{complex}
+N.~Megiddo and A.~Tamir.
+\newblock New results on the complexity of p-centre problems.
+\newblock \emph{SIAM Journal on Computing}, 12\penalty0 (4):\penalty0 751--758,
+  1983.
+
+\bibitem[Okabe et~al.(2009)Okabe, Boots, Sugihara, and Chiu]{tricard2}
+A.~Okabe, B.~Boots, K.~Sugihara, and S.~N. Chiu.
+\newblock \emph{Spatial Tessellations: Concepts and Applications of Voronoi
+  Diagrams}, volume 501.
+\newblock John Wiley \& Sons, 2009.
+
+\bibitem[Sagan(1994)]{sfcurves}
+H.~Sagan.
+\newblock \emph{Space-Filling Curves}, volume~18.
+\newblock Springer-Verlag New York, 1994.
+
+\bibitem[Shewchuk(1999)]{tricomplex}
+J.~R. Shewchuk.
+\newblock \emph{Lecture Notes on Delaunay Mesh Generation}.
+\newblock Department of Electrical Engineering and Computer Science, University
+  of California at Berkeley, 1999.
+
+\bibitem[Vaz(2013)]{dvaz}
+D.~Vaz.
+\newblock Subset selection algorithms in multiobjective optimization.
+\newblock {MSc} in informatics engineering, University of Coimbra, Portugal,
+  2013.
+
+\end{thebibliography}

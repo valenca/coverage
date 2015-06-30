@@ -1,3 +1,4 @@
+\cleardoublepage  
 \chapter{Concepts, Definitions and Notation}
 \label{chap:theory}
 \lhead{Chapter \ref{chap:theory}. \emph{\nameref{chap:theory}}}
@@ -203,13 +204,11 @@ Constructing a \kdtree requires selecting a pivot, which divides the set into tw
 Even though the median of medians algorithm does not necessarily return the actual median, the query complexity in a \kdtree constructed using this still achieves the $\bigo(\log{n})$. This occurs because the median of medians always outputs a value between the $30$th and $70$th percentile. This guarantees that at each level of the \kdtree the group of points covered by each of the children nodes is substantially smaller than the parent node by a constant factor, and there will never be a redundant node that covers the same set of points the parent does. At each level of a given query, each decision discards at least 30\% of the points, maintaining the $\bigo(\log{n})$ time complexity \cite{kdmedian}.
 
 \subsection{Orthogonal Aligned Range Search}
-Some geometric algorithms require knowing which subset of points are contained in a given area. This operation is known as range search. A range search can be used to find all the neighbours of a given point that are within a fixed radius. This is most efficiently done by performing a orthogonally aligned range search on the square that encloses the range circle.
-
-Performing a orthogonally aligned range search query on a set of points can be done using a \kdtree structure or a line sweep.
+Some geometric algorithms require knowing which subset of points are contained in a given area. This operation is known as range search. A range search can be used to find all the neighbours of a given point that are within a fixed radius. This is most efficiently done by performing a orthogonally aligned range search on the square that encloses the range circle. Performing a orthogonally aligned range search query on a set of points can be done using a \kdtree structure or a line sweep.
 
 \subsubsection*{\kdTree Range Search}
 \label{sect:kdrs}
-Performing a range search on a \kdTree can be done recursively. Each level of the \kdtree alternates the dimension it divides the plane in. Starting at the root, only the sides (left and/or right) that intersect the queried rectangle are checked for points contained inside it. 
+Performing a range search on a \kdtree can be done recursively. Each level of the \kdtree alternates the dimension it divides the plane in. Starting at the root, only the sides (left and/or right) that intersect the queried rectangle are checked for points contained inside it. Figure \ref{fig:kdrs} illustrates a 2-dimensional \kdtree.
 
 \input{Figures/kdrs}
 

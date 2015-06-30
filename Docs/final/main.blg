@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2014/Arch Linux)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: front.aux
+A level-1 auxiliary file: initial.aux
+The style file: abbrvnat.bst
+Database file #1: references.bib
+Warning--I didn't find a database entry for "kdmedian"
+Warning--I didn't find a database entry for "fig:fixed_n"
+Warning--I didn't find a database entry for "geodisk"
+Warning--I didn't find a database entry for "proximity"
+Warning--I didn't find a database entry for "greedyapprox"
+Warning--I didn't find a database entry for "selection"
+Warning--I didn't find a database entry for "medians"
+You've used 14 entries,
+            2773 wiz_defined-function locations,
+            689 strings with 6817 characters,
+and the built_in function-call counts, 6464 in all, are:
+= -- 582
+> -- 329
+< -- 14
++ -- 113
+- -- 99
+* -- 483
+:= -- 978
+add.period$ -- 46
+call.type$ -- 14
+change.case$ -- 71
+chr.to.int$ -- 14
+cite$ -- 28
+duplicate$ -- 329
+empty$ -- 555
+format.name$ -- 119
+if$ -- 1383
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 18
+newline$ -- 78
+num.names$ -- 56
+pop$ -- 169
+preamble$ -- 1
+purify$ -- 61
+quote$ -- 0
+skip$ -- 244
+stack$ -- 0
+substring$ -- 239
+swap$ -- 51
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 129
+warning$ -- 0
+while$ -- 62
+width$ -- 0
+write$ -- 191
+(There were 7 warnings)

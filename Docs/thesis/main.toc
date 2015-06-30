@@ -1,7 +1,7 @@
 \vspace {1em}
-\contentsline {paragraph}{Keywords:}{i}{section*.1}
+\contentsline {paragraph}{Keywords:}{ii}{section*.1}
 \vspace {1em}
-\contentsline {paragraph}{Palavras-chave:}{i}{section*.2}
+\contentsline {paragraph}{Palavras-chave:}{ii}{section*.2}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.3}
 \contentsline {chapter}{\numberline {2}Concepts, Definitions and Notation}{5}{chapter.6}
 \contentsline {section}{\numberline {2.1}Definition of Coverage}{5}{section.7}
@@ -20,32 +20,32 @@
 \contentsline {subsection}{\numberline {2.5.4}Voronoi Diagrams}{16}{subsection.46}
 \contentsline {subsection}{\numberline {2.5.5}Delaunay Triangulations}{17}{subsection.48}
 \contentsline {subsection}{\numberline {2.5.6}Hilbert Curves}{22}{subsection.61}
-\contentsline {chapter}{\numberline {3}Optimal Minimum Coverage Algorithms}{24}{chapter.63}
-\contentsline {section}{\numberline {3.1}Na\IeC {\"\i }ve Branch-and-Bound}{24}{section.64}
-\contentsline {subsection}{\numberline {3.1.1}Branching}{24}{subsection.65}
-\contentsline {paragraph}{Inserting a Centroid}{25}{section*.66}
-\contentsline {paragraph}{Inserting a Non-Centroid}{25}{section*.67}
-\contentsline {paragraph}{}{25}{section*.68}
-\contentsline {paragraph}{Removing a Centroid}{25}{section*.69}
-\contentsline {paragraph}{Removing a Non-Centroid}{25}{section*.70}
-\contentsline {subsection}{\numberline {3.1.2}Bounds}{26}{subsection.71}
-\contentsline {paragraph}{Lower Bound}{26}{section*.72}
-\contentsline {section}{\numberline {3.2}Delaunay Assisted Branch-and-Bound}{26}{section.73}
-\contentsline {paragraph}{Inserting a Centroid}{26}{section*.74}
-\contentsline {paragraph}{Inserting a Non-Centroid}{27}{section*.75}
-\contentsline {paragraph}{Removing a Centroid}{27}{section*.76}
-\contentsline {paragraph}{Removing a Non-Centroid}{28}{section*.77}
-\contentsline {paragraph}{Bounds}{28}{section*.78}
-\contentsline {section}{\numberline {3.3}Algorithm Comparison}{28}{section.79}
-\contentsline {subsection}{\numberline {3.3.1}Time Complexity}{28}{subsection.80}
-\contentsline {subsection}{\numberline {3.3.2}Experimental Results}{29}{subsection.82}
-\contentsline {paragraph}{}{29}{section*.83}
-\contentsline {chapter}{\numberline {4}Geometric Disk Cover}{33}{chapter.90}
-\contentsline {section}{\numberline {4.1}Approximation Algorithm}{33}{section.91}
-\contentsline {subsection}{\numberline {4.1.1}Results}{36}{subsection.97}
-\contentsline {section}{\numberline {4.2}Heuristic Speed-ups}{38}{section.102}
-\contentsline {subsection}{\numberline {4.2.1}Sampling}{38}{subsection.103}
-\contentsline {subsection}{\numberline {4.2.2}Two-phase filtering}{40}{subsection.107}
-\contentsline {chapter}{\numberline {5}Annexes}{44}{chapter.112}
-\contentsline {subsection}{\numberline {5.0.3}Median of Medians}{44}{subsection.113}
+\contentsline {chapter}{\numberline {3}Optimal Minimum Coverage Algorithms}{25}{chapter.63}
+\contentsline {section}{\numberline {3.1}Na\IeC {\"\i }ve Branch-and-Bound}{25}{section.64}
+\contentsline {subsection}{\numberline {3.1.1}Branching}{25}{subsection.65}
+\contentsline {paragraph}{Inserting a Centroid}{26}{section*.66}
+\contentsline {paragraph}{Inserting a Non-Centroid}{26}{section*.67}
+\contentsline {paragraph}{}{26}{section*.68}
+\contentsline {paragraph}{Removing a Centroid}{26}{section*.69}
+\contentsline {paragraph}{Removing a Non-Centroid}{26}{section*.70}
+\contentsline {subsection}{\numberline {3.1.2}Bounds}{27}{subsection.71}
+\contentsline {paragraph}{Lower Bound}{27}{section*.72}
+\contentsline {section}{\numberline {3.2}Delaunay Assisted Branch-and-Bound}{27}{section.73}
+\contentsline {paragraph}{Inserting a Centroid}{27}{section*.74}
+\contentsline {paragraph}{Inserting a Non-Centroid}{28}{section*.75}
+\contentsline {paragraph}{Removing a Centroid}{28}{section*.76}
+\contentsline {paragraph}{Removing a Non-Centroid}{29}{section*.77}
+\contentsline {paragraph}{Bounds}{29}{section*.78}
+\contentsline {section}{\numberline {3.3}Algorithm Comparison}{29}{section.79}
+\contentsline {subsection}{\numberline {3.3.1}Time Complexity}{29}{subsection.80}
+\contentsline {subsection}{\numberline {3.3.2}Experimental Results}{30}{subsection.82}
+\contentsline {paragraph}{}{30}{section*.83}
+\contentsline {chapter}{\numberline {4}Geometric Disk Cover}{35}{chapter.90}
+\contentsline {section}{\numberline {4.1}Approximation Algorithm}{35}{section.91}
+\contentsline {subsection}{\numberline {4.1.1}Results}{38}{subsection.97}
+\contentsline {section}{\numberline {4.2}Heuristic Speed-ups}{40}{section.102}
+\contentsline {subsection}{\numberline {4.2.1}Sampling}{40}{subsection.103}
+\contentsline {subsection}{\numberline {4.2.2}Two-phase filtering}{42}{subsection.107}
+\contentsline {chapter}{\numberline {5}Annexes}{47}{chapter.112}
+\contentsline {subsection}{\numberline {5.0.3}Median of Medians}{47}{subsection.113}
 \vspace {2em}

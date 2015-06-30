@@ -1,0 +1,33 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Example of a Representative Set}}{2}{figure.caption.2}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Proposed Program Architecture\relax }}{2}{figure.caption.3}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Different assignments for the same set of points\relax }}{7}{figure.caption.4}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Example of a \textit {k}-d Tree\xspace \relax }}{13}{figure.caption.5}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Example of a range search query on a \textit {k}-d Tree\xspace }}{14}{figure.caption.6}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Illustration of the Line Sweep method.}}{15}{figure.caption.7}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Example of a Voronoi Diagram\relax }}{16}{figure.caption.8}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Example of a Delaunay Triangulation\relax }}{16}{figure.caption.9}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Overlap of a Voronoi Diagram and its Delaunay Triangulation\relax }}{17}{figure.caption.10}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Illustration of the Half-Edge Structure\relax }}{19}{figure.caption.11}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Example of the Greedy Routing Algorithm\relax }}{20}{figure.caption.12}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Illustration of the Walking Algorithm\relax }}{21}{figure.caption.13}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces First Five Orders of Hilbert Curve Approximation\relax }}{22}{figure.caption.14}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces CPU-time for different values of $K$ with varying values of $N$\relax }}{29}{figure.caption.17}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces CPU-time for different values of $N$ with varying values of $K$\relax }}{30}{figure.caption.18}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Illustration of the proximity graph}}{32}{figure.caption.19}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Illustration of the state of the proximity graph after the first iteration.}}{33}{figure.caption.20}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Illustration of the state of the final chosen set}}{34}{figure.caption.21}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Selected subsets from both graph building algorithms}}{34}{figure.caption.22}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces CPU-time for Line Sweep and $k$-d Tree range search.}}{35}{figure.caption.24}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Number $K$ of points selected for Line Sweep and $k$-d Tree range search}}{36}{figure.caption.25}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces CPU-time for both random sample algorithms}}{37}{figure.caption.26}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Number $K$ of points selected for both random sample algorithms on uniform and clustered points}}{37}{figure.caption.27}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Selected subset using the full set and a sampled subset}}{38}{figure.caption.28}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces CPU-time for both two-phase filter algorithms on uniform and clustered inputs}}{39}{figure.caption.29}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Number $K$ of points for both two-phase filter algorithms on uniform and clustered inputs}}{39}{figure.caption.30}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Illustration of the worst case scenario for the error of the two-phase algorithm}}{40}{figure.caption.31}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Two-phase Filter result comparison}}{40}{figure.caption.32}
+\addvspace {10\p@ }

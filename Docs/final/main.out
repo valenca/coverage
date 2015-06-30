@@ -1,0 +1,36 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Concepts, Definitions and Notation}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Definition of Coverage}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Minimum Coverage Subset}{chapter.2}% 4
+\BOOKMARK [2][-]{subsection.2.2.1}{Integer Linear Programming Formulation}{section.2.2}% 5
+\BOOKMARK [2][-]{subsection.2.2.2}{Local Search Approach}{section.2.2}% 6
+\BOOKMARK [1][-]{section.2.3}{Geometric Disk Coverage}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.3.1}{Integer Linear Programming}{section.2.3}% 8
+\BOOKMARK [1][-]{section.2.4}{Algorithmic Concepts}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.4.1}{Branch-and-Bound}{section.2.4}% 10
+\BOOKMARK [2][-]{subsection.2.4.2}{Approximation Algorithms}{section.2.4}% 11
+\BOOKMARK [1][-]{section.2.5}{Geometric Concepts and Geometric Structures}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.5.1}{Nearest Neighbour Search and Point Location}{section.2.5}% 13
+\BOOKMARK [2][-]{subsection.2.5.2}{k-Dimensional Trees}{section.2.5}% 14
+\BOOKMARK [2][-]{subsection.2.5.3}{Orthogonal Aligned Range Search}{section.2.5}% 15
+\BOOKMARK [2][-]{subsection.2.5.4}{Voronoi Diagrams}{section.2.5}% 16
+\BOOKMARK [2][-]{subsection.2.5.5}{Delaunay Triangulations}{section.2.5}% 17
+\BOOKMARK [2][-]{subsection.2.5.6}{Hilbert Curves}{section.2.5}% 18
+\BOOKMARK [0][-]{chapter.3}{Optimal Minimum Coverage Algorithms}{}% 19
+\BOOKMARK [1][-]{section.3.1}{Na\357ve Branch-and-Bound}{chapter.3}% 20
+\BOOKMARK [2][-]{subsection.3.1.1}{Branching}{section.3.1}% 21
+\BOOKMARK [2][-]{subsection.3.1.2}{Bounds}{section.3.1}% 22
+\BOOKMARK [1][-]{section.3.2}{Delaunay Assisted Branch-and-Bound}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.3}{Algorithm Comparison}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.3.1}{Time Complexity}{section.3.3}% 25
+\BOOKMARK [2][-]{subsection.3.3.2}{Experimental Results}{section.3.3}% 26
+\BOOKMARK [0][-]{chapter.4}{Geometric Disk Cover}{}% 27
+\BOOKMARK [1][-]{section.4.1}{Approximation Algorithm}{chapter.4}% 28
+\BOOKMARK [2][-]{subsection.4.1.1}{Proximity Graph Construction}{section.4.1}% 29
+\BOOKMARK [2][-]{subsection.4.1.2}{Set Cover}{section.4.1}% 30
+\BOOKMARK [2][-]{subsection.4.1.3}{Results}{section.4.1}% 31
+\BOOKMARK [1][-]{section.4.2}{Heuristic Speed-ups}{chapter.4}% 32
+\BOOKMARK [2][-]{subsection.4.2.1}{Sampling}{section.4.2}% 33
+\BOOKMARK [2][-]{subsection.4.2.2}{Two-phase filtering}{section.4.2}% 34
+\BOOKMARK [0][-]{appendix.A}{Theorems and Proofs}{}% 35
+\BOOKMARK [1][-]{section.A.1}{Median of Medians}{appendix.A}% 36

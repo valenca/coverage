@@ -1,0 +1,11 @@
+\begin{algorithm}[H]
+    \caption{Remove Non-Centroid}
+    \begin{algorithmic}[1]
+        \Procedure {remove\_non-centroid P}{}
+            \State Pick centroid C to which P is assigned to
+            \State $\text{CoveredBy}(C) \gets \text{CoveredBy}(C) \setminus P$
+            \State Update Objective Function
+        \EndProcedure
+    \end{algorithmic}
+    \label{alg:bb_rnc}
+\end{algorithm}
