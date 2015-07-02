@@ -203,7 +203,8 @@ int main(){
   coverage();
   
   T = clock() - T;
-  
+
+
 #ifndef DEBUG
   printf("%d\n",K);
   for(j=1;j<=K;j++)

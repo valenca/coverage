@@ -19,7 +19,7 @@
 %\end{table}
 
 \section{Median of Medians}
-\label{median}
+\label{ann:median}
 Efficiently constructing a balance \kdtree depends on an efficient method to pick the point that divides the hyper-rectangle in two. One way to reasonably quickly find a value close to the median is to find the median of a sample. To ensure the quality of this sample, is to gather the medians of smaller subsets which can be quickly calculated. This algorithm is an example of a \emph{selection algorithm} \cite{selection} and is known as the \emph{median of medians} algorithm \cite{medians}.
 
 The median of medians algorithms works as follows. Any starting array $S$ consisting of $n$ arbitrary values is split into $n/5$ sub-arrays, each containing at most 5 elements (the last array might have less, depending on whether $n$ is divisible by 5 or not). For each of the sub-arrays, the median can be calculated in constant time, since for 5 values it can be done in at most 6 comparisons, which for the whole array $S$ takes $6n/5$ comparisons. After finding all the sub-arrays' medians and gathering them in a new array $F$, the algorithm then is called recursively for $F$ until only one value $M$ remains. $M$ is then used to partition the input into two sub-groups: elements smaller than $M$ and elements larger than $M$. The two subgroups are then concatenated in increasing order and with $M$ in between them, and the algorithm is recursively called again for the group that contains the $n/2$th point of the newly concatenated list. Whenever the list has less than a given number of elements, the median is calculated via brute-force, to avoid infinite recursion. This value will be the value returned by the initial recursive call of the function.
@@ -52,3 +52,63 @@ If $T(n)$ is to be at most $cn$, so that the induction proof is valid, then is m
 This proves that $T(n) \le 12n$, or any larger constants than 12 multiplied by $n$ comparisons.
 
 %http://www.ics.uci.edu/~eppstein/161/960130.html  \cite{eppstein}
+
+
+\section{Set Cover Approximation Algorithm}
+\label{ann:setcover}
+
+
+\begin{theorem}
+	The greedy algorithm for the Set Cover can find a collection with at most $m \log_e n$ sets, where $m$ is the optimal number, and $n$ is the number of elements covered by all sets.
+	
+	\begin{proof}
+		Let the universe $U$ contain $n$ points, which can be covered by at least $m$ sets. The first set picked by the algorithm has size at least $n/m$. The number of elements of $U$ left to cover $n_1$ is
+		
+		\begin{equation}
+		n_1 \leq n - n/m = n(1-1/m)
+		\end{equation}
+		
+		The remaining sets must contain at least $n_1/(m-1)$ elements, otherwise the optimal solution would have to contain more than $m$ sets. By iteratively calling the same process, the number of sets at stage $i$ is given by
+		
+		\begin{align}
+		\begin{aligned}
+		n_{i+1} & \leq n_i(1-1/m) \\ 
+		n_{i+1} & \leq n(1-1/m)^{i+1}
+		\end{aligned}
+		\end{align}
+		If it takes $k$ stages for the greedy algorithm to cover $U$, then $n_k \leq n(1-1/m)^1$ needs to be less than 1.
+		\begin{align}
+		\begin{aligned}
+		n(1-1/m)^k & < 1 \\
+		n(1-1/m)^{m \frac{k}{m}} & < 1\\
+		(1-1/m)^{m \frac{k}{m}} & < 1/n\\
+		e^{-\frac{k}{m}} & < 1/n \ldots (1-x)^\frac{1}{x} \approx 1/e\\
+		k/m & > \log_e n \\
+		k & < m\log_e n
+		\end{aligned}
+		\end{align}
+		This means that the size of the collection of sets picked by the greedy algorithm is bound above by $m \log_e n$, which gives the greedy algorithm a $\bigo(\log_e n)$ approximation to the optimal solution.
+		
+	\end{proof}
+\end{theorem}
+
+\section{Circle Packing}
+\label{ann:packing}
+The circle packing problem's goal is to find the best disposition of non-intersecting circles inside a square, given the ratio of the circle diameter to the width of the square. Also, in our approach to the geometric disk cover, the radius of the disks is given as a fraction $d$ of the largest dimension of the rectangular region. This means that the case of a rectangular window is bound above by the solution of its containing square. The circle packing algorithm expects non-intersecting circles contained by a square. 
+
+Since each covering disk around a centroid can intersect other disks, but cannot contain any other centroids, then the circle packing will have to be calculated with circles with radius $r^\prime$ half the radius $r$ of the geometric disk cover disks.
+
+Furthermore, the circles in the circle packing usually have to be fully contained in the square. In our case, however, they can be partially outside, as long as the centre is inside. This means that the side of the square to the corresponding circle packing instance $w^\prime$ is equal to the side of the original region $w$ plus two times the circle packing radius $r^\prime$.
+
+This means that to find the ratio $r^\prime/w^\prime$ in relation to $d$, where $r^\prime=r/2$ and $w^\prime=w+2r^\prime$.
+
+\begin{align}
+	\frac{r^\prime}{w^\prime} = \frac{r/2}{w+2r^\prime} = \frac{r/2}{w+r} = \frac{r}{2(w+r)} = \frac{dw}{2(w+dw)}=\frac{d}{2+2d}
+\end{align}
+
+given by $r=\frac{d}{2+d}$. This means that the corresponding radius to the values of $d=\{0.1,0.15,0.2\}$ is given by $r\approx\{0.4545,0.6522,0.0833\}$, for which the best values found as of the writing of this thesis are $k=\{128,59,36\}$ \cite{pack1,pack2,pack3}. Figure \ref{fig:packing} shows the best distributions found so far.
+
+\input{Figures/packing}
+
+
+With the exception of the latter, these values are yet to be proven to be optimal. However, the optimal values are not expected to be very different, as the remaining area is very limited. The

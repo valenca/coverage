@@ -1,15 +1,42 @@
-\begin{thebibliography}{14}
+\begin{thebibliography}{23}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[wat({\natexlab{a}})]{waterloo_greece}
+{Greece TSP dataset, University of Waterloo, Ontario, Canada.}, {\natexlab{a}}.
+\newblock URL \url{http://www.math.uwaterloo.ca/tsp/world/grpoints.html}.
+
+\bibitem[wat({\natexlab{b}})]{waterloo_sweden}
+{Sweden TSP dataset, University of Waterloo, Ontario, Canada.}, {\natexlab{b}}.
+\newblock URL \url{http://www.math.uwaterloo.ca/tsp/world/swpoints.html}.
+
+\bibitem[Addis et~al.(2005)Addis, Locatelli, and Schoen]{pack2}
+B.~Addis, M.~Locatelli, and F.~Schoen.
+\newblock Packing circles in a square: New putative optima obtained via global
+  optimization.
+\newblock \emph{Optimization Online}, 154, 2005.
+
 \bibitem[Amenta et~al.(2003)Amenta, Choi, and Rote]{walking}
 N.~Amenta, S.~Choi, and G.~Rote.
 \newblock Incremental constructions con {BRIO}.
 \newblock In \emph{Proceedings of the Nineteenth Annual Symposium on
   Computational Geometry}, pages 211--219. ACM Press, 2003.
+
+\bibitem[Bentley(1975)]{kdtrees}
+J.~L. Bentley.
+\newblock Multidimensional binary search trees used for associative searching.
+\newblock \emph{Communications of the ACM}, 18\penalty0 (9):\penalty0 509--517,
+  1975.
+
+\bibitem[Blum et~al.(1973)Blum, Floyd, Pratt, Rivest, and
+  Tarjan]{mediancomplex}
+M.~Blum, R.~W. Floyd, V.~Pratt, R.~L. Rivest, and R.~E. Tarjan.
+\newblock Time bounds for selection.
+\newblock \emph{Journal of computer and system sciences}, 7\penalty0
+  (4):\penalty0 448--461, 1973.
 
 \bibitem[Bose and Morin(1999)]{greedyroute}
 P.~Bose and P.~Morin.
@@ -29,6 +56,12 @@ H.~Cambazard, D.~Mehta, B.~O’Sullivan, and L.~Quesada.
   location problems.
 \newblock In \emph{Integration of AI and OR Techniques in Contraint Programming
   for Combinatorial Optimzation Problems}, pages 97--112. Springer, 2012.
+
+\bibitem[Caprara et~al.(2000)Caprara, Toth, and Fischetti]{gdccomplex}
+A.~Caprara, P.~Toth, and M.~Fischetti.
+\newblock Algorithms for the set covering problem.
+\newblock \emph{Annals of Operations Research}, 98\penalty0 (1-4):\penalty0
+  353--371, 2000.
 
 \bibitem[Daskin(2011)]{thisfref}
 M.~S. Daskin.
@@ -73,6 +106,11 @@ A.~Okabe, B.~Boots, K.~Sugihara, and S.~N. Chiu.
   Diagrams}, volume 501.
 \newblock John Wiley \& Sons, 2009.
 
+\bibitem[Peikert(1994)]{pack3}
+R.~Peikert.
+\newblock Dichteste packungen von gleichen kreisen in einem quadrat.
+\newblock \emph{Elem. Math}, 49\penalty0 (1):\penalty0 16--26, 1994.
+
 \bibitem[Sagan(1994)]{sfcurves}
 H.~Sagan.
 \newblock \emph{Space-Filling Curves}, volume~18.
@@ -84,10 +122,23 @@ J.~R. Shewchuk.
 \newblock Department of Electrical Engineering and Computer Science, University
   of California at Berkeley, 1999.
 
+\bibitem[Szab{\'o} et~al.(2007)Szab{\'o}, Mark{\'o}t, Csendes, Specht, Casado,
+  and Garc{\'\i}a]{pack1}
+P.~G. Szab{\'o}, M.~C. Mark{\'o}t, T.~Csendes, E.~Specht, L.~G. Casado, and
+  I.~Garc{\'\i}a.
+\newblock \emph{New approaches to circle packing in a square: with program
+  codes}, volume~6.
+\newblock Springer Science \& Business Media, 2007.
+
 \bibitem[Vaz(2013)]{dvaz}
 D.~Vaz.
 \newblock Subset selection algorithms in multiobjective optimization.
 \newblock {MSc} in informatics engineering, University of Coimbra, Portugal,
   2013.
+
+\bibitem[Vazirani(2013)]{approxalgos}
+V.~V. Vazirani.
+\newblock \emph{Approximation algorithms}.
+\newblock Springer Science \& Business Media, 2013.
 
 \end{thebibliography}

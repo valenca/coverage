@@ -13,6 +13,7 @@
 \usepackage{amssymb}
 \usepackage{bm,array}
 \usepackage{tocloft}
+\usepackage{placeins}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{booktabs}
 \usepackage{tikz}
@@ -30,9 +31,9 @@
 \usepackage{style}
 
 
-\newcommand{\change}[1]{\textcolor{blue}{#1}}
-\newcommand{\incomp}[1]{\textcolor{red}{#1}}
-\newenvironment{changed}{\color{blue}}{\ignorespacesafterend}
+%\newcommand{\change}[1]{\textcolor{blue}{#1}}
+\newcommand{\question}[1]{\textcolor{red}{#1}}
+\newenvironment{change}{\color{blue}}{\ignorespacesafterend}
 \newcommand{\kdtree}{\textit{k}-d tree\xspace}
 \newcommand{\kdTree}{\textit{k}-d Tree\xspace}
 \newcommand{\kdtrees}{\textit{k}-d trees\xspace}
@@ -46,13 +47,11 @@
 
 \include{front}
 \include{initial}
+\onehalfspacing
 \input{Chapters/introduction}
 \input{Chapters/theory} 
-%\input{Chapters/sotart}
 \input{Chapters/algorithms}
-\input{Chapters/heuristic} 
-%\input{Chapters/future} 
-%\input{Chapters/conclusion} 
+\input{Chapters/heuristic}  
 \input{Chapters/annex}
 
 \pagestyle{plain}

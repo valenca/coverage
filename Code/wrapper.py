@@ -18,7 +18,7 @@ min_x=float('inf')
 min_y=float('inf')
 
 if argv[1]=='../inputs/greece.in':
-	max_x=41000
+	max_x=42000
 	max_y=30000
 	min_x=34000
 	min_y=19300
@@ -106,35 +106,43 @@ class PyApp(gtk.Window):
 		cr.translate(-max_x/2.0, max_y/2.0)
 		cr.rotate(-math.pi/2)
 
-		cr.set_line_width(0.3)
-		cr.set_source_rgb(0,0,0)
+
 		"""
-		for i in v:
-			cr.arc(i[0], i[1], 0.1, 0, 2*math.pi)
-			cr.stroke()
-			
-		
-		cr.set_source_rgb(1,1,1)
 		cr.set_line_width(0.1)
 		
 		for i in b:
 			cr.arc(i[0], i[1], t, 0, 2*math.pi)
 			cr.stroke()
-		"""	
+		"""
+		
+		cr.set_line_width(0.3)
+		cr.set_source_rgb(0,0,0)
+		xx=0
+		yy=0
+		for i in v:
+			i[0]+=xx
+			i[1]+=yy
+			cr.arc(i[0], i[1], 0.1, 0, 2*math.pi)
+			cr.stroke()
+		
+		cr.set_source_rgb(1,1,1)
 		cr.set_line_width(0.7)
+		
 		for i,p in enumerate(b):
+			p[0]+=xx
+			p[1]+=yy
 			if i==0:
-				cr.set_source_rgb(0,0,0)
+				cr.set_source_rgb(1,0,0)
 				#cr.set_source_rgb(0,1,0)
 			elif i==len(b)-1:
-				cr.set_source_rgb(0,0,0)
+				cr.set_source_rgb(1,0,0)
 				#cr.set_source_rgb(0.5,0,0)
 			
 			else:
 				#cr.set_source_rgb(1,0.75-((float(i)/K)*3/4),0)
-				cr.set_source_rgb(0,0,0)
+				cr.set_source_rgb(1,0,0)
 			cr.arc(p[0], p[1], 0.6, 0, 2*math.pi)
 			cr.stroke()
-		
+			
 PyApp()
 gtk.main()

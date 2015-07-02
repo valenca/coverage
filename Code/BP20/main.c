@@ -7,7 +7,7 @@
 #define max(a,b) ((a)>(b))?(a):(b)
 #define min(a,b) ((a)<(b))?(a):(b)
 #define DEBUGo 1
-#define SKIP 20
+#define SKIP 5
 
 typedef struct point point;
 typedef struct link link;

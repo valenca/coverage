@@ -1,25 +1,27 @@
 \cleardoublepage
-\chapter{Optimal Minimum Coverage Algorithms}
+\chapter{Exact Algorithms for the k-Centre Problem}
 \label{chap:algos}
 %\lhead{Chapter \ref{chap:algos}. \emph{\nameref{chap:algos}}} % This is for the header
 
-This chapter describes two possible algorithms that solve the coverage problem described in Section \ref{sect:problem}. Both algorithms use an incremental branch-and-bound approach for implicit enumeration of the centroid subsets. 
+\begin{change}
+This chapter describes two possible algorithms that solve the k-centre problem. The goal of this problem is to, given a set of points $N$, find the subset of centroids of cardinality $k$ that minimises the distance between the farthest point in $N$ and its closest centroid. 
 
-The first algorithm is a naïve implementation of a branch-and-bound algorithm and uses simple loops over arrays for point location queries. The second algorithm builds and uses Delaunay triangulations to achieve more efficient point location queries.
+Both algorithms use an incremental branch-and-bound approach for implicit enumeration of the centroid subsets. The first algorithm is a naïve implementation of a branch-and-bound algorithm and uses simple loops over arrays for point location queries. The second algorithm builds and uses Delaunay triangulations to achieve more efficient point location queries. At the end of this chapter, these algorithms, as well as an implementation of the Integer Linear Programming formulation described in Section \ref{alg:ilp}, are experimentally tested in a set of benchmark instances.
 
-%\section{Combinatorial Approach}
-%\paragraph{}
-%The simplest way to implement a solution to the coverage problem is to enumerate all combinations of $K$ elements from $N$. Each of these combinations is the list of candidate centroids, and every point in $N$ is assigned to its closest centroid. This assignement step takes $\mathcal{O(NK)}$ for each combination of $K$ elements.\\
-%Finding the minimum coverage value in this approach is trivial, since it is just a matter selecting the combination of centroids that has the minimum distance between the farthest point from its centroid. \\
-%This approach takes $\mathcal{O}(K!)$ time complexity, and takes no advantage from previously calculated candidate solutions.
+\end{change}
 \section{Naïve Branch-and-Bound}
 \label{alg:bb}
 
+\begin{change}
 A more sophisticated approach to the problem is to use a branch-and-bound method.
-In this approach, the assignment of non-centroids to their correct centroids is built incrementally.
-At each step of the recursive tree, one of the available points is considered. A decision is then taken of whether the point is a centroid or a non-centroid. According to which decision is taken, the objective function and the centroid assignment is updated accordingly. This is done until all the centroids have been chosen.
-\subsection{Branching}
+In our approach, the assignment of non-centroids to their correct centroids is built incrementally.
 
+\citet{incrementalcov} solve the \emph{k-centre} problem heuristically using local search. Their method describes algorithms to incrementally insert and remove centroids from a set of points, and update the centroid assignment only in the geometrical area surrounding the changed point. This method allows for small modifications on an already valid solution, and the techniques for updating the objective function upon insertion and removal of points can be used in an incremental branch-and-bound method to speed up the computation between branches, without having to calculate the full point assignment for every iteration of the algorithm, whilst still implicitly enumerating all possible combinations. 
+
+To solve the problem incrementally, at each step of the recursive tree, one of the available points is considered. A decision is then taken of whether the point is a centroid or a non-centroid. According to which decision is taken, the objective function and the centroid assignment is updated accordingly. This is done until all the centroids have been chosen and a solution is found at the end of the branch. The best solution in all the branches is the optimal value for the k-centre problem.
+\end{change}
+
+\subsection{Branching}
 As stated above, branching the tree involves updating the assignment between new points and/or new centroids, as well as updating the objective function. The following procedures explain in detail how to do so.
 \paragraph{Inserting a Centroid}
 To insert a centroid $c$, the established non-centroids which are closer to $c$ than their current centroid must be checked, and change their assignment to $c$.
@@ -118,21 +120,7 @@ In this section, we analyse empirically the time spent calculating the solutions
 \subsubsection*{Methodology and Set-up}
 The test cases are sets of uniformly distributed points generated with a fixed seed. Each test was repeated 10 times with different sets of points. The same sets and machine were used to test the three algorithms.
 
-Both branch-and-bound approaches were implemented using \emph{C++} and compiled using \emph{g++ 4.9.2}. The integer linear programming version had the data preprocessed using \emph{python 2.7.9} and was solved using the \emph{GLPK LP/MIP v4.55} solver. The machine that ran the tests had the specifications described in Table \ref{tab:specs}.
-
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{|c|c|}
-			\hline
-			Operating System  & Arch Linux 3.14.4 x64\\\hline
-			CPU & Intel i7 Dual-Core, 2GHz\\\hline
-			Memory & 8 GB, 1600 MHz \\\hline
-			Storage &  Solid-State Drive, 300 MB/s (read)\\\hline
-		\end{tabular}
-		\caption{Machine specifications}
-		\label{tab:specs}
-	\end{center}
-\end{table}
+Both branch-and-bound approaches were implemented using \emph{C++} and compiled using \emph{g++ 4.9.2}. The integer linear programming version had the data preprocessed using \emph{python 2.7.9} and was solved using the \emph{GLPK LP/MIP v4.55} solver. The programs were ran on a machine with a Intel i7 Dual-Core, 2GHz processor, with a 8 GB, 1600 MHz memory and Arch Linux 3.14.4 x64 as its operating system.
 
 \subsubsection*{Effect of $N$}
 
@@ -152,3 +140,6 @@ It is also worth noting that The Delaunay-assisted approach showed a lot more va
 
 The time required for each test limited the number of tests performed. Because of this, the results may not be statistically meaningful. 
 This could mean that the Delaunay-assisted approach is only preferable for values of $N$ and $K$ to which neither approach is usable in real-time. Due to the small number of tests for large values of $N$, this result may not be statistically meaningful, but it is noteworthy.
+
+\section{Discussion}
+The algorithms in this chapter have some drawbacks when used in a web application. Not only were the running times too large to be used in real-time, taking minutes and even hours for small instances with 40 points at most, but they also required some a priori knowledge about the number of clusters on a given window. This is infeasible, since there is no efficient way to infer how many clusters there are in a new region, without testing for all possible values of $K$. The algorithm should be able to calculate the final number of selected points, constrained to a minimum distance factor between them. This can be achieved by solving \emph{Geometric Disk Cover} problem described in Section \ref{ilp2}. The next chapter describes in detail a way to solve this problem in regards to the final application.

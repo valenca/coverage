@@ -6,9 +6,9 @@ from itertools import product
 
 plt.style.use(plt.style.available[1])
 
-lista=["LS","BP20","BP10"]
-#files=["results_clus10","results_clus15","results_clus20"]
-#files=["results_unif10","results_unif15","results_unif20"]
+lista=["LS","KD"]#,"RS5","RS10","BP5","BP10","BP20"]
+#files=["results_unif10","results_clus10"]
+#files=["results_unif15","results_clus15"]
 files=["results_unif20","results_clus20"]
 
 trans={"KD"		:{"10":"#00CDCD","15":"#388E8E","20":"#2F4F4F"},
@@ -19,8 +19,23 @@ trans={"KD"		:{"10":"#00CDCD","15":"#388E8E","20":"#2F4F4F"},
 	   "BP20"	:{"10":"#87421F","15":"#8A360F","20":"#691F01"},
 }
 
+trans={"KD"		: "#0000FF",
+	   "LS"		: "#FF0000",
+	   "RS5"	: "#00FF00",
+	   "RS10"	: "#CCCC00",
+	   "BP5"	: "#00FFFF",
+	   "BP10"	: "#FF00FF",
+	   "BP20"	: "#FF8800",
+}
+
 labels=[]
 for directory in product(lista,files):
+	if directory[1][-3]=='f':
+		l='--'
+		t='clus'
+	else:
+		l='-'
+		t='unif'
 	w=[]
 	x=[]
 	with open(directory[0]+"/res/"+directory[1]) as f:
@@ -32,9 +47,9 @@ for directory in product(lista,files):
 			w.append(v)
 	arr=np.array(w)
 	plt.plot(range(1000,31000,1000),
-					 np.mean(arr,axis=1),
-					 linewidth=2,color=trans[directory[0]][directory[1][-2:]])
-	labels.append(directory[0]+" d="+directory[1][-2:]+"%")
+					 np.mean(arr,axis=1),l,
+					 linewidth=2,color=trans[directory[0]])
+	labels.append(directory[0]+" "+t)
 	
 plt.yscale('log')
 plt.xticks(range(0,31000,10000))
@@ -48,6 +63,12 @@ plt.show()
 
 labels=[]
 for directory in product(lista,files):
+	if directory[1][-3]=='f':
+		l='--'
+		t='clus'
+	else:
+		l='-'
+		t='unif'
 	w=[]
 	x=[]
 	with open(directory[0]+"/res/"+directory[1]) as f:
@@ -59,9 +80,9 @@ for directory in product(lista,files):
 			w.append(v)
 	arr=np.array(w)
 	plt.plot(range(1000,31000,1000),
-			 np.mean(arr,axis=1),
-			 linewidth=1.5,color=trans[directory[0]][directory[1][-2:]])
-	labels.append(directory[0]+" d="+directory[1][-2:]+"%")
+			 np.mean(arr,axis=1),l,
+			 linewidth=1.5,color=trans[directory[0]])
+	labels.append(directory[0]+" "+t)
 	
 #plt.yscale('log')
 plt.axis([0, 30000, 0, 90])

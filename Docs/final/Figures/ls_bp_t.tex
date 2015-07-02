@@ -1,19 +1,6 @@
-\begin{figure}[H] 
-  \begin{subfigure}[b]{0.5\linewidth}
-    \centering
-    \includegraphics[width=0.9\linewidth]{Pictures/unif_ls_bp_t} 
-    %\caption{$N=10$} 
-    \label{fig:unif_ls_bp_t} 
-    \vspace{4ex}
-  \end{subfigure}%% 
-  \begin{subfigure}[b]{0.5\linewidth}
-    \centering
-    \includegraphics[width=0.9\linewidth]{Pictures/clus_ls_bp_t} 
-    %\caption{$N=20$} 
-    \label{fig:clus_ls_bp_t} 
-    \vspace{4ex}
-  \end{subfigure}
-  \caption[CPU-time for both two-phase filter algorithms on uniform and clustered inputs]{CPU-time for both two-phase filter algorithms on uniform inputs(left) and clustered inputs(right). The red lines represent the control group (line sweep), the purple lines represent the $10\%d$ first pass and the brown lines represent the $5\%d$ first pass for the two-phase algorithm.}
-  \label{fig:ls_bp_t} 
+\begin{figure}[!h] 
+	\centering
+	\includegraphics[width=0.8\linewidth]{Pictures/ls_bp_t} 
+	\caption[CPU-time for Line Sweep and Two-phase filter algorithms.]{CPU-time for the line sweep algorithm, and three instances of the Two-phase filter, with $d^\prime=5\%$, $d^\prime=10\%$ and $d^\prime=20\%$ in relation to $d$.}
+	\label{fig:ls_bp_t} 
 \end{figure}
-
