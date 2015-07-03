@@ -1,7 +1,5 @@
 \begin{figure}[H]
 	\centering
-	\begin{minipage}{0.4\linewidth}
-		\centering
 		\begin{tikzpicture}[scale=1.4]
 			\fill[gray!15,draw=black] (-0.5,-0.4) rectangle (3.5,2.6);
 			
@@ -36,23 +34,15 @@
 			\fill (0.538,1.756)circle (1.5pt);
 			\fill (0.932,1.913)circle (1.5pt);
 			\fill (0.982,1.786)circle (1.5pt);
+			
+			\begin{scope}[shift={(5,0)}]
+			\fill[gray!15,draw=black] (-0.5,-0.4) rectangle (3.5,2.6);
+			
+			\fill (0.765,1.734)circle (1.5pt);
+			\fill (0.514,0.605)circle (1.5pt);
+			\fill (2.292,1.07)circle (1.5pt);
+			\end{scope}
 		\end{tikzpicture}
-		\caption*{\footnotesize Original Set}
-		\label{fig:badrep}
-	\end{minipage}
-	\hspace{1cm}
-	\begin{minipage}{0.4\linewidth}
-		\centering
-		\begin{tikzpicture}[scale=1.4]
-		\fill[gray!15,draw=black] (-0.5,-0.4) rectangle (3.5,2.6);
-		
-		\fill (0.765,1.734)circle (1.5pt);
-		\fill (0.514,0.605)circle (1.5pt);
-		\fill (2.292,1.07)circle (1.5pt);
-		\end{tikzpicture}		
-		\caption*{\footnotesize Representative Subset}
-		\label{fig:goodrep}
-	\end{minipage}
-	\caption[Example of a Representative Set]{Example of a Representative Set}
+	\caption[Example of a Representative Set]{Example of a Representative Set \question{Eu sei que falta mudar esta $:)$}}
 	\label{fig:rep}
 \end{figure}

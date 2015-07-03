@@ -9,56 +9,49 @@ Warning--entry type for "waterloo_greece" isn't style-file defined
 --line 1 of file references.bib
 Warning--entry type for "waterloo_sweden" isn't style-file defined
 --line 7 of file references.bib
-Warning--I didn't find a database entry for "kcentre"
-Warning--I didn't find a database entry for "gdc"
-Warning--I didn't find a database entry for "fig:fixed_n"
-Warning--I didn't find a database entry for "proximity"
-Warning--I didn't find a database entry for "greedyapprox"
-Warning--I didn't find a database entry for "selection"
-Warning--I didn't find a database entry for "medians"
 Warning--to sort, need author or key in waterloo_sweden
 Warning--to sort, need author or key in waterloo_greece
 Warning--empty year in waterloo_greece
 Warning--empty year in waterloo_sweden
-You've used 23 entries,
+You've used 27 entries,
             2773 wiz_defined-function locations,
-            739 strings with 8118 characters,
-and the built_in function-call counts, 10109 in all, are:
-= -- 899
-> -- 524
-< -- 18
-+ -- 183
-- -- 159
-* -- 790
-:= -- 1516
-add.period$ -- 71
-call.type$ -- 23
-change.case$ -- 116
-chr.to.int$ -- 22
-cite$ -- 52
-duplicate$ -- 502
-empty$ -- 881
-format.name$ -- 186
-if$ -- 2147
-int.to.chr$ -- 2
+            752 strings with 8452 characters,
+and the built_in function-call counts, 12028 in all, are:
+= -- 1077
+> -- 633
+< -- 21
++ -- 221
+- -- 192
+* -- 950
+:= -- 1811
+add.period$ -- 83
+call.type$ -- 27
+change.case$ -- 140
+chr.to.int$ -- 25
+cite$ -- 60
+duplicate$ -- 586
+empty$ -- 1030
+format.name$ -- 225
+if$ -- 2547
+int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 27
-newline$ -- 121
-num.names$ -- 84
-pop$ -- 275
+missing$ -- 30
+newline$ -- 141
+num.names$ -- 100
+pop$ -- 315
 preamble$ -- 1
-purify$ -- 99
+purify$ -- 118
 quote$ -- 0
-skip$ -- 373
+skip$ -- 438
 stack$ -- 0
-substring$ -- 353
-swap$ -- 63
-text.length$ -- 7
+substring$ -- 441
+swap$ -- 75
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 218
+type$ -- 262
 warning$ -- 4
-while$ -- 91
+while$ -- 110
 width$ -- 0
-write$ -- 301
-(There were 13 warnings)
+write$ -- 353
+(There were 6 warnings)

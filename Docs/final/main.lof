@@ -6,13 +6,13 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Example of a \textit {k}-d Tree\xspace \relax }}{12}{figure.caption.6}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Example of a range search query on a \textit {k}-d Tree\xspace }}{13}{figure.caption.7}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Illustration of the Line Sweep method.}}{14}{figure.caption.8}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Example of a Voronoi Diagram\relax }}{15}{figure.caption.9}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Example of a Delaunay Triangulation\relax }}{16}{figure.caption.10}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Overlap of a Voronoi Diagram and its Delaunay Triangulation\relax }}{16}{figure.caption.11}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Illustration of the Half-Edge Structure\relax }}{18}{figure.caption.12}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Example of the Greedy Routing Algorithm\relax }}{19}{figure.caption.13}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Illustration of the Walking Algorithm\relax }}{20}{figure.caption.14}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces First Five Orders of Hilbert Curve Approximation\relax }}{20}{figure.caption.15}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Example of a Voronoi Diagram\relax }}{14}{figure.caption.9}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Example of a Delaunay Triangulation\relax }}{15}{figure.caption.10}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Overlap of a Voronoi Diagram and its Delaunay Triangulation\relax }}{15}{figure.caption.11}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Illustration of the Half-Edge Structure\relax }}{17}{figure.caption.12}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Example of the Greedy Routing Algorithm\relax }}{18}{figure.caption.13}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Illustration of the Walking Algorithm\relax }}{19}{figure.caption.14}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces First Five Orders of Hilbert Curve Approximation\relax }}{19}{figure.caption.15}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces CPU-time for different values of $K$ with varying values of $N$\relax }}{27}{figure.caption.17}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces CPU-time for different values of $N$ with varying values of $K$\relax }}{28}{figure.caption.18}
@@ -24,11 +24,14 @@
 \contentsline {figure}{\numberline {4.5}{\ignorespaces CPU-time for Line Sweep and $k$-d Tree range search.}}{35}{figure.caption.23}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Number $k$ of points selected for Line Sweep and $k$-d Tree range search.}}{36}{figure.caption.24}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces CPU-time for Line Sweep and Random Sampling algorithms.}}{37}{figure.caption.25}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Number $k$ of points selected for Line Sweep and Random Sampling algorithms.}}{38}{figure.caption.26}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Number $k$ of points selected for Line Sweep and Random Sampling algorithms.}}{37}{figure.caption.26}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Selected subset using the full set and a sampled subset}}{38}{figure.caption.27}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces CPU-time for Line Sweep and Two-phase filter algorithms.}}{40}{figure.caption.28}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Number $k$ of points selected for Line Sweep and Two-phase filter algorithms.}}{40}{figure.caption.29}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Illustration of the worst case scenario for the error of the two-phase algorithm}}{41}{figure.caption.30}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Two-phase filter result comparison}}{41}{figure.caption.31}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces CPU-time for Line Sweep and Two-phase filter algorithms.}}{39}{figure.caption.28}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Number $k$ of points selected for Line Sweep and Two-phase filter algorithms.}}{39}{figure.caption.29}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Illustration of the worst case scenario for the error of the two-phase algorithm}}{40}{figure.caption.30}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Two-phase filter result comparison}}{40}{figure.caption.31}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Example of a panning motion}}{41}{figure.caption.32}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Example of a zooming motion}}{42}{figure.caption.33}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Most efficient distributions for circle packing for $d=0.1$, $d=0.15$,$d=0.2$.\relax }}{46}{figure.caption.32}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Most efficient distributions for circle packing for $d=0.1$, $d=0.15$,$d=0.2$.\relax }}{48}{figure.caption.34}

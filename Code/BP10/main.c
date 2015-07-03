@@ -37,7 +37,7 @@ link **heads;
 link *pool;
 int p;
 int C;
-
+int c;
 int *w;
 
 double max_x;

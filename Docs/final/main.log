@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.5.29)  2 JUL 2015 02:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.5.29)  3 JUL 2015 04:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1150,17 +1150,21 @@ File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.0 (rcs-revision 1.9)
 \pgf@circ@res@step=\dimen226
 \pgfstartlinewidth=\dimen227
 ))
-(/usr/share/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+backgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2013/07/18 v3.0.0 (rcs-revision 1.3)
+\pgf@layerbox@background=\box61
+\pgf@layerboxsaved@background=\box62
+) (/usr/share/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
-
 (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count157
 \float@exts=\toks49
-\float@box=\box61
+\float@box=\box63
 \@float@everytoks=\toks50
-\@floatcapt=\box62
+\@floatcapt=\box64
 )
 (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
@@ -1190,26 +1194,26 @@ Document Style - pseudocode environments for use with the `algorithmicx' style
 )) (./main.aux (./front.aux) (./initial.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
 
 (/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count166
 \scratchdimen=\dimen228
-\scratchbox=\box63
+\scratchbox=\box65
 \nofMPsegments=\count167
 \nofMParguments=\count168
 \everyMPshowfont=\toks52
@@ -1233,11 +1237,11 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box64
-Package hyperref Info: Link coloring ON on input line 46.
-LaTeX Info: Redefining \ref on input line 46.
-LaTeX Info: Redefining \pageref on input line 46.
-LaTeX Info: Redefining \nameref on input line 46.
+\AtBeginShipoutBox=\box66
+Package hyperref Info: Link coloring ON on input line 45.
+LaTeX Info: Redefining \ref on input line 45.
+LaTeX Info: Redefining \pageref on input line 45.
+LaTeX Info: Redefining \nameref on input line 45.
  (./main.out)
 (./main.out)
 \@outlinefile=\write4
@@ -1286,77 +1290,51 @@ Package caption Info: End \AtBeginDocument code.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.12} into 
 your preamble.
- on input line 46.
+ on input line 45.
 
 \openout2 = `front.aux'.
 
-(./front.tex
-Underfull \hbox (badness 10000) in paragraph at lines 52--54
+(./front.tex <Figures/fctuc.jpg, id=167, 165.7392pt x 72.7518pt>
+File: Figures/fctuc.jpg Graphic file (type jpg)
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--60
-
- []
-
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <12> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 65.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 64--66
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--72
-
- []
-
-<Figures/dei.png, id=160, 1093.08376pt x 235.88126pt>
-File: Figures/dei.png Graphic file (type png)
- <use Figures/dei.png>
-Package pdftex.def Info: Figures/dei.png used on input line 74.
-(pdftex.def)             Requested size: 273.27026pt x 58.97017pt.
-
-[1
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Figures/dei.png>]
-[2
-
-]
-LaTeX Font Info:    Try loading font information for U+msa on input line 97.
+<use Figures/fctuc.jpg>
+Package pdftex.def Info: Figures/fctuc.jpg used on input line 4.
+(pdftex.def)             Requested size: 165.73877pt x 72.7516pt.
+LaTeX Font Info:    Try loading font information for U+msa on input line 36.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 97.
+LaTeX Font Info:    Try loading font information for U+msb on input line 36.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [3] [4
+)
+<Figures/dei.png, id=173, 1093.08376pt x 235.88126pt>
+File: Figures/dei.png Graphic file (type png)
+ <use Figures/dei.png>
+Package pdftex.def Info: Figures/dei.png used on input line 63.
+(pdftex.def)             Requested size: 273.27026pt x 58.97017pt.
+)
+[1
 
-])
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Figures/fctuc.jpg> <./Fi
+gures/dei.png>]
 \openout2 = `initial.aux'.
 
- (./initial.tex
-(./abstract.tex
-Overfull \hbox (1.0498pt too wide) in paragraph at lines 10--11
-[]\OT1/cmr/m/n/12 Geographic Clus-ter-ing, Cov-er-age, Ge-o-met-ric Al-go-rithm
-s, k-Centre, Ge-o-met-ric Disk Cover,
- []
-
-) [1
+ (./initial.tex [2
 
 
-] [2
 
-] (./main.toc)
+] (./abstract.tex) [1] [2
+
+] (./main.toc
+[3])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [3] [4] (./main.lof)
+ [4] (./main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
@@ -1375,7 +1353,7 @@ Chapter 1.
 (./Figures/rep.tex
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
-(Font)              using `OT1/cmr/bx/n' instead on input line 40.
+(Font)              using `OT1/cmr/bx/n' instead on input line 46.
 
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1390,6 +1368,9 @@ l.20
 
 
 ] (./Figures/arch.tex)
+Underfull \vbox (badness 3312) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.0pt.
@@ -1400,29 +1381,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 
-      [2]
-
-Package natbib Warning: Citation `kcentre' on page 3 undefined on input line 34
-.
-
-
-Package natbib Warning: Citation `gdc' on page 3 undefined on input line 36.
-
-
+l.31 
+      [2]) (./Chapters/theory.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.37 
-      [3]) (./Chapters/theory.texpdfTeX warning (ext4): destination with the sa
-me identifier (name{page.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \cleardoublepage
-                     [4]
+ [3]
+[4]
 Chapter 2.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1435,7 +1399,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6]
-Underfull \vbox (badness 1838) has occurred while \output is active []
+Underfull \vbox (badness 1400) has occurred while \output is active []
 
  [7]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 79.
@@ -1443,7 +1407,7 @@ LaTeX Font Info:    Try loading font information for OMS+cmr on input line 79.
 (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 79.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 79.
@@ -1459,54 +1423,44 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
+(./Figures/kd1.tex
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
-(./Figures/kd1.tex) [12] (./Figures/kdrs.tex
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 8.
-
+[12] (./Figures/kdrs.tex
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 8.
 
-) [13] (./Figures/ls1.tex
+) (./Figures/ls1.tex
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <5> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 11.
 
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 15.
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 ) (./Figures/vd1.tex)
-Underfull \vbox (badness 1077) has occurred while \output is active []
+Underfull \vbox (badness 1629) has occurred while \output is active []
 
- [14]
-(./Figures/dt1.tex) (./Figures/dt_vd.tex)
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[15] (./Algorithms/bw.tex
+ [13]
+[14] (./Figures/dt1.tex) (./Figures/dt_vd.tex) [15] (./Algorithms/bw.tex
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 26.
-) [16] (./Figures/halfedge.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
+)
+Underfull \vbox (badness 3919) has occurred while \output is active []
 
- [17]
-(./Figures/gr1.tex)
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[18] (./Figures/wk1.tex)
+ [16]
+(./Figures/halfedge.tex) (./Figures/gr1.tex) [17] (./Figures/wk1.tex)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Underfull \vbox (badness 1661) has occurred while \output is active []
-
- [19]
-(./Figures/hilbert.tex)) (./Chapters/algorithms.tex [20]
+[18] (./Figures/hilbert.tex) [19]) (./Chapters/algorithms.tex [20]
 Chapter 3.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1515,11 +1469,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-[22] [23]
+[22] [23] [24]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24]
-[25] (./Figures/fixed_k.tex <Pictures/k1.png, id=539, 574.5465pt x 539.8569pt>
+ [25]
+(./Figures/fixed_k.tex <Pictures/k1.png, id=545, 574.5465pt x 539.8569pt>
 File: Pictures/k1.png Graphic file (type png)
 
 <use Pictures/k1.png>
@@ -1529,13 +1483,13 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5.
- <Pictures/k2.png, id=540, 574.5465pt x 539.8569pt>
+ <Pictures/k2.png, id=546, 574.5465pt x 539.8569pt>
 File: Pictures/k2.png Graphic file (type png)
 
 <use Pictures/k2.png>
 Package pdftex.def Info: Pictures/k2.png used on input line 10.
 (pdftex.def)             Requested size: 204.85846pt x 192.48665pt.
- <Pictures/k3.png, id=541, 574.5465pt x 539.8569pt>
+ <Pictures/k3.png, id=547, 574.5465pt x 539.8569pt>
 File: Pictures/k3.png Graphic file (type png)
 
 <use Pictures/k3.png>
@@ -1545,58 +1499,48 @@ Package pdftex.def Info: Pictures/k3.png used on input line 16.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [26]
-
-Package natbib Warning: Citation `fig:fixed_n' on page 27 undefined on input li
-ne 133.
-
-(./Figures/fixed_n.tex <Pictures/n10.png, id=547, 574.5465pt x 539.8569pt>
+) (./Figures/fixed_n.tex <Pictures/n10.png, id=550, 574.5465pt x 539.8569pt>
 File: Pictures/n10.png Graphic file (type png)
 
 <use Pictures/n10.png>
 Package pdftex.def Info: Pictures/n10.png used on input line 4.
 (pdftex.def)             Requested size: 204.85846pt x 192.48665pt.
- <Pictures/n20.png, id=548, 574.5465pt x 539.8569pt>
+ <Pictures/n20.png, id=551, 574.5465pt x 539.8569pt>
 File: Pictures/n20.png Graphic file (type png)
 
 <use Pictures/n20.png>
 Package pdftex.def Info: Pictures/n20.png used on input line 10.
 (pdftex.def)             Requested size: 204.85846pt x 192.48665pt.
- <Pictures/n30.png, id=549, 574.5465pt x 539.8569pt>
+ <Pictures/n30.png, id=552, 574.5465pt x 539.8569pt>
 File: Pictures/n30.png Graphic file (type png)
 
 <use Pictures/n30.png>
 Package pdftex.def Info: Pictures/n30.png used on input line 16.
 (pdftex.def)             Requested size: 204.85846pt x 192.48665pt.
- <Pictures/n40.png, id=550, 574.5465pt x 539.8569pt>
+ <Pictures/n40.png, id=553, 574.5465pt x 539.8569pt>
 File: Pictures/n40.png Graphic file (type png)
 
 <use Pictures/n40.png>
 Package pdftex.def Info: Pictures/n40.png used on input line 22.
 (pdftex.def)             Requested size: 204.85846pt x 192.48665pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2818) has occurred while \output is active []
 
  [27 <./Pictures/k1.png> <./Pictures/k2.png> <./Pictures/k3.png>]
-Underfull \vbox (badness 5802) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [28 <./Pictures/n10.png> <./Pictures/n20.png> <./Pictures/n30.png> <./Pictures
-/n40.png>])
-(./Chapters/heuristic.tex [29] [30
+/n40.png>]) (./Chapters/heuristic.tex [29] [30
 
 ]
 Chapter 4.
-
-LaTeX Warning: Reference `diskcomplex' on page 31 undefined on input line 9.
-
-
-Package natbib Warning: Citation `proximity' on page 31 undefined on input line
- 12.
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1605,134 +1549,114 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 (./Figures/apx1.tex
 Missing character: There is no - in font nullfont!
-)
-
-Package natbib Warning: Citation `greedyapprox' on page 32 undefined on input l
-ine 19.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [32]
-(./Figures/apx2.tex) (./Figures/apx3.tex) [33] (./Figures/sweden_dist.tex
-<Pictures/sweden.png, id=596, 798.985pt x 881.2925pt>
+) [32] (./Figures/apx2.tex) (./Figures/apx3.tex) [33]
+(./Figures/sweden_dist.tex
+<Pictures/sweden.png, id=605, 798.985pt x 881.2925pt>
 File: Pictures/sweden.png Graphic file (type png)
 
 <use Pictures/sweden.png>
 Package pdftex.def Info: Pictures/sweden.png used on input line 4.
 (pdftex.def)             Requested size: 98.33429pt x 108.45346pt.
 
-<Pictures/10_sweden.png, id=597, 798.985pt x 881.2925pt>
+<Pictures/10_sweden.png, id=606, 798.985pt x 881.2925pt>
 File: Pictures/10_sweden.png Graphic file (type png)
 
 <use Pictures/10_sweden.png>
 Package pdftex.def Info: Pictures/10_sweden.png used on input line 11.
 (pdftex.def)             Requested size: 98.33429pt x 108.45346pt.
 
-<Pictures/15_sweden.png, id=598, 798.985pt x 881.2925pt>
+<Pictures/15_sweden.png, id=607, 798.985pt x 881.2925pt>
 File: Pictures/15_sweden.png Graphic file (type png)
 
 <use Pictures/15_sweden.png>
 Package pdftex.def Info: Pictures/15_sweden.png used on input line 18.
 (pdftex.def)             Requested size: 98.33429pt x 108.45346pt.
 
-<Pictures/20_sweden.png, id=599, 798.985pt x 881.2925pt>
+<Pictures/20_sweden.png, id=608, 798.985pt x 881.2925pt>
 File: Pictures/20_sweden.png Graphic file (type png)
 
 <use Pictures/20_sweden.png>
 Package pdftex.def Info: Pictures/20_sweden.png used on input line 25.
 (pdftex.def)             Requested size: 98.33429pt x 108.45346pt.
-) (./Figures/kd_ls_t.tex
-<Pictures/ls_kd_t.png, id=604, 950.3505pt x 737.8767pt>
+) [34 <./Pictures/sweden.png> <./Pictures/10_sweden.png> <./Pictures/15_sweden.
+png> <./Pictures/20_sweden.png>]
+(./Figures/kd_ls_t.tex
+<Pictures/ls_kd_t.png, id=624, 1008.1665pt x 417.7206pt>
 File: Pictures/ls_kd_t.png Graphic file (type png)
 
 <use Pictures/ls_kd_t.png>
 Package pdftex.def Info: Pictures/ls_kd_t.png used on input line 3.
-(pdftex.def)             Requested size: 364.19667pt x 282.77171pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [34 <./Pictures/sweden.png> <./Pictures/10_sweden.png> <./Pictures/15_sweden.p
-ng> <./Pictures/20_sweden.png>] (./Figures/kd_ls_k.tex
-<Pictures/ls_kd_k.png, id=617, 950.3505pt x 737.8767pt>
+(pdftex.def)             Requested size: 455.24411pt x 188.62267pt.
+) (./Figures/kd_ls_k.tex
+<Pictures/ls_kd_k.png, id=627, 1008.1665pt x 417.7206pt>
 File: Pictures/ls_kd_k.png Graphic file (type png)
 
 <use Pictures/ls_kd_k.png>
 Package pdftex.def Info: Pictures/ls_kd_k.png used on input line 3.
-(pdftex.def)             Requested size: 364.19667pt x 282.77171pt.
+(pdftex.def)             Requested size: 455.24411pt x 188.62267pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 )
-Underfull \vbox (badness 4792) has occurred while \output is active []
+Underfull \vbox (badness 1014) has occurred while \output is active []
 
  [35 <./Pictures/ls_kd_t.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [36 <./Pictures/ls_kd_k.png>] (./Figures/ls_rs_t.tex
-<Pictures/ls_rs_t.png, id=632, 950.3505pt x 737.8767pt>
+<Pictures/ls_rs_t.png, id=643, 1008.1665pt x 417.7206pt>
 File: Pictures/ls_rs_t.png Graphic file (type png)
 
 <use Pictures/ls_rs_t.png>
 Package pdftex.def Info: Pictures/ls_rs_t.png used on input line 3.
-(pdftex.def)             Requested size: 364.19667pt x 282.77171pt.
+(pdftex.def)             Requested size: 455.24411pt x 188.62267pt.
 ) (./Figures/ls_rs_k.tex
-<Pictures/ls_rs_k.png, id=635, 950.3505pt x 737.8767pt>
+<Pictures/ls_rs_k.png, id=646, 1008.1665pt x 417.7206pt>
 File: Pictures/ls_rs_k.png Graphic file (type png)
 
 <use Pictures/ls_rs_k.png>
 Package pdftex.def Info: Pictures/ls_rs_k.png used on input line 3.
-(pdftex.def)             Requested size: 364.19667pt x 282.77171pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [37 <./Pictures/ls_rs_t.png>] (./Figures/ls_rs_greece.tex
-<Pictures/rs_greece.png, id=642, 798.985pt x 580.1675pt>
+(pdftex.def)             Requested size: 455.24411pt x 188.62267pt.
+) [37 <./Pictures/ls_rs_t.png> <./Pictures/ls_rs_k.png>] (./Figures/ls_rs_greec
+e.tex
+<Pictures/rs_greece.png, id=654, 798.985pt x 580.1675pt>
 File: Pictures/rs_greece.png Graphic file (type png)
 
 <use Pictures/rs_greece.png>
 Package pdftex.def Info: Pictures/rs_greece.png used on input line 5.
 (pdftex.def)             Requested size: 163.88426pt x 118.99707pt.
 
-<Pictures/ls_greece.png, id=643, 798.985pt x 580.1675pt>
+<Pictures/ls_greece.png, id=655, 798.985pt x 580.1675pt>
 File: Pictures/ls_greece.png Graphic file (type png)
 
 <use Pictures/ls_greece.png>
 Package pdftex.def Info: Pictures/ls_greece.png used on input line 11.
 (pdftex.def)             Requested size: 163.88426pt x 118.99707pt.
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [38 <./Pictures/ls_rs_k.png> <./Pictures/rs_greece.png> <./Pictures/ls_greece.
-png>]
-(./Figures/ls_bp_t.tex <Pictures/ls_bp_t.png, id=659, 950.3505pt x 737.8767pt>
+) (./Figures/ls_bp_t.tex
+<Pictures/ls_bp_t.png, id=662, 1008.1665pt x 417.7206pt>
 File: Pictures/ls_bp_t.png Graphic file (type png)
 
 <use Pictures/ls_bp_t.png>
 Package pdftex.def Info: Pictures/ls_bp_t.png used on input line 3.
-(pdftex.def)             Requested size: 364.19667pt x 282.77171pt.
+(pdftex.def)             Requested size: 455.24411pt x 188.62267pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ) (./Figures/ls_bp_k.tex
-<Pictures/ls_bp_k.png, id=660, 950.3505pt x 737.8767pt>
+<Pictures/ls_bp_k.png, id=664, 1008.1665pt x 417.7206pt>
 File: Pictures/ls_bp_k.png Graphic file (type png)
 
 <use Pictures/ls_bp_k.png>
 Package pdftex.def Info: Pictures/ls_bp_k.png used on input line 3.
-(pdftex.def)             Requested size: 364.19667pt x 282.77171pt.
+(pdftex.def)             Requested size: 455.24411pt x 188.62267pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./Figures/bp_error.tex
+) [38 <./Pictures/rs_greece.png> <./Pictures/ls_greece.png>]
+(./Figures/bp_error.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1742,118 +1666,116 @@ File: Pictures/sweden.png Graphic file (type png)
 Package pdftex.def Info: Pictures/sweden.png used on input line 6.
 (pdftex.def)             Requested size: 118.81514pt x 131.04514pt.
 
-<Pictures/bp10_1_sweden.png, id=663, 798.985pt x 881.2925pt>
+<Pictures/bp10_1_sweden.png, id=674, 798.985pt x 881.2925pt>
 File: Pictures/bp10_1_sweden.png Graphic file (type png)
 
 <use Pictures/bp10_1_sweden.png>
 Package pdftex.def Info: Pictures/bp10_1_sweden.png used on input line 13.
 (pdftex.def)             Requested size: 118.81514pt x 131.04514pt.
 
-<Pictures/bp5_1_sweden.png, id=664, 798.985pt x 881.2925pt>
+<Pictures/bp5_1_sweden.png, id=675, 798.985pt x 881.2925pt>
 File: Pictures/bp5_1_sweden.png Graphic file (type png)
 
 <use Pictures/bp5_1_sweden.png>
 Package pdftex.def Info: Pictures/bp5_1_sweden.png used on input line 20.
 (pdftex.def)             Requested size: 118.81514pt x 131.04514pt.
 
-<Pictures/ls_10_sweden.png, id=665, 798.985pt x 881.2925pt>
+<Pictures/ls_10_sweden.png, id=676, 798.985pt x 881.2925pt>
 File: Pictures/ls_10_sweden.png Graphic file (type png)
 
 <use Pictures/ls_10_sweden.png>
 Package pdftex.def Info: Pictures/ls_10_sweden.png used on input line 30.
 (pdftex.def)             Requested size: 118.81514pt x 131.04514pt.
 
-<Pictures/bp10_2_sweden.png, id=666, 798.985pt x 881.2925pt>
+<Pictures/bp10_2_sweden.png, id=677, 798.985pt x 881.2925pt>
 File: Pictures/bp10_2_sweden.png Graphic file (type png)
 
 <use Pictures/bp10_2_sweden.png>
 Package pdftex.def Info: Pictures/bp10_2_sweden.png used on input line 37.
 (pdftex.def)             Requested size: 118.81514pt x 131.04514pt.
 
-<Pictures/bp5_2_sweden.png, id=667, 798.985pt x 881.2925pt>
+<Pictures/bp5_2_sweden.png, id=678, 798.985pt x 881.2925pt>
 File: Pictures/bp5_2_sweden.png Graphic file (type png)
 
 <use Pictures/bp5_2_sweden.png>
 Package pdftex.def Info: Pictures/bp5_2_sweden.png used on input line 44.
 (pdftex.def)             Requested size: 118.81514pt x 131.04514pt.
+ [39 <./Pictures/ls_bp_t.png> <./Pictures/ls_bp_k.png>])
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [40 <./Pictures/bp10_1_sweden.png> <./Pictures/bp5_1_sweden.png> <./Pictures/l
+s_10_sweden.png> <./Pictures/bp10_2_sweden.png> <./Pictures/bp5_2_sweden.png>]
+(./Figures/panning.tex
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 211.
+) (./Figures/zooming.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [39]
-
-LaTeX Warning: Text page 40 contains only floats.
-
-
-Underfull \vbox (badness 2057) has occurred while \output is active []
-
- [40 <./Pictures/ls_bp_t.png> <./Pictures/ls_bp_k.png>]
-Underfull \vbox (badness 1983) has occurred while \output is active []
-
- [41 <./Pictures/bp10_1_sweden.png> <./Pictures/bp5_1_sweden.png> <./Pictures/l
-s_10_sweden.png> <./Pictures/bp10_2_sweden.png> <./Pictures/bp5_2_sweden.png>])
-
-(./Chapters/annex.tex [42]
-Appendix A.
-
-Package natbib Warning: Citation `selection' on page 43 undefined on input line
- 23.
-
-
-Package natbib Warning: Citation `medians' on page 43 undefined on input line 2
-3.
-
+ [41])
+(./Chapters/conclusion.tex [42]
+Chapter 5.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [43
 
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [44]
-[45] (./Figures/packing.tex
-Missing character: There is no [ in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no [ in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no [ in font nullfont!
-Missing character: There is no ] in font nullfont!
-)) [46] (./main.bbl [47
-
 
 ])
+(./Chapters/annex.tex [44]
+Appendix A.
 
-Package natbib Warning: There were undefined citations.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[48]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
- (./main.aux (./front.aux) (./initial.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D349350405CFFB79520E34BA037E5E72;2650.
+ [45
 
+]
+[46]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47]
+(./Figures/packing.tex
+Missing character: There is no [ in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no ] in font nullfont!
+)) [48] (./main.bbl [49
+
+
+]) [50]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 72.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 72.
+ (./main.aux (./front.aux)
+(./initial.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 72.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 72.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 136C46137A147749A50B9DFC5466F1B5;2754
+(rerunfilecheck)             After:  78DA2413792929CBC34FE002D620758E;2812.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 71.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 72.
  ) 
 Here is how much of TeX's memory you used:
- 37037 strings out of 493109
- 876816 string characters out of 6140856
- 1321927 words of memory out of 5000000
- 39517 multiletter control sequences out of 15000+600000
- 27605 words of font info for 99 fonts, out of 8000000 for 9000
+ 37547 strings out of 493109
+ 888979 string characters out of 6140856
+ 1345616 words of memory out of 5000000
+ 40007 multiletter control sequences out of 15000+600000
+ 25438 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,15n,79p,18260b,1002s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,15n,79p,18260b,996s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/pub
@@ -1866,21 +1788,17 @@ sfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
 .pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/shar
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
-12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/s
-hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/share/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.p
-fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw/zapfding/
-uzdr.pfb>
-Output written on main.pdf (58 pages, 1799444 bytes).
+amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
+.pfb></usr/share/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on main.pdf (58 pages, 1842251 bytes).
 PDF statistics:
- 869 PDF objects out of 1000 (max. 8388607)
- 720 compressed objects within 8 object streams
- 173 named destinations out of 1000 (max. 500000)
- 442 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 888 PDF objects out of 1000 (max. 8388607)
+ 742 compressed objects within 8 object streams
+ 184 named destinations out of 1000 (max. 500000)
+ 463 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
-\begin{thebibliography}{23}
+\begin{thebibliography}{27}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -31,12 +31,19 @@ J.~L. Bentley.
 \newblock \emph{Communications of the ACM}, 18\penalty0 (9):\penalty0 509--517,
   1975.
 
-\bibitem[Blum et~al.(1973)Blum, Floyd, Pratt, Rivest, and
+\bibitem[Blum et~al.(1973{\natexlab{a}})Blum, Floyd, Pratt, Rivest, and
   Tarjan]{mediancomplex}
 M.~Blum, R.~W. Floyd, V.~Pratt, R.~L. Rivest, and R.~E. Tarjan.
 \newblock Time bounds for selection.
 \newblock \emph{Journal of computer and system sciences}, 7\penalty0
-  (4):\penalty0 448--461, 1973.
+  (4):\penalty0 448--461, 1973{\natexlab{a}}.
+
+\bibitem[Blum et~al.(1973{\natexlab{b}})Blum, Floyd, Pratt, Rivest, and
+  Tarjan]{selection}
+M.~Blum, R.~W. Floyd, V.~Pratt, R.~L. Rivest, and R.~E. Tarjan.
+\newblock Time bounds for selection.
+\newblock \emph{Journal of computer and system sciences}, 7\penalty0
+  (4):\penalty0 448--461, 1973{\natexlab{b}}.
 
 \bibitem[Bose and Morin(1999)]{greedyroute}
 P.~Bose and P.~Morin.
@@ -63,6 +70,12 @@ A.~Caprara, P.~Toth, and M.~Fischetti.
 \newblock \emph{Annals of Operations Research}, 98\penalty0 (1-4):\penalty0
   353--371, 2000.
 
+\bibitem[Cornu{\'e}jols et~al.(1983)Cornu{\'e}jols, Nemhauser, and
+  Wolsey]{facilityloc}
+G.~Cornu{\'e}jols, G.~L. Nemhauser, and L.~A. Wolsey.
+\newblock The uncapacitated facility location problem.
+\newblock Technical report, DTIC Document, 1983.
+
 \bibitem[Daskin(2011)]{thisfref}
 M.~S. Daskin.
 \newblock \emph{Network and discrete location: models, algorithms, and
@@ -81,12 +94,23 @@ S.~Elloumi, M.~Labb{\'e}, and Y.~Pochet.
 \newblock \emph{INFORMS Journal on Computing}, 16\penalty0 (1):\penalty0
   84--94, 2004.
 
+\bibitem[Goldberg(1970)]{packing}
+M.~Goldberg.
+\newblock The packing of equal circles in a square.
+\newblock \emph{Mathematics Magazine}, pages 24--30, 1970.
+
 \bibitem[Hu et~al.(2010)Hu, Ku, Bakiras, and Shahabi]{tricard1}
 L.~Hu, W.-S. Ku, S.~Bakiras, and C.~Shahabi.
 \newblock Verifying spatial queries using voronoi neighbors.
 \newblock In \emph{Proceedings of the 18th SIGSPATIAL International Conference
   on Advances in Geographic Information Systems}, pages 350--359. ACM Press,
   2010.
+
+\bibitem[Jaromczyk and Toussaint(1992)]{proximity}
+J.~W. Jaromczyk and G.~T. Toussaint.
+\newblock Relative neighborhood graphs and their relatives.
+\newblock \emph{Proceedings of the IEEE}, 80\penalty0 (9):\penalty0 1502--1517,
+  1992.
 
 \bibitem[Lee and Wong(1977)]{kdrange}
 D.-T. Lee and C.~Wong.

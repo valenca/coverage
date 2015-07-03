@@ -10,4 +10,5 @@ seed((argv[1],argv[2]))
 #print K
 
 for i in range(N):
-	print i,random()*100,random()*100
+	print i,random()*20,random()*15
+	#print "\\fill[gray] (%3f,%3f) circle (3pt);" % (random()*20,random()*15)

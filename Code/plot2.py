@@ -1,12 +1,14 @@
 import numpy as np
 from pprint import pprint
-from matplotlib import pyplot as plt
+import matplotlib 
 from matplotlib import ticker
 from itertools import product
 
+from matplotlib import pyplot as plt
+
 plt.style.use(plt.style.available[1])
 
-lista=["LS","BP5","BP10","BP20"]
+lista=["LS","KD"]#"RS5","RS10"]#,"BP5","BP10","BP20"]
 #files=["results_unif10","results_clus10"]
 #files=["results_unif15","results_clus15"]
 files=["results_unif20","results_clus20"]
@@ -39,8 +41,11 @@ trans={"KD"		: "#0000FF",
 
 labels=[]
 plot_n=1
+
+#plt.figure(figsize=(15,4))
+
 for files in [["results_unif10","results_clus10"],["results_unif15","results_clus15"],["results_unif20","results_clus20"]]:
-	plt.subplot(220+plot_n)
+	plt.subplot(130+plot_n)
 	plot_n+=1
 	for directory in product(lista,files):
 		if directory[1][-3]=='f':
@@ -71,19 +76,19 @@ for files in [["results_unif10","results_clus10"],["results_unif15","results_clu
 	plt.ylabel('$time(s)$')
 	plt.grid(False)
 	plt.title("$ d=%d\\%% $"%int(files[0][-2:]))
-	plt.tight_layout()
-	#plt.subplots_adjust(bottom=0.15)
-	#plt.legend(labels,loc=4)
-	
-plt.legend(labels,loc='center', bbox_to_anchor=(1.85, 0.5))
-	
+	#plt.tight_layout()
+	plt.subplots_adjust(bottom=0.3,left=0.07,right=0.95)
+
+	if(plot_n==3):
+		plt.legend(labels,loc=9, ncol=len(lista),bbox_to_anchor=(0.5,-0.2))
+
 plt.show()
 
-
+plt.figure(figsize=(12,4))
 labels=[]
 plot_n=1
 for files in [["results_unif10","results_clus10"],["results_unif15","results_clus15"],["results_unif20","results_clus20"]]:
-	plt.subplot(220+plot_n)
+	plt.subplot(130+plot_n)
 	plot_n+=1
 	for directory in product(lista,files):
 		if directory[1][-3]=='f':
@@ -114,10 +119,11 @@ for files in [["results_unif10","results_clus10"],["results_unif15","results_clu
 	plt.ylabel('$K$')
 	plt.grid(False)
 	plt.title("$ d=%d\\%% $"%int(files[0][-2:]))
-	plt.tight_layout()
-	#plt.subplots_adjust(bottom=0.15)
+	#plt.tight_layout()
+	plt.subplots_adjust(bottom=0.3,left=0.07,right=0.95)
 	#plt.legend(labels,loc=4)
-	
-plt.legend(labels,loc='center', bbox_to_anchor=(1.85, 0.5))
-	
+
+	if(plot_n==3):
+		plt.legend(labels,loc=9, ncol=len(lista),bbox_to_anchor=(0.5,-0.2))
+
 plt.show()
