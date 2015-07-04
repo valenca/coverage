@@ -45,6 +45,9 @@ double max_y;
 double min_x;
 double min_y;
 
+int c;
+int m;
+
 clock_t T;
 
 double euclidean(point p,point q){
@@ -105,6 +108,7 @@ int rangeSearch(){
 	if(euclidean(v[i],v[j])<=thres){
 	  if(p>C-2){
 	    pool=(link*)malloc(C*sizeof(link));
+	    c+=p;
 	    p=0;
 	  }
 	  pool[p].next=heads[i];
@@ -130,6 +134,8 @@ int rangeSearch(){
 	break;
     }
   }
+  c+=p;
+  if (c>m) m=c;
   return 0;
 }
 
@@ -214,6 +220,6 @@ int main(){
   printf("%g\n",thres);
 #endif
 
-  printf("%d\t%g\t%d\t%g\n",N0,fact,K,((float)T)/CLOCKS_PER_SEC);
+  printf("%d\t%g\t%d\t%g\t%d\n",N0,fact,K,((float)T)/CLOCKS_PER_SEC,(m/1024/1024*(int)sizeof(struct link)));
   return 0;
 }
