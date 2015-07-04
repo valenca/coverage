@@ -13,45 +13,45 @@ Warning--to sort, need author or key in waterloo_sweden
 Warning--to sort, need author or key in waterloo_greece
 Warning--empty year in waterloo_greece
 Warning--empty year in waterloo_sweden
-You've used 27 entries,
+You've used 28 entries,
             2773 wiz_defined-function locations,
-            752 strings with 8452 characters,
-and the built_in function-call counts, 12028 in all, are:
-= -- 1077
-> -- 633
-< -- 21
-+ -- 221
-- -- 192
-* -- 950
-:= -- 1811
-add.period$ -- 83
-call.type$ -- 27
-change.case$ -- 140
-chr.to.int$ -- 25
-cite$ -- 60
-duplicate$ -- 586
-empty$ -- 1030
-format.name$ -- 225
-if$ -- 2547
+            757 strings with 8643 characters,
+and the built_in function-call counts, 12326 in all, are:
+= -- 1103
+> -- 643
+< -- 22
++ -- 225
+- -- 195
+* -- 965
+:= -- 1860
+add.period$ -- 86
+call.type$ -- 28
+change.case$ -- 144
+chr.to.int$ -- 26
+cite$ -- 62
+duplicate$ -- 605
+empty$ -- 1060
+format.name$ -- 229
+if$ -- 2609
 int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 30
-newline$ -- 141
-num.names$ -- 100
-pop$ -- 315
+missing$ -- 31
+newline$ -- 146
+num.names$ -- 104
+pop$ -- 324
 preamble$ -- 1
-purify$ -- 118
+purify$ -- 121
 quote$ -- 0
-skip$ -- 438
+skip$ -- 451
 stack$ -- 0
-substring$ -- 441
-swap$ -- 75
+substring$ -- 443
+swap$ -- 76
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 262
+type$ -- 273
 warning$ -- 4
-while$ -- 110
+while$ -- 113
 width$ -- 0
-write$ -- 353
+write$ -- 365
 (There were 6 warnings)

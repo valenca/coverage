@@ -14,9 +14,9 @@ In two dimensions, coverage measures the area occupied by the union of a collect
 Although the points represent geographic locations, in this thesis the metric that would measure their distance on the surface of the globe, the geodesic distance, is not used. The triangular inequality property does not apply to geodesic distances as a sphere (or an approximation of thereof) is not an Euclidean space, and it would add an unnecessary layer of complexity to computing the coverage.
 Because of this, in this thesis, the coordinates of the points are the planar projection of the geographic coordinates to their location counterparts, as implemented by the WFS web mapping communication standard. Therefore, the Euclidean norm is used as the spatial distance notion.
 
-\section{The k-Centre Problem}
+\section{The $k$-centre Problem}
 \label{alg:ilp}
-One of coverage problems approached in this thesis is the k-centre problem. Given a set of points $N$ in $\mathbb{R}^2$, the goal is to choose a subset $P$ that best matches our definition of representation.
+One of coverage problems approached in this thesis is the $k$-centre problem. Given a set of points $N$ in $\mathbb{R}^2$, the goal is to choose a subset $P$ that best matches our definition of representation.
 The size of $P$, however, is constrained to a size $k$, which specifies how many points can be displayed in a section of a map.
 
 For any point in $N$ not in $P$, there must be a point in $P$ that best represents it. This notion of representation may be defined by the distance, i.e.\ the point $p$ that best represents $q$ is the closest point to $q$, or the one that minimises the Euclidean distance between the pair.
@@ -41,11 +41,11 @@ We can then finally define our problem as the minimising the coverage:
 \min_{\substack{P \subseteq N\\ \lvert P \rvert = k}}{\max_{n \in N}{\min_{p \in P}{\lVert p-n \rVert}}}
 \end{equation}
 
-This is known in the field of optimisation as the \emph{k-centre} problem, and is an example of a facility location problem \cite{thisfref}. Figure \ref{fig:cov} shows two possible centroid assignments, each with its own value of coverage, $d$.
+This is known in the field of optimisation as the \emph{$k$-centre} problem, and is an example of a facility location problem \cite{thisfref}. Figure \ref{fig:cov} shows two possible centroid assignments, each with its own value of coverage, $d$.
 
 \input{Figures/cov}
 
-The \emph{k-centre} problem is a well known problem in the optimisation field of study. As such, several approaches have been explored over the years. For the 1-dimensional case, the minimum coverage value can be calculated in polynomial time \cite{dvaz}. However, for any other number of dimensions it is a \emph{NP-hard} problem, and cannot be solved in polynomial time \cite{complex}. One approach to the problem is to model it in  integer linear programming as follows:
+The \emph{$k$-centre} problem is a well known problem in the optimisation field of study. As such, several approaches have been explored over the years. For the 1-dimensional case, the minimum coverage value can be calculated in polynomial time \cite{dvaz}. However, for any other number of dimensions it is a \emph{NP-hard} problem, and cannot be solved in polynomial time \cite{complex}. One approach to the problem is to model it in  integer linear programming as follows:
 
 \begin{align}
 \text{minimise}   \quad& D				   &\\
@@ -82,7 +82,7 @@ Other more elaborate formulations can be used. \citet{linearprog} explore a new 
 
 \section{Geometric Disk Coverage}
 \label{ilp2}
-Another coverage problem considered in this thesis is the geometric disk coverage problem. Given a set of objects $N$ and a fixed distance $d$, the goal is to minimise the cardinality of the set of disks of radius $d$ centred around a set of centroids $P$ contained in $N$, such that all points in $N$ are covered. This is also a variation of the class of facility location problems \cite{thisfref}, and shares some similarities with the k-centre problem, described in the previous section.
+Another coverage problem considered in this thesis is the geometric disk coverage problem. Given a set of objects $N$ and a fixed distance $d$, the goal is to minimise the cardinality of the set of disks of radius $d$ centred around a set of centroids $P$ contained in $N$, such that all points in $N$ are covered. This is also a variation of the class of facility location problems \cite{thisfref}, and shares some similarities with the $k$-centre problem, described in the previous section.
 
 The geometric distance cover problem can be seen as a dual problem to the minimum cover subset. In fact, an Integer Linear Programming formulation can be obtained by swapping the objective function for one of the constraints:
 
@@ -130,7 +130,7 @@ In this thesis, we explore approximation algorithms to solve the \emph{set cover
 \subsection{Heuristic Techniques}
 Optimal solution algorithms, even very optimized ones, are oftentimes still too inefficient to be used in any practical, time constrained application. One possible strategy to solve an \emph{NP-hard} problem is to use a heuristic method to speed the process up. A heuristic is a rule or method that allows an algorithm to find a solution to problems faster than it would by calculating every option. Heuristics do this by compromising the quality of the result, and so they do not calculate the optimal solution to the problems. However, they are useful in applications where the time is a more important factor than quality.
 
-\emph{Local search}is a heuristic method to finding solution to \emph{NP-hard} problems. This approach starts by finding a valid solution to a problem. Then, it tries to find similar valid solutions by slightly modifying the original solution, thus searching the local space of candidate solutions. After a local optimum is found or a time bound is elapsed, the best candidate is returned as the local solution to the problem. This method offers no quality guarantee, but are very efficient in practical implementations. Chapter \ref{chap:algos} mentions a Local Search approach to the k-centre problem, as described by \citet{incrementalcov}.
+\emph{Local search}is a heuristic method to finding solution to \emph{NP-hard} problems. This approach starts by finding a valid solution to a problem. Then, it tries to find similar valid solutions by slightly modifying the original solution, thus searching the local space of candidate solutions. After a local optimum is found or a time bound is elapsed, the best candidate is returned as the local solution to the problem. This method offers no quality guarantee, but are very efficient in practical implementations. Chapter \ref{chap:algos} mentions a Local Search approach to the $k$-centre problem, as described by \citet{incrementalcov}.
 
 \section{Geometric Concepts and Data Structures}
 In the following, we explain some geometric concepts that are used in the following chapters, in order to simplify the explanation of more complex algorithms in further chapters.

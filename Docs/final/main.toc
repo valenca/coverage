@@ -1,7 +1,7 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Concepts, Definitions and Notation}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Definitions of Coverage}{5}{section.2.1}
-\contentsline {section}{\numberline {2.2}The k-Centre Problem}{6}{section.2.2}
+\contentsline {section}{\numberline {2.2}The $k$-centre Problem}{6}{section.2.2}
 \contentsline {section}{\numberline {2.3}Geometric Disk Coverage}{8}{section.2.3}
 \contentsline {section}{\numberline {2.4}Algorithmic Concepts}{9}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Branch-and-Bound}{9}{subsection.2.4.1}
@@ -14,40 +14,40 @@
 \contentsline {subsection}{\numberline {2.5.4}Voronoi Diagrams}{14}{subsection.2.5.4}
 \contentsline {subsection}{\numberline {2.5.5}Delaunay Triangulations}{14}{subsection.2.5.5}
 \contentsline {subsection}{\numberline {2.5.6}Hilbert Curves}{19}{subsection.2.5.6}
-\contentsline {chapter}{\numberline {3}Exact Algorithms for the k-Centre Problem}{21}{chapter.3}
+\contentsline {chapter}{\numberline {3}Exact Algorithms for the $k$-Centre Problem}{21}{chapter.3}
 \contentsline {section}{\numberline {3.1}Na\IeC {\"\i }ve Branch-and-Bound}{21}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Branching}{22}{subsection.3.1.1}
 \contentsline {paragraph}{Inserting a Centroid}{22}{subsection.3.1.1}
-\contentsline {paragraph}{Inserting a Non-Centroid}{22}{subsection.3.1.1}
-\contentsline {paragraph}{}{22}{subsection.3.1.1}
-\contentsline {paragraph}{Removing a Centroid}{22}{subsection.3.1.1}
-\contentsline {paragraph}{Removing a Non-Centroid}{23}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Bounds}{23}{subsection.3.1.2}
-\contentsline {paragraph}{Lower Bound}{23}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Delaunay Assisted Branch-and-Bound}{23}{section.3.2}
-\contentsline {paragraph}{Inserting a Centroid}{23}{section.3.2}
-\contentsline {paragraph}{Inserting a Non-Centroid}{24}{section.3.2}
-\contentsline {paragraph}{Removing a Centroid}{24}{section.3.2}
-\contentsline {paragraph}{Removing a Non-Centroid}{25}{section.3.2}
-\contentsline {paragraph}{Bounds}{25}{section.3.2}
-\contentsline {section}{\numberline {3.3}Algorithm Comparison}{25}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Time Complexity}{25}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Experimental Results}{26}{subsection.3.3.2}
-\contentsline {paragraph}{}{26}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Discussion}{29}{section.3.4}
-\contentsline {chapter}{\numberline {4}Geometric Disk Cover}{31}{chapter.4}
-\contentsline {section}{\numberline {4.1}Approximation Algorithm}{31}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Proximity Graph Construction}{31}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Set Cover}{32}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Results}{33}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Heuristic Speed-ups}{36}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Sampling}{37}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Two-phase filtering}{38}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Region Panning and Zooming}{40}{section.4.3}
-\contentsline {section}{\numberline {4.4}Discussion}{42}{section.4.4}
-\contentsline {chapter}{\numberline {5}Conclusions}{43}{chapter.5}
-\contentsline {section}{\numberline {5.1}Future Work}{44}{section.5.1}
-\contentsline {chapter}{\numberline {A}Theorems and Proofs}{45}{appendix.A}
-\contentsline {section}{\numberline {A.1}Median of Medians}{45}{section.A.1}
-\contentsline {section}{\numberline {A.2}Set Cover Approximation Algorithm}{46}{section.A.2}
-\contentsline {section}{\numberline {A.3}Circle Packing}{47}{section.A.3}
+\contentsline {paragraph}{Inserting a Non-Centroid}{22}{figure.caption.16}
+\contentsline {paragraph}{}{22}{figure.caption.17}
+\contentsline {paragraph}{Removing a Centroid}{23}{figure.caption.17}
+\contentsline {paragraph}{Removing a Non-Centroid}{23}{figure.caption.18}
+\contentsline {subsection}{\numberline {3.1.2}Bounds}{24}{subsection.3.1.2}
+\contentsline {paragraph}{Lower Bound}{24}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Delaunay Assisted Branch-and-Bound}{24}{section.3.2}
+\contentsline {paragraph}{Inserting a Centroid}{25}{section.3.2}
+\contentsline {paragraph}{Inserting a Non-Centroid}{25}{figure.caption.21}
+\contentsline {paragraph}{Removing a Centroid}{26}{figure.caption.22}
+\contentsline {paragraph}{Removing a Non-Centroid}{27}{figure.caption.23}
+\contentsline {paragraph}{Bounds}{27}{figure.caption.24}
+\contentsline {section}{\numberline {3.3}Algorithm Comparison}{27}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Time Complexity}{27}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Experimental Results}{27}{subsection.3.3.2}
+\contentsline {paragraph}{}{27}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Discussion}{31}{section.3.4}
+\contentsline {chapter}{\numberline {4}Geometric Disk Cover}{33}{chapter.4}
+\contentsline {section}{\numberline {4.1}Approximation Algorithm}{33}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Proximity Graph Construction}{33}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Set Cover}{34}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Results}{36}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Heuristic Speed-ups}{38}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Sampling}{39}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Two-phase filtering}{40}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Region Panning and Zooming}{43}{section.4.3}
+\contentsline {section}{\numberline {4.4}Discussion}{44}{section.4.4}
+\contentsline {chapter}{\numberline {5}Conclusion}{45}{chapter.5}
+\contentsline {section}{\numberline {5.1}Future Work}{46}{section.5.1}
+\contentsline {chapter}{\numberline {A}Theorems and Proofs}{47}{appendix.A}
+\contentsline {section}{\numberline {A.1}Median of Medians}{47}{section.A.1}
+\contentsline {section}{\numberline {A.2}Set Cover Approximation Algorithm}{48}{section.A.2}
+\contentsline {section}{\numberline {A.3}Circle Packing Upper Bound}{49}{section.A.3}

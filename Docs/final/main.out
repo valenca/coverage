@@ -1,7 +1,7 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
 \BOOKMARK [0][-]{chapter.2}{Concepts, Definitions and Notation}{}% 2
 \BOOKMARK [1][-]{section.2.1}{Definitions of Coverage}{chapter.2}% 3
-\BOOKMARK [1][-]{section.2.2}{The k-Centre Problem}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.2}{The k-centre Problem}{chapter.2}% 4
 \BOOKMARK [1][-]{section.2.3}{Geometric Disk Coverage}{chapter.2}% 5
 \BOOKMARK [1][-]{section.2.4}{Algorithmic Concepts}{chapter.2}% 6
 \BOOKMARK [2][-]{subsection.2.4.1}{Branch-and-Bound}{section.2.4}% 7
@@ -33,9 +33,9 @@
 \BOOKMARK [2][-]{subsection.4.2.2}{Two-phase filtering}{section.4.2}% 33
 \BOOKMARK [1][-]{section.4.3}{Region Panning and Zooming}{chapter.4}% 34
 \BOOKMARK [1][-]{section.4.4}{Discussion}{chapter.4}% 35
-\BOOKMARK [0][-]{chapter.5}{Conclusions}{}% 36
+\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 36
 \BOOKMARK [1][-]{section.5.1}{Future Work}{chapter.5}% 37
 \BOOKMARK [0][-]{appendix.A}{Theorems and Proofs}{}% 38
 \BOOKMARK [1][-]{section.A.1}{Median of Medians}{appendix.A}% 39
 \BOOKMARK [1][-]{section.A.2}{Set Cover Approximation Algorithm}{appendix.A}% 40
-\BOOKMARK [1][-]{section.A.3}{Circle Packing}{appendix.A}% 41
+\BOOKMARK [1][-]{section.A.3}{Circle Packing Upper Bound}{appendix.A}% 41

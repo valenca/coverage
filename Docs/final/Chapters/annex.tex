@@ -92,9 +92,9 @@ This proves that $T(n) \le 12n$, or any larger constants than 12 multiplied by $
 	\end{proof}
 \end{theorem}
 
-\section{Circle Packing}
+\section{Circle Packing Upper Bound}
 \label{ann:packing}
-The circle packing problem's goal is to find the best disposition of non-intersecting circles inside a square, given the ratio of the circle diameter to the width of the square \cite{packing}. Also, in our approach to the geometric disk cover, the radius of the disks is given as a fraction $d$ of the largest dimension of the rectangular region. This means that the case of a rectangular window is bound above by the solution of its containing square. The circle packing algorithm also expects non-intersecting circles contained by a square. To find the circle packing solution for our problem, we cannot use or values of distance $d$ for our value of width $w$, since the circles in our problem have different properties. The properties must be accounted for to reach the equivalent values for the radius $r^\prime$ in relation to the width $w^\prime$ for the circle packing problem.
+The circle packing problem's goal is to find the best disposition of non-intersecting circles inside a square, given the ratio of the circle diameter to the width of the square \cite{packing}. In our approach to the geometric disk cover, the radius of the disks is given as a fraction $d$ of the largest dimension of the rectangular region. This means that the case of a rectangular window is bound from above by the solution of its containing square. The circle packing algorithm also expects non-intersecting circles contained by a square. To find the circle packing solution for our problem, we cannot use or values of distance $d$ for our value of width $w$, since the circles in our problem have different properties. The properties must be accounted for to reach the equivalent values for the radius $r^\prime$ in relation to the width $w^\prime$ for the circle packing problem.
 
 Since each covering disk around a centroid can intersect other disks in our problem, but cannot contain any other centroids. The centres of the disks cannot be closer than the radius $d$. Therefore, the circle packing has to be calculated with circles with radius $r^\prime$ half the radius $r$ of the geometric disk cover disks, to ensure the centres are at the right distance. 
 

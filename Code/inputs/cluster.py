@@ -9,6 +9,7 @@ N=int(argv[2])
 seed((argv[1],argv[2]))
 	
 K=randint(10,20)
+K=10
 v=[]
 w=[]
 
@@ -23,10 +24,10 @@ for j in range(K):
 			r=random()*d    
 			x=xx+(cos(t)*r)
 			y=yy+(sin(t)*r)
-		v.append(x)
-		w.append(y)
+		v.append(x/100.0*4.0)
+		w.append(y/100.0*3.0)
 		#print "\t\\fill[white,draw=black] (%.3f,%.3f) circle (1.5pt);"%(x/100.0*6,y/100.0*4)
-		print i,x,y
+		print i,x/100*4.0,y/100*3.0
 
 plt.plot(v,w,"o")
 plt.show()
