@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.5.29)  6 JUL 2015 04:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.5.29)  6 JUL 2015 08:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -939,6 +939,20 @@ shapes.callouts.code.tex
 (/usr/share/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.callou
 ts.code.tex)))
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+patterns.code.tex
+File: tikzlibrarypatterns.code.tex 2008/01/15 v3.0.0 (rcs-revision 1.2)
+
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
+File: pgflibrarypatterns.code.tex 2008/03/03 v3.0.0 (rcs-revision 1.13)
+))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+fadings.code.tex
+File: tikzlibraryfadings.code.tex 2009/11/15 v3.0.0 (rcs-revision 1.2)
+
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
+File: pgflibraryfadings.code.tex 2008/02/07 v3.0.0 (rcs-revision 1.3)
+))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 positioning.code.tex
 File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.0 (rcs-revision 1.7)
 )
@@ -1322,7 +1336,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--25
 
  []
 
-<Figures/dei.png, id=172, 1093.08376pt x 235.88126pt>
+<Figures/dei.png, id=196, 1093.08376pt x 235.88126pt>
 File: Figures/dei.png Graphic file (type png)
  <use Figures/dei.png>
 Package pdftex.def Info: Figures/dei.png used on input line 27.
@@ -1339,11 +1353,11 @@ Package pdftex.def Info: Figures/dei.png used on input line 27.
 
 
 
-] <Figures/fctuc.jpg, id=188, 165.7392pt x 72.7518pt>
-File: Figures/fctuc.jpg Graphic file (type jpg)
+] <Figures/fctuc2.jpg, id=212, 165.7392pt x 72.7518pt>
+File: Figures/fctuc2.jpg Graphic file (type jpg)
 
-<use Figures/fctuc.jpg>
-Package pdftex.def Info: Figures/fctuc.jpg used on input line 4.
+<use Figures/fctuc2.jpg>
+Package pdftex.def Info: Figures/fctuc2.jpg used on input line 4.
 (pdftex.def)             Requested size: 165.73877pt x 72.7516pt.
 LaTeX Font Info:    Try loading font information for U+msa on input line 36.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1353,16 +1367,11 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 36.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-File: Figures/dei.png Graphic file (type png)
- <use Figures/dei.png>
-Package pdftex.def Info: Figures/dei.png used on input line 63.
-(pdftex.def)             Requested size: 273.27026pt x 58.97017pt.
-)
-[3 <./Figures/fctuc.jpg>]
+)) [3 <./Figures/fctuc2.jpg>]
 \openout2 = `initial.aux'.
 
- (./initial.tex [4
+
+(./initial.tex [4
 
 
 
@@ -1374,11 +1383,11 @@ m-puta-cional, Prob-le-mas de Cober-tura, Aplica^^Xc~oes
 
 ) [1] [2
 
-] <Pictures/acks.jpg, id=219, 1116.17pt x 151.56625pt>
+] <Pictures/acks.jpg, id=243, 1116.17pt x 151.56625pt>
 File: Pictures/acks.jpg Graphic file (type jpg)
 
 <use Pictures/acks.jpg>
-Package pdftex.def Info: Pictures/acks.jpg used on input line 21.
+Package pdftex.def Info: Pictures/acks.jpg used on input line 25.
 (pdftex.def)             Requested size: 318.66948pt x 43.27083pt.
  [3
 
@@ -1562,59 +1571,55 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [26]
-Underfull \vbox (badness 1320) has occurred while \output is active []
-
- [27]
-(./Figures/fixed_k.tex <Pictures/k1.png, id=622, 574.5465pt x 539.8569pt>
+) [26] [27] (./Figures/fixed_k.tex
+<Pictures/k1.png, id=646, 574.5465pt x 539.8569pt>
 File: Pictures/k1.png Graphic file (type png)
-
-<use Pictures/k1.png>
+ <use Pictures/k1.png>
 Package pdftex.def Info: Pictures/k1.png used on input line 5.
 (pdftex.def)             Requested size: 227.62206pt x 213.87955pt.
- <Pictures/k2.png, id=623, 574.5465pt x 539.8569pt>
-File: Pictures/k2.png Graphic file (type png)
 
-<use Pictures/k2.png>
+<Pictures/k2.png, id=647, 574.5465pt x 539.8569pt>
+File: Pictures/k2.png Graphic file (type png)
+ <use Pictures/k2.png>
 Package pdftex.def Info: Pictures/k2.png used on input line 11.
 (pdftex.def)             Requested size: 227.62206pt x 213.87955pt.
- <Pictures/k3.png, id=624, 574.5465pt x 539.8569pt>
-File: Pictures/k3.png Graphic file (type png)
 
-<use Pictures/k3.png>
+<Pictures/k3.png, id=648, 574.5465pt x 539.8569pt>
+File: Pictures/k3.png Graphic file (type png)
+ <use Pictures/k3.png>
 Package pdftex.def Info: Pictures/k3.png used on input line 16.
 (pdftex.def)             Requested size: 227.62206pt x 213.87955pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./Figures/fixed_n.tex <Pictures/n10.png, id=627, 574.5465pt x 539.8569pt>
+) (./Figures/fixed_n.tex <Pictures/n10.png, id=651, 574.5465pt x 539.8569pt>
 File: Pictures/n10.png Graphic file (type png)
 
 <use Pictures/n10.png>
 Package pdftex.def Info: Pictures/n10.png used on input line 5.
 (pdftex.def)             Requested size: 204.85846pt x 192.48665pt.
- <Pictures/n20.png, id=628, 574.5465pt x 539.8569pt>
+ <Pictures/n20.png, id=652, 574.5465pt x 539.8569pt>
 File: Pictures/n20.png Graphic file (type png)
 
 <use Pictures/n20.png>
 Package pdftex.def Info: Pictures/n20.png used on input line 11.
 (pdftex.def)             Requested size: 204.85846pt x 192.48665pt.
- <Pictures/n30.png, id=629, 574.5465pt x 539.8569pt>
+ <Pictures/n30.png, id=653, 574.5465pt x 539.8569pt>
 File: Pictures/n30.png Graphic file (type png)
 
 <use Pictures/n30.png>
 Package pdftex.def Info: Pictures/n30.png used on input line 17.
 (pdftex.def)             Requested size: 204.85846pt x 192.48665pt.
- <Pictures/n40.png, id=630, 574.5465pt x 539.8569pt>
+ <Pictures/n40.png, id=654, 574.5465pt x 539.8569pt>
 File: Pictures/n40.png Graphic file (type png)
 
 <use Pictures/n40.png>
 Package pdftex.def Info: Pictures/n40.png used on input line 23.
 (pdftex.def)             Requested size: 204.85846pt x 192.48665pt.
+
+Underfull \vbox (badness 4096) has occurred while \output is active []
+
  [28]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1641,28 +1646,28 @@ Underfull \vbox (badness 2073) has occurred while \output is active []
 
  [35]
 (./Figures/sweden_dist.tex
-<Pictures/sweden.png, id=683, 798.985pt x 881.2925pt>
+<Pictures/sweden.png, id=707, 798.985pt x 881.2925pt>
 File: Pictures/sweden.png Graphic file (type png)
 
 <use Pictures/sweden.png>
 Package pdftex.def Info: Pictures/sweden.png used on input line 4.
 (pdftex.def)             Requested size: 98.33429pt x 108.45346pt.
 
-<Pictures/10_sweden.png, id=684, 798.985pt x 881.2925pt>
+<Pictures/10_sweden.png, id=708, 798.985pt x 881.2925pt>
 File: Pictures/10_sweden.png Graphic file (type png)
 
 <use Pictures/10_sweden.png>
 Package pdftex.def Info: Pictures/10_sweden.png used on input line 11.
 (pdftex.def)             Requested size: 98.33429pt x 108.45346pt.
 
-<Pictures/15_sweden.png, id=685, 798.985pt x 881.2925pt>
+<Pictures/15_sweden.png, id=709, 798.985pt x 881.2925pt>
 File: Pictures/15_sweden.png Graphic file (type png)
 
 <use Pictures/15_sweden.png>
 Package pdftex.def Info: Pictures/15_sweden.png used on input line 18.
 (pdftex.def)             Requested size: 98.33429pt x 108.45346pt.
 
-<Pictures/20_sweden.png, id=686, 798.985pt x 881.2925pt>
+<Pictures/20_sweden.png, id=710, 798.985pt x 881.2925pt>
 File: Pictures/20_sweden.png Graphic file (type png)
 
 <use Pictures/20_sweden.png>
@@ -1673,7 +1678,7 @@ Underfull \vbox (badness 1655) has occurred while \output is active []
 
  [36 <./Pictures/sweden.png> <./Pictures/10_sweden.png> <./Pictures/15_sweden.p
 ng> <./Pictures/20_sweden.png>] (./Figures/kd_ls_t.tex
-<Pictures/ls_kd_t.png, id=699, 1008.1665pt x 417.7206pt>
+<Pictures/ls_kd_t.png, id=723, 1008.1665pt x 417.7206pt>
 File: Pictures/ls_kd_t.png Graphic file (type png)
 
 <use Pictures/ls_kd_t.png>
@@ -1684,7 +1689,7 @@ Package pdftex.def Info: Pictures/ls_kd_t.png used on input line 4.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ) (./Figures/kd_ls_s.tex
-<Pictures/ls_kd_s.png, id=700, 1008.1665pt x 417.7206pt>
+<Pictures/ls_kd_s.png, id=724, 1008.1665pt x 417.7206pt>
 File: Pictures/ls_kd_s.png Graphic file (type png)
 
 <use Pictures/ls_kd_s.png>
@@ -1695,7 +1700,7 @@ Package pdftex.def Info: Pictures/ls_kd_s.png used on input line 4.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ) (./Figures/kd_ls_k.tex
-<Pictures/ls_kd_k.png, id=701, 1008.1665pt x 417.7206pt>
+<Pictures/ls_kd_k.png, id=725, 1008.1665pt x 417.7206pt>
 File: Pictures/ls_kd_k.png Graphic file (type png)
 
 <use Pictures/ls_kd_k.png>
@@ -1714,7 +1719,7 @@ LaTeX Warning: Text page 38 contains only floats.
 
 [38 <./Pictures/ls_kd_t.png> <./Pictures/ls_kd_s.png> <./Pictures/ls_kd_k.png>]
 (./Figures/ls_rs_t.tex
-<Pictures/ls_rs_t.png, id=718, 1008.1665pt x 417.7206pt>
+<Pictures/ls_rs_t.png, id=742, 1008.1665pt x 417.7206pt>
 File: Pictures/ls_rs_t.png Graphic file (type png)
 
 <use Pictures/ls_rs_t.png>
@@ -1725,7 +1730,7 @@ Package pdftex.def Info: Pictures/ls_rs_t.png used on input line 4.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ) (./Figures/ls_rs_s.tex
-<Pictures/ls_rs_s.png, id=719, 1008.1665pt x 417.7206pt>
+<Pictures/ls_rs_s.png, id=743, 1008.1665pt x 417.7206pt>
 File: Pictures/ls_rs_s.png Graphic file (type png)
 
 <use Pictures/ls_rs_s.png>
@@ -1736,7 +1741,7 @@ Package pdftex.def Info: Pictures/ls_rs_s.png used on input line 4.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ) (./Figures/ls_rs_k.tex
-<Pictures/ls_rs_k.png, id=720, 1008.1665pt x 417.7206pt>
+<Pictures/ls_rs_k.png, id=744, 1008.1665pt x 417.7206pt>
 File: Pictures/ls_rs_k.png Graphic file (type png)
 
 <use Pictures/ls_rs_k.png>
@@ -1755,14 +1760,14 @@ LaTeX Warning: Text page 40 contains only floats.
 
 [40 <./Pictures/ls_rs_t.png> <./Pictures/ls_rs_s.png> <./Pictures/ls_rs_k.png>]
 (./Figures/ls_rs_greece.tex
-<Pictures/rs_greece.png, id=734, 798.985pt x 580.1675pt>
+<Pictures/rs_greece.png, id=758, 798.985pt x 580.1675pt>
 File: Pictures/rs_greece.png Graphic file (type png)
 
 <use Pictures/rs_greece.png>
 Package pdftex.def Info: Pictures/rs_greece.png used on input line 5.
 (pdftex.def)             Requested size: 163.88426pt x 118.99707pt.
 
-<Pictures/ls_greece.png, id=735, 798.985pt x 580.1675pt>
+<Pictures/ls_greece.png, id=759, 798.985pt x 580.1675pt>
 File: Pictures/ls_greece.png Graphic file (type png)
 
 <use Pictures/ls_greece.png>
@@ -1777,7 +1782,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [41 <./Pictures/rs_greece.png> <./Pictures/ls_greece.png>] (./Figures/ls_bp_t.
 tex
-<Pictures/ls_bp_t.png, id=752, 1008.1665pt x 417.7206pt>
+<Pictures/ls_bp_t.png, id=776, 1008.1665pt x 417.7206pt>
 File: Pictures/ls_bp_t.png Graphic file (type png)
 
 <use Pictures/ls_bp_t.png>
@@ -1788,7 +1793,7 @@ Package pdftex.def Info: Pictures/ls_bp_t.png used on input line 4.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ) (./Figures/ls_bp_s.tex
-<Pictures/ls_bp_s.png, id=753, 1008.1665pt x 417.7206pt>
+<Pictures/ls_bp_s.png, id=777, 1008.1665pt x 417.7206pt>
 File: Pictures/ls_bp_s.png Graphic file (type png)
 
 <use Pictures/ls_bp_s.png>
@@ -1799,7 +1804,7 @@ Package pdftex.def Info: Pictures/ls_bp_s.png used on input line 4.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ) (./Figures/ls_bp_k.tex
-<Pictures/ls_bp_k.png, id=754, 1008.1665pt x 417.7206pt>
+<Pictures/ls_bp_k.png, id=778, 1008.1665pt x 417.7206pt>
 File: Pictures/ls_bp_k.png Graphic file (type png)
 
 <use Pictures/ls_bp_k.png>
@@ -1815,35 +1820,35 @@ File: Pictures/sweden.png Graphic file (type png)
 Package pdftex.def Info: Pictures/sweden.png used on input line 7.
 (pdftex.def)             Requested size: 131.1124pt x 144.61359pt.
 
-<Pictures/bp10_1_sweden.png, id=756, 798.985pt x 881.2925pt>
+<Pictures/bp10_1_sweden.png, id=780, 798.985pt x 881.2925pt>
 File: Pictures/bp10_1_sweden.png Graphic file (type png)
 
 <use Pictures/bp10_1_sweden.png>
 Package pdftex.def Info: Pictures/bp10_1_sweden.png used on input line 14.
 (pdftex.def)             Requested size: 131.1124pt x 144.61359pt.
 
-<Pictures/bp5_1_sweden.png, id=757, 798.985pt x 881.2925pt>
+<Pictures/bp5_1_sweden.png, id=781, 798.985pt x 881.2925pt>
 File: Pictures/bp5_1_sweden.png Graphic file (type png)
 
 <use Pictures/bp5_1_sweden.png>
 Package pdftex.def Info: Pictures/bp5_1_sweden.png used on input line 21.
 (pdftex.def)             Requested size: 131.1124pt x 144.61359pt.
 
-<Pictures/ls_10_sweden.png, id=758, 798.985pt x 881.2925pt>
+<Pictures/ls_10_sweden.png, id=782, 798.985pt x 881.2925pt>
 File: Pictures/ls_10_sweden.png Graphic file (type png)
 
 <use Pictures/ls_10_sweden.png>
 Package pdftex.def Info: Pictures/ls_10_sweden.png used on input line 31.
 (pdftex.def)             Requested size: 131.1124pt x 144.61359pt.
 
-<Pictures/bp10_2_sweden.png, id=759, 798.985pt x 881.2925pt>
+<Pictures/bp10_2_sweden.png, id=783, 798.985pt x 881.2925pt>
 File: Pictures/bp10_2_sweden.png Graphic file (type png)
 
 <use Pictures/bp10_2_sweden.png>
 Package pdftex.def Info: Pictures/bp10_2_sweden.png used on input line 38.
 (pdftex.def)             Requested size: 131.1124pt x 144.61359pt.
 
-<Pictures/bp5_2_sweden.png, id=760, 798.985pt x 881.2925pt>
+<Pictures/bp5_2_sweden.png, id=784, 798.985pt x 881.2925pt>
 File: Pictures/bp5_2_sweden.png Graphic file (type png)
 
 <use Pictures/bp5_2_sweden.png>
@@ -1922,10 +1927,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 72.
  ) 
 Here is how much of TeX's memory you used:
- 40254 strings out of 493109
- 942608 string characters out of 6140856
- 2528606 words of memory out of 5000000
- 42634 multiletter control sequences out of 15000+600000
+ 40391 strings out of 493109
+ 947566 string characters out of 6140856
+ 2536708 words of memory out of 5000000
+ 42759 multiletter control sequences out of 15000+600000
  35999 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,16n,82p,18260b,1659s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1952,10 +1957,10 @@ fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
 nts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/sym
 bols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on main.pdf (66 pages, 2610660 bytes).
+Output written on main.pdf (66 pages, 2580486 bytes).
 PDF statistics:
- 990 PDF objects out of 1000 (max. 8388607)
- 825 compressed objects within 9 object streams
+ 1014 PDF objects out of 1200 (max. 8388607)
+ 833 compressed objects within 9 object streams
  204 named destinations out of 1000 (max. 500000)
- 491 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 587 words of extra memory for PDF output out of 10000 (max. 10000000)
 

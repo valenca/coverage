@@ -73,7 +73,7 @@
 \fill [white](14.117647058823529, 3.269230769230769)circle(4pt);
 \draw (14.117647058823529, 3.269230769230769)circle(4pt);
 \fill [white](7.0588235294117645, 4.1923076923076925)circle(4pt);
-\draw [blue,thick](7.0588235294117645, 4.1923076923076925)circle(4pt);
+\draw [thick](7.0588235294117645, 4.1923076923076925)circle(4pt);
 \fill(7.261764705882353, 1.3796923076923076)circle(4pt);
 \fill(10.690588235294118, 3.9763076923076923)circle(4pt);
 \fill(3.0697058823529413, 7.531076923076923)circle(4pt);
@@ -103,6 +103,7 @@
 \fill(13.072058823529412, 5.602769230769231)circle(4pt);
 \fill(6.922058823529412, 2.917538461538462)circle(4pt);
 \fill(7.909411764705883, 7.688923076923077)circle(4pt);
+\node at (7.0588235294117645, 4.1923076923076925)[right] {$c$};
 \begin{scope}[shift={(16,0)}]
 \draw [<->,thick] (0,0) rectangle (15,10) {};
 \draw [-,gray!50] (11.471,5.115) -- (8.824,1.423);
@@ -183,7 +184,7 @@
 \fill [white](14.117647058823529, 3.269230769230769)circle(4pt);
 \draw (14.117647058823529, 3.269230769230769)circle(4pt);
 \fill [white](7.0588235294117645, 4.1923076923076925)circle(4pt);
-\draw [blue,thick](7.0588235294117645, 4.1923076923076925)circle(4pt);
+\draw [thick](7.0588235294117645, 4.1923076923076925)circle(4pt);
 \fill(7.261764705882353, 1.3796923076923076)circle(4pt);
 \fill(10.690588235294118, 3.9763076923076923)circle(4pt);
 \fill(3.0697058823529413, 7.531076923076923)circle(4pt);
@@ -213,8 +214,9 @@
 \fill(13.072058823529412, 5.602769230769231)circle(4pt);
 \fill(6.922058823529412, 2.917538461538462)circle(4pt);
 \fill(7.909411764705883, 7.688923076923077)circle(4pt);
+\node at (7.0588235294117645, 4.1923076923076925)[right] {$c$};
 \end{scope}
 \end{tikzpicture}
-\caption[Illustration of a centroid insertion using the geometric method]{Illustration of a centroid insertion using the geometric method. The Delaunay triangulation is updated and only the neighbours need to be checked for assignment updates.}
+\caption[Illustration of a centroid insertion using the geometric method]{Illustration of a centroid insertion $c$ using the geometric method. The Delaunay triangulation is updated and only the neighbours of $c$ need to be checked for assignment updates.}
 \label{fig:gncent}
 \end{figure}

@@ -90,15 +90,13 @@ As it can be seen, the two-phase filtering is more efficient than the simple lin
 The smaller distance requires less edges to be created, and the proximity graph for the first phase is uses less space than a one-phase algorithm does. The proximity graph for the second phase benefits from having less points, thus requiring less edges. Since this algorithm calculates two graphs, both of which sparser than the complete on in the Line Sweep and \kdtree algorithms, the memory limit was not an issue for the inputs tested. Figure \ref{fig:ls_bp_s} shows the memory footprint of the three versions of the algorithm. These algorithms are less predictable concerning the size of the graphs, since they depend a lot from local density of points for the first phase. While they do not have as small a footprint as the random sampling, they still use considerably less than the line sweep and \kdtree range search. 
 
 These algorithms do not share the issue of leaving isolated points completely uncovered like the random sampling algorithms do, returning better representative subsets. Figure \ref{fig:ls_bp_k} shows the variation in size of the final subset chosen by the two-phase filtering algorithms.
-
 The graph shows that despite the two-phase algorithms returning lower numbers of $K$, they are not as low as the random sampling. 
 
 \input{Figures/ls_bp_t}
 \input{Figures/ls_bp_s}
 \input{Figures/ls_bp_k}
 
-This result has some effect on the quality, but it is not nearly as noticeable as the results from the random sampling. Figure \ref{fig:bp_sweden} shows the compared output between the original line sweep algorithm, and the different versions of the two-phase algorithm, as well as their intermediate phases.
-
+As aforementioned, this heuristic has some effect on the quality of the chosen set, but it is not nearly as noticeable as the results from the random sampling. Figure \ref{fig:bp_sweden} shows the compared output between the original line sweep algorithm, and the different versions of the two-phase algorithm, as well as their intermediate phases.
 
 This final result shows that the two-phase filter, especially with $d^\prime=0.1d$, can yield very approximate results at a fraction of the time and space, thus making a good candidate to use with inputs larger than the regular Line Sweep method can handle.
 
@@ -107,7 +105,7 @@ This final result shows that the two-phase filter, especially with $d^\prime=0.1
 \section{Region Panning and Zooming}
 One of the requirements established for the final algorithm it that it should be able to handle a translation motion in the region and starting point set. This means that in case the new region intersects the previous one, it is important for the user that the points already in display are kept selected, so that each move does not cause the user to lose track of the movement. As such, any selected centroids inside the intersection of the two regions, and all the points covered by them, should be kept unchanged, even if it means losing the guaranteed approximation to the optimal value. Each of the approaches described earlier can be modified to ensure that this property is met. 
 
-To handle the panning case, each instance of the program receives the centroids chosen in the previous region. To ensure that the points are still selected is a matter of artificially increasing their number of neighbours by $N$, then compute the problem regularly.  Since the number of points from the old region is bound from above by at most 128, the new number of points is relatively insignificant for instances of 10000 points and more, and the algorithms show no significant difference in performance. Since the covering distance does not change, the old centroids are not close enough together to cover each other, otherwise they would have done so in the old region. This solves the panning issue without needing to add much complexity to the algorithms. In the case of multiple phase filters, the weight of the selected points must be artificially increased in all the phases, to ensure they are kept selected.
+To handle a panning motion, each instance of the program receives the centroids chosen in the previous region. To ensure that the points are still selected is a matter of artificially increasing their number of neighbours by $N$, then compute the problem regularly.  Since the number of points from the old region is bound from above by at most 128, the new number of points is relatively insignificant for instances of 10000 points and more, and the algorithms show no significant difference in performance. Since the covering distance does not change, the old centroids are not close enough together to cover each other, otherwise they would have done so in the old region. This solves the panning issue without needing to add much complexity to the algorithms. In the case of multiple phase filters, the weight of the selected points must be artificially increased in all the phases, to ensure they are kept selected. 
 
 \input{Figures/panning}
 

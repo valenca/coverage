@@ -1,6 +1,7 @@
 This is BibTeX, Version 0.99d (TeX Live 2014/Arch Linux)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
+A level-1 auxiliary file: capa.aux
 A level-1 auxiliary file: front.aux
 A level-1 auxiliary file: initial.aux
 The style file: abbrvnat.bst
@@ -9,50 +10,49 @@ Warning--entry type for "waterloo_greece" isn't style-file defined
 --line 1 of file references.bib
 Warning--entry type for "waterloo_sweden" isn't style-file defined
 --line 7 of file references.bib
-Warning--I didn't find a database entry for "selection"
 Warning--to sort, need author or key in waterloo_sweden
 Warning--to sort, need author or key in waterloo_greece
 Warning--empty year in waterloo_greece
 Warning--empty year in waterloo_sweden
 You've used 27 entries,
             2773 wiz_defined-function locations,
-            757 strings with 8643 characters,
-and the built_in function-call counts, 11716 in all, are:
-= -- 1051
-> -- 595
-< -- 22
-+ -- 208
-- -- 180
-* -- 901
-:= -- 1765
-add.period$ -- 83
+            758 strings with 8851 characters,
+and the built_in function-call counts, 11765 in all, are:
+= -- 1045
+> -- 624
+< -- 21
++ -- 217
+- -- 189
+* -- 916
+:= -- 1773
+add.period$ -- 82
 call.type$ -- 27
-change.case$ -- 136
+change.case$ -- 139
 chr.to.int$ -- 26
 cite$ -- 60
-duplicate$ -- 584
-empty$ -- 1019
-format.name$ -- 213
-if$ -- 2487
+duplicate$ -- 577
+empty$ -- 1013
+format.name$ -- 222
+if$ -- 2494
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 30
-newline$ -- 141
+missing$ -- 29
+newline$ -- 140
 num.names$ -- 100
-pop$ -- 310
+pop$ -- 320
 preamble$ -- 1
-purify$ -- 114
+purify$ -- 117
 quote$ -- 0
 skip$ -- 437
 stack$ -- 0
-substring$ -- 416
+substring$ -- 390
 swap$ -- 73
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 262
 warning$ -- 4
-while$ -- 108
+while$ -- 106
 width$ -- 0
-write$ -- 352
-(There were 7 warnings)
+write$ -- 350
+(There were 6 warnings)

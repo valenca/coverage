@@ -38,10 +38,12 @@ M.~Blum, R.~W. Floyd, V.~Pratt, R.~L. Rivest, and R.~E. Tarjan.
 \newblock \emph{Journal of computer and system sciences}, 7\penalty0
   (4):\penalty0 448--461, 1973.
 
-\bibitem[Bose and Morin(1999)]{greedyroute}
+\bibitem[Bose and Morin(2003)]{greedyroute}
 P.~Bose and P.~Morin.
 \newblock Online routing in triangulations.
-\newblock In \emph{Algorithms and Computation}, pages 113--122. Springer, 1999.
+\newblock In \emph{Algorithms and Computations: 10th International Symposium,
+  ISAAC'99, Chennai, India, December 16-18, 1999 Proceedings}, page 113.
+  Springer, 2003.
 
 \bibitem[Bowyer(1981)]{bwalgo}
 A.~Bowyer.
@@ -49,13 +51,14 @@ A.~Bowyer.
 \newblock \emph{The Computer Journal}, 24\penalty0 (2):\penalty0 162--166,
   1981.
 
-\bibitem[Cambazard et~al.(2012)Cambazard, Mehta, O’Sullivan, and
+\bibitem[Cambazard et~al.(2012)Cambazard, Mehta, O'Sullivan, and
   Quesada]{incrementalcov}
-H.~Cambazard, D.~Mehta, B.~O’Sullivan, and L.~Quesada.
+H.~Cambazard, D.~Mehta, B.~O'Sullivan, and L.~Quesada.
 \newblock A computational geometry-based local search algorithm for planar
   location problems.
-\newblock In \emph{Integration of AI and OR Techniques in Contraint Programming
-  for Combinatorial Optimzation Problems}, pages 97--112. Springer, 2012.
+\newblock In \emph{Proceedings of the 9th international conference on
+  Integration of AI and OR Techniques in Constraint Programming for
+  Combinatorial Optimization Problems}, pages 97--112. Springer-Verlag, 2012.
 
 \bibitem[Caprara et~al.(2000)Caprara, Toth, and Fischetti]{gdccomplex}
 A.~Caprara, P.~Toth, and M.~Fischetti.
@@ -147,12 +150,10 @@ P.~G. Szab{\'o}, M.~C. Mark{\'o}t, T.~Csendes, E.~Specht, L.~G. Casado, and
   codes}, volume~6.
 \newblock Springer Science \& Business Media, 2007.
 
-\bibitem[Valença(2015)]{valenca}
-J.~Valença.
+\bibitem[Valença et~al.(2015)Valença, Paquete, Caçador, and Reino]{valenca}
+J.~Valença, L.~Paquete, C.~Caçador, and P.~Reino.
 \newblock {Visualisation and Analysis of Geographic Information: Algorithms and
-  Data Structures}.
-\newblock \emph{{AGILE 2015 - 18th International Conference on Geographic
-  Information Systems }}, 2015.
+  Data Structures}, 2015.
 
 \bibitem[Vaz(2013)]{dvaz}
 D.~Vaz.
