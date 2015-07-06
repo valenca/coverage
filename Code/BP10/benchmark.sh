@@ -10,7 +10,7 @@ for (( i=1000; i<=j; i+=1000 )); do
 	cat tmp2 | tail -1 >> res/results_unif10
     done
     echo -e "" >> res/results_clus10
-    echo -e "" >> res/results_unif15
+    echo -e "" >> res/results_unif10
     notify-send "Batch Done" "size $(( i ))"
 done
 
@@ -20,6 +20,8 @@ j=30000
 
 for (( i=1000; i<=j; i+=1000 )); do
     for (( seed=0; seed<30; seed++ )); do
+	./main < ../benches/clus15_${seed}_${i}.in > tmp2
+	cat tmp2 | tail -1 >> res/results_clus15
 	./main < ../benches/unif15_${seed}_${i}.in > tmp2
 	cat tmp2 | tail -1 >> res/results_unif15
     done

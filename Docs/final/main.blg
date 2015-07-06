@@ -9,49 +9,50 @@ Warning--entry type for "waterloo_greece" isn't style-file defined
 --line 1 of file references.bib
 Warning--entry type for "waterloo_sweden" isn't style-file defined
 --line 7 of file references.bib
+Warning--I didn't find a database entry for "selection"
 Warning--to sort, need author or key in waterloo_sweden
 Warning--to sort, need author or key in waterloo_greece
 Warning--empty year in waterloo_greece
 Warning--empty year in waterloo_sweden
-You've used 28 entries,
+You've used 27 entries,
             2773 wiz_defined-function locations,
             757 strings with 8643 characters,
-and the built_in function-call counts, 12326 in all, are:
-= -- 1103
-> -- 643
+and the built_in function-call counts, 11716 in all, are:
+= -- 1051
+> -- 595
 < -- 22
-+ -- 225
-- -- 195
-* -- 965
-:= -- 1860
-add.period$ -- 86
-call.type$ -- 28
-change.case$ -- 144
++ -- 208
+- -- 180
+* -- 901
+:= -- 1765
+add.period$ -- 83
+call.type$ -- 27
+change.case$ -- 136
 chr.to.int$ -- 26
-cite$ -- 62
-duplicate$ -- 605
-empty$ -- 1060
-format.name$ -- 229
-if$ -- 2609
-int.to.chr$ -- 3
+cite$ -- 60
+duplicate$ -- 584
+empty$ -- 1019
+format.name$ -- 213
+if$ -- 2487
+int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 31
-newline$ -- 146
-num.names$ -- 104
-pop$ -- 324
+missing$ -- 30
+newline$ -- 141
+num.names$ -- 100
+pop$ -- 310
 preamble$ -- 1
-purify$ -- 121
+purify$ -- 114
 quote$ -- 0
-skip$ -- 451
+skip$ -- 437
 stack$ -- 0
-substring$ -- 443
-swap$ -- 76
+substring$ -- 416
+swap$ -- 73
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 273
+type$ -- 262
 warning$ -- 4
-while$ -- 113
+while$ -- 108
 width$ -- 0
-write$ -- 365
-(There were 6 warnings)
+write$ -- 352
+(There were 7 warnings)

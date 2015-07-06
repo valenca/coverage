@@ -1,46 +1,50 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Example of a Representative Subset}}{1}{figure.caption.3}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Proposed Program Architecture\relax }}{2}{figure.caption.4}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Example of a Representative Subset}}{1}{figure.caption.4}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Proposed Program Architecture\relax }}{2}{figure.caption.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Different assignments for the same set of points\relax }}{7}{figure.caption.5}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Example of a \textit {k}-d Tree\xspace \relax }}{12}{figure.caption.6}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Example of a range search query on a \textit {k}-d Tree\xspace }}{13}{figure.caption.7}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Illustration of the Line Sweep method.}}{14}{figure.caption.8}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Example of a Voronoi Diagram\relax }}{14}{figure.caption.9}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Example of a Delaunay Triangulation\relax }}{15}{figure.caption.10}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Overlap of a Voronoi Diagram and its Delaunay Triangulation\relax }}{15}{figure.caption.11}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Illustration of the Half-Edge Structure\relax }}{17}{figure.caption.12}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Example of the Greedy Routing Algorithm\relax }}{18}{figure.caption.13}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Illustration of the Walking Algorithm\relax }}{19}{figure.caption.14}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces First Five Orders of Hilbert Curve Approximation\relax }}{19}{figure.caption.15}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Different assignments for the same set of points\relax }}{6}{figure.caption.6}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Example of a \textit {k}-d Tree\xspace \relax }}{11}{figure.caption.7}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Example of a range search query on a \textit {k}-d Tree\xspace }}{12}{figure.caption.8}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Illustration of the Line Sweep method.}}{13}{figure.caption.9}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Example of a Voronoi Diagram\relax }}{14}{figure.caption.10}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Example of a Delaunay Triangulation\relax }}{14}{figure.caption.11}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Overlap of a Voronoi Diagram and its Delaunay Triangulation\relax }}{15}{figure.caption.12}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Illustration of the Half-Edge Structure\relax }}{17}{figure.caption.13}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Example of the Greedy Routing Algorithm\relax }}{17}{figure.caption.14}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Illustration of the Walking Algorithm\relax }}{18}{figure.caption.15}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces First Five Orders of Hilbert Curve Approximation\relax }}{19}{figure.caption.16}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Illustration of a centroid insertion.}}{22}{figure.caption.16}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Illustration of a non-centroid insertion}}{23}{figure.caption.17}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Illustration of a centroid removal.}}{23}{figure.caption.18}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Illustration of a non-centroid removal}}{24}{figure.caption.19}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Illustration of the lower bound calculation.}}{24}{figure.caption.20}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Illustration of a centroid insertion using the geometric method}}{25}{figure.caption.21}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Illustration of a non-centroid insertion using the geometric method}}{26}{figure.caption.22}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Illustration of a centroid removal using the geometric method}}{26}{figure.caption.23}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Illustration of a non-centroid removal using the geometric method}}{27}{figure.caption.24}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces CPU-time for different values of $K$ with varying values of $N$\relax }}{29}{figure.caption.26}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces CPU-time for different values of $N$ with varying values of $K$\relax }}{30}{figure.caption.27}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Illustration of the branching process}}{22}{figure.caption.17}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Illustration of a centroid insertion.}}{22}{figure.caption.18}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Illustration of a non-centroid insertion}}{23}{figure.caption.19}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Illustration of a centroid removal.}}{23}{figure.caption.20}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Illustration of a non-centroid removal}}{24}{figure.caption.21}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Illustration of the lower bound calculation.}}{24}{figure.caption.22}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Illustration of a centroid insertion using the geometric method}}{25}{figure.caption.23}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Illustration of a non-centroid insertion using the geometric method}}{26}{figure.caption.24}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Illustration of a centroid removal using the geometric method}}{27}{figure.caption.25}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Illustration of a non-centroid removal using the geometric method}}{27}{figure.caption.26}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces CPU-time for different values of $K$ with varying values of $N$\relax }}{29}{figure.caption.28}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces CPU-time for different values of $N$ with varying values of $K$\relax }}{30}{figure.caption.29}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Illustration of the proximity graph}}{34}{figure.caption.28}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Illustration of the state of the proximity graph after the first iteration.}}{35}{figure.caption.29}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Illustration of the state of the final chosen set}}{35}{figure.caption.30}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Selected subsets from both graph building algorithms}}{36}{figure.caption.31}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces CPU-time for Line Sweep and $k$-d Tree range search.}}{37}{figure.caption.32}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Number $k$ of points selected for Line Sweep and $k$-d Tree range search.}}{38}{figure.caption.33}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces CPU-time for Line Sweep and Random Sampling algorithms.}}{39}{figure.caption.34}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Number $k$ of points selected for Line Sweep and Random Sampling algorithms.}}{40}{figure.caption.35}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Selected subset using the full set and a sampled subset}}{40}{figure.caption.36}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces CPU-time for Line Sweep and Two-phase filter algorithms.}}{41}{figure.caption.37}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Number $k$ of points selected for Line Sweep and Two-phase filter algorithms.}}{41}{figure.caption.38}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Illustration of the worst case scenario for the error of the two-phase algorithm}}{42}{figure.caption.39}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Two-phase filter result comparison}}{42}{figure.caption.40}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Example of a panning motion}}{43}{figure.caption.41}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Example of a zooming motion}}{44}{figure.caption.42}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Illustration of the proximity graph}}{34}{figure.caption.30}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Illustration of the state of the proximity graph after the first iteration}}{35}{figure.caption.31}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Illustration of the state of the final chosen set}}{35}{figure.caption.32}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Selected subsets from both graph building algorithms}}{36}{figure.caption.33}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces CPU-time for Line Sweep and $k$-d Tree range search.}}{38}{figure.caption.34}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Memory used by Line Sweep and $k$-d Tree range search.}}{38}{figure.caption.35}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Number $k$ of points selected for Line Sweep and $k$-d Tree range search.}}{38}{figure.caption.36}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces CPU-time for Line Sweep and Random Sampling algorithms.}}{40}{figure.caption.37}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Memory used by Line Sweep and Random Sampling algorithms.}}{40}{figure.caption.38}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Number $k$ of points selected for Line Sweep and Random Sampling algorithms.}}{40}{figure.caption.39}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Selected subset using the full set and a sampled subset}}{41}{figure.caption.40}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Illustration of the worst case scenario for the error of the two-phase algorithm}}{42}{figure.caption.41}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces CPU-time for Line Sweep and Two-phase filter algorithms.}}{43}{figure.caption.42}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Memory used by Line Sweep and Two-phase filter algorithms..}}{43}{figure.caption.43}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Number $k$ of points selected for Line Sweep and Two-phase filter algorithms.}}{43}{figure.caption.44}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Two-phase filter result comparison}}{44}{figure.caption.45}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Example of a panning motion}}{45}{figure.caption.46}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Example of a zooming motion}}{45}{figure.caption.47}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Most efficient distributions for circle packing for $d=0.1$, $d=0.15$,$d=0.2$.\relax }}{50}{figure.caption.43}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Most efficient distributions for circle packing for $d=0.1$, $d=0.15$,$d=0.2$.\relax }}{52}{figure.caption.48}

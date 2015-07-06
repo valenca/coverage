@@ -6,7 +6,7 @@ from itertools import product
 
 plt.style.use(plt.style.available[1])
 
-lista=["LS","KD"]#,"RS5","RS10","BP5","BP10","BP20"]
+lista=["LS","BP10"]#,"RS5","RS10","BP5","BP10","BP20"]
 #files=["results_unif10","results_clus10"]
 #files=["results_unif15","results_clus15"]
 files=["results_unif20","results_clus20"]
@@ -93,3 +93,39 @@ plt.grid(False)
 plt.subplots_adjust(bottom=0.15,right=0.65)
 plt.legend(labels,loc='center left', bbox_to_anchor=(1, 0.5))
 plt.show()
+
+if True:
+	print "here"
+	labels=[]
+	for directory in product(lista,files):
+		if directory[1][-3]=='f':
+			l='--'
+			t='clus'
+		else:
+			l='-'
+			t='unif'
+		w=[]
+		x=[]
+		with open(directory[0]+"/res/"+directory[1]) as f:
+			for j in range(30):
+				v=[]
+				for i in range(30):
+					v.append(float(f.readline().split()[4]))
+				f.readline()
+				w.append(v)
+		arr=np.array(w)
+		plt.plot(range(1000,31000,1000),
+				 np.mean(arr,axis=1),l,
+				 linewidth=1.5,color=trans[directory[0]])
+		labels.append(directory[0]+" "+t)
+	
+	#plt.yscale('log')
+	plt.axis([0, 30000, 0, 90])
+	plt.ylabel('K')
+	plt.xlabel('N')
+	plt.xticks(range(0,31000,10000))
+	plt.grid(False)
+	plt.subplots_adjust(bottom=0.15,right=0.65)
+	plt.legend(labels,loc='center left', bbox_to_anchor=(1, 0.5))
+	plt.show()
+

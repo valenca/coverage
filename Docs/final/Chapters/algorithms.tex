@@ -2,7 +2,7 @@
 \chapter{Exact Algorithms for the $k$-Centre Problem}
 \label{chap:algos}
 %\lhead{Chapter \ref{chap:algos}. \emph{\nameref{chap:algos}}} % This is for the header
-
+\vspace{-15pt}
 This chapter describes two possible algorithms that solve the \emph{$k$-centre} problem. The goal of this problem is to, given a set $N$ of $n$ points, find the subset of centroids of cardinality $k$ that minimises the farthest distance of a point in $N$ to its closest centroid. 
 
 Both algorithms use an incremental branch-and-bound approach for implicit enumeration. The first algorithm is a naïve implementation of a branch-and-bound algorithm and uses simple loops over arrays for point location queries. The second algorithm builds and uses Delaunay triangulations to achieve more efficient point location queries. At the end of this chapter, these algorithms, as well as an implementation of the Integer Linear Programming formulation described in Section \ref{alg:ilp}, are experimentally tested in a set of benchmark instances.
@@ -12,30 +12,30 @@ Both algorithms use an incremental branch-and-bound approach for implicit enumer
 
 One possible approach to this problem is to use a branch-and-bound method. Our approach is based on the wotk of \citet{incrementalcov} for solving a related $k$-centre problem. Their method describes algorithms to incrementally insert and remove centroids from a set of points, and update the centroid assignment only in the geometrical area surrounding the changed point. This method allows for small modifications on an already valid solution, and the techniques for updating the objective function upon insertion and removal of points can be used in an incremental branch-and-bound method to speed up the computation between branches, without having to calculate the full point assignment for every iteration of the algorithm, whilst still implicitly enumerating all possible combinations. 
 
-To solve the problem incrementally, at each step of the recursive tree, one of the available points is considered. A decision is then taken of whether the point is a centroid or a non-centroid. According to which decision is taken, the objective function and the centroid assignment is updated accordingly. This is done until all the centroids have been chosen and a solution is found at the end of the branch. The best solution in all the branches is the optimal value for the \emph{$k$-centre} problem.
-
 \subsection{Branching}
+
+To solve the problem incrementally, at each step of the recursive tree, one of the available points is considered. A decision is then taken of whether the point is a centroid or a non-centroid. According to which decision is taken, the objective function and the centroid assignment is updated accordingly. This is done until all the centroids have been chosen and a solution is found at the end of the branch. The best solution in all the branches is the optimal value for the \emph{$k$-centre} problem. Figure \ref{fig:branch} illustrates the branching process.
+
+\input{Figures/branch}
+
 As stated above, branching the tree involves updating the assignment between new points and/or new centroids, as well as updating the objective function. The following procedures explain in detail how to do so.
 \paragraph{Inserting a Centroid}
-To insert a centroid $c$, the established non-centroids which are closer to $c$ than their current centroid must be checked, and change their assignment to $c$.
+ To insert a centroid $c$, the established non-centroids which are closer to $c$ than their current centroid must be checked, and change their assignment to $c$.
 Since non-centroids only change assignment to centroids closer to them, inserting a centroid means that the objective function either decreases in value or stays the same.\\
 After inserting a centroid, if the farthest non-centroid is reassigned, all non-centroids must be checked to see which one now maximises the objective function.
 This step compares all non-centroids to the new centroid $c$, taking $\Theta(N)$ time. Figure \ref{fig:ncent} illustrates this operation.
 
 \input{Figures/ncent}
 
+\pagebreak
 \paragraph{Inserting a Non-Centroid}
 Inserting a non-centroid $n$ only requires finding which of the current centroids is the closest to $n$. Updating the objective function is a matter of testing whether the distance between $n$ and its centroid is larger than the current maximum.
 Inserting a non-centroid cannot produce a better objective function, since it either decreases or maintains the current value. 
 This step compares the distance between point $n$ and all centroids, taking $\Theta(k)$ time. Figure \ref{fig:nncent} illustrates this step.
 
 \input{Figures/nncent}
-
-\paragraph{}
-After a branch is fully calculated, it is necessary to backtrack to the parent state, either by removing a centroid, or a non-centroid.
-
 \paragraph{Removing a Centroid}
-Removing a centroid $c$ means redistributing the values assigned to $c$ to their respective closest centroids in the remaining set. \\
+After a branch is fully calculated, it is necessary to backtrack to the parent state, either by removing a centroid, or a non-centroid. Removing a centroid $c$ means redistributing the values assigned to $c$ to their respective closest centroids in the remaining set. \\
 The value function either increases or maintains, since the distance for all points previously assigned to $c$ increases, potentially above the current value for the objective function.
 Removing a centroid $c$ means comparing all non-centroids assigned to $c$ to all the other centroids. This step takes $\Theta(NK)$ time to execute. Alternatively, if the assignment state is saved before inserting the centroid, recovering it requires only retrieving the state, which means, in the worst and best cases copying an array of size $N$, which takes $\Theta(N)$ time at the expense of additional $\Theta(N)$ memory space. Figure \ref{fig:rcent} illustrates this step.
 
@@ -108,6 +108,7 @@ This is especially true since maintaining a valid Delaunay triangulation through
 
 Each of the procedures mentioned in the previous Section are performed at each step of the recursive tree. At each step the bound is also calculated, which takes $\mathcal{O}(N)$ time. Table \ref{tab:exptime} shows the time complexities for each procedure in both algorithms. The values presented at the row corresponding to the average case of the Delaunay-assisted algorithm are conjectured and need to be shown in a more formal manner.
 \begin{table}[!h]
+\vspace{10pt}
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
 	\hline
@@ -130,9 +131,9 @@ Each of the procedures mentioned in the previous Section are performed at each s
 	\captionof{table}{Time complexities for the various operations in a uniformly distributed point set}
 	\label{tab:exptime}
 \end{center}
+\vspace{-10pt}
 \end{table}
 \subsection{Experimental Results}
-\paragraph{}
 In this section, we analyse empirically the time spent calculating the solutions to different sizes of the problem. 
 \subsubsection*{Methodology and Set-up}
 The test cases are sets of uniformly distributed points generated with a fixed seed. Each test was repeated 10 times with different sets of points. The same sets and machine were used to test the three algorithms.
@@ -150,13 +151,13 @@ The Integer Linear Programming Approach performs faster for larger values of $N$
 In this experiment, we analysed the performance of the three algorithms in dependence of parameter $K$. We fixed $N$ and varied $K$ from 2 to $N$ by steps of 2. Figure \ref{fig:fixed_n} show the results for the $N=\{10,20,30,40\}$, respectively. The tests were stopped at the half-hour mark. Figure \ref{fig:fixed_n} shows the results of these tests.
 \input{Figures/fixed_n}
 \noindent
-The Integer Linear Programming approach seems to be the fastest approach for most cases, and seems independent to the value of $K$. The exceptions to this seem to be smaller values of $N$, as well as the smallest and largest values of $K$. This happens because the implicit enumeration methods only need to enumerate a very small number of combinations.
+The Integer Linear Programming approach seems to be the fastest approach for most cases, and seems independent to the value of $K$, the only exception being for smaller values of $N$, as well as the smallest and largest values of $K$. This happens because the implicit enumeration methods only need to enumerate a very small number of combinations.
 As for the branch-and-bound algorithms, the Delaunay-assisted approach is slower than the Naïve implementation in these test cases. However it should be noted that for each $N$, the Delaunay-assisted algorithm peaks before the expected value of $K=N/2$. This is justified due to the fact that the Delaunay triangulation has an overhead which can take advantage for in larger values of $K$.
 Furthermore, the fact that the Naïve implementation had no test for the middle values of $K$ for $N=40$ that ended before the time-out mark is noteworthy.
-It is also worth noting that The Delaunay-assisted approach showed a lot more variance between tests, often taking much lower values than the mean. However, for the tests performed, two runs had values much larger than the Naïve approach, approximating the Delaunay-assisted algorithm's mean to the Naïve approach.
+It is also worth noting that The Delaunay-assisted approach showed a lot more variance between tests, often taking much lower values than the mean. However, for the tests performed, two runs had values much larger than the Naïve approach, approximating the mean of the Delaunay-assisted to that of the Naïve approach.
 
 The time required for each test limited the number of tests performed. Because of this, the results may not be statistically meaningful. 
-This could mean that the Delaunay-assisted approach is only preferable for values of $N$ and $K$ to which neither approach is usable in real-time. Due to the small number of tests for large values of $N$, this result may not be statistically meaningful, but it is noteworthy.
+This could mean that the Delaunay-assisted approach is only preferable for values of $N$ and $K$ to which neither approach is usable in real-time. 
 
 \section{Discussion}
 The algorithms in this chapter have some drawbacks when used in a web application. Not only were the running times too large to be used in real-time, taking minutes and even hours for small instances with 40 points at most, but they also required some a priori knowledge about the number of clusters on a given window. This is infeasible, since there is no efficient way to infer how many clusters there are in a new region, without testing for all possible values of $K$. The algorithm should be able to calculate the final number of selected points, constrained to a minimum distance factor between them. This can be achieved by solving \emph{Geometric Disk Cover} problem described in Section \ref{ilp2}. The next chapter describes in detail a way to solve this problem in regards to the final application.

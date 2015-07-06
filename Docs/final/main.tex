@@ -23,10 +23,12 @@
 \usepackage{xspace}
 \usepackage{lipsum}
 \usepackage[square, numbers, comma, sort&compress]{natbib}
-\usetikzlibrary{shapes}
+\usetikzlibrary{automata,shapes}
 \usetikzlibrary{positioning,arrows,decorations}
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{decorations.pathreplacing} 
+
+\tikzset{initial text={},node distance=2cm,on grid,auto,main node/.style={draw,fill=gray!30}, accepting/.style={double distance=1pt,outer sep=.9pt,thick}}
 
 \usepackage{style}
 
@@ -45,7 +47,7 @@
 \begin{document}
 
 \singlespacing
-%\include{capa}
+\include{capa}
 %\end{document}
 \include{front}
 \include{initial}
@@ -62,13 +64,9 @@
 \thispagestyle{plain}
 
 \label{References}
-
 \renewcommand\bibname{References}
-
 \lhead{\emph{References}} % Change the page header to say "Bibliography"
-
 \bibliographystyle{abbrvnat} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
-
 \bibliography{references} % The references (bibliography) information are stored in the file named "Bibliography.bib"
 
 \end{document}  

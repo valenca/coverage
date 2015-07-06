@@ -1,4 +1,4 @@
-\begin{thebibliography}{28}
+\begin{thebibliography}{27}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -31,19 +31,12 @@ J.~L. Bentley.
 \newblock \emph{Communications of the ACM}, 18\penalty0 (9):\penalty0 509--517,
   1975.
 
-\bibitem[Blum et~al.(1973{\natexlab{a}})Blum, Floyd, Pratt, Rivest, and
+\bibitem[Blum et~al.(1973)Blum, Floyd, Pratt, Rivest, and
   Tarjan]{mediancomplex}
 M.~Blum, R.~W. Floyd, V.~Pratt, R.~L. Rivest, and R.~E. Tarjan.
 \newblock Time bounds for selection.
 \newblock \emph{Journal of computer and system sciences}, 7\penalty0
-  (4):\penalty0 448--461, 1973{\natexlab{a}}.
-
-\bibitem[Blum et~al.(1973{\natexlab{b}})Blum, Floyd, Pratt, Rivest, and
-  Tarjan]{selection}
-M.~Blum, R.~W. Floyd, V.~Pratt, R.~L. Rivest, and R.~E. Tarjan.
-\newblock Time bounds for selection.
-\newblock \emph{Journal of computer and system sciences}, 7\penalty0
-  (4):\penalty0 448--461, 1973{\natexlab{b}}.
+  (4):\penalty0 448--461, 1973.
 
 \bibitem[Bose and Morin(1999)]{greedyroute}
 P.~Bose and P.~Morin.

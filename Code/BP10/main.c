@@ -47,8 +47,8 @@ double min_y;
 
 clock_t T;
 
-int c;
-int m;
+double c;
+double m;
 
 double euclidean(point p,point q){
   return sqrt(((p.x-q.x)*(p.x-q.x))+((p.y-q.y)*(p.y-q.y)));
@@ -224,6 +224,6 @@ int main(){
   printf("%g\n",thres);
 #endif
 
-  printf("%d\t%g\t%d\t%g\t%d\n",N0,fact,K,((float)T)/CLOCKS_PER_SEC,(m/1024/1024*(int)sizeof(struct link)));
+  printf("%d\t%g\t%d\t%f\t%f\n",N0,fact,K,((float)T)/CLOCKS_PER_SEC,(m/1024.0/1024.0*(double)sizeof(struct link)));
   return 0;
 }

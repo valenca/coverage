@@ -45,8 +45,8 @@ double max_y;
 double min_x;
 double min_y;
 
-int c;
-int m;
+double c;
+double m;
 
 clock_t T;
 
@@ -55,8 +55,8 @@ double euclidean(point p,point q){
 }
 
 int compare(const void *p1, const void *p2){
-    const point *elem1 = p1;    
-    const point *elem2 = p2;
+  const point *elem1 = p1;    
+  const point *elem2 = p2;
 
     return (elem1->x > elem2->x);
 }
@@ -220,6 +220,7 @@ int main(){
   printf("%g\n",thres);
 #endif
 
-  printf("%d\t%g\t%d\t%g\t%d\n",N0,fact,K,((float)T)/CLOCKS_PER_SEC,(m/1024/1024*(int)sizeof(struct link)));
+  
+  printf("%d\t%g\t%d\t%f\t%g\n",N0,fact,K,((float)T)/CLOCKS_PER_SEC,(m/1024.0/1024.0*(double)sizeof(struct link)));
   return 0;
 }

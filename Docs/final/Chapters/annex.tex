@@ -2,7 +2,7 @@
 \chapter{Theorems and Proofs}
 \label{chap:append}
 \lhead{Chapter \ref{chap:append}. \emph{\nameref{chap:append}}} %
-
+\vspace{-15pt}
 %\section{Machine Specifications}
 %\label{ann:specs}
 %\begin{table}[H]
@@ -20,7 +20,7 @@
 
 \section{Median of Medians}
 \label{ann:median}
-Efficiently constructing a balance \kdtree depends on an efficient method to pick the point that divides the hyper-rectangle in two. One way to reasonably quickly find a value close to the median is to find the median of a sample. To ensure the quality of this sample, is to gather the medians of smaller subsets which can be quickly calculated. This algorithm is an example of a \emph{selection algorithm} and is known as the \emph{median of medians} algorithm \cite{selection}.
+Efficiently constructing a balance \kdtree depends on an efficient method to pick the point that divides the hyper-rectangle in two. One way to reasonably quickly find a value close to the median is to find the median of a sample. To ensure the quality of this sample, is to gather the medians of smaller subsets which can be quickly calculated. This algorithm is an example of a \emph{selection algorithm} and is known as the \emph{median of medians} algorithm \cite{mediancomplex}.
 
 The median of medians algorithms works as follows. Any starting array $S$ consisting of $n$ arbitrary values is split into $n/5$ sub-arrays, each containing at most 5 elements (the last array might have less, depending on whether $n$ is divisible by 5 or not). For each of the sub-arrays, the median can be calculated in constant time, since for 5 values it can be done in at most 6 comparisons, which for the whole array $S$ takes $6n/5$ comparisons. After finding all the sub-arrays' medians and gathering them in a new array $F$, the algorithm then is called recursively for $F$ until only one value $M$ remains. $M$ is then used to partition the input into two sub-groups: elements smaller than $M$ and elements larger than $M$. The two subgroups are then concatenated in increasing order and with $M$ in between them, and the algorithm is recursively called again for the group that contains the $n/2$th point of the newly concatenated list. Whenever the list has less than a given number of elements, the median is calculated via brute-force, to avoid infinite recursion. This value is returned by the initial recursive call of the function.
 
