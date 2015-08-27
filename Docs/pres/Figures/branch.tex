@@ -1,0 +1,44 @@
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[->,>=stealth', scale=1.5,
+level 1/.style={sibling distance=60  , level distance = 10},
+level 2/.style={sibling distance=40, level distance = 10}, 
+level 3/.style={sibling distance=20, level distance = 12}, 
+level 4/.style={sibling distance=10, level distance = 10}, 
+',n/.style={main node, state, circle}]  
+
+\node [] {}
+child {node [n] {$p_1$}
+	child {node [n] {$p_2$}
+		child {node [n] {$p_3$}
+			child {node [] {$\cdots$}
+				edge from parent node[above left] {}}
+			child {node [] {$\cdots$}
+				edge from parent node[above left] {}}
+			edge from parent node[above left] {\tiny \textit{centroid}}			}
+		child {node [n] {$p_3$}
+			child {node [] {$\cdots$}
+				edge from parent node[above left] {}}
+			child {node [] {$\cdots$}
+				edge from parent node[above left] {}}
+			edge from parent node[above right] {\tiny \textit{non-centroid}}}
+		edge from parent node[above left] {\tiny \textit{centroid}}}
+	child {node [n] {$p_2$}
+		child {node [n] {$p_3$} 
+			child {node [] {$\cdots$}
+				edge from parent node[above left] {}}
+			child {node [] {$\cdots$}
+				edge from parent node[above left] {}}
+			edge from parent node[above left] {\tiny \textit{centroid}}}
+		child {node [n] {$p_3$}
+			child {node [] {$\cdots$}
+				edge from parent node[above left] {}}
+			child {node [] {$\cdots$}
+				edge from parent node[above left] {}}
+			edge from parent node[above right] {\tiny \textit{non-centroid}}}
+		edge from parent node[above right] {\tiny \textit{non-centroid}}}
+	edge from parent node[above right] {}
+}
+;
+\end{tikzpicture}
+\end{figure}

@@ -17,24 +17,84 @@
 \usepackage{pifont}
 \usepackage{lipsum}
 \usepackage{tikz}
-\usetikzlibrary{shapes,arrows,decorations,shapes}
+\usetikzlibrary{automata,shapes,patterns,fadings}
+\usetikzlibrary{positioning,arrows,decorations}
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{decorations.pathreplacing} 
 
+\tikzset{initial text={},node distance=2cm,on grid,auto,main node/.style={draw,fill=gray!30}, accepting/.style={double distance=1pt,outer sep=.9pt,thick}}
+
 \author{João Valença\\valenca@student.dei.uc.pt}
 \institute{Department of Informatics Engineering\\University of Coimbra}
-\date{February 2, 2015}
+\date{July 13, 2015}
 \subject{Theoretical Computer Science}
-\title{Visualisation and Analysis of Geographic Information}
-\subtitle{Algorithms and Data Structures}
+\title{Visualisation and Analysis of Geographic Information: Algorithms and Data Structures}
 
 \setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=8pt,text margin right=8pt}
 \addtobeamertemplate{navigation symbols}{}{%
 	\usebeamerfont{footline}%
 	\usebeamercolor[fg]{footline}%
 	\hspace{1em}%
 	-- \textcolor{black}\insertframenumber\ --
 }
+
+
+\usepackage{mwe}
+
+\makeatletter
+\defbeamertemplate*{note page}{mynotes}
+{%
+	{%
+		\scriptsize
+		\usebeamerfont{note title}\usebeamercolor[fg]{note title}%
+		\ifbeamercolorempty[bg]{note title}{}{%
+			\insertvrule{.45\paperheight}{note title.bg}%
+			\vskip-.45\paperheight%
+			\nointerlineskip%
+		}%
+		\vbox{
+			\hfill\insertslideintonotes{0.45}\hskip-\Gm@rmargin\hskip0pt%
+			\vskip-0.45\paperheight%
+			\nointerlineskip
+			\begin{pgfpicture}{0cm}{0cm}{0cm}{0cm}
+				\begin{pgflowlevelscope}{\pgftransformrotate{90}}
+					{\pgftransformshift{\pgfpoint{-2cm}{0.2cm}}%
+						\pgftext[base,left]{\usebeamerfont{note date}\usebeamercolor[fg]{note date}\the\year-\ifnum\month<10\relax0\fi\the\month-\ifnum\day<10\relax0\fi\the\day}}
+				\end{pgflowlevelscope}
+			\end{pgfpicture}}
+			\nointerlineskip
+			\vbox to .45\paperheight{\vskip0.5em
+				\hbox{\insertshorttitle[width=8cm]}%
+				\setbox\beamer@tempbox=\hbox{\insertsection}%
+				\hbox{\ifdim\wd\beamer@tempbox>1pt{\hskip4pt\raise3pt\hbox{\vrule
+							width0.4pt height7pt\vrule width 9pt
+							height0.4pt}}\hskip1pt\hbox{\begin{minipage}[t]{7.5cm}\def\breakhere{}\insertsection\end{minipage}}\fi%
+				}%
+				\setbox\beamer@tempbox=\hbox{\insertsubsection}%
+				\hbox{\ifdim\wd\beamer@tempbox>1pt{\hskip17.4pt\raise3pt\hbox{\vrule
+							width0.4pt height7pt\vrule width 9pt
+							height0.4pt}}\hskip1pt\hbox{\begin{minipage}[t]{7.5cm}\def\breakhere{}\insertsubsection\end{minipage}}\fi%
+				}%
+				\setbox\beamer@tempbox=\hbox{\insertshortframetitle}%
+				\hbox{\ifdim\wd\beamer@tempbox>1pt{\hskip30.8pt\raise3pt\hbox{\vrule
+							width0.4pt height7pt\vrule width 9pt
+							height0.4pt}}\hskip1pt\hbox{\insertshortframetitle[width=7cm]}\fi%
+				}%
+				\vfil}%
+		}%
+		\ifbeamercolorempty[bg]{note page}{}{%
+			\nointerlineskip%
+			\insertvrule{.55\paperheight}{note page.bg}%
+			\vskip-.55\paperheight%
+		}%
+		\vskip.25em
+		\nointerlineskip
+		\insertnote
+	}
+	\makeatother
+
+
 
 \newcommand{\smark}{\ding{110}}%
 \newcommand{\cmark}{\ding{108}}%
@@ -46,16 +106,11 @@
 }
 
 \frame{
-	\frametitle{Motivation}
+	\frametitle{Visualisation and Analysis of Geographic Information}
+	\framesubtitle{1. Motivation}
 	\begin{itemize}
-		\item To develop a Web application for Geographic information system
 		\item A QREN project with Smartgeo and UC
-	\end{itemize}
-}
-
-\frame{
-	\frametitle{Motivation}
-	\begin{itemize}
+		\item Create a real-time algorithm for a web-application
 		\item Reduce visual information when displaying large numbers of geographic points (e.g. Points of interest)
 		\item Find a representative subset of a collection of points in a map
 		\input{Figures/rep}
@@ -64,40 +119,427 @@
 }
 
 \frame{
-	\frametitle{Coverage}	
+	\frametitle{Visualisation and Analysis of Geographic Information}
+	\framesubtitle{1. Work Plan}
+		\begin{itemize}
+			\item $1^{st}$ Semester
+			\begin{itemize} 
+				\item Formalise the representation problem as the $k$-centre problem.
+				\item Development of a branch-and-bound approach.
+				\item Implement an integer linear programming approach.
+				\item Experimental analysis of the algorithms.
+			\end{itemize}
+		\end{itemize}
+		\begin{itemize}
+			\item $2^{nd}$ Semester
+			\begin{itemize}
+				\item Formalise the representation problem as geometric disk cover.
+				\item Development of an approximation algorithm approach.
+				\item Development of heuristic speed-ups.
+				\item Experimental analysis of the algorithms.
+			\end{itemize}
+		\end{itemize}
+}
+
+
+\frame{
+	\frametitle{2. $k$-Centre Problem}	
+	\framesubtitle{Defining Coverage}
 	\begin{itemize}
-		\item Minimising Coverage
+		\item Given a set $N$ of points, find a subset $P$ of $k$ centroids.
+		\item Goal : to minimise the largest distance between a point and its closest centroid.
 	\end{itemize}
 	\input{Figures/cov}
-	\pause
 	\begin{equation*}
 	\min_{\substack{P \subseteq N\\ \lvert P \rvert = k}}{\max_{n \in N}{\min_{p \in P}{\lVert p-n \rVert}}}
 	\end{equation*}
 }
 
 \frame{
-\frametitle{Work Plan}
+	\frametitle{2. $k$-Centre Problem}	
+	\framesubtitle{Branch-and-bound}
 	\begin{itemize}
-		\item $1^{st}$ Semester
+		\item Branching
 		\begin{itemize}
-			\item Literature Review: Geographic Information Systems, OGC Standards WMS, WFS, Map Projections, algorithms and heuristics for clustering and facility-location problems.
-			\item Development of a Branch-and-Bound approach.
+			\medskip
+			\item Divide search space in a binary tree
+			\medskip
+			\item At each step, decide if a point is a centroid or non-centroid
+			\medskip
+			\item Update objective function accordingly
 		\end{itemize}
-	\end{itemize}
-	\begin{itemize}
-		\item $2^{nd}$ Semester
+		\item Bound
 		\begin{itemize}
-			\item Development of heuristic approaches.
-			\item Experimental analysis of the algorithms.
-			\item Integration of the algorithms in the visualisation framework through web-mapping standards (WMS/WFS).
-			\item Comparison between different approaches using Open Street Map data.
+			\medskip
+			\item Assume best possible case
+			\medskip
+			\item Prune tree
 		\end{itemize}
 	\end{itemize}
 }
 
+\frame{
+	\frametitle{2. $k$-Centre Problem}	
+	\framesubtitle{Na\"ive Branch-and-bound}
+	\begin{minipage}{0.48\linewidth}
+	\begin{itemize}
+		\item Inserting a Centroid
+		\begin{itemize}
+			\medskip
+			\item Search all non-centroids for assignment update
+			\medskip
+			\item Smaller or equal coverage
+		\end{itemize}
+		\vspace{0.5cm}
+		\item Inserting a Non-centroid
+		\begin{itemize}
+			\medskip
+			\item Search for closest centroid
+			\medskip
+			\item Larger or equal coverage
+		\end{itemize}
+	\end{itemize}
+	\end{minipage}
+	\begin{minipage}{0.48\linewidth}
+		\vspace{-15pt}
+		\input{Figures/npoint}
+	\end{minipage}
+}
+\frame{
+	\frametitle{2. $k$-Centre Problem}	
+	\framesubtitle{Na\"ive Branch-and-bound}
+	\begin{minipage}{0.48\linewidth}
+	\begin{itemize}
+		\item Removing a Centroid
+		\begin{itemize}
+			\medskip
+			\item Update all non-centroids
+			\medskip
+			\item Larger or equal coverage
+		\end{itemize}
+		\vspace{0.5cm}
+		\item Removing a Non-centroid
+		\begin{itemize}
+			\medskip
+			\item Update objective function
+			\medskip
+			\item Smaller or equal coverage
+		\end{itemize}
+	\end{itemize}
+	\end{minipage}
+	\begin{minipage}{0.48\linewidth}
+		\vspace{-15pt}
+		\input{Figures/rpoint}
+	\end{minipage}
+}
+
+\frame{
+	\frametitle{2. $k$-Centre Problem}
+	\framesubtitle{Na\"ive Branch-and-bound}
+	\begin{itemize}
+		\item Assume all remaining points are centroids
+		\item If the closest one is too far, the branch can be pruned
+	\end{itemize}		
+	\input{Figures/bound}
+	\begin{itemize}
+		\item Only if a better solution has been found
+	\end{itemize}		
+}
+
+\frame{
+	\frametitle{2. $k$-Centre Problem}	
+	\framesubtitle{Geometric Branch-and-bound}	
+	\begin{itemize}
+		\item Use geometric structures to speed-up the update of the objective function
+		\item Delaunay triangulations
+		\item Sort points by Hilbert curve
+	\end{itemize}
+	\input{Figures/dt1}
+}
+
+
+\frame{
+	\frametitle{2. $k$-Centre Problem}	
+	\framesubtitle{Geometric Branch-and-bound}	
+	\begin{minipage}{0.6\linewidth}
+	\begin{itemize}
+		\item Inserting a Centroid
+		\begin{itemize}
+			\medskip
+			\item Insert centroid in triangulation
+			\medskip
+			\item Search all non-centroids for assignment update
+			\medskip
+			\item Smaller or equal coverage
+		\end{itemize}
+		\vspace{0.5cm}
+		\item Inserting a Non-centroid
+		\begin{itemize}
+			\medskip
+			\item Search for closest centroid using greedy routing
+			\medskip
+			\item Update objective function
+			\medskip
+			\item Larger or equal coverage
+		\end{itemize}
+	\end{itemize}
+	\end{minipage}
+	\begin{minipage}{0.38\linewidth}
+		\input{Figures/gnpoint}
+	\end{minipage}
+}
+
+
+\frame{
+	\frametitle{2. $k$-Centre Problem}	
+	\framesubtitle{Na\"ive Branch-and-bound}
+	\begin{minipage}{0.6\linewidth}
+		\begin{itemize}
+			\item Removing a Centroid
+			\begin{itemize}
+				\medskip
+				\item Revert assignment
+				\medskip
+				\item Remove centroid from triangulation
+				\medskip
+				\item Larger or equal coverage 
+			\end{itemize}
+			\vspace{0.5cm}
+			\item Removing a Non-centroid
+			\begin{itemize}
+				\medskip
+				\item Update objective function
+				\medskip
+				\item Revert assignment
+				\medskip
+				\item Smaller or equal coverage 
+			\end{itemize}
+		\end{itemize}
+	\end{minipage}
+	\begin{minipage}{0.38\linewidth}
+		\input{Figures/grpoint}
+	\end{minipage}
+}
+
+\frame{
+	\frametitle{2. $k$-Centre Problem}	
+	\framesubtitle{Algorithm Comparison - Effect of N}
+	\input{Figures/fixed_k}		
+}
+\frame{
+	\frametitle{2. $k$-Centre Problem}	
+	\framesubtitle{Algorithm Comparison - Effect of K}
+	\input{Figures/fixed_n}		
+}
+
+\frame{
+	\frametitle{2. $k$-Centre Problem}	
+	\framesubtitle{Disadvantages}
+	\begin{itemize}
+		\item All approaches are too slow.
+		\medskip
+		\item So solve the problem we need to know how many clusters to choose.
+		\medskip
+	\end{itemize}
+	\centering
+	\begin{tikzpicture}
+		\fill[lightgray!15,draw=black] (0,0) rectangle (4,3);
+		\clip(0,0) rectangle (4,3);
+		\input{Figures/cluster}
+		\end{tikzpicture}
+}
+
+\frame{
+	\frametitle{3. Geometric Disk Cover Problem}
+		\framesubtitle{Definition}
+		\begin{itemize}
+			\item Given a set of points $N$ and a distance $d$
+			\item Find the minimum number of disks of radius $d$ and centred in $P \subseteq N$ to cover all points in N
+		\end{itemize}
+		\input{Figures/rep}
+}
+
+\frame{
+	\frametitle{3. Geometric Disk Cover Problem}
+	\framesubtitle{Approximation Algorithm - Chosing a distance}
+	\input{Figures/sweden_dist}
+}
+
+\frame{
+	\frametitle{3. Geometric Disk Cover Problem}
+	\framesubtitle{Approximation Algorithm}
+	\input{Figures/apx0}
+	\begin{itemize}
+		\item{Given $N$ points.}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{3. Geometric Disk Cover Problem}
+	\framesubtitle{Approximation Algorithm}
+	\input{Figures/apx1}
+	\begin{itemize}
+		\item Connect all pairs whose distance is less than $d$ 
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{3. Geometric Disk Cover Problem}
+	\framesubtitle{Approximation Algorithm}
+	\input{Figures/apx2}
+	\begin{itemize}
+		\item{Select point with most connections and remove its neighbours.}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{3. Geometric Disk Cover Problem}
+	\framesubtitle{Approximation Algorithm}
+	\input{Figures/apx3}
+	\begin{itemize}
+		\item{Repeat until all points are either removed or selected.}
+	\end{itemize}
+}
+
+%\frame{
+%	\frametitle{Geometric Disk Cover}
+%	\framesubtitle{Buiding the Proximity Graph}
+%	\input{Figures/kd1}
+%}
+%
+%\frame{
+%	\frametitle{Geometric Disk Cover}
+%	\framesubtitle{Buiding the Proximity Graph}
+%	\input{Figures/kdrs}
+%}
+%
+%\frame{
+%	\frametitle{Geometric Disk Cover}
+%	\framesubtitle{Buiding the Proximity Graph}
+%	\input{Figures/ls1}
+%}
+
+\frame{
+	\frametitle{3. Geometric Disk Cover Problem}
+	\framesubtitle{$k$-d Trees vs. Line Sweep}
+	\input{Figures/kd_ls_t}
+	\begin{itemize}
+		\item{Line Sweep algorithm is faster.}
+	\end{itemize}
+}
+
+
+
+\frame{
+	\frametitle{3. Geometric Disk Cover Problem}
+	\framesubtitle{$k$-d Trees vs. Line Sweep}
+	\input{Figures/kd_ls_s}
+	\begin{itemize}
+		\item{Both algorithms use the same space (up to 4Gb)}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{3. Geometric Disk Cover Problem}
+	\framesubtitle{$k$-d Trees vs. Line Sweep}
+	\input{Figures/kd_ls_k}
+	\begin{itemize}
+		\item{Both algorithms give the same results}
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{3. Geometric Disk Cover Problem}
+	\framesubtitle{Heuristic Speed-ups: Random Sampling}
+	\begin{itemize}
+		\item Randomly discard a fraction of the input points.
+		\item Uniform sets should keep a similar distribution.
+		\item Less points to deal means faster times.
+	\end{itemize}
+	\pause
+	\input{Figures/ls_rs_greece}
+}
+
+\frame{
+	\frametitle{3. Geometric Disk Cover Problem}
+	\framesubtitle{Heuristic Speed-ups: Two-Phase Filtering}
+	\begin{itemize}
+		\item Solve the problem with a smaller distance first.
+		\item Use the output as a new input for the given distance.
+		\item Sparser graphs mean faster CPU times.
+	\end{itemize}
+	\pause
+	\input{Figures/bp_error}
+}
+
+\frame{
+	\frametitle{3. Geometric Disk Cover Problem}
+	\framesubtitle{Heuristic Speed-ups: Two-Phase Filtering}
+	\input{Figures/ls_bp_t}
+	\begin{itemize}
+		\item Two-phase algorithm is $10\times$ faster than line sweep
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{3. Geometric Disk Cover Problem}
+	\framesubtitle{Heuristic Speed-ups: Two-Phase Filtering}
+	\input{Figures/ls_bp_s}
+	\begin{itemize}
+		\item Uses less memory \quad ($\approx$ 100Mb for $d^\prime=0.1d$)
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{3. Geometric Disk Cover Problem}
+	\framesubtitle{Heuristic Speed-ups: Two-Phase Filtering}
+	\input{Figures/ls_bp_k}
+	\begin{itemize}
+		\item Maintains a similar quality of the results.
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{3. Geometric Disk Cover Problem}
+	\framesubtitle{Heuristic Speed-ups: Two-Phase Filtering}
+	\input{Figures/bp_sweden}
+}
+
+\frame{
+	\frametitle{3. Geometric Disk Cover Problem}
+	\framesubtitle{Panning}
+	\input{Figures/panning}
+	\begin{itemize}
+		\item Give priority to already chosen centroids
+	\end{itemize}
+}
+\frame{
+	\frametitle{3. Geometric Disk Cover Problem}
+	\framesubtitle{Zooming}
+	\input{Figures/zooming}
+	\begin{itemize}
+		\item Give priority to already chosen centroids
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{4. Future Work}
+	\begin{itemize}
+		\item Integration with the Web application.
+		\item Further research on range search algorithms
+		\item Experiment with different notions of representations.
+	\end{itemize}	
+	
+}
+
+
+\frame{
+	
+	}
 
 \frame{
 	\frametitle{Integer Linear Programming}
+	\framesubtitle{$k$-centre}
 	\begin{align*}
 	\text{minimise}   \quad& D							   &\\
 	\text{subject to} \quad
@@ -114,245 +556,85 @@
 	\end{align*}
 }
 
-\frame{
-	\frametitle{Branch-and-bound}
-	\begin{itemize}
-		\item Branching
-		\begin{itemize}
-			\item Divide search space in a binary tree
-			\item At each step, decide if a point is a centroid or non-centroid
-			\item Update objective function accordingly
-		\end{itemize}
-		\pause
-		\item Bound
-		\begin{itemize}
-			\item Assume best possible case
-			\item Prune tree
-		\end{itemize}
-	\end{itemize}
-}
 
 \frame{
-	\frametitle{Branch-and-bound}
-	\begin{itemize}
-		\item Inserting a Centroid
-		\begin{itemize}
-			\item Search all non-centroids for assignment update
-			\item Smaller or equal coverage value
-		\end{itemize}
-	\end{itemize}
-	\input{Figures/ncent}
-}
-
-\frame{
-	\frametitle{Branch-and-bound}
-	\begin{itemize}
-		\item Inserting a Non-centroid
-		\begin{itemize}
-			\item Search for closest centroid
-			\item Larger or equal coverage value
-		\end{itemize}
-	\end{itemize}
-	\input{Figures/nncent}
+	\frametitle{Integer Linear Programming}
+	\framesubtitle{Geometric Disk Cover}
+	\begin{align*}
+		\text{minimise}   \quad& k							   &\\
+		\text{subject to} \quad
+		& \sum\limits_{j=1}^{N}{y_j} \leq k 
+		& 							\\
+		& \sum\limits_{j=1}^{N}{x_{ij}}	= 1   
+		& i=1,\ldots,N 				\\
+		& \sum\limits_{j=1}^{N}{d_{ij} x_{ij}} \leq D
+		& i=1,\ldots,N				\\
+		& x_{ij} \leq y_{j}				   
+		& i=1,\ldots,N;j=1,\ldots,N	\\
+		& x_{ij},y_{j} \in \{0,1\}
+		& i=1,\ldots,N;j=1,\ldots,N 
+	\end{align*}
 }
 
 
 \frame{
-	\frametitle{Branch-and-bound}
-	\begin{itemize}
-				\item Removing a Centroid
-				\begin{itemize}
-					\item Update all non-centroids
-					\item Larger or equal coverage value
-				\end{itemize}
-	\end{itemize}
-	\input{Figures/rcent}
+	\frametitle{Delaunay Triangulations}
+	\input{Figures/dt2}
 }
 
 \frame{
-	\frametitle{Branch-and-bound}
-	\begin{itemize}
-				\item Removing a Non-centroid
-				\begin{itemize}
-					\item Update objective function
-				\item Smaller or equal coverage value
-				\end{itemize}
-	\end{itemize}
-	\input{Figures/rncent}
+	\frametitle{Delaunay Triangulations}
+	\input{Figures/dt_vd}
 }
 
 \frame{
-	\frametitle{Branch-and-bound}
-	\begin{itemize}
-		\item Applying the bound
-	\end{itemize}		
-	\input{Figures/bound}
-	\pause
-	\begin{itemize}
-		\item (Only if a better solution has been found)
-	\end{itemize}		
+	\frametitle{Voronoi Diagrams}
+	\input{Figures/vd1}
 }
 
 \frame{
-	\frametitle{Geometric Approach}	
-	\begin{itemize}
-		\item Unnecessary number of calculations
-		\begin{itemize}	
-			\item Use geometric structures to speed-up the update of the objective function
-		\end{itemize}
-		\pause
-		\item Delaunay triangulations
-	\end{itemize}
-	\input{Figures/dt1}
-}
-
-\frame{
-	\frametitle{Geometric Approach}	
-	\begin{itemize}
-		\item Greedy Routing
-	\end{itemize}
+	\frametitle{Greedy Routing}
 	\input{Figures/gr1}
 }
 
 \frame{
-	\frametitle{Geometric Approach}	
-	\begin{itemize}
-		\item Greedy Routing
-		\item Use Hilbert curves to minimise distance between consecutive routing calls
-	\end{itemize}
-	\input{Figures/hilbert}
+	\frametitle{$k$-d Trees}
+	\input{Figures/kd1}
 }
 
 \frame{
-	\frametitle{Geometric Approach}
-	\begin{itemize}
-		\item Pre-process:
-		\begin{itemize}
-			\item Initialize Delaunay Triangulation
-			\item Sort points by Hilbert curve
-		\end{itemize}
-	\end{itemize}
+	\frametitle{$k$-d Trees Range Search}
+	\input{Figures/kdrs}
 }
 
 \frame{
-	\frametitle{Geometric Approach}
-	\begin{itemize}
-		\item Inserting a Centroid
-		\begin{itemize}
-			\item Insert centroid in triangulation
-			\item Search all non-centroids for assignment update
-			\item Smaller or equal coverage value
-		\end{itemize}
-	\end{itemize}
-	\input{Figures/gncent}
-}
-\frame{
-	\frametitle{Geometric Approach}
-	\begin{itemize}
-		\item Inserting a Non-centroid
-		\begin{itemize}
-			\item Search for closest centroid using greedy routing
-			\item Update objective function
-			\item Larger or equal coverage value
-		\end{itemize}
-	\end{itemize}
-	\input{Figures/gnncent}
+	\frametitle{Line Sweep}
+	\input{Figures/ls1}
 }
 
 \frame{
-	\frametitle{Geometric Approach}
+	\frametitle{Geometric Disk Cover}
+	\framesubtitle{Random Sampling}
+	\input{Figures/ls_rs_t}
 	\begin{itemize}
-		\item Removing a Centroid
-		\begin{itemize}
-			\item Revert assignment
-			\item Remove centroid from triangulation
-			\item Larger or equal coverage value
+		\item Faster Times than the line sweep algorithm
 	\end{itemize}
+}
 	
-	\end{itemize}
-	\input{Figures/grcent}
-}
-
 \frame{
-	\frametitle{Geometric Approach}
+	\frametitle{Geometric Disk Cover}
+	\framesubtitle{Random Sampling}
+	\input{Figures/ls_rs_s}
 	\begin{itemize}
-		\item Removing a Non-centroid
-		\begin{itemize}
-			\item Update objective function
-			\item Revert assignment
-			\item Smaller or equal coverage value
+		\item Uses less memory (150Mb)
 		\end{itemize}
-	\end{itemize}
-	\input{Figures/grncent}
 }
 
 \frame{
-	\frametitle{Algorithm Comparison}
-	\begin{itemize}
-		\item Complexity of operations
-	\end{itemize}
-	\resizebox{\linewidth}{!}{
-	\begin{tabular}{|c|c|c|c|c|}
-		\hline
-		\multirow{2}{*}{Algorithm}	& \multicolumn{2}{c|}{Insert}	& \multicolumn{2}{c|}{Remove}	\\ \cline{2-5}
-		& Centroid		& Non-Centroid	& Centroid		& Non-Centroid	\\ \hline
-		Naïve BB		& $\Theta(N)$ & $\Theta(K)$ 	& $\Theta(N)$ & $\mathcal{O}(1)$ \\ \hline\hline
-		Geometric BB	
-		& \multirow{2}{*}{$\mathcal{O}(\log{K}+N/K)$}
-		& \multirow{2}{*}{$\mathcal{O}(\sqrt{K})$}
-		& \multirow{2}{*}{$\mathcal{O}(N/K)$ }
-		& \multirow{2}{*}{$\mathcal{O}(1)$}\\
-		Average Case
-		\footnote{to be shown} & & & & \\ \hline
-		Geometric BB 
-		& \multirow{2}{*}{$\mathcal{O}(K+N)$}
-		& \multirow{2}{*}{$\mathcal{O}(K)$}	
-		& \multirow{2}{*}{$\mathcal{O}(N)$} 
-		& \multirow{2}{*}{$\mathcal{O}(1)$}\\ 
-		Worst Case 	& & & & \\ \hline
-	\end{tabular}
-	}
+	\frametitle{Geometric Disk Cover}
+	\framesubtitle{Random Sampling}
+	\input{Figures/ls_rs_k}
 }
 
-\frame{
-	\frametitle{Algorithm Comparison}
-	\begin{itemize}
-		\item Tests Performed
-		\begin{itemize}
-			\item Effect of N
-			\begin{itemize}
-				\item Change N
-				\item Keep proportional K
-			\end{itemize}
-			\item Effect of K
-			\begin{itemize}
-				\item Fixed N
-				\item Change K
-			\end{itemize}
-		\end{itemize}
-	\end{itemize}
-}
-
-\frame{
-	\frametitle{Algorithm Comparison}
-	\framesubtitle{Effect of N}
-	\input{Figures/fixed_k}		
-}
-\frame{
-	\frametitle{Algorithm Comparison}
-	\framesubtitle{Effect of K}
-	\input{Figures/fixed_n}		
-}
-
-\frame{
-	\frametitle{Future Work}
-	\begin{itemize}
-		\item Heuristic Approach
-		\item Approximation Algorithms
-		\item Adapt to allow panning and zooming
-		\item Integration with WFS standard
-		\item Benchmark with real data
-	\end{itemize}
-}
 
 \end{document}
