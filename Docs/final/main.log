@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Arch Linux) (preloaded format=pdflatex 2015.5.29)  26 AUG 2015 18:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.9.15)  22 SEP 2015 14:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
-LaTeX2e <2014/05/01>
+LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (/usr/share/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
@@ -25,7 +25,7 @@ File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \bibindent=\dimen102
 )
 (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2014/04/30 v1.2b Input encoding file
+Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
@@ -257,7 +257,7 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 (/usr/share/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 94.
 
 (/usr/share/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
@@ -407,7 +407,7 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 \c@section@level=\count99
 )
 (/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
-Package: amsthm 2009/07/02 v2.20.1
+Package: amsthm 2015/03/04 v2.20.2
 \thm@style=\toks18
 \thm@bodyfont=\toks19
 \thm@headfont=\toks20
@@ -491,8 +491,8 @@ Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
 \symboldletters=\mathgroup7
 \symboldsymbols=\mathgroup8
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 137.
-LaTeX Info: Redefining \bm on input line 203.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
 )
 (/usr/share/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
@@ -1057,7 +1057,7 @@ Package: import 2009/03/23  v 5.1
 )
 (/usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.sty
 (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
-Package: pgfplots 2015/01/31 v1.12 Data Visualization (1.12)
+Package: pgfplots 2015/05/02 v1.12.1 Data Visualization (1.12.1)
 
 (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
 (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
@@ -1139,26 +1139,29 @@ File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
 (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2013/07/20 v3.0.0 (rcs-revision 1.13)
 ))) (/usr/share/texmf-dist/tex/latex/circuitikz/circuitikz.sty
-Package: circuitikz 2012/12/29 The CircuiTikz circuit drawing package version 0
-.3.0
+Package: circuitikz 2015/05/15 The CircuiTikz circuit drawing package version 0
+.4
 
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 calc.code.tex
 File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.0 (rcs-revision 1.9)
-) (/usr/share/texmf-dist/tex/latex/circuitikz/circuitikz.code.tex
+)
+(/usr/share/texmf-dist/tex/generic/circuitikz/circuitikz.code.tex
 \pgf@circ@Rlen=\dimen219
 
-(/usr/share/texmf-dist/tex/latex/circuitikz/pgfcircutils.sty)
-(/usr/share/texmf-dist/tex/latex/circuitikz/pgfcircmath.sty)
-(/usr/share/texmf-dist/tex/latex/circuitikz/pgfcircshapes.sty)
-(/usr/share/texmf-dist/tex/latex/circuitikz/pgfcircmonopoles.sty)
-(/usr/share/texmf-dist/tex/latex/circuitikz/pgfcircbipoles.sty)
-(/usr/share/texmf-dist/tex/latex/circuitikz/pgfcirctripoles.sty)
-(/usr/share/texmf-dist/tex/latex/circuitikz/pgfcircquadpoles.sty)
-(/usr/share/texmf-dist/tex/latex/circuitikz/pgfcirclabel.sty)
-(/usr/share/texmf-dist/tex/latex/circuitikz/pgfcircvoltage.sty)
-(/usr/share/texmf-dist/tex/latex/circuitikz/pgfcirccurrent.sty))
-(/usr/share/texmf-dist/tex/latex/circuitikz/circuitikz1.code.tex
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircutils.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircmath.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircmonopoles.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircquadpoles.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircnpoles.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcirclabel.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircvoltage.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircinputarrows.tex))
+(/usr/share/texmf-dist/tex/generic/circuitikz/circuitikz1.code.tex
 \pgf@circ@res@up=\dimen220
 \pgf@circ@res@down=\dimen221
 \pgf@circ@res@zero=\dimen222
@@ -1166,7 +1169,8 @@ File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.0 (rcs-revision 1.9)
 \pgf@circ@res@right=\dimen224
 \pgf@circ@res@other=\dimen225
 \pgf@circ@res@step=\dimen226
-\pgfstartlinewidth=\dimen227
+\pgf@circ@res@temp=\dimen227
+\pgfstartlinewidth=\dimen228
 ))
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 backgrounds.code.tex
@@ -1230,13 +1234,13 @@ LaTeX Font Info:    ... okay on input line 47.
 (/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count166
-\scratchdimen=\dimen228
+\scratchdimen=\dimen229
 \scratchbox=\box65
 \nofMPsegments=\count167
 \nofMParguments=\count168
 \everyMPshowfont=\toks52
 \MPscratchCnt=\count169
-\MPscratchDim=\dimen229
+\MPscratchDim=\dimen230
 \MPnumerator=\count170
 \makeMPintoPDFobject=\count171
 \everyMPtoPDFconversion=\toks53
@@ -1927,10 +1931,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 72.
  ) 
 Here is how much of TeX's memory you used:
- 40391 strings out of 493109
- 947566 string characters out of 6140856
- 2536709 words of memory out of 5000000
- 42759 multiletter control sequences out of 15000+600000
+ 41446 strings out of 493089
+ 978955 string characters out of 6140694
+ 2589967 words of memory out of 5000000
+ 43827 multiletter control sequences out of 15000+600000
  35999 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,16n,82p,18260b,1659s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1957,7 +1961,7 @@ fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
 nts/type1/public/amsfonts/cm/cmti7.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/sym
 bols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on main.pdf (66 pages, 2580365 bytes).
+Output written on main.pdf (66 pages, 2580351 bytes).
 PDF statistics:
  1014 PDF objects out of 1200 (max. 8388607)
  833 compressed objects within 9 object streams
